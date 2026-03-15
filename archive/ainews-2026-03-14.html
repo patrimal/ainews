@@ -183,36 +183,57 @@
 
   <div id="content">
 
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The people building AI are now openly warning about what it will break. Altman told BlackRock investors that AI is &ldquo;disrupting the basic fabric of capitalism&rdquo; and that governments will end up as the &ldquo;insurer of last resort&rdquo; &mdash; then in the same breath pitched intelligence-as-a-metered-utility with OpenAI collecting the bills. Karpathy put numbers on it: 42% of US jobs, 60 million workers, score 7 or higher on his AI exposure index. Musk&rsquo;s response &mdash; &ldquo;all jobs will be optional&rdquo; &mdash; landed less as reassurance and more as confirmation. Meanwhile the buildout isn&rsquo;t slowing: NVIDIA&rsquo;s GTC keynote tomorrow will unveil Vera Rubin, LeCun just raised a billion dollars to prove everyone else&rsquo;s architecture is wrong, and developer tools are shipping weekly. The disconnect between the alarm and the acceleration is the story right now. Everyone sees the cliff; nobody is touching the brakes.</p>
+    </div>
+
     <div class="story">
-      <h2>Karpathy maps AI exposure for every US job &mdash; 42% score high risk</h2>
+      <h2>Altman at BlackRock: AI is &ldquo;disrupting the basic fabric of capitalism&rdquo;</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Sam Altman (@sama)</span></div>
+      <p>Altman&rsquo;s remarks at the BlackRock U.S. Infrastructure Summit went viral today. He warned that &ldquo;the next few years are going to be a painful adjustment&rdquo; as the labor-capital balance shifts, said companies are already blaming AI for layoffs &ldquo;whether or not it really is about AI,&rdquo; and predicted that government will become &ldquo;the insurer of last resort.&rdquo; He also pitched intelligence as a metered utility &mdash; &ldquo;too cheap to meter&rdquo; &mdash; with OpenAI as the provider.</p>
+      <p class="why">Altman&rsquo;s framing: he&rsquo;s simultaneously warning about economic disruption and positioning OpenAI to be the utility company that profits from it. The backlash was immediate &mdash; critics noted the tension between &ldquo;painful adjustment&rdquo; and &ldquo;buy it from us on a meter.&rdquo;</p>
+      <div class="links"><a href="https://futurism.com/artificial-intelligence/sam-altman-ai-labor" target="_blank" rel="noopener">Futurism coverage</a> <a href="https://cybernews.com/ai-news/altman-ai-utility/" target="_blank" rel="noopener">Intelligence-as-utility remarks</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy&rsquo;s AI job exposure map: 42% of US workers in the danger zone</h2>
       <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Andrej Karpathy (@karpathy)</span></div>
-      <p>Karpathy published an interactive AI job exposure map at karpathy.ai/jobs, scoring 342 US occupations on a 0&ndash;10 scale using BLS data and LLM assessment. The average exposure is 5.3 out of 10. Software developers land at 8&ndash;9, medical transcriptionists hit a perfect 10, while trades like plumbing and roofing sit at 0&ndash;1. Visualized as a treemap where size is employment volume and color is exposure level.</p>
-      <p class="why">The core pattern: 42% of all US jobs (59.9 million workers) score 7 or higher &mdash; essentially any role that lives entirely on a screen. Karpathy highlights prompt skill as the key differentiator that can materially lower individual risk within the same job title.</p>
-      <div class="links"><a href="https://karpathy.ai/jobs/" target="_blank" rel="noopener">AI Job Exposure Map</a> <a href="https://x.com/TFTC21/status/2033046464004321542" target="_blank" rel="noopener">TFTC breakdown thread</a></div>
+      <p>Karpathy published an interactive treemap at karpathy.ai/jobs scoring all 342 US occupations on AI exposure (0&ndash;10 scale) using BLS employment data. Average exposure: 5.3. Software developers land at 8&ndash;9, medical transcriptionists hit a perfect 10, trades like plumbing sit at 0&ndash;1. Musk responded on X: &ldquo;all jobs will be optional.&rdquo;</p>
+      <p class="why">Karpathy&rsquo;s core finding: if your entire job lives on a screen, AI is coming for it. 59.9 million workers &mdash; 42% of US employment &mdash; score 7+. He highlights prompt skill as the key differentiator that can materially lower individual risk within the same job title.</p>
+      <div class="links"><a href="https://karpathy.ai/jobs/" target="_blank" rel="noopener">AI Job Exposure Map</a> <a href="https://x.com/karpathy" target="_blank" rel="noopener">@karpathy</a></div>
     </div>
 
     <div class="story">
-      <h2>Willison: &ldquo;Tests are no longer remotely optional&rdquo; in the age of coding agents</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Simon Willison (@simonw)</span></div>
-      <p>Willison gave a fireside chat on agentic engineering at the Pragmatic Summit in San Francisco. He outlined the progression from asking ChatGPT questions to agents writing more code than humans, and argued that test-driven development is now mandatory &mdash; not optional &mdash; when working with agents. He also called Opus 4.5 &ldquo;the first model that earned my trust&rdquo; for familiar problem classes.</p>
-      <p class="why">Willison&rsquo;s framing: the shift from code review to test suites as the primary trust mechanism. When agents write most of the code, reading every line stops scaling &mdash; red-green TDD becomes your verification layer.</p>
-      <div class="links"><a href="https://simonwillison.net/2026/Mar/14/pragmatic-summit/" target="_blank" rel="noopener">Willison&rsquo;s recap</a></div>
+      <h2>NVIDIA GTC 2026 kicks off tomorrow &mdash; Vera Rubin and NemoClaw expected</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">The Rundown AI / CNBC</span></div>
+      <p>Jensen Huang&rsquo;s keynote on March 16 is expected to formally unveil the Vera Rubin platform (5x inference, 3.5x training over Blackwell), NemoClaw (an open-source enterprise AI agent platform already being pitched to Salesforce and Google), and new N1/N1X ARM-based CPUs for Windows laptops. The CPU is sharing top billing with the GPU this year.</p>
+      <p class="why">NVIDIA is betting that the next bottleneck isn&rsquo;t just GPU compute but the full stack &mdash; CPU, networking, and an open agent platform to run on top of it. NemoClaw is their play to own the enterprise agent layer, not just the silicon.</p>
+      <div class="links"><a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA GTC blog</a> <a href="https://www.cnbc.com/2026/03/13/nvidia-gtc-ai-jensen-huang-cpu-gpu.html" target="_blank" rel="noopener">CNBC preview</a></div>
     </div>
 
     <div class="story">
-      <h2>GitHub&rsquo;s &ldquo;slopocalypse&rdquo; forces Jazzband to shut down open membership</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Simon Willison (@simonw)</span></div>
-      <p>Jazzband, a collaborative Python open-source project built on shared push access, announced it can no longer sustain its open membership model. Maintainer Jannis Leidel says the flood of AI-generated spam PRs and issues has made the model untenable &mdash; only 1 in 10 AI-authored PRs meet basic quality standards. Willison shared the quote alongside references to curl&rsquo;s closed bug bounty and GitHub&rsquo;s new PR kill switch.</p>
-      <p class="why">Leidel&rsquo;s point: permissive access models designed for human-scale collaboration can&rsquo;t survive when the majority of automated contributions are low-quality noise &mdash; a structural problem, not a moderation one.</p>
-      <div class="links"><a href="https://simonwillison.net/2026/Mar/14/jannis-leidel/" target="_blank" rel="noopener">Willison&rsquo;s post</a></div>
+      <h2>Claude Code v2.1.76: MCP elicitation, <code>/effort</code> command, sparse worktrees</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Friday&rsquo;s release adds MCP elicitation support (servers can request structured input mid-task via interactive dialogs), the <code>/effort</code> slash command for setting model effort level, <code>-n</code> flag for named sessions, and <code>worktree.sparsePaths</code> for large monorepos. Also adds <code>PostCompact</code> hooks and fixes for deferred tools losing schemas after compaction.</p>
+      <p class="why">MCP elicitation closes a real gap: servers can now ask for human input during execution instead of failing silently or guessing. It&rsquo;s the kind of plumbing that makes agent-driven workflows actually viable in production.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Full changelog</a></div>
     </div>
 
     <div class="story">
-      <h2>Morgan Stanley: US faces 9&ndash;18 GW power shortfall from AI infrastructure through 2028</h2>
-      <div class="meta"><span class="tag tag-date">Mar 13</span> <span class="source">Morgan Stanley via Fortune</span></div>
-      <p>Morgan Stanley&rsquo;s &ldquo;Intelligence Factory&rdquo; model projects a 12%&ndash;25% deficit in the power needed to run US AI infrastructure through 2028. Developers are already converting Bitcoin mining operations into AI compute centers and deploying natural gas turbines and fuel cells rather than waiting for grid upgrades. The bank calls AI a &ldquo;powerful deflationary force&rdquo; as tools replicate human work at a fraction of cost.</p>
-      <p class="why">The bank&rsquo;s thesis: the AI compute buildout is outrunning the electrical grid &mdash; whoever solves power access first gets to set the pace of the next generation of model training.</p>
-      <div class="links"><a href="https://fortune.com/2026/03/13/elon-musk-morgan-stanley-ai-leap-2026/" target="_blank" rel="noopener">Fortune coverage</a></div>
+      <h2>LeCun&rsquo;s AMI Labs closes $1.03B seed &mdash; Europe&rsquo;s largest ever</h2>
+      <div class="meta"><span class="tag tag-date">Mar 10</span> <span class="source">Yann LeCun / TechCrunch</span></div>
+      <p>Yann LeCun&rsquo;s startup Advanced Machine Intelligence (AMI) Labs raised $1.03 billion at a $3.5B pre-money valuation, backed by Bezos Expeditions, Nvidia, Toyota, Samsung, and Eric Schmidt among others. AMI is building world models based on LeCun&rsquo;s Joint Embedding Predictive Architecture (JEPA), targeting robotics, industrial, and healthcare applications.</p>
+      <p class="why">LeCun is putting a billion-dollar bet behind his long-standing argument that autoregressive LLMs are a dead end for real-world reasoning. If JEPA works, it reframes the entire industry; if not, it&rsquo;s the most expensive &ldquo;I told you so&rdquo; attempt in AI history.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/09/yann-lecuns-ami-labs-raises-1-03-billion-to-build-world-models/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://fortune.com/2026/03/11/meta-ex-ai-boss-convinced-former-employer-betting-wrong-technology-raised-1-billion/" target="_blank" rel="noopener">Fortune</a></div>
+    </div>
+
+    <div class="story">
+      <h2>AI layoffs accelerate: Oracle plans 20K&ndash;30K cuts, Block already shed 40%</h2>
+      <div class="meta"><span class="tag tag-date">Mar 9</span> <span class="source">The Neuron / Bloomberg</span></div>
+      <p>Oracle is planning 20,000&ndash;30,000 layoffs (12&ndash;18% of workforce) to redirect $8&ndash;10B toward AI data center infrastructure. Block already cut ~4,000 employees (~40%), with Jack Dorsey explicitly citing AI and predicting most companies would follow within a year. Total 2026 tech layoffs hit 45,000 in March alone, with 9,200+ directly attributed to AI.</p>
+      <p class="why">Dorsey&rsquo;s bluntness is the signal: &ldquo;most companies will make similar cuts within a year.&rdquo; Oracle&rsquo;s version is even starker &mdash; they&rsquo;re not just cutting to save money, they&rsquo;re redirecting those billions into the infrastructure that replaces the people they&rsquo;re firing.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-03-05/oracle-layoffs-to-impact-thousands-in-ai-cash-crunch" target="_blank" rel="noopener">Bloomberg</a> <a href="https://technode.global/2026/03/09/2026-tech-layoffs-reach-45000-in-march-more-than-9200-due-to-ai-and-automation-rationalfx/" target="_blank" rel="noopener">Layoff tracker</a></div>
     </div>
 
   </div>
