@@ -11,6 +11,12 @@
       --muted: #78716c;
       --accent: #2563eb;
       --border: #e7e5e4;
+      --tag-today-bg: #f5f5f4;
+      --tag-today-text: #57534e;
+      --tag-yesterday-bg: #f5f5f4;
+      --tag-yesterday-text: #57534e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -19,6 +25,12 @@
         --muted: #a8a29e;
         --accent: #60a5fa;
         --border: #292524;
+        --tag-today-bg: #292524;
+        --tag-today-text: #a8a29e;
+        --tag-yesterday-bg: #292524;
+        --tag-yesterday-text: #a8a29e;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
       }
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -46,10 +58,12 @@
     .story { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--border); }
     .story:last-child { border-bottom: none; }
     .story h2 { font-size: 1.05rem; font-weight: 600; line-height: 1.35; margin-bottom: 0.35rem; }
-    .story .meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .story .meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .tag { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.55rem; border-radius: 9999px; letter-spacing: 0.02em; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+    .tag-today, .tag-yesterday, .tag-date { background: var(--tag-date-bg); color: var(--tag-date-text); }
     .story p { font-size: 0.925rem; margin-bottom: 0.5rem; }
     .story .links { font-size: 0.825rem; }
-    .story .links a { color: var(--accent); text-decoration: none; margin-right: 0.75rem; }
+    .story .links a { color: var(--accent); text-decoration: none; margin-right: 0.75rem; padding: 0.2rem 0; display: inline-block; }
     .story .links a:hover { text-decoration: underline; }
     footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted); }
   </style>
@@ -72,8 +86,21 @@
       try {
         const res = await fetch(file + '?t=' + Date.now());
         if (!res.ok) throw new Error('not found');
-        const md = await res.text();
-        renderMarkdown(md);
+        const text = await res.text();
+
+        if (file.endsWith('.html')) {
+          // HTML archive: extract content and date from the archived page
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(text, 'text/html');
+          const dateLine = doc.getElementById('date-line');
+          const content = doc.getElementById('content');
+          if (dateLine) document.getElementById('date-line').textContent = dateLine.textContent;
+          if (content) document.getElementById('content').innerHTML = content.innerHTML;
+          document.title = doc.title || 'AI News — Archive';
+        } else {
+          // Legacy .md archive
+          renderMarkdown(text);
+        }
       } catch (e) {
         document.getElementById('content').innerHTML = '<p>Briefing not found.</p>';
       }
@@ -102,7 +129,8 @@
           continue;
         }
         if (line.startsWith('**') && line.includes('—')) {
-          html += '<div class="meta">' + escapeHtml(line.replace(/\*\*/g, '')) + '</div>';
+          const meta = line.replace(/\*\*/g, '');
+          html += '<div class="meta"><span class="tag tag-date">' + escapeHtml(meta.split('—')[0].trim()) + '</span> <span class="source">' + escapeHtml(meta.split('—').slice(1).join('—').trim()) + '</span></div>';
           continue;
         }
         if (line.trim() && line.includes('[') && line.includes('](')) {

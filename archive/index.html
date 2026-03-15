@@ -92,7 +92,7 @@
 
         let html = '';
         for (const f of files) {
-          const dateStr = f.replace('ainews-', '').replace('.md', '');
+          const dateStr = f.replace('ainews-', '').replace('.html', '').replace('.md', '');
           const d = new Date(dateStr + 'T12:00:00');
           const display = d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
           html += `<div class="archive-item"><a href="view.html?file=${f}">${display}</a></div>`;
