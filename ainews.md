@@ -12,7 +12,7 @@ Karpathy dropped AgentHub, an open-source collaboration platform designed for sw
 ---
 
 ## Claude Code adds MCP elicitation — servers can now ask you questions mid-task
-**Mar 14** — Claude Code changelog (v2.1.76)
+**Today** — Claude Code changelog (v2.1.76)
 
 Claude Code now supports MCP elicitation, letting MCP servers request structured input from the user via an interactive dialog while a task is running. New `Elicitation` and `ElicitationResult` hooks let developers tap into this flow. Also added a `-n` / `--name` CLI flag to name sessions at startup.
 
