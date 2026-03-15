@@ -120,6 +120,12 @@
       color: var(--text);
       margin-bottom: 0.5rem;
     }
+    .story .why {
+      font-size: 0.825rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
     .story .links {
       font-size: 0.825rem;
     }
@@ -153,6 +159,7 @@
       <h2>Claude Code adds MCP elicitation &mdash; servers can now ask you questions mid-task</h2>
       <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code changelog (v2.1.76)</span></div>
       <p>Claude Code now supports MCP elicitation, letting MCP servers request structured input from the user via an interactive dialog while a task is running. New <code>Elicitation</code> and <code>ElicitationResult</code> hooks let developers tap into this flow. Also added a <code>-n</code> / <code>--name</code> CLI flag to name sessions at startup.</p>
+      <p class="why">Also in this release: sparse checkout for monorepos (<code>worktree.sparsePaths</code>) so agents only check out directories they need, and a circuit breaker to stop auto-compaction retry loops after 3 attempts.</p>
       <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code changelog</a></div>
     </div>
 
@@ -160,6 +167,7 @@
       <h2>1M context now generally available for Opus 4.6 and Sonnet 4.6</h2>
       <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Simon Willison (@simonw)</span></div>
       <p>Anthropic made 1M-token context windows generally available for Claude Opus 4.6 and Sonnet 4.6 at standard pricing &mdash; no premium charges for longer prompts. As Willison notes, this contrasts with OpenAI and Google, which charge extra fees when token usage exceeds certain thresholds, making Claude significantly more cost-effective for large documents and extended conversations.</p>
+      <p class="why">Willison highlights that Gemini charges a premium past 200K tokens and GPT-5.4 past 272K &mdash; Anthropic is the first to offer the full 1M window at flat pricing.</p>
       <div class="links"><a href="https://simonwillison.net/2026/Mar/13/1m-context/" target="_blank" rel="noopener">Simon Willison&rsquo;s analysis</a></div>
     </div>
 
@@ -167,6 +175,7 @@
       <h2>Claude Code gets /color, session names, and smarter memory</h2>
       <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Claude Code changelog (v2.1.75)</span></div>
       <p>Anthropic shipped a batch of Claude Code updates: a <code>/color</code> command to tag sessions with a prompt-bar color, session name display when using <code>/rename</code>, and last-modified timestamps on memory files so Claude can reason about which memories are fresh vs. stale. Also fixed voice mode, model switching, and HTTP 400 errors for users behind proxies on Bedrock/Vertex.</p>
+      <p class="why">Under the hood: fixed token estimation over-counting for thinking and tool_use blocks, which was triggering premature context compaction.</p>
       <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code changelog</a> <a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Claude Code release notes</a></div>
     </div>
 
@@ -174,6 +183,7 @@
       <h2>Karpathy launches AgentHub &mdash; &ldquo;GitHub, but for AI agents&rdquo;</h2>
       <div class="meta"><span class="tag tag-date">Mar 11</span> <span class="source">Andrej Karpathy (@karpathy)</span></div>
       <p>Karpathy dropped AgentHub, an open-source collaboration platform designed for swarms of AI agents working on the same codebase. Instead of branches, PRs, and merges, it exposes a bare git DAG where agents push commits via bundles and coordinate through a built-in message board. Built as the organizational layer for autoresearch, it&rsquo;s explicitly a sketch &mdash; but hit 2,000+ GitHub stars in under 24 hours.</p>
+      <p class="why">Karpathy&rsquo;s argument: GitHub has &ldquo;a softly built-in assumption of one master branch&rdquo; &mdash; agents need a DAG they can push to in parallel, not PRs and merge conflicts designed for humans.</p>
       <div class="links"><a href="https://github.com/karpathy/agenthub" target="_blank" rel="noopener">Karpathy&rsquo;s AgentHub</a> <a href="https://x.com/Yuchenj_UW/status/2031438602383798514" target="_blank" rel="noopener">Yuchen Jin&rsquo;s breakdown</a></div>
     </div>
 
@@ -181,6 +191,7 @@
       <h2>Latent Space hosting Notion AI team &mdash; swyx calls them &ldquo;the most important knowledge work agent lab&rdquo;</h2>
       <div class="meta"><span class="tag tag-date">Mar 10</span> <span class="source">swyx (@swyx)</span></div>
       <p>swyx announced the Latent Space podcast will feature the Notion AI team, including Simon Last. He framed Notion as &ldquo;probably the most important knowledge work agent lab in the world&rdquo; &mdash; a bold take that reflects how AI-native productivity tools are becoming the real battleground, not standalone chat interfaces.</p>
+      <p class="why">swyx&rsquo;s framing: the real AI productivity race isn&rsquo;t chatbots &mdash; it&rsquo;s the tools where knowledge work already happens getting agent capabilities baked in.</p>
       <div class="links"><a href="https://x.com/swyx/status/2031497751423566116" target="_blank" rel="noopener">swyx&rsquo;s announcement</a> <a href="https://www.latent.space/podcast" target="_blank" rel="noopener">Latent Space podcast</a></div>
     </div>
 
@@ -188,6 +199,7 @@
       <h2>Autoresearch goes distributed &mdash; 35 agents, 333 experiments, zero humans</h2>
       <div class="meta"><span class="tag tag-date">Mar 10</span> <span class="source">Andrej Karpathy (@karpathy)</span></div>
       <p>Following Karpathy&rsquo;s autoresearch release, Varun Mathur (Hyperspace AI) distributed the single-agent loop across a peer-to-peer network. On the night of March 8&ndash;9, 35 autonomous agents ran 333 experiments completely unsupervised. Karpathy&rsquo;s original 2-day run found ~20 real improvements that cut time-to-GPT-2 by 11% &mdash; the distributed version is scaling that approach to a research community.</p>
+      <p class="why">Latent Space called this &ldquo;sparks of recursive self-improvement&rdquo; &mdash; all ~20 improvements were additive (they stack without canceling each other) and transferred cleanly from small to large models.</p>
       <div class="links"><a href="https://x.com/karpathy/status/2031135152349524125" target="_blank" rel="noopener">Karpathy&rsquo;s results post</a> <a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">Autoresearch repo</a></div>
     </div>
 
