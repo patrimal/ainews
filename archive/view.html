@@ -88,73 +88,16 @@
         if (!res.ok) throw new Error('not found');
         const text = await res.text();
 
-        if (file.endsWith('.html')) {
-          // HTML archive: extract content and date from the archived page
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(text, 'text/html');
-          const dateLine = doc.getElementById('date-line');
-          const content = doc.getElementById('content');
-          if (dateLine) document.getElementById('date-line').textContent = dateLine.textContent;
-          if (content) document.getElementById('content').innerHTML = content.innerHTML;
-          document.title = doc.title || 'AI News — Archive';
-        } else {
-          // Legacy .md archive
-          renderMarkdown(text);
-        }
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+        const dateLine = doc.getElementById('date-line');
+        const content = doc.getElementById('content');
+        if (dateLine) document.getElementById('date-line').textContent = dateLine.textContent;
+        if (content) document.getElementById('content').innerHTML = content.innerHTML;
+        document.title = doc.title || 'AI News — Archive';
       } catch (e) {
         document.getElementById('content').innerHTML = '<p>Briefing not found.</p>';
       }
-    }
-
-    function renderMarkdown(md) {
-      const lines = md.split('\n');
-      let html = '';
-      let inStory = false;
-      let dateLine = '';
-
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        if (line.startsWith('# AI News')) {
-          dateLine = line.replace('# AI News — ', '').replace('# AI News —', '').trim();
-          continue;
-        }
-        if (line.trim() === '---') {
-          if (inStory) { html += '</div>'; inStory = false; }
-          continue;
-        }
-        if (line.startsWith('## ')) {
-          inStory = true;
-          html += '<div class="story">';
-          html += '<h2>' + escapeHtml(line.replace('## ', '')) + '</h2>';
-          continue;
-        }
-        if (line.startsWith('**') && line.includes('—')) {
-          const meta = line.replace(/\*\*/g, '');
-          html += '<div class="meta"><span class="tag tag-date">' + escapeHtml(meta.split('—')[0].trim()) + '</span> <span class="source">' + escapeHtml(meta.split('—').slice(1).join('—').trim()) + '</span></div>';
-          continue;
-        }
-        if (line.trim() && line.includes('[') && line.includes('](')) {
-          html += '<div class="links">' + renderLinks(line) + '</div>';
-          continue;
-        }
-        if (line.trim() && !line.startsWith('#')) {
-          html += '<p>' + escapeHtml(line) + '</p>';
-        }
-      }
-      if (inStory) html += '</div>';
-
-      document.getElementById('date-line').textContent = dateLine;
-      document.getElementById('content').innerHTML = html;
-      document.title = 'AI News — ' + dateLine;
-    }
-
-    function renderLinks(text) {
-      return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
-                 .replace(/·/g, '').trim();
-    }
-
-    function escapeHtml(str) {
-      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
 
     loadArchiveEntry();

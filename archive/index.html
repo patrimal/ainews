@@ -91,11 +91,12 @@
         }
 
         let html = '';
-        for (const f of files) {
-          const dateStr = f.replace('ainews-', '').replace('.html', '').replace('.md', '');
+        for (const entry of files) {
+          const file = typeof entry === 'string' ? entry : entry.file;
+          const dateStr = typeof entry === 'string' ? entry.replace('ainews-', '').replace('.html', '') : entry.date;
           const d = new Date(dateStr + 'T12:00:00');
           const display = d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-          html += `<div class="archive-item"><a href="view.html?file=${f}">${display}</a></div>`;
+          html += `<div class="archive-item"><a href="view.html?file=${file}">${display}</a></div>`;
         }
         document.getElementById('archive-list').innerHTML = html;
       } catch (e) {
