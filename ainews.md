@@ -11,12 +11,21 @@ Karpathy dropped AgentHub, an open-source collaboration platform designed for sw
 
 ---
 
+## Claude Code adds MCP elicitation — servers can now ask you questions mid-task
+**Mar 14** — Claude Code changelog (v2.1.76)
+
+Claude Code now supports MCP elicitation, letting MCP servers request structured input from the user via an interactive dialog while a task is running. New `Elicitation` and `ElicitationResult` hooks let developers tap into this flow. Also added a `-n` / `--name` CLI flag to name sessions at startup.
+
+[Claude Code changelog](https://code.claude.com/docs/en/changelog)
+
+---
+
 ## Claude Code gets /color, session names, and smarter memory
-**Mar 13** — Boris Cherny (@bcherny)
+**Mar 13** — Boris Cherny (@bcherny), Claude Code changelog (v2.1.75)
 
-Anthropic shipped a batch of Claude Code updates: a `/color` command to tag sessions with a prompt-bar color, session name display when using `/rename`, and last-modified timestamps on memory files so Claude can reason about which memories are fresh vs. stale. Also fixed voice mode, model switching, and HTTP 400 errors for users behind proxies on Bedrock/Vertex.
+Anthropic shipped a batch of Claude Code updates: a `/color` command to tag sessions with a prompt-bar color, session name display when using `/rename`, and last-modified timestamps on memory files so Claude can reason about which memories are fresh vs. stale. 1M context window enabled by default for Opus on Max/Team/Enterprise plans. Also fixed voice mode, model switching, and HTTP 400 errors for users behind proxies on Bedrock/Vertex.
 
-[Claude Code release notes](https://releasebot.io/updates/anthropic/claude-code)
+[Claude Code changelog](https://code.claude.com/docs/en/changelog) · [Claude Code release notes](https://releasebot.io/updates/anthropic/claude-code)
 
 ---
 
