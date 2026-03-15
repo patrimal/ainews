@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News Briefing — Saturday, March 14, 2026</title>
+  <title>AI News Briefing — Sunday, March 15, 2026</title>
   <style>
     :root {
       --bg: #fafaf9;
@@ -178,56 +178,40 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Saturday, March 14, 2026</div>
+  <div id="date-line">Sunday, March 15, 2026</div>
 
   <div id="content">
 
     <div class="story">
-      <h2>Claude Code adds MCP elicitation &mdash; servers can now ask you questions mid-task</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code changelog (v2.1.76)</span></div>
-      <p>Claude Code now supports MCP elicitation, letting MCP servers request structured input from the user via an interactive dialog while a task is running. New <code>Elicitation</code> and <code>ElicitationResult</code> hooks let developers tap into this flow. Also added a <code>-n</code> / <code>--name</code> CLI flag to name sessions at startup.</p>
-      <p class="why">The changelog describes this as enabling &ldquo;more sophisticated interactions with external tools&rdquo; &mdash; MCP tools can now have back-and-forth with the user, turning one-shot tool calls into interactive workflows.</p>
-      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code changelog</a></div>
+      <h2>Karpathy maps AI exposure for every US job &mdash; 42% score high risk</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Andrej Karpathy (@karpathy)</span></div>
+      <p>Karpathy published an interactive AI job exposure map at karpathy.ai/jobs, scoring 342 US occupations on a 0&ndash;10 scale using BLS data and LLM assessment. The average exposure is 5.3 out of 10. Software developers land at 8&ndash;9, medical transcriptionists hit a perfect 10, while trades like plumbing and roofing sit at 0&ndash;1. Visualized as a treemap where size is employment volume and color is exposure level.</p>
+      <p class="why">The core pattern: 42% of all US jobs (59.9 million workers) score 7 or higher &mdash; essentially any role that lives entirely on a screen. Karpathy highlights prompt skill as the key differentiator that can materially lower individual risk within the same job title.</p>
+      <div class="links"><a href="https://karpathy.ai/jobs/" target="_blank" rel="noopener">AI Job Exposure Map</a> <a href="https://x.com/TFTC21/status/2033046464004321542" target="_blank" rel="noopener">TFTC breakdown thread</a></div>
     </div>
 
     <div class="story">
-      <h2>1M context now generally available for Opus 4.6 and Sonnet 4.6</h2>
+      <h2>Willison: &ldquo;Tests are no longer remotely optional&rdquo; in the age of coding agents</h2>
       <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Simon Willison (@simonw)</span></div>
-      <p>Anthropic made 1M-token context windows generally available for Claude Opus 4.6 and Sonnet 4.6 at standard pricing &mdash; no premium charges for longer prompts. As Willison notes, this contrasts with OpenAI and Google, which charge extra fees when token usage exceeds certain thresholds, making Claude significantly more cost-effective for large documents and extended conversations.</p>
-      <p class="why">Willison&rsquo;s point: at flat pricing, you can now feed entire codebases or long documents without hitting the cost cliffs that Gemini (200K) and GPT-5.4 (272K) impose.</p>
-      <div class="links"><a href="https://simonwillison.net/2026/Mar/13/1m-context/" target="_blank" rel="noopener">Simon Willison&rsquo;s analysis</a></div>
+      <p>Willison gave a fireside chat on agentic engineering at the Pragmatic Summit in San Francisco. He outlined the progression from asking ChatGPT questions to agents writing more code than humans, and argued that test-driven development is now mandatory &mdash; not optional &mdash; when working with agents. He also called Opus 4.5 &ldquo;the first model that earned my trust&rdquo; for familiar problem classes.</p>
+      <p class="why">Willison&rsquo;s framing: the shift from code review to test suites as the primary trust mechanism. When agents write most of the code, reading every line stops scaling &mdash; red-green TDD becomes your verification layer.</p>
+      <div class="links"><a href="https://simonwillison.net/2026/Mar/14/pragmatic-summit/" target="_blank" rel="noopener">Willison&rsquo;s recap</a></div>
     </div>
 
     <div class="story">
-      <h2>Claude Code gets /color, session names, and smarter memory</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Claude Code changelog (v2.1.75)</span></div>
-      <p>Anthropic shipped a batch of Claude Code updates: a <code>/color</code> command to tag sessions with a prompt-bar color, session name display when using <code>/rename</code>, and last-modified timestamps on memory files so Claude can reason about which memories are fresh vs. stale. Also fixed voice mode, model switching, and HTTP 400 errors for users behind proxies on Bedrock/Vertex.</p>
-      <p class="why">The memory timestamp feature is a prerequisite for agents that work reliably across sessions &mdash; without it, Claude can&rsquo;t tell if saved context is from today or last month.</p>
-      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Claude Code changelog</a> <a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Claude Code release notes</a></div>
+      <h2>GitHub&rsquo;s &ldquo;slopocalypse&rdquo; forces Jazzband to shut down open membership</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Simon Willison (@simonw)</span></div>
+      <p>Jazzband, a collaborative Python open-source project built on shared push access, announced it can no longer sustain its open membership model. Maintainer Jannis Leidel says the flood of AI-generated spam PRs and issues has made the model untenable &mdash; only 1 in 10 AI-authored PRs meet basic quality standards. Willison shared the quote alongside references to curl&rsquo;s closed bug bounty and GitHub&rsquo;s new PR kill switch.</p>
+      <p class="why">Leidel&rsquo;s point: permissive access models designed for human-scale collaboration can&rsquo;t survive when the majority of automated contributions are low-quality noise &mdash; a structural problem, not a moderation one.</p>
+      <div class="links"><a href="https://simonwillison.net/2026/Mar/14/jannis-leidel/" target="_blank" rel="noopener">Willison&rsquo;s post</a></div>
     </div>
 
     <div class="story">
-      <h2>Karpathy launches AgentHub &mdash; &ldquo;GitHub, but for AI agents&rdquo;</h2>
-      <div class="meta"><span class="tag tag-date">Mar 11</span> <span class="source">Andrej Karpathy (@karpathy)</span></div>
-      <p>Karpathy dropped AgentHub, an open-source collaboration platform designed for swarms of AI agents working on the same codebase. Instead of branches, PRs, and merges, it exposes a bare git DAG where agents push commits via bundles and coordinate through a built-in message board. Built as the organizational layer for autoresearch, it&rsquo;s explicitly a sketch &mdash; but hit 2,000+ GitHub stars in under 24 hours.</p>
-      <p class="why">Karpathy&rsquo;s argument: GitHub has &ldquo;a softly built-in assumption of one master branch&rdquo; &mdash; agents need a DAG they can push to in parallel, not PRs and merge conflicts designed for humans.</p>
-      <div class="links"><a href="https://github.com/karpathy/agenthub" target="_blank" rel="noopener">Karpathy&rsquo;s AgentHub</a> <a href="https://x.com/Yuchenj_UW/status/2031438602383798514" target="_blank" rel="noopener">Yuchen Jin&rsquo;s breakdown</a></div>
-    </div>
-
-    <div class="story">
-      <h2>Latent Space hosting Notion AI team &mdash; swyx calls them &ldquo;the most important knowledge work agent lab&rdquo;</h2>
-      <div class="meta"><span class="tag tag-date">Mar 10</span> <span class="source">swyx (@swyx)</span></div>
-      <p>swyx announced the Latent Space podcast will feature the Notion AI team, including Simon Last. He framed Notion as &ldquo;probably the most important knowledge work agent lab in the world&rdquo; &mdash; a bold take that reflects how AI-native productivity tools are becoming the real battleground, not standalone chat interfaces.</p>
-      <p class="why">swyx has been tracking the &ldquo;AI-native vs. AI-added&rdquo; split &mdash; his bet is that tools with existing workflow lock-in (like Notion) will outcompete standalone AI products.</p>
-      <div class="links"><a href="https://x.com/swyx/status/2031497751423566116" target="_blank" rel="noopener">swyx&rsquo;s announcement</a> <a href="https://www.latent.space/podcast" target="_blank" rel="noopener">Latent Space podcast</a></div>
-    </div>
-
-    <div class="story">
-      <h2>Autoresearch goes distributed &mdash; 35 agents, 333 experiments, zero humans</h2>
-      <div class="meta"><span class="tag tag-date">Mar 10</span> <span class="source">Andrej Karpathy (@karpathy)</span></div>
-      <p>Following Karpathy&rsquo;s autoresearch release, Varun Mathur (Hyperspace AI) distributed the single-agent loop across a peer-to-peer network. On the night of March 8&ndash;9, 35 autonomous agents ran 333 experiments completely unsupervised. Karpathy&rsquo;s original 2-day run found ~20 real improvements that cut time-to-GPT-2 by 11% &mdash; the distributed version is scaling that approach to a research community.</p>
-      <p class="why">Latent Space called this &ldquo;sparks of recursive self-improvement&rdquo; &mdash; all ~20 improvements were additive (they stack without canceling each other) and transferred cleanly from small to large models.</p>
-      <div class="links"><a href="https://x.com/karpathy/status/2031135152349524125" target="_blank" rel="noopener">Karpathy&rsquo;s results post</a> <a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">Autoresearch repo</a></div>
+      <h2>Morgan Stanley: US faces 9&ndash;18 GW power shortfall from AI infrastructure through 2028</h2>
+      <div class="meta"><span class="tag tag-date">Mar 13</span> <span class="source">Morgan Stanley via Fortune</span></div>
+      <p>Morgan Stanley&rsquo;s &ldquo;Intelligence Factory&rdquo; model projects a 12%&ndash;25% deficit in the power needed to run US AI infrastructure through 2028. Developers are already converting Bitcoin mining operations into AI compute centers and deploying natural gas turbines and fuel cells rather than waiting for grid upgrades. The bank calls AI a &ldquo;powerful deflationary force&rdquo; as tools replicate human work at a fraction of cost.</p>
+      <p class="why">The bank&rsquo;s thesis: the AI compute buildout is outrunning the electrical grid &mdash; whoever solves power access first gets to set the pace of the next generation of model training.</p>
+      <div class="links"><a href="https://fortune.com/2026/03/13/elon-musk-morgan-stanley-ai-leap-2026/" target="_blank" rel="noopener">Fortune coverage</a></div>
     </div>
 
   </div>
