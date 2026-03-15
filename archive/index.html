@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Archive</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 1.5rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    header h1 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+    header a { font-size: 0.875rem; color: var(--accent); text-decoration: none; }
+    header a:hover { text-decoration: underline; }
+    .archive-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .archive-item a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .archive-item a:hover { text-decoration: underline; }
+    .archive-item .date {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    #archive-list { margin-top: 1rem; }
+    .empty { color: var(--muted); font-size: 0.925rem; margin-top: 1rem; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Archive</h1>
+    <a href="../">Today's News</a>
+  </header>
+  <div id="archive-list"></div>
+  <footer>Curated daily by Claude. Sources managed by Patrick.</footer>
+
+  <script>
+    async function loadArchive() {
+      try {
+        const res = await fetch('index.json?t=' + Date.now());
+        if (!res.ok) throw new Error('not found');
+        const files = await res.json();
+
+        if (files.length === 0) {
+          document.getElementById('archive-list').innerHTML = '<p class="empty">No archived briefings yet.</p>';
+          return;
+        }
+
+        let html = '';
+        for (const f of files) {
+          const dateStr = f.replace('ainews-', '').replace('.md', '');
+          const d = new Date(dateStr + 'T12:00:00');
+          const display = d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+          html += `<div class="archive-item"><a href="view.html?file=${f}">${display}</a></div>`;
+        }
+        document.getElementById('archive-list').innerHTML = html;
+      } catch (e) {
+        document.getElementById('archive-list').innerHTML = '<p class="empty">No archived briefings yet.</p>';
+      }
+    }
+
+    loadArchive();
+  </script>
+</body>
+</html>

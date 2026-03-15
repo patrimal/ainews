@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Archive</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 1.5rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    header h1 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+    header a { font-size: 0.875rem; color: var(--accent); text-decoration: none; }
+    header a:hover { text-decoration: underline; }
+    #date-line { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .story { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--border); }
+    .story:last-child { border-bottom: none; }
+    .story h2 { font-size: 1.05rem; font-weight: 600; line-height: 1.35; margin-bottom: 0.35rem; }
+    .story .meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .story p { font-size: 0.925rem; margin-bottom: 0.5rem; }
+    .story .links { font-size: 0.825rem; }
+    .story .links a { color: var(--accent); text-decoration: none; margin-right: 0.75rem; }
+    .story .links a:hover { text-decoration: underline; }
+    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI News</h1>
+    <a href="./">Back to Archive</a>
+  </header>
+  <div id="date-line"></div>
+  <div id="content"></div>
+  <footer>Curated daily by Claude. Sources managed by Patrick.</footer>
+
+  <script>
+    async function loadArchiveEntry() {
+      const params = new URLSearchParams(window.location.search);
+      const file = params.get('file');
+      if (!file) { document.getElementById('content').innerHTML = '<p>No file specified.</p>'; return; }
+
+      try {
+        const res = await fetch(file + '?t=' + Date.now());
+        if (!res.ok) throw new Error('not found');
+        const md = await res.text();
+        renderMarkdown(md);
+      } catch (e) {
+        document.getElementById('content').innerHTML = '<p>Briefing not found.</p>';
+      }
+    }
+
+    function renderMarkdown(md) {
+      const lines = md.split('\n');
+      let html = '';
+      let inStory = false;
+      let dateLine = '';
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.startsWith('# AI News')) {
+          dateLine = line.replace('# AI News — ', '').replace('# AI News —', '').trim();
+          continue;
+        }
+        if (line.trim() === '---') {
+          if (inStory) { html += '</div>'; inStory = false; }
+          continue;
+        }
+        if (line.startsWith('## ')) {
+          inStory = true;
+          html += '<div class="story">';
+          html += '<h2>' + escapeHtml(line.replace('## ', '')) + '</h2>';
+          continue;
+        }
+        if (line.startsWith('**') && line.includes('—')) {
+          html += '<div class="meta">' + escapeHtml(line.replace(/\*\*/g, '')) + '</div>';
+          continue;
+        }
+        if (line.trim() && line.includes('[') && line.includes('](')) {
+          html += '<div class="links">' + renderLinks(line) + '</div>';
+          continue;
+        }
+        if (line.trim() && !line.startsWith('#')) {
+          html += '<p>' + escapeHtml(line) + '</p>';
+        }
+      }
+      if (inStory) html += '</div>';
+
+      document.getElementById('date-line').textContent = dateLine;
+      document.getElementById('content').innerHTML = html;
+      document.title = 'AI News — ' + dateLine;
+    }
+
+    function renderLinks(text) {
+      return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+                 .replace(/·/g, '').trim();
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    loadArchiveEntry();
+  </script>
+</body>
+</html>
