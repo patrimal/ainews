@@ -251,8 +251,8 @@
     <div class="subtitle">NVIDIA GTC 2026 Keynote</div>
   </header>
   <div id="meta-line">
-    <span id="status"><span class="waiting-badge">Awaiting Event</span></span>
-    <span id="last-updated"></span>
+    <span id="status"><span class="live-badge">Live</span></span>
+    <span id="last-updated">Last updated 4:26 PM PT</span>
   </div>
 
   <div id="countdown-section">
@@ -295,11 +295,8 @@
 
     function fmtTime(ms) {
       var d = new Date(ms);
-      var h = d.getHours();
-      var m = d.getMinutes();
-      var ampm = h >= 12 ? 'PM' : 'AM';
-      h = h % 12 || 12;
-      return h + ':' + String(m).padStart(2, '0') + ' ' + ampm;
+      var pt = d.toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', minute: '2-digit', hour12: true });
+      return pt + ' PT';
     }
 
     function nextUpdateAfter(now) {
