@@ -354,6 +354,14 @@
       countdownSection.style.display = 'none';
       var exec = document.getElementById('exec-summary');
       if (exec) exec.style.display = '';
+      // Still show next update time in the last-updated line
+      var lastUpdatedEl = document.getElementById('last-updated');
+      var now = Date.now();
+      var ptHour = parseInt(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', hour12: false }));
+      if (ptHour < 23) {
+        var next = nextUpdateAfter(now);
+        lastUpdatedEl.textContent = lastUpdatedEl.textContent + ' · Next update shortly after ' + fmtTime(next);
+      }
       return;
     }
 
