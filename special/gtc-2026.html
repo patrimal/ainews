@@ -378,12 +378,13 @@
         labelEl.textContent = '';
         countdownEl.textContent = 'Event under way';
         var next = nextUpdateAfter(now);
-        var eod = new Date();
-        eod.setHours(23, 59, 0, 0);
-        var schedule = (next > eod.getTime())
+        // Get current hour in PT to determine end-of-day
+        var ptHour = parseInt(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', hour12: false }));
+        var done = (ptHour >= 23);
+        var schedule = done
           ? 'Updates are complete for today.'
-          : 'Check back at ' + fmtTime(next) + ' PT for the next update.';
-        detailsEl.innerHTML = originalDetails.replace(/First update.*/, schedule);
+          : 'Check back at ' + fmtTime(next) + ' for the next update.';
+        detailsEl.innerHTML = originalDetails.replace(/First update.*|Check back at.*|Updates are complete.*/, schedule);
         return;
       }
       var diff = eventTime - now;
