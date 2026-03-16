@@ -383,7 +383,7 @@
         var done = (ptHour >= 23);
         var schedule = done
           ? 'Updates are complete for today.'
-          : 'Check back at ' + fmtTime(next) + ' for the next update.';
+          : 'Check back shortly after ' + fmtTime(next) + ' for the next update.';
         detailsEl.innerHTML = originalDetails.replace(/First update.*|Check back at.*|Updates are complete.*/, schedule);
         return;
       }
