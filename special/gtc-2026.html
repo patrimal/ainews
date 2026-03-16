@@ -309,6 +309,8 @@
       return firstUpdate + intervals * 3600000;
     }
 
+    var originalDetails = detailsEl.innerHTML;
+
     function updateCountdown() {
       var now = Date.now();
       if (now >= eventTime) {
@@ -317,11 +319,10 @@
         var next = nextUpdateAfter(now);
         var eod = new Date();
         eod.setHours(23, 59, 0, 0);
-        if (next > eod.getTime()) {
-          detailsEl.innerHTML = 'Updates are complete for today.';
-        } else {
-          detailsEl.innerHTML = 'Check back at ' + fmtTime(next) + ' PT for the next update.';
-        }
+        var schedule = (next > eod.getTime())
+          ? 'Updates are complete for today.'
+          : 'Check back at ' + fmtTime(next) + ' PT for the next update.';
+        detailsEl.innerHTML = originalDetails.replace(/First update.*/, schedule);
         return;
       }
       var diff = eventTime - now;
