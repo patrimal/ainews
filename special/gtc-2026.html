@@ -279,11 +279,13 @@
   <script>
   (function() {
     var eventTime = new Date(document.body.dataset.eventTime).getTime();
+    var firstUpdate = eventTime + 30 * 60 * 1000;
     var countdownEl = document.getElementById('countdown');
+    var labelEl = document.querySelector('.countdown-label');
+    var detailsEl = document.querySelector('.countdown-details');
     var countdownSection = document.getElementById('countdown-section');
     var hasEntries = document.querySelectorAll('.timeline-entry').length > 0;
 
-    // If timeline already has entries, hide countdown and show exec summary
     if (hasEntries) {
       countdownSection.style.display = 'none';
       var exec = document.getElementById('exec-summary');
@@ -291,13 +293,38 @@
       return;
     }
 
+    function fmtTime(ms) {
+      var d = new Date(ms);
+      var h = d.getHours();
+      var m = d.getMinutes();
+      var ampm = h >= 12 ? 'PM' : 'AM';
+      h = h % 12 || 12;
+      return h + ':' + String(m).padStart(2, '0') + ' ' + ampm;
+    }
+
+    function nextUpdateAfter(now) {
+      if (now < firstUpdate) return firstUpdate;
+      var sinceFU = now - firstUpdate;
+      var intervals = Math.floor(sinceFU / 3600000) + 1;
+      return firstUpdate + intervals * 3600000;
+    }
+
     function updateCountdown() {
       var now = Date.now();
-      var diff = eventTime - now;
-      if (diff <= 0) {
-        countdownEl.textContent = 'Starting now';
+      if (now >= eventTime) {
+        labelEl.textContent = '';
+        countdownEl.textContent = 'Event under way';
+        var next = nextUpdateAfter(now);
+        var eod = new Date();
+        eod.setHours(23, 59, 0, 0);
+        if (next > eod.getTime()) {
+          detailsEl.innerHTML = 'Updates are complete for today.';
+        } else {
+          detailsEl.innerHTML = 'Check back at ' + fmtTime(next) + ' PT for the next update.';
+        }
         return;
       }
+      var diff = eventTime - now;
       var h = Math.floor(diff / 3600000);
       var m = Math.floor((diff % 3600000) / 60000);
       var s = Math.floor((diff % 60000) / 1000);
