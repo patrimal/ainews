@@ -255,7 +255,7 @@
       <div><a href="../">Today&rsquo;s Briefing</a> <a href="../archive/">Archive</a></div>
     </div>
     <div class="subtitle">NVIDIA GTC 2026 Keynote</div>
-    <div id="last-updated" style="font-size:0.7rem;opacity:0.6;margin-top:0.25rem;">Last updated 7:39 PM PT</div>
+    <div id="last-updated" style="font-size:0.7rem;opacity:0.6;margin-top:0.25rem;">Last updated 8:44 PM PT</div>
   </header>
   <div id="meta-line">
     <span id="status"><span class="live-badge">Live</span></span>
@@ -276,12 +276,27 @@
 
   <div id="exec-summary" class="exec-summary">
     <h2>The Story So Far</h2>
-    <p>GTC 2026 day one told a single, unmistakable story: NVIDIA is no longer a chip company &mdash; it&rsquo;s an AI infrastructure monopoly that now designs every layer of the stack, from the 3nm silicon (Vera Rubin) to the inference accelerator beside it (Groq 3 LPU) to the vertical rack it sits in (Kyber) to the software orchestrating it (NemoClaw). And as of this evening, essentially every major AI lab on the planet has signed up to buy it &mdash; along with the infrastructure providers they&rsquo;ll need to run it all.</p>
-    <p>The deal-making is as impressive as the silicon. Meta just committed up to $27 billion over five years to Nebius Group for dedicated Vera Rubin capacity &mdash; the largest &ldquo;neocloud&rdquo; deal in AI history, a ninefold expansion of their existing contract. OpenAI locked in 5 GW total. AWS committed to 1 million+ GPUs. Microsoft lit up Vera Rubin NVL72 first. And now Nscale is building a 1.35 GW Vera Rubin campus in West Virginia with Caterpillar gas generators and room to scale to 8 GW. The physical footprint of AI compute is expanding at an almost absurd pace &mdash; we&rsquo;re talking about multi-gigawatt campuses with their own power plants.</p>
-    <p>The market&rsquo;s reaction &mdash; NVDA up just 1.65% to $183.22, drifting to $182.65 after hours &mdash; tells you Wall Street had priced in most of the chip story. The real action was downstream: Nebius surged 14% on the Meta deal. The real questions remain execution ones: does Vera Rubin ship on schedule in early 2027? Does that 35x tokens-per-watt Groq claim hold up in production? Can NVIDIA keep collapsing the stack without tripping over antitrust wires? And can anyone actually build data centers fast enough to absorb that $1 trillion pipeline? For now, though, nobody else is even in the same conversation.</p>
+    <p>GTC 2026 day one told a single, unmistakable story: NVIDIA is no longer a chip company &mdash; it&rsquo;s an AI infrastructure monopoly that now designs every layer of the stack, from the 3nm silicon (Vera Rubin) to the inference accelerator beside it (Groq 3 LPU) to the vertical rack it sits in (Kyber) to the storage layer underneath it (BlueField-4 STX) to the software orchestrating it (NemoClaw). And as of tonight, essentially every major AI lab on the planet has signed up to buy it &mdash; along with the infrastructure providers they&rsquo;ll need to run it all.</p>
+    <p>The deal-making is as impressive as the silicon. Meta just committed up to $27 billion over five years to Nebius Group for dedicated Vera Rubin capacity &mdash; the largest &ldquo;neocloud&rdquo; deal in AI history. OpenAI locked in 5 GW total. AWS committed to 1 million+ GPUs. Microsoft lit up Vera Rubin NVL72 first. Nscale is building a 1.35 GW campus in West Virginia with its own gas power plant. The physical footprint of AI compute is expanding at an almost absurd pace &mdash; multi-gigawatt campuses measured in thousands of acres.</p>
+    <p>What&rsquo;s striking about the evening announcements is how far NVIDIA is pushing into verticals. Healthcare got its own physical AI stack &mdash; GR00T-H and Open-H for surgical robotics, with J&amp;J MedTech and CMR Surgical already building on it. BlueField-4 STX claims the storage layer for agentic AI, with fifteen major vendors on board. This is the pattern: NVIDIA doesn&rsquo;t just sell chips, it ships the full-stack reference architecture and gets the ecosystem to build around it.</p>
+    <p>The market&rsquo;s reaction &mdash; NVDA up just 1.65% to $183.22 &mdash; tells you Wall Street had priced in most of the chip story. The real questions remain execution ones: does Vera Rubin ship on schedule in early 2027? Does that 35x tokens-per-watt Groq claim hold up in production? Can NVIDIA keep collapsing the stack without tripping over antitrust wires? And can anyone actually build data centers fast enough to absorb that $1 trillion pipeline? For now, though, nobody else is even in the same conversation.</p>
   </div>
 
   <div id="timeline">
+  <div class="timeline-entry">
+    <div class="entry-time">8:30 PM PT</div>
+    <h3>First physical AI platform for healthcare: surgical robots get GR00T-H</h3>
+    <p>NVIDIA launched the first domain-specific physical AI platform for healthcare robotics. The stack includes GR00T-H, a vision-language-action model trained on Open-H &mdash; the world&rsquo;s largest open dataset for healthcare robotics, with CMR Surgical contributing nearly 500 hours of anonymized surgical video from its Versius system. Cosmos-H generates physics-based synthetic surgical data for post-training. Johnson &amp; Johnson MedTech is already using Cosmos and Isaac for Healthcare to train its MONARCH urology platform. CMR Surgical, Moon Surgical and Rob Surgical are also adopting. This is NVIDIA&rsquo;s physical AI thesis applied to one of the highest-stakes domains imaginable.</p>
+    <div class="links"><a href="https://nvidianews.nvidia.com/news/nvidia-releases-new-physical-ai-models-as-global-partners-unveil-next-generation-robots" target="_blank" rel="noopener">NVIDIA Newsroom</a> <a href="https://www.globenewswire.com/news-release/2026/03/16/3256764/0/en/NVIDIA-and-Global-Robotics-Leaders-Take-Physical-AI-to-the-Real-World.html" target="_blank" rel="noopener">GlobeNewsWire</a></div>
+  </div>
+
+  <div class="timeline-entry">
+    <div class="entry-time">8:00 PM PT</div>
+    <h3>BlueField-4 STX: NVIDIA builds the storage layer for agentic AI</h3>
+    <p>NVIDIA unveiled BlueField-4 STX, a modular reference architecture for accelerated storage designed specifically for agentic AI workloads. The system pairs a new storage-optimized BlueField-4 processor (combining the Vera CPU with ConnectX-9 SuperNIC) with Spectrum-X networking. NVIDIA claims 4x better energy efficiency than CPU-based storage and 5x more tokens per second via its CMX context memory platform. Fifteen major storage vendors &mdash; including Dell, HPE, IBM, NetApp, VAST Data and WEKA &mdash; are building on the architecture. STX ships second half of 2026. Another piece of the stack NVIDIA now owns: the persistent memory layer that keeps agents fast and coherent across long-running sessions.</p>
+    <div class="links"><a href="https://nvidianews.nvidia.com/news/nvidia-launches-bluefield-4-stx-storage-architecture-with-broad-industry-adoption" target="_blank" rel="noopener">NVIDIA Newsroom</a> <a href="https://siliconangle.com/2026/03/16/nvidia-introduces-bluefield-4-stx-reference-architecture-ai-storage-systems/" target="_blank" rel="noopener">SiliconANGLE</a></div>
+  </div>
+
   <div class="timeline-entry">
     <div class="entry-time">7:30 PM PT</div>
     <h3>Meta commits $27B to Nebius in largest neocloud deal ever</h3>
