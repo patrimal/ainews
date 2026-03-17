@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News Briefing — Monday, March 16, 2026</title>
+  <title>AI News — Tuesday, March 17, 2026</title>
   <style>
     :root {
       --bg: #fafaf9;
@@ -179,50 +179,49 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Monday, March 16, 2026</div>
+  <div id="date-line">Tuesday, March 17, 2026</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
-      <p>GTC day. Jensen takes the stage at 11 AM and everything NVIDIA has been teasing &mdash; Vera Rubin, NemoClaw, ARM CPUs &mdash; goes from rumor to spec sheet. That&rsquo;s genuinely exciting: if the 5x inference numbers hold, we&rsquo;re looking at a step function in what&rsquo;s economically viable to run. But the backdrop is grim. Meta&rsquo;s stock jumped 3% this morning on news they&rsquo;re planning to fire ~15,800 people &mdash; 20% of the company &mdash; to fund $135 billion in AI infrastructure spending. Wall Street literally rewarding headcount reduction. Meanwhile, Karpathy&rsquo;s weekend &ldquo;vibe coded&rdquo; job exposure map went viral, showed 42% of US workers in the AI danger zone, then he walked it back as a Saturday morning hack &mdash; but deleted the GitHub repo, not the data. The numbers are still sitting there at karpathy.ai/jobs and they&rsquo;re still stark. And Musk is launching a $25B chip fab this week because apparently building rockets and running a social network wasn&rsquo;t enough vertical integration. The theme today: the infrastructure for replacing human labor is being built at extraordinary speed, and the people financing it are very, very excited about it.</p>
-      <a href="special/gtc-2026.html" style="display:inline-block;background:var(--tag-today-bg);color:var(--tag-today-text);padding:0.3rem 0.65rem;border-radius:6px;font-size:0.8rem;font-weight:600;text-decoration:none;margin-top:0.5rem;">Live: GTC 2026 Special Report &rarr;</a>
+      <p>The most interesting thing to come out of GTC week isn&rsquo;t from GTC. Karpathy dropped &ldquo;autoresearch&rdquo; &mdash; a 630-line Python script that lets an AI agent run ML experiments unsupervised &mdash; and after 700 experiments over two days, it found 20 optimizations that humans missed through two decades of manual tuning, including a missing scalar multiplier in QK-Norm attention. Shopify&rsquo;s CEO tried it overnight and got a 19% gain. That&rsquo;s not a demo. That&rsquo;s AI doing actual AI research, and it works. Meanwhile, Jensen stood on stage for two hours to announce NVIDIA expects $1 trillion in purchase orders through 2027. One trillion. That&rsquo;s not a forecast &mdash; that&rsquo;s a vibes number designed to move the stock. The actual Vera Rubin specs are impressive (10x perf/watt over Blackwell, 144-GPU Kyber racks), but the $1T headline is pure Jensen showmanship. Also from GTC: Uber is plugging robotaxis from BYD, Hyundai, and Nissan into its app in real cities. That one actually matters &mdash; autonomous vehicles entering mainstream ride-hailing infrastructure is a bigger deal than another GPU roadmap slide.</p>
     </div>
 
     <div class="story">
-      <h2>NVIDIA GTC 2026 kicks off &mdash; Vera Rubin, NemoClaw, and ARM CPUs on deck</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">NVIDIA / TechCrunch</span></div>
-      <p>Jensen Huang&rsquo;s keynote at 11 AM PT opens GTC 2026 at San Jose&rsquo;s SAP Center. Expected: the formal unveiling of Vera Rubin (3nm, HBM4, 5x inference over Blackwell, 22 TB/s memory bandwidth), NemoClaw (open-source enterprise AI agent platform already pitched to Salesforce, Cisco, Google, and Adobe), N1X ARM CPUs for Windows, and a partnership with Thinking Machines Lab for 1+ gigawatt of Rubin systems. Vera Rubin Ultra and the 2028 Feynman architecture will also get roadmap time.</p>
-      <p class="why">NVIDIA is stacking the full compute stack &mdash; GPU, CPU, networking, and now an open agent platform. NemoClaw is hardware-agnostic by design, which means NVIDIA is playing for the software layer too, not just selling shovels.</p>
-      <div class="links"><a href="https://www.nvidia.com/gtc/keynote/" target="_blank" rel="noopener">Watch keynote live</a> <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA GTC blog</a> <a href="https://techcrunch.com/2026/03/16/nvidia-gtc-how-to-watch-jensen-huang-2026-keynote/" target="_blank" rel="noopener">TechCrunch preview</a></div>
+      <h2>Karpathy&rsquo;s &ldquo;autoresearch&rdquo; &mdash; AI agent runs 700 experiments, catches bugs humans missed for 20 years</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Andrej Karpathy / Fortune / VentureBeat</span></div>
+      <p>Karpathy open-sourced <code>autoresearch</code>, a 630-line Python script that gives an AI coding agent a small LLM training setup and lets it experiment autonomously. Over two days it ran ~700 experiments on nanochat, discovered 20 additive optimizations &mdash; including a missing scalar multiplier in QK-Norm attention &mdash; and cut the &ldquo;Time to GPT-2&rdquo; benchmark from 2.02 hours to 1.80 hours (11% faster). Shopify CEO Tobi L&uuml;tke tried it on internal data overnight: 37 experiments, 19% performance gain.</p>
+      <p class="why">Karpathy&rsquo;s own framing: &ldquo;All LLM frontier labs will do this. It&rsquo;s the final boss battle.&rdquo; Fortune calls it &ldquo;The Karpathy Loop&rdquo; &mdash; the agent caught an attention scaling oversight that went unnoticed through two decades of manual optimization. This is AI doing useful AI research, not a benchmark game.</p>
+      <div class="links"><a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">GitHub repo</a> <a href="https://fortune.com/2026/03/17/andrej-karpathy-loop-autonomous-ai-agents-future/" target="_blank" rel="noopener">Fortune</a> <a href="https://venturebeat.com/technology/andrej-karpathys-new-open-source-autoresearch-lets-you-run-hundreds-of-ai" target="_blank" rel="noopener">VentureBeat</a></div>
     </div>
 
     <div class="story">
-      <h2>Meta planning 20% layoffs (~15,800 jobs) to fund AI infrastructure binge</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">CNBC / Reuters</span></div>
-      <p>Meta stock climbed 3.2% premarket to $633 on Monday after Reuters reported the company is planning to cut 20%+ of its ~79,000 workforce. The cuts would offset $135 billion in planned 2026 capital expenditure &mdash; roughly double last year &mdash; mostly on AI data centers. Meta spokesperson Andy Stone called it &ldquo;speculative reporting about theoretical approaches.&rdquo; If confirmed, it would be Meta&rsquo;s largest reduction since the 2022&ndash;2023 &ldquo;year of efficiency.&rdquo;</p>
-      <p class="why">CNBC&rsquo;s framing says it all: stock goes up on mass layoffs. Meta is doubling its capex to $135B while cutting 20% of its humans. The market is pricing in a future where fewer people and more GPUs is the winning formula.</p>
-      <div class="links"><a href="https://www.cnbc.com/2026/03/16/meta-ai-costs-mass-layoffs-20percent-up-premarket.html" target="_blank" rel="noopener">CNBC</a> <a href="https://techcrunch.com/2026/03/14/meta-reportedly-considering-layoffs-that-could-affect-20-of-the-company/" target="_blank" rel="noopener">TechCrunch</a></div>
+      <h2>Claude Code v2.1.77: Opus 4.6 default output jumps to 64K tokens</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Today&rsquo;s Claude Code release raises the default max output for Opus 4.6 to 64K tokens, with the upper bound for both Opus 4.6 and Sonnet 4.6 now at 128K. Also adds an <code>allowRead</code> sandbox filesystem setting to re-allow read access within <code>denyRead</code> regions, and <code>/copy</code> now accepts an optional index to copy the Nth-latest assistant response.</p>
+      <p class="why">64K default output means Opus can generate entire files, long multi-step analyses, and complex refactors in a single turn without hitting truncation &mdash; a practical quality-of-life upgrade for anyone using Claude Code for real work.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
     </div>
 
     <div class="story">
-      <h2>Karpathy&rsquo;s AI job exposure map goes viral, then he walks it back</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Andrej Karpathy (@karpathy)</span></div>
-      <p>Karpathy published an interactive treemap Saturday scoring all 342 US occupations on AI exposure (0&ndash;10) using BLS data. Key numbers: average exposure 5.3, jobs paying $100K+ average 6.7, jobs under $35K average 3.4. It went viral &mdash; then Sunday morning he deleted the GitHub repo and clarified: &ldquo;This was a Saturday morning 2-hour vibe coded project inspired by a book I&rsquo;m reading.&rdquo; The site at karpathy.ai/jobs is still live.</p>
-      <p class="why">Fortune&rsquo;s headline nails it: &ldquo;the highest-paying jobs have the worst scores.&rdquo; Karpathy walking it back as a casual weekend hack doesn&rsquo;t change the underlying BLS data &mdash; white-collar workers earning six figures are the most exposed, and the numbers are still public.</p>
-      <div class="links"><a href="https://karpathy.ai/jobs/" target="_blank" rel="noopener">AI Job Exposure Map</a> <a href="https://fortune.com/2026/03/15/andrej-karpathy-openai-cofounder-us-labor-market-exposure-ai-white-collar-jobs-professionals/" target="_blank" rel="noopener">Fortune</a></div>
+      <h2>GTC keynote recap: Vera Rubin unveiled, Jensen projects $1 trillion in orders</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NVIDIA / CNBC / TechCrunch</span></div>
+      <p>Jensen Huang&rsquo;s two-hour GTC keynote delivered the Vera Rubin platform: 10x performance per watt over Blackwell, connecting up to 144 GPUs via the new Kyber rack architecture (vertical compute trays for density and lower latency). Also announced: Groq 3 LPU partnership (256 LPUs per rack alongside Rubin), NemoClaw open-source agent platform, DLSS 5 for gaming, and a &ldquo;Vera Rubin Space-1&rdquo; plan for orbital data centers. Jensen&rsquo;s headline number: $1 trillion in combined Blackwell and Vera Rubin purchase orders expected through 2027.</p>
+      <p class="why">TechCrunch&rsquo;s headline: Jensen &ldquo;put projections into the $1 trillion stratosphere.&rdquo; The Vera Rubin specs and Kyber architecture are genuinely novel engineering. The $1T number is Jensen being Jensen &mdash; it&rsquo;s designed to move markets, not inform engineers.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/03/16/nvidia-gtc-2026-ceo-jensen-huang-keynote-blackwell-vera-rubin.html" target="_blank" rel="noopener">CNBC</a> <a href="https://techcrunch.com/2026/03/16/jensen-just-put-nvidias-blackwell-and-vera-rubin-sales-projections-into-the-1-trillion-stratosphere/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA blog</a></div>
     </div>
 
     <div class="story">
-      <h2>Tesla Terafab: Musk&rsquo;s $25B AI chip factory launches this week</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Tom&rsquo;s Hardware / Teslarati</span></div>
-      <p>Musk announced Saturday that Tesla&rsquo;s Terafab AI chip manufacturing project launches in seven days (~March 21&ndash;22). The facility will vertically integrate logic processing, memory, and advanced packaging under one roof &mdash; a scale no private company outside Taiwan and South Korea currently operates. First product: Tesla&rsquo;s fifth-gen AI5 chip for autonomous driving, with small-batch production in 2026 and volume in 2027. Estimated cost: $25 billion, part of Tesla&rsquo;s $20B+ capex plan for 2026.</p>
-      <p class="why">Tom&rsquo;s Hardware calls it Musk&rsquo;s &ldquo;latest moonshot&rdquo; &mdash; but the strategic logic is clear: Tesla wants to stop depending on external fabs for the chips that power FSD. If Terafab works, Tesla controls its own silicon destiny. That&rsquo;s a genuine competitive moat.</p>
-      <div class="links"><a href="https://www.tomshardware.com/tech-industry/semiconductors/elon-musk-says-his-terafab-project-chipmaking-venture-will-launch-in-seven-days-musks-latest-moonshot-multi-billion-project-launches-on-a-saturday" target="_blank" rel="noopener">Tom&rsquo;s Hardware</a> <a href="https://www.teslarati.com/tesla-terafab-ai-chip-factory/" target="_blank" rel="noopener">Teslarati</a></div>
+      <h2>NVIDIA + Uber bring robotaxis from BYD, Hyundai, and Nissan to the ride-hailing network</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NVIDIA GTC / Tom&rsquo;s Guide</span></div>
+      <p>At GTC, NVIDIA announced four new robotaxi partners &mdash; BYD, Hyundai, Nissan, and Wayve &mdash; with Uber integrating autonomous vehicles into its app in select cities. The Nissan Leaf-based robotaxi service, developed with Wayve, will pilot on Uber in Tokyo in late 2026. All vehicles run on NVIDIA&rsquo;s DRIVE platform.</p>
+      <p class="why">This isn&rsquo;t a research demo or a geofenced pilot &mdash; Uber connecting robotaxis from multiple manufacturers into its actual ride-hailing network means autonomous vehicles are entering mainstream consumer infrastructure, not just running closed test programs.</p>
+      <div class="links"><a href="https://www.tomsguide.com/computing/live/nvidia-gtc-2026-live" target="_blank" rel="noopener">Tom&rsquo;s Guide live blog</a> <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA blog</a></div>
     </div>
 
   </div>
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Mon Mar 16, 2026 at 9:59 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 17, 2026 at 6:03 AM PDT</footer>
 </body>
 </html>
