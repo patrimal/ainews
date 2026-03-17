@@ -448,12 +448,15 @@
       countdownSection.style.display = 'none';
       var exec = document.getElementById('exec-summary');
       if (exec) exec.style.display = '';
-      var nextEl = document.getElementById('next-update');
-      var now = Date.now();
-      var ptHour = parseInt(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', hour12: false }));
-      if (ptHour < 23) {
-        var next = nextUpdateAfter(now);
-        nextEl.textContent = 'Next update shortly after ' + fmtTime(next);
+      var isFinalized = document.querySelector('.finalized-badge');
+      if (!isFinalized) {
+        var nextEl = document.getElementById('next-update');
+        var now = Date.now();
+        var ptHour = parseInt(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', hour12: false }));
+        if (ptHour < 23) {
+          var next = nextUpdateAfter(now);
+          nextEl.textContent = 'Next update shortly after ' + fmtTime(next);
+        }
       }
       return;
     }

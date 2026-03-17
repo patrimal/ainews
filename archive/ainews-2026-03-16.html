@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News Briefing — Monday, March 16, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Monday, March 16, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>GTC day. Jensen takes the stage at 11 AM and everything NVIDIA has been teasing &mdash; Vera Rubin, NemoClaw, ARM CPUs &mdash; goes from rumor to spec sheet. That&rsquo;s genuinely exciting: if the 5x inference numbers hold, we&rsquo;re looking at a step function in what&rsquo;s economically viable to run. But the backdrop is grim. Meta&rsquo;s stock jumped 3% this morning on news they&rsquo;re planning to fire ~15,800 people &mdash; 20% of the company &mdash; to fund $135 billion in AI infrastructure spending. Wall Street literally rewarding headcount reduction. Meanwhile, Karpathy&rsquo;s weekend &ldquo;vibe coded&rdquo; job exposure map went viral, showed 42% of US workers in the AI danger zone, then he walked it back as a Saturday morning hack &mdash; but deleted the GitHub repo, not the data. The numbers are still sitting there at karpathy.ai/jobs and they&rsquo;re still stark. And Musk is launching a $25B chip fab this week because apparently building rockets and running a social network wasn&rsquo;t enough vertical integration. The theme today: the infrastructure for replacing human labor is being built at extraordinary speed, and the people financing it are very, very excited about it.</p>
+      <a href="special/gtc-2026.html" style="display:inline-block;background:var(--tag-today-bg);color:var(--tag-today-text);padding:0.3rem 0.65rem;border-radius:6px;font-size:0.8rem;font-weight:600;text-decoration:none;margin-top:0.5rem;">Live: GTC 2026 Special Report &rarr;</a>
+    </div>
+
+    <div class="story">
+      <h2>NVIDIA GTC 2026 kicks off &mdash; Vera Rubin, NemoClaw, and ARM CPUs on deck</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">NVIDIA / TechCrunch</span></div>
+      <p>Jensen Huang&rsquo;s keynote at 11 AM PT opens GTC 2026 at San Jose&rsquo;s SAP Center. Expected: the formal unveiling of Vera Rubin (3nm, HBM4, 5x inference over Blackwell, 22 TB/s memory bandwidth), NemoClaw (open-source enterprise AI agent platform already pitched to Salesforce, Cisco, Google, and Adobe), N1X ARM CPUs for Windows, and a partnership with Thinking Machines Lab for 1+ gigawatt of Rubin systems. Vera Rubin Ultra and the 2028 Feynman architecture will also get roadmap time.</p>
+      <p class="why">NVIDIA is stacking the full compute stack &mdash; GPU, CPU, networking, and now an open agent platform. NemoClaw is hardware-agnostic by design, which means NVIDIA is playing for the software layer too, not just selling shovels.</p>
+      <div class="links"><a href="https://www.nvidia.com/gtc/keynote/" target="_blank" rel="noopener">Watch keynote live</a> <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA GTC blog</a> <a href="https://techcrunch.com/2026/03/16/nvidia-gtc-how-to-watch-jensen-huang-2026-keynote/" target="_blank" rel="noopener">TechCrunch preview</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Meta planning 20% layoffs (~15,800 jobs) to fund AI infrastructure binge</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">CNBC / Reuters</span></div>
+      <p>Meta stock climbed 3.2% premarket to $633 on Monday after Reuters reported the company is planning to cut 20%+ of its ~79,000 workforce. The cuts would offset $135 billion in planned 2026 capital expenditure &mdash; roughly double last year &mdash; mostly on AI data centers. Meta spokesperson Andy Stone called it &ldquo;speculative reporting about theoretical approaches.&rdquo; If confirmed, it would be Meta&rsquo;s largest reduction since the 2022&ndash;2023 &ldquo;year of efficiency.&rdquo;</p>
+      <p class="why">CNBC&rsquo;s framing says it all: stock goes up on mass layoffs. Meta is doubling its capex to $135B while cutting 20% of its humans. The market is pricing in a future where fewer people and more GPUs is the winning formula.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/03/16/meta-ai-costs-mass-layoffs-20percent-up-premarket.html" target="_blank" rel="noopener">CNBC</a> <a href="https://techcrunch.com/2026/03/14/meta-reportedly-considering-layoffs-that-could-affect-20-of-the-company/" target="_blank" rel="noopener">TechCrunch</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy&rsquo;s AI job exposure map goes viral, then he walks it back</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Andrej Karpathy (@karpathy)</span></div>
+      <p>Karpathy published an interactive treemap Saturday scoring all 342 US occupations on AI exposure (0&ndash;10) using BLS data. Key numbers: average exposure 5.3, jobs paying $100K+ average 6.7, jobs under $35K average 3.4. It went viral &mdash; then Sunday morning he deleted the GitHub repo and clarified: &ldquo;This was a Saturday morning 2-hour vibe coded project inspired by a book I&rsquo;m reading.&rdquo; The site at karpathy.ai/jobs is still live.</p>
+      <p class="why">Fortune&rsquo;s headline nails it: &ldquo;the highest-paying jobs have the worst scores.&rdquo; Karpathy walking it back as a casual weekend hack doesn&rsquo;t change the underlying BLS data &mdash; white-collar workers earning six figures are the most exposed, and the numbers are still public.</p>
+      <div class="links"><a href="https://karpathy.ai/jobs/" target="_blank" rel="noopener">AI Job Exposure Map</a> <a href="https://fortune.com/2026/03/15/andrej-karpathy-openai-cofounder-us-labor-market-exposure-ai-white-collar-jobs-professionals/" target="_blank" rel="noopener">Fortune</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Tesla Terafab: Musk&rsquo;s $25B AI chip factory launches this week</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Tom&rsquo;s Hardware / Teslarati</span></div>
+      <p>Musk announced Saturday that Tesla&rsquo;s Terafab AI chip manufacturing project launches in seven days (~March 21&ndash;22). The facility will vertically integrate logic processing, memory, and advanced packaging under one roof &mdash; a scale no private company outside Taiwan and South Korea currently operates. First product: Tesla&rsquo;s fifth-gen AI5 chip for autonomous driving, with small-batch production in 2026 and volume in 2027. Estimated cost: $25 billion, part of Tesla&rsquo;s $20B+ capex plan for 2026.</p>
+      <p class="why">Tom&rsquo;s Hardware calls it Musk&rsquo;s &ldquo;latest moonshot&rdquo; &mdash; but the strategic logic is clear: Tesla wants to stop depending on external fabs for the chips that power FSD. If Terafab works, Tesla controls its own silicon destiny. That&rsquo;s a genuine competitive moat.</p>
+      <div class="links"><a href="https://www.tomshardware.com/tech-industry/semiconductors/elon-musk-says-his-terafab-project-chipmaking-venture-will-launch-in-seven-days-musks-latest-moonshot-multi-billion-project-launches-on-a-saturday" target="_blank" rel="noopener">Tom&rsquo;s Hardware</a> <a href="https://www.teslarati.com/tesla-terafab-ai-chip-factory/" target="_blank" rel="noopener">Teslarati</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Mon Mar 16, 2026 at 9:59 AM PDT</footer>
+</body>
+</html>
