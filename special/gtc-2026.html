@@ -255,7 +255,7 @@
       <div><a href="../">Today&rsquo;s Briefing</a> <a href="../archive/">Archive</a></div>
     </div>
     <div class="subtitle">NVIDIA GTC 2026 Keynote</div>
-    <div id="last-updated" style="font-size:0.7rem;opacity:0.6;margin-top:0.25rem;">Last updated 4:26 PM PT</div>
+    <div id="last-updated" style="font-size:0.7rem;opacity:0.6;margin-top:0.25rem;">Last updated 5:47 PM PT</div>
   </header>
   <div id="meta-line">
     <span id="status"><span class="live-badge">Live</span></span>
@@ -276,12 +276,33 @@
 
   <div id="exec-summary" class="exec-summary">
     <h2>The Story So Far</h2>
-    <p>Jensen Huang just delivered one of the densest GTC keynotes in years, and the headline isn&rsquo;t any single chip &mdash; it&rsquo;s that NVIDIA is methodically filling every gap in the AI stack. The Vera Rubin platform (Vera CPU + Rubin GPU, 3nm, HBM4, 10x perf/watt over Grace Blackwell) is the expected generational leap. What&rsquo;s <em>not</em> expected: bolting Groq&rsquo;s LPUs onto Rubin racks for a claimed 35x tokens-per-watt improvement on decode. If that number holds in production, it retroactively justifies the $20B acquisition and makes every other inference play look underpowered.</p>
-    <p>The software side is equally aggressive. NemoClaw gives enterprises an open-source agent stack that runs on DGX Spark at a desk. The Nemotron Coalition corrals Mistral, Perplexity, Cursor and five other labs into building open frontier models on NVIDIA&rsquo;s infrastructure &mdash; a play to make &ldquo;open&rdquo; AI synonymous with NVIDIA compute. The Vera CPU&rsquo;s 88 ARM cores and the N1/N1X laptop chips with MediaTek signal NVIDIA is serious about owning the CPU side too, not just accelerators.</p>
-    <p>The showmanship was peak Jensen: a Disney Olaf robot waddling onstage on NVIDIA&rsquo;s physics engine, &ldquo;the ChatGPT moment of self-driving&rdquo; declared with four new robotaxi partners and an Uber deal, and &mdash; most audaciously &mdash; chips designed for orbital data centers. The $1 trillion order pipeline through 2027 (double the prior estimate) is the number Wall Street wanted. NVDA closed up ~2%. Whether the Feynman roadmap and space ambitions are vision or vaporware remains to be seen, but the near-term hardware is real and shipping.</p>
+    <p>The full picture of GTC 2026 is coming into focus, and it&rsquo;s this: NVIDIA isn&rsquo;t just making chips anymore &mdash; it&rsquo;s designing entire data centers, from vertical rack architecture (Kyber) to the silicon inside them (Vera Rubin) to the inference accelerators bolted alongside (Groq 3 LPUs) to the software that orchestrates it all (NemoClaw). The Vera Rubin platform is the expected generational leap &mdash; 3nm, HBM4, 10x perf/watt over Grace Blackwell. But the real story is how aggressively NVIDIA is collapsing the stack: GPU, CPU, LPU, networking, rack design, power delivery, cooling. Nobody else is even attempting this.</p>
+    <p>The afternoon brought the receipts. AWS committed to deploying more than 1 million NVIDIA GPUs &mdash; Blackwell, Rubin, <em>and</em> Groq 3 LPUs &mdash; across its global regions. That&rsquo;s not a vague partnership; that&rsquo;s the world&rsquo;s largest cloud provider going all-in on NVIDIA&rsquo;s full stack including the new inference hardware. Roche claiming pharma&rsquo;s largest GPU footprint at 3,500 Blackwell chips is a smaller number but a telling signal: AI compute is becoming as fundamental to drug discovery as wet labs.</p>
+    <p>Wall Street&rsquo;s reaction was a shrug dressed as a rally &mdash; NVDA touched $188 intraday (up ~4.8%) before settling to close at $183.22, up just 1.65%. For a keynote this loaded, that tells you the market had already priced in a lot. The $1 trillion order pipeline, the Groq integration, the Kyber racks pulling 600kW &mdash; impressive on paper, but the real test is whether Vera Rubin ships on time in early 2027 and whether that 35x tokens-per-watt Groq claim survives contact with production workloads.</p>
   </div>
 
   <div id="timeline">
+  <div class="timeline-entry">
+    <div class="entry-time">4:00 PM PT</div>
+    <h3>NVDA closes at $183.22, up 1.65%; analysts overwhelmingly bullish</h3>
+    <p>NVIDIA shares touched $188 intraday (up ~4.8% from Friday&rsquo;s $180.25 close) before settling to finish at $183.22 &mdash; a modest gain given the keynote&rsquo;s density, suggesting the market had already priced in much of the Vera Rubin platform. Analyst consensus remains firmly bullish: 58 buy ratings, 2 holds, 1 sell, with a consensus price target of $267.54. Bank of America told clients to treat GTC as a buying opportunity, calling it the event where the AI industry&rsquo;s direction &ldquo;is set, rather than observed.&rdquo;</p>
+    <div class="links"><a href="https://247wallst.com/investing/2026/03/16/nvidia-rises-as-ceo-jensen-huang-takes-the-stage-at-gtc-event/" target="_blank" rel="noopener">24/7 Wall St.</a> <a href="https://www.fool.com/investing/2026/03/16/nvidia-investors-just-got-incredible-news-from-ceo/" target="_blank" rel="noopener">Motley Fool</a></div>
+  </div>
+
+  <div class="timeline-entry">
+    <div class="entry-time">3:30 PM PT</div>
+    <h3>AWS commits to 1M+ NVIDIA GPUs; Roche claims pharma&rsquo;s largest footprint</h3>
+    <p>AWS announced it will deploy more than 1 million NVIDIA GPUs starting this year, spanning Blackwell, Rubin, and Groq 3 LPUs across global cloud regions &mdash; the full NVIDIA stack, not just GPUs. Separately, Roche unveiled a 3,500 Blackwell GPU deployment across the U.S. and Europe, calling it pharma&rsquo;s largest announced GPU footprint. The chips power biological foundation models, drug discovery, and digital twin manufacturing. Nearly 90% of eligible small molecule programs at Genentech now integrate AI, and one oncology molecule was designed 25% faster.</p>
+    <div class="links"><a href="https://aws.amazon.com/blogs/machine-learning/aws-and-nvidia-deepen-strategic-collaboration-to-accelerate-ai-from-pilot-to-production/" target="_blank" rel="noopener">AWS Blog</a> <a href="https://www.datacenterdynamics.com/en/news/pharmaceutical-company-roche-deploys-3500-nvidia-blackwell-gpus-across-hybrid-cloud-and-onpremises/" target="_blank" rel="noopener">DCD</a></div>
+  </div>
+
+  <div class="timeline-entry">
+    <div class="entry-time">2:30 PM PT</div>
+    <h3>Kyber: NVIDIA&rsquo;s next rack architecture goes vertical</h3>
+    <p>Post-keynote sessions revealed details on Kyber, the successor to the Oberon rack design. Compute blades mount vertically like books on a shelf &mdash; 18 blades per chassis, up to 144 GPUs per rack, pulling 600kW with a dedicated power-and-cooling sidecar. Kyber ships with Vera Rubin Ultra in 2027, scaling from NVL72 to NVL144 to a flagship NVL576, with rack-to-rack optical interconnects enabling NVL1152 supercomputers. NVIDIA is designing the data center itself now, not just the chips inside it.</p>
+    <div class="links"><a href="https://www.datacenterdynamics.com/en/analysis/nvidia-gtc-jensen-huang-data-center-rack-density/" target="_blank" rel="noopener">DCD</a> <a href="https://developer.nvidia.com/blog/nvidia-vera-rubin-pod-seven-chips-five-rack-scale-systems-one-ai-supercomputer/" target="_blank" rel="noopener">NVIDIA Developer Blog</a></div>
+  </div>
+
   <div class="timeline-entry">
     <div class="entry-time">2:00 PM PT</div>
     <h3>NVDA stock up ~2%; N1/N1X ARM laptop chips confirmed</h3>
