@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Tuesday, March 17, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Tuesday, March 17, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The most interesting thing to come out of GTC week isn&rsquo;t from GTC. Karpathy dropped &ldquo;autoresearch&rdquo; &mdash; a 630-line Python script that lets an AI agent run ML experiments unsupervised &mdash; and after 700 experiments over two days, it found 20 optimizations that humans missed through two decades of manual tuning, including a missing scalar multiplier in QK-Norm attention. Shopify&rsquo;s CEO tried it overnight and got a 19% gain. That&rsquo;s not a demo. That&rsquo;s AI doing actual AI research, and it works. Meanwhile, Jensen stood on stage for two hours to announce NVIDIA expects $1 trillion in purchase orders through 2027. One trillion. That&rsquo;s not a forecast &mdash; that&rsquo;s a vibes number designed to move the stock. The actual Vera Rubin specs are impressive (10x perf/watt over Blackwell, 144-GPU Kyber racks), but the $1T headline is pure Jensen showmanship. Also from GTC: Uber is plugging robotaxis from BYD, Hyundai, and Nissan into its app in real cities. That one actually matters &mdash; autonomous vehicles entering mainstream ride-hailing infrastructure is a bigger deal than another GPU roadmap slide.</p>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy&rsquo;s &ldquo;autoresearch&rdquo; &mdash; AI agent runs 700 experiments, catches bugs humans missed for 20 years</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Andrej Karpathy / Fortune / VentureBeat</span></div>
+      <p>Karpathy open-sourced <code>autoresearch</code>, a 630-line Python script that gives an AI coding agent a small LLM training setup and lets it experiment autonomously. Over two days it ran ~700 experiments on nanochat, discovered 20 additive optimizations &mdash; including a missing scalar multiplier in QK-Norm attention &mdash; and cut the &ldquo;Time to GPT-2&rdquo; benchmark from 2.02 hours to 1.80 hours (11% faster). Shopify CEO Tobi L&uuml;tke tried it on internal data overnight: 37 experiments, 19% performance gain.</p>
+      <p class="why">Karpathy&rsquo;s own framing: &ldquo;All LLM frontier labs will do this. It&rsquo;s the final boss battle.&rdquo; Fortune calls it &ldquo;The Karpathy Loop&rdquo; &mdash; the agent caught an attention scaling oversight that went unnoticed through two decades of manual optimization. This is AI doing useful AI research, not a benchmark game.</p>
+      <div class="links"><a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">GitHub repo</a> <a href="https://fortune.com/2026/03/17/andrej-karpathy-loop-autonomous-ai-agents-future/" target="_blank" rel="noopener">Fortune</a> <a href="https://venturebeat.com/technology/andrej-karpathys-new-open-source-autoresearch-lets-you-run-hundreds-of-ai" target="_blank" rel="noopener">VentureBeat</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.77: Opus 4.6 default output jumps to 64K tokens</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Today&rsquo;s Claude Code release raises the default max output for Opus 4.6 to 64K tokens, with the upper bound for both Opus 4.6 and Sonnet 4.6 now at 128K. Also adds an <code>allowRead</code> sandbox filesystem setting to re-allow read access within <code>denyRead</code> regions, and <code>/copy</code> now accepts an optional index to copy the Nth-latest assistant response.</p>
+      <p class="why">64K default output means Opus can generate entire files, long multi-step analyses, and complex refactors in a single turn without hitting truncation &mdash; a practical quality-of-life upgrade for anyone using Claude Code for real work.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
+    </div>
+
+    <div class="story">
+      <h2>GTC keynote recap: Vera Rubin unveiled, Jensen projects $1 trillion in orders</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NVIDIA / CNBC / TechCrunch</span></div>
+      <p>Jensen Huang&rsquo;s two-hour GTC keynote delivered the Vera Rubin platform: 10x performance per watt over Blackwell, connecting up to 144 GPUs via the new Kyber rack architecture (vertical compute trays for density and lower latency). Also announced: Groq 3 LPU partnership (256 LPUs per rack alongside Rubin), NemoClaw open-source agent platform, DLSS 5 for gaming, and a &ldquo;Vera Rubin Space-1&rdquo; plan for orbital data centers. Jensen&rsquo;s headline number: $1 trillion in combined Blackwell and Vera Rubin purchase orders expected through 2027.</p>
+      <p class="why">TechCrunch&rsquo;s headline: Jensen &ldquo;put projections into the $1 trillion stratosphere.&rdquo; The Vera Rubin specs and Kyber architecture are genuinely novel engineering. The $1T number is Jensen being Jensen &mdash; it&rsquo;s designed to move markets, not inform engineers.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/03/16/nvidia-gtc-2026-ceo-jensen-huang-keynote-blackwell-vera-rubin.html" target="_blank" rel="noopener">CNBC</a> <a href="https://techcrunch.com/2026/03/16/jensen-just-put-nvidias-blackwell-and-vera-rubin-sales-projections-into-the-1-trillion-stratosphere/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA blog</a></div>
+    </div>
+
+    <div class="story">
+      <h2>NVIDIA + Uber bring robotaxis from BYD, Hyundai, and Nissan to the ride-hailing network</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NVIDIA GTC / Tom&rsquo;s Guide</span></div>
+      <p>At GTC, NVIDIA announced four new robotaxi partners &mdash; BYD, Hyundai, Nissan, and Wayve &mdash; with Uber integrating autonomous vehicles into its app in select cities. The Nissan Leaf-based robotaxi service, developed with Wayve, will pilot on Uber in Tokyo in late 2026. All vehicles run on NVIDIA&rsquo;s DRIVE platform.</p>
+      <p class="why">This isn&rsquo;t a research demo or a geofenced pilot &mdash; Uber connecting robotaxis from multiple manufacturers into its actual ride-hailing network means autonomous vehicles are entering mainstream consumer infrastructure, not just running closed test programs.</p>
+      <div class="links"><a href="https://www.tomsguide.com/computing/live/nvidia-gtc-2026-live" target="_blank" rel="noopener">Tom&rsquo;s Guide live blog</a> <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA blog</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 17, 2026 at 6:03 AM PDT</footer>
+</body>
+</html>

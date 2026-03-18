@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News — Tuesday, March 17, 2026</title>
+  <title>AI News — Wednesday, March 18, 2026</title>
   <style>
     :root {
       --bg: #fafaf9;
@@ -179,49 +179,57 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Tuesday, March 17, 2026</div>
+  <div id="date-line">Wednesday, March 18, 2026</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
-      <p>The most interesting thing to come out of GTC week isn&rsquo;t from GTC. Karpathy dropped &ldquo;autoresearch&rdquo; &mdash; a 630-line Python script that lets an AI agent run ML experiments unsupervised &mdash; and after 700 experiments over two days, it found 20 optimizations that humans missed through two decades of manual tuning, including a missing scalar multiplier in QK-Norm attention. Shopify&rsquo;s CEO tried it overnight and got a 19% gain. That&rsquo;s not a demo. That&rsquo;s AI doing actual AI research, and it works. Meanwhile, Jensen stood on stage for two hours to announce NVIDIA expects $1 trillion in purchase orders through 2027. One trillion. That&rsquo;s not a forecast &mdash; that&rsquo;s a vibes number designed to move the stock. The actual Vera Rubin specs are impressive (10x perf/watt over Blackwell, 144-GPU Kyber racks), but the $1T headline is pure Jensen showmanship. Also from GTC: Uber is plugging robotaxis from BYD, Hyundai, and Nissan into its app in real cities. That one actually matters &mdash; autonomous vehicles entering mainstream ride-hailing infrastructure is a bigger deal than another GPU roadmap slide.</p>
+      <p>The cost curve is bending fast. OpenAI dropped GPT-5.4 Mini and Nano today &mdash; just two weeks after the flagship launch, the mini version is free-tier and runs 2x faster, while nano hits $0.20 per million input tokens. Frontier capabilities are commoditizing in real time. Meanwhile, someone anonymously dropped a 1-trillion-parameter model called &ldquo;Hunter Alpha&rdquo; on OpenRouter with a 1M-token context window, and it&rsquo;s already processed 160 billion tokens with nobody willing to claim ownership. The leading theory is DeepSeek V4, but the last anonymous model from the same account turned out to be Zhipu&rsquo;s GLM-5 &mdash; so place your bets accordingly. Mistral went a different direction at GTC, launching Forge to let enterprises build their own models rather than rent frontier ones. The bet: companies will want to own their AI, not just consume it. And Sam Altman posted a &ldquo;gratitude&rdquo; tweet thanking programmers for &ldquo;getting us to this point&rdquo; &mdash; during the same week Atlassian cut 1,600 jobs and Block fired nearly half its workforce. The replies were predictably savage. Read the room, Sam.</p>
     </div>
 
     <div class="story">
-      <h2>Karpathy&rsquo;s &ldquo;autoresearch&rdquo; &mdash; AI agent runs 700 experiments, catches bugs humans missed for 20 years</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Andrej Karpathy / Fortune / VentureBeat</span></div>
-      <p>Karpathy open-sourced <code>autoresearch</code>, a 630-line Python script that gives an AI coding agent a small LLM training setup and lets it experiment autonomously. Over two days it ran ~700 experiments on nanochat, discovered 20 additive optimizations &mdash; including a missing scalar multiplier in QK-Norm attention &mdash; and cut the &ldquo;Time to GPT-2&rdquo; benchmark from 2.02 hours to 1.80 hours (11% faster). Shopify CEO Tobi L&uuml;tke tried it on internal data overnight: 37 experiments, 19% performance gain.</p>
-      <p class="why">Karpathy&rsquo;s own framing: &ldquo;All LLM frontier labs will do this. It&rsquo;s the final boss battle.&rdquo; Fortune calls it &ldquo;The Karpathy Loop&rdquo; &mdash; the agent caught an attention scaling oversight that went unnoticed through two decades of manual optimization. This is AI doing useful AI research, not a benchmark game.</p>
-      <div class="links"><a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">GitHub repo</a> <a href="https://fortune.com/2026/03/17/andrej-karpathy-loop-autonomous-ai-agents-future/" target="_blank" rel="noopener">Fortune</a> <a href="https://venturebeat.com/technology/andrej-karpathys-new-open-source-autoresearch-lets-you-run-hundreds-of-ai" target="_blank" rel="noopener">VentureBeat</a></div>
+      <h2>OpenAI launches GPT-5.4 Mini and Nano &mdash; frontier AI goes free-tier</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">OpenAI / Dataconomy / Digital Trends</span></div>
+      <p>OpenAI released two distilled versions of GPT-5.4: Mini is now available to Free and Go users with performance approaching the full model, running 2x faster than GPT-5.0 mini with improved multimodal understanding and web search. Nano is API-only at $0.20 per million input tokens, targeting high-volume tasks like data classification, extraction, and agent delegation.</p>
+      <p class="why">Digital Trends frames this as OpenAI &ldquo;shrinking GPT-5.4 for speed and lower costs&rdquo; &mdash; two weeks from flagship launch to commodity pricing. The nano model at $0.20/M tokens makes agentic workflows dramatically cheaper, which matters more than the benchmarks.</p>
+      <div class="links"><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" rel="noopener">OpenAI announcement</a> <a href="https://dataconomy.com/2026/03/18/openai-releases-gpt-5-4-mini-and-nano-models/" target="_blank" rel="noopener">Dataconomy</a> <a href="https://www.digitaltrends.com/computing/openai-shrinks-gpt-5-4-for-speed-and-lower-costs/" target="_blank" rel="noopener">Digital Trends</a></div>
     </div>
 
     <div class="story">
-      <h2>Claude Code v2.1.77: Opus 4.6 default output jumps to 64K tokens</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
-      <p>Today&rsquo;s Claude Code release raises the default max output for Opus 4.6 to 64K tokens, with the upper bound for both Opus 4.6 and Sonnet 4.6 now at 128K. Also adds an <code>allowRead</code> sandbox filesystem setting to re-allow read access within <code>denyRead</code> regions, and <code>/copy</code> now accepts an optional index to copy the Nth-latest assistant response.</p>
-      <p class="why">64K default output means Opus can generate entire files, long multi-step analyses, and complex refactors in a single turn without hitting truncation &mdash; a practical quality-of-life upgrade for anyone using Claude Code for real work.</p>
-      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
+      <h2>&ldquo;Hunter Alpha&rdquo; &mdash; mystery 1-trillion-parameter model fuels DeepSeek V4 speculation</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Technology.org / Geeky Gadgets / Seeking Alpha</span></div>
+      <p>An anonymous 1-trillion-parameter model called Hunter Alpha appeared on OpenRouter with free access, reasoning capabilities, and a 1M-token context window. It describes itself as &ldquo;a Chinese AI model primarily trained in Chinese&rdquo; with a May 2025 training cutoff &mdash; identical to DeepSeek&rsquo;s chatbot. By Sunday it had processed over 160 billion tokens. Neither DeepSeek nor OpenRouter will comment.</p>
+      <p class="why">Technology.org notes the same anonymous provider previously released &ldquo;Pony Alpha,&rdquo; which turned out to be Zhipu AI&rsquo;s GLM-5. The architectural fingerprint could point to DeepSeek V4 or Zhipu&rsquo;s GLM-6 &mdash; either way, someone is stealth-testing a frontier model and letting the internet do free QA.</p>
+      <div class="links"><a href="https://www.technology.org/2026/03/18/mystery-ai-model-is-it-deepseek-v4/" target="_blank" rel="noopener">Technology.org</a> <a href="https://www.geeky-gadgets.com/deepseek-v4-stealth-models/" target="_blank" rel="noopener">Geeky Gadgets</a> <a href="https://seekingalpha.com/news/4565643-what-is-hunter-alpha-ai-model-fuels-talk-of-new-system-at-deepseek" target="_blank" rel="noopener">Seeking Alpha</a></div>
     </div>
 
     <div class="story">
-      <h2>GTC keynote recap: Vera Rubin unveiled, Jensen projects $1 trillion in orders</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NVIDIA / CNBC / TechCrunch</span></div>
-      <p>Jensen Huang&rsquo;s two-hour GTC keynote delivered the Vera Rubin platform: 10x performance per watt over Blackwell, connecting up to 144 GPUs via the new Kyber rack architecture (vertical compute trays for density and lower latency). Also announced: Groq 3 LPU partnership (256 LPUs per rack alongside Rubin), NemoClaw open-source agent platform, DLSS 5 for gaming, and a &ldquo;Vera Rubin Space-1&rdquo; plan for orbital data centers. Jensen&rsquo;s headline number: $1 trillion in combined Blackwell and Vera Rubin purchase orders expected through 2027.</p>
-      <p class="why">TechCrunch&rsquo;s headline: Jensen &ldquo;put projections into the $1 trillion stratosphere.&rdquo; The Vera Rubin specs and Kyber architecture are genuinely novel engineering. The $1T number is Jensen being Jensen &mdash; it&rsquo;s designed to move markets, not inform engineers.</p>
-      <div class="links"><a href="https://www.cnbc.com/2026/03/16/nvidia-gtc-2026-ceo-jensen-huang-keynote-blackwell-vera-rubin.html" target="_blank" rel="noopener">CNBC</a> <a href="https://techcrunch.com/2026/03/16/jensen-just-put-nvidias-blackwell-and-vera-rubin-sales-projections-into-the-1-trillion-stratosphere/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA blog</a></div>
+      <h2>Mistral launches Forge &mdash; enterprise &ldquo;build your own AI&rdquo; platform &mdash; plus Small 4 hybrid model</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TechCrunch / VentureBeat / Silicon Republic</span></div>
+      <p>Announced at GTC, Mistral Forge lets enterprises build custom frontier-grade models trained on their own data using Mistral&rsquo;s open-weight library. Early partners include Ericsson, the European Space Agency, and Singapore&rsquo;s DSO. Alongside it, Mistral Small 4 ships as a 119B-parameter hybrid model (6B active per token) that auto-switches between Magistral (reasoning), Pixtral (multimodal), and Devstral (coding), delivering 40% faster end-to-end completion and 3x more requests per second vs. Small 3.</p>
+      <p class="why">TechCrunch&rsquo;s framing: Mistral is betting that enterprises want to own their AI, not rent it &mdash; a direct challenge to OpenAI and Anthropic&rsquo;s API-consumption model. The forward-deployed engineering team (borrowed from Palantir&rsquo;s playbook) signals this is a services play, not just a platform.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://venturebeat.com/infrastructure/mistral-ai-launches-forge-to-help-companies-build-proprietary-ai-models" target="_blank" rel="noopener">VentureBeat</a> <a href="https://www.siliconrepublic.com/machines/mistral-ai-france-small-4-forge-enterprise" target="_blank" rel="noopener">Silicon Republic</a></div>
     </div>
 
     <div class="story">
-      <h2>NVIDIA + Uber bring robotaxis from BYD, Hyundai, and Nissan to the ride-hailing network</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NVIDIA GTC / Tom&rsquo;s Guide</span></div>
-      <p>At GTC, NVIDIA announced four new robotaxi partners &mdash; BYD, Hyundai, Nissan, and Wayve &mdash; with Uber integrating autonomous vehicles into its app in select cities. The Nissan Leaf-based robotaxi service, developed with Wayve, will pilot on Uber in Tokyo in late 2026. All vehicles run on NVIDIA&rsquo;s DRIVE platform.</p>
-      <p class="why">This isn&rsquo;t a research demo or a geofenced pilot &mdash; Uber connecting robotaxis from multiple manufacturers into its actual ride-hailing network means autonomous vehicles are entering mainstream consumer infrastructure, not just running closed test programs.</p>
-      <div class="links"><a href="https://www.tomsguide.com/computing/live/nvidia-gtc-2026-live" target="_blank" rel="noopener">Tom&rsquo;s Guide live blog</a> <a href="https://blogs.nvidia.com/blog/gtc-2026-news/" target="_blank" rel="noopener">NVIDIA blog</a></div>
+      <h2>World launches AgentKit &mdash; iris-scan &ldquo;proof of human&rdquo; for AI shopping agents</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TechCrunch / CoinDesk / PYMNTS</span></div>
+      <p>Sam Altman&rsquo;s World (formerly Worldcoin) released AgentKit, a developer toolkit that lets AI agents carry cryptographic proof they&rsquo;re backed by a real human via World ID iris scans. It integrates with Coinbase&rsquo;s x402 protocol for agent-to-agent transactions. Merchants can request one-time human-approval signals when an AI agent tries to checkout, apply coupons, or complete purchases.</p>
+      <p class="why">McKinsey projects agentic commerce could hit $3&ndash;5 trillion globally by 2030; Bain estimates AI agents could handle 25% of U.S. e-commerce. TechCrunch notes this tackles a real problem &mdash; without proof-of-human checks, agent commerce is wide open to bot abuse, coupon fraud, and synthetic-identity attacks.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/17/world-launches-tool-to-verify-humans-behind-ai-shopping-agents/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction" target="_blank" rel="noopener">CoinDesk</a> <a href="https://world.org/blog/announcements/now-available-agentkit-proof-of-human-for-the-agentic-web" target="_blank" rel="noopener">World blog</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Altman thanks coders for &ldquo;getting us to this point&rdquo; &mdash; internet roasts him</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">SFist / Futurism / KRON4</span></div>
+      <p>Sam Altman tweeted: &ldquo;I have so much gratitude to people who wrote extremely complex software character-by-character. It already feels difficult to remember how much effort it really took. Thank you for getting us to this point.&rdquo; The replies were overwhelmingly negative, with developers calling it tone-deaf amid ongoing mass layoffs at Atlassian (1,600 jobs), Block (nearly half its workforce), and rumored 20%+ cuts at Meta.</p>
+      <p class="why">Futurism&rsquo;s headline: &ldquo;Sam Altman Thanks Programmers for Their Effort, Says Their Time Is Over.&rdquo; One reply summed up the mood: &ldquo;Nothing says &lsquo;you&rsquo;re being replaced&rsquo; quite like a heartfelt thank you from the guy doing the replacing.&rdquo;</p>
+      <div class="links"><a href="https://sfist.com/2026/03/17/sam-altman-posts-tone-deaf-tweet-thanking-coders-for-making-themselves-obsolete/" target="_blank" rel="noopener">SFist</a> <a href="https://futurism.com/artificial-intelligence/sam-altman-thanks-programmers-over" target="_blank" rel="noopener">Futurism</a> <a href="https://www.kron4.com/news/technology-ai/this-is-tone-deaf-openai-ceo-sam-altman-roasted-for-tweet-thanking-coders/" target="_blank" rel="noopener">KRON4</a></div>
     </div>
 
   </div>
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 17, 2026 at 6:03 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Mar 18, 2026 at 6:03 AM PDT</footer>
 </body>
 </html>
