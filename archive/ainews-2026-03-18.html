@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Wednesday, March 18, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Wednesday, March 18, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The cost curve is bending fast. OpenAI dropped GPT-5.4 Mini and Nano today &mdash; just two weeks after the flagship launch, the mini version is free-tier and runs 2x faster, while nano hits $0.20 per million input tokens. Frontier capabilities are commoditizing in real time. Meanwhile, someone anonymously dropped a 1-trillion-parameter model called &ldquo;Hunter Alpha&rdquo; on OpenRouter with a 1M-token context window, and it&rsquo;s already processed 160 billion tokens with nobody willing to claim ownership. The leading theory is DeepSeek V4, but the last anonymous model from the same account turned out to be Zhipu&rsquo;s GLM-5 &mdash; so place your bets accordingly. Mistral went a different direction at GTC, launching Forge to let enterprises build their own models rather than rent frontier ones. The bet: companies will want to own their AI, not just consume it. And Sam Altman posted a &ldquo;gratitude&rdquo; tweet thanking programmers for &ldquo;getting us to this point&rdquo; &mdash; during the same week Atlassian cut 1,600 jobs and Block fired nearly half its workforce. The replies were predictably savage. Read the room, Sam.</p>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI launches GPT-5.4 Mini and Nano &mdash; frontier AI goes free-tier</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">OpenAI / Dataconomy / Digital Trends</span></div>
+      <p>OpenAI released two distilled versions of GPT-5.4: Mini is now available to Free and Go users with performance approaching the full model, running 2x faster than GPT-5.0 mini with improved multimodal understanding and web search. Nano is API-only at $0.20 per million input tokens, targeting high-volume tasks like data classification, extraction, and agent delegation.</p>
+      <p class="why">Digital Trends frames this as OpenAI &ldquo;shrinking GPT-5.4 for speed and lower costs&rdquo; &mdash; two weeks from flagship launch to commodity pricing. The nano model at $0.20/M tokens makes agentic workflows dramatically cheaper, which matters more than the benchmarks.</p>
+      <div class="links"><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" rel="noopener">OpenAI announcement</a> <a href="https://dataconomy.com/2026/03/18/openai-releases-gpt-5-4-mini-and-nano-models/" target="_blank" rel="noopener">Dataconomy</a> <a href="https://www.digitaltrends.com/computing/openai-shrinks-gpt-5-4-for-speed-and-lower-costs/" target="_blank" rel="noopener">Digital Trends</a></div>
+    </div>
+
+    <div class="story">
+      <h2>&ldquo;Hunter Alpha&rdquo; &mdash; mystery 1-trillion-parameter model fuels DeepSeek V4 speculation</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Technology.org / Geeky Gadgets / Seeking Alpha</span></div>
+      <p>An anonymous 1-trillion-parameter model called Hunter Alpha appeared on OpenRouter with free access, reasoning capabilities, and a 1M-token context window. It describes itself as &ldquo;a Chinese AI model primarily trained in Chinese&rdquo; with a May 2025 training cutoff &mdash; identical to DeepSeek&rsquo;s chatbot. By Sunday it had processed over 160 billion tokens. Neither DeepSeek nor OpenRouter will comment.</p>
+      <p class="why">Technology.org notes the same anonymous provider previously released &ldquo;Pony Alpha,&rdquo; which turned out to be Zhipu AI&rsquo;s GLM-5. The architectural fingerprint could point to DeepSeek V4 or Zhipu&rsquo;s GLM-6 &mdash; either way, someone is stealth-testing a frontier model and letting the internet do free QA.</p>
+      <div class="links"><a href="https://www.technology.org/2026/03/18/mystery-ai-model-is-it-deepseek-v4/" target="_blank" rel="noopener">Technology.org</a> <a href="https://www.geeky-gadgets.com/deepseek-v4-stealth-models/" target="_blank" rel="noopener">Geeky Gadgets</a> <a href="https://seekingalpha.com/news/4565643-what-is-hunter-alpha-ai-model-fuels-talk-of-new-system-at-deepseek" target="_blank" rel="noopener">Seeking Alpha</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Mistral launches Forge &mdash; enterprise &ldquo;build your own AI&rdquo; platform &mdash; plus Small 4 hybrid model</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TechCrunch / VentureBeat / Silicon Republic</span></div>
+      <p>Announced at GTC, Mistral Forge lets enterprises build custom frontier-grade models trained on their own data using Mistral&rsquo;s open-weight library. Early partners include Ericsson, the European Space Agency, and Singapore&rsquo;s DSO. Alongside it, Mistral Small 4 ships as a 119B-parameter hybrid model (6B active per token) that auto-switches between Magistral (reasoning), Pixtral (multimodal), and Devstral (coding), delivering 40% faster end-to-end completion and 3x more requests per second vs. Small 3.</p>
+      <p class="why">TechCrunch&rsquo;s framing: Mistral is betting that enterprises want to own their AI, not rent it &mdash; a direct challenge to OpenAI and Anthropic&rsquo;s API-consumption model. The forward-deployed engineering team (borrowed from Palantir&rsquo;s playbook) signals this is a services play, not just a platform.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://venturebeat.com/infrastructure/mistral-ai-launches-forge-to-help-companies-build-proprietary-ai-models" target="_blank" rel="noopener">VentureBeat</a> <a href="https://www.siliconrepublic.com/machines/mistral-ai-france-small-4-forge-enterprise" target="_blank" rel="noopener">Silicon Republic</a></div>
+    </div>
+
+    <div class="story">
+      <h2>World launches AgentKit &mdash; iris-scan &ldquo;proof of human&rdquo; for AI shopping agents</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TechCrunch / CoinDesk / PYMNTS</span></div>
+      <p>Sam Altman&rsquo;s World (formerly Worldcoin) released AgentKit, a developer toolkit that lets AI agents carry cryptographic proof they&rsquo;re backed by a real human via World ID iris scans. It integrates with Coinbase&rsquo;s x402 protocol for agent-to-agent transactions. Merchants can request one-time human-approval signals when an AI agent tries to checkout, apply coupons, or complete purchases.</p>
+      <p class="why">McKinsey projects agentic commerce could hit $3&ndash;5 trillion globally by 2030; Bain estimates AI agents could handle 25% of U.S. e-commerce. TechCrunch notes this tackles a real problem &mdash; without proof-of-human checks, agent commerce is wide open to bot abuse, coupon fraud, and synthetic-identity attacks.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/17/world-launches-tool-to-verify-humans-behind-ai-shopping-agents/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction" target="_blank" rel="noopener">CoinDesk</a> <a href="https://world.org/blog/announcements/now-available-agentkit-proof-of-human-for-the-agentic-web" target="_blank" rel="noopener">World blog</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Altman thanks coders for &ldquo;getting us to this point&rdquo; &mdash; internet roasts him</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">SFist / Futurism / KRON4</span></div>
+      <p>Sam Altman tweeted: &ldquo;I have so much gratitude to people who wrote extremely complex software character-by-character. It already feels difficult to remember how much effort it really took. Thank you for getting us to this point.&rdquo; The replies were overwhelmingly negative, with developers calling it tone-deaf amid ongoing mass layoffs at Atlassian (1,600 jobs), Block (nearly half its workforce), and rumored 20%+ cuts at Meta.</p>
+      <p class="why">Futurism&rsquo;s headline: &ldquo;Sam Altman Thanks Programmers for Their Effort, Says Their Time Is Over.&rdquo; One reply summed up the mood: &ldquo;Nothing says &lsquo;you&rsquo;re being replaced&rsquo; quite like a heartfelt thank you from the guy doing the replacing.&rdquo;</p>
+      <div class="links"><a href="https://sfist.com/2026/03/17/sam-altman-posts-tone-deaf-tweet-thanking-coders-for-making-themselves-obsolete/" target="_blank" rel="noopener">SFist</a> <a href="https://futurism.com/artificial-intelligence/sam-altman-thanks-programmers-over" target="_blank" rel="noopener">Futurism</a> <a href="https://www.kron4.com/news/technology-ai/this-is-tone-deaf-openai-ceo-sam-altman-roasted-for-tweet-thanking-coders/" target="_blank" rel="noopener">KRON4</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Mar 18, 2026 at 6:03 AM PDT</footer>
+</body>
+</html>
