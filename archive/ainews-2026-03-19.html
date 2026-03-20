@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Thursday, March 19, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Thursday, March 19, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The Hunter Alpha mystery is solved, and the answer is more interesting than anyone guessed. It&rsquo;s not DeepSeek V4 &mdash; it&rsquo;s Xiaomi. The smartphone company. They stealth-dropped a trillion-parameter model on OpenRouter and the entire AI community spent a week convinced it had to be DeepSeek, because who else in China could possibly be training at that scale? Turns out: the company that sells $200 phones. Xiaomi&rsquo;s stock jumped 5.8% on the reveal, and they shipped three models at once &mdash; language, multimodal, and TTS &mdash; which suggests this isn&rsquo;t a vanity project. Meanwhile, a16z&rsquo;s latest consumer AI report quietly dropped the most important number of the week: ChatGPT hit 900 million weekly active users, up 500 million in a single year. That&rsquo;s not a tech product anymore, that&rsquo;s a utility. And on the dev tools front, Claude Code keeps shipping at a clip that makes everyone else look like they&rsquo;re on quarterly release cycles &mdash; yesterday&rsquo;s 2.1.79 adds a remote control bridge so you can kick off a coding session on your laptop and keep going from your phone. The future of programming is apparently lying on the couch.</p>
+    </div>
+
+    <div class="story">
+      <h2>Hunter Alpha unmasked &mdash; it&rsquo;s Xiaomi&rsquo;s MiMo-V2-Pro, not DeepSeek V4</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Japan Times / Technology.org / BusinessToday</span></div>
+      <p>The anonymous trillion-parameter model that appeared on OpenRouter last week &mdash; sparking a frenzy of DeepSeek V4 speculation &mdash; was revealed today as Xiaomi&rsquo;s MiMo-V2-Pro. Luo Fuli, head of Xiaomi&rsquo;s AI division MiMo and a former DeepSeek researcher, confirmed it&rsquo;s an &ldquo;early internal test build&rdquo; designed to power autonomous AI agents. Xiaomi released three models simultaneously: MiMo-V2-Pro (language), MiMo-V2-Omni (multimodal), and MiMo-V2-TTS (speech). Xiaomi&rsquo;s Hong Kong shares surged 5.8%.</p>
+      <p class="why">The Japan Times notes this reshuffles assumptions about China&rsquo;s AI landscape &mdash; a consumer electronics company is now training at trillion-parameter scale. The model topped OpenRouter&rsquo;s leaderboard and processed over a trillion tokens during its anonymous run, proving Xiaomi&rsquo;s AI ambitions go well beyond phone assistants.</p>
+      <div class="links"><a href="https://www.japantimes.co.jp/business/2026/03/19/tech/mystery-ai-model-china-buzz/" target="_blank" rel="noopener">Japan Times</a> <a href="https://www.technology.org/2026/03/19/whos-that-ai-the-mystery-model-everyone-blamed-on-deepseek-turned-out-to-be-xiaomi/" target="_blank" rel="noopener">Technology.org</a> <a href="https://www.businesstoday.in/technology/news/story/mystery-behind-hunter-alpha-ai-model-revealed-know-what-it-is-and-why-everyones-talking-about-it-521430-2026-03-19" target="_blank" rel="noopener">BusinessToday</a></div>
+    </div>
+
+    <div class="story">
+      <h2>a16z: ChatGPT hits 900M weekly users, AI agents crack the top 100</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">a16z / The Neuron</span></div>
+      <p>Andreessen Horowitz published the 6th edition of their Top 100 Gen AI Consumer Apps report. ChatGPT now has 900 million weekly active users (up 500M in a year), 2.7x larger than #2 Gemini on web. AI agents entered the rankings for the first time: OpenClaw (acquired by OpenAI in February after hitting 68K GitHub stars) and Manus both made the list. Claude&rsquo;s paid subscriptions grew 200% year-over-year. The report expanded its scope to include AI-native features in existing products like Canva, Notion, and CapCut.</p>
+      <p class="why">The Neuron&rsquo;s analysis: the real story isn&rsquo;t ChatGPT&rsquo;s dominance &mdash; it&rsquo;s that agents are finally a consumer category. OpenClaw went from solo side project to most-starred repo on GitHub to OpenAI acquisition in under three months. That velocity is the signal.</p>
+      <div class="links"><a href="https://www.a16z.news/p/top-100-gen-ai-consumer-apps-march" target="_blank" rel="noopener">a16z report</a> <a href="https://www.theneuron.ai/explainer-articles/a16z-just-ranked-the-100-most-popular-ai-apps-heres-the-full-list-and-what-it-tells-us-/" target="_blank" rel="noopener">The Neuron analysis</a> <a href="https://a16z.com/100-gen-ai-apps-6/" target="_blank" rel="noopener">a16z full list</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code 2.1.79 &mdash; remote control bridge, session auto-naming, 18MB memory savings</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Yesterday&rsquo;s Claude Code release adds <code>/remote-control</code> in VSCode to bridge your terminal session to claude.ai/code, so you can continue coding from a browser or phone. Sessions now get AI-generated tab names. Other additions: <code>--console</code> flag for Anthropic Console auth, &ldquo;show turn duration&rdquo; toggle, and fixes for <code>claude -p</code> hanging as a subprocess. Startup memory usage dropped ~18MB across all scenarios.</p>
+      <p class="why">DevOps.com frames remote control as &ldquo;keeping your agent local while putting it in your pocket&rdquo; &mdash; the session still runs on your machine with full filesystem access, but any browser becomes a window into it. For developers who kick off long agent runs, this means you can leave your desk without losing context.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://devops.com/claude-code-remote-control-keeps-your-agent-local-and-puts-it-in-your-pocket/" target="_blank" rel="noopener">DevOps.com</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic v. Pentagon &mdash; Microsoft files amicus brief, hearing set for March 24</h2>
+      <div class="meta"><span class="tag tag-date">Mar 16</span> <span class="source">Axios / The Silicon Review / CNBC</span></div>
+      <p>Microsoft formally backed Anthropic&rsquo;s lawsuit against the Pentagon&rsquo;s supply-chain risk designation, filing an amicus brief urging a federal judge to grant a temporary restraining order. The filing argues the blacklisting &mdash; typically reserved for foreign adversaries like Huawei &mdash; threatens to disrupt critical AI capabilities across the defense ecosystem. Industry groups representing hundreds of companies have joined the push. A hearing on temporary relief is set for March 24.</p>
+      <p class="why">Axios&rsquo;s framing: this started as an Anthropic problem but has become an industry-wide concern. If the Pentagon can label a domestic AI company a &ldquo;supply chain risk&rdquo; for refusing to build autonomous weapons, every AI company&rsquo;s relationship with the defense sector is up for renegotiation.</p>
+      <div class="links"><a href="https://www.axios.com/2026/03/16/tech-industry-rallies-anthropic-pentagon-fight" target="_blank" rel="noopener">Axios</a> <a href="https://thesiliconreview.com/2026/03/microsoft-backs-anthropic-pentagon-blacklist-lawsuit" target="_blank" rel="noopener">Silicon Review</a> <a href="https://www.cnbc.com/2026/03/09/anthropic-trump-claude-ai-supply-chain-risk.html" target="_blank" rel="noopener">CNBC</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Thu Mar 19, 2026 at 6:03 AM PDT</footer>
+</body>
+</html>
