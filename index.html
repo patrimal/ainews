@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News — Friday, March 20, 2026</title>
+  <title>AI News — Saturday, March 21, 2026</title>
   <style>
     :root {
       --bg: #fafaf9;
@@ -179,41 +179,57 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Friday, March 20, 2026</div>
+  <div id="date-line">Saturday, March 21, 2026</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
-      <p>It&rsquo;s Friday after GTC week, and the AI industry is doing its best impression of a quiet news day. Don&rsquo;t buy it. The real story is playing out in federal court filings and Congressional back rooms, not on keynote stages. The Pentagon escalated its fight with Anthropic by playing the China card &mdash; citing PRC employees as a national security risk under China&rsquo;s National Intelligence Law &mdash; while the DOJ filed a brief calling the supply-chain blacklist &ldquo;lawful and reasonable.&rdquo; On the same day, Anthropic was briefing House Homeland Security behind closed doors. Monday&rsquo;s hearing will be the first real judicial test of whether the government can blacklist a domestic AI company for refusing to drop its safety guardrails. On the dev tools front, Claude Code shipped Channels &mdash; MCP-based push messaging from Telegram and Discord into your local coding sessions &mdash; and VentureBeat is already calling it an OpenClaw killer. Premature? Maybe. But the direction is right: your agent stays local with full filesystem access while you talk to it from anywhere. The week&rsquo;s actual lesson: the most consequential AI decisions right now are being made by lawyers and judges, not engineers.</p>
+      <p>The biggest AI story this weekend isn&rsquo;t a model release &mdash; it&rsquo;s a Super Micro co-founder in handcuffs. The DOJ unsealed &ldquo;Operation Gatekeeper,&rdquo; alleging $2.5 billion in Nvidia GPUs were routed to China through a Southeast Asian shell game. SMCI stock cratered 28%. This is the highest-profile enforcement action yet in the chip export war, and it makes the Pentagon&rsquo;s obsession with Anthropic&rsquo;s foreign employees look almost quaint by comparison. Speaking of which: Anthropic dropped a bombshell Friday filing showing the Pentagon emailed Dario Amodei on March 4 saying they were &ldquo;very close&rdquo; to agreement &mdash; <em>the day after</em> formally blacklisting the company. If that email doesn&rsquo;t come up in Tuesday&rsquo;s hearing, every lawyer in San Francisco will be asking why. On the product side, a16z&rsquo;s new consumer AI report shows ChatGPT at 900M weekly users and OpenClaw &mdash; a January side project &mdash; already the most-starred repo on GitHub, ahead of Linux. Claude Code shipped <code>--bare</code> mode for headless scripting. The pattern is clear: AI infrastructure is now a geopolitical weapon, AI agents are eating the app layer, and the courtroom drama is better than anything on Netflix.</p>
     </div>
 
     <div class="story">
-      <h2>Pentagon plays the China card: cites Anthropic&rsquo;s PRC employees as security threat</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Axios / The Hill / Al Jazeera</span></div>
-      <p>Pentagon Undersecretary Emil Michael filed a declaration arguing that Anthropic &ldquo;employs a large number of foreign nationals&hellip; including many from the People&rsquo;s Republic of China,&rdquo; claiming this &ldquo;increases the degree of adversarial risk&rdquo; under China&rsquo;s National Intelligence Law. The same day, Anthropic briefed the House Homeland Security committee behind closed doors (Axios scoop). This follows the DOJ&rsquo;s Tuesday filing calling the supply-chain blacklist &ldquo;lawful and reasonable&rdquo; and arguing Anthropic&rsquo;s First Amendment claim will fail because refusing contract terms is &ldquo;conduct, not speech.&rdquo; The March 24 hearing on Anthropic&rsquo;s preliminary injunction now carries significantly higher stakes.</p>
-      <p class="why">Axios notes this shifts the dispute from contract terms to national security territory. The Foundation for American Innovation&rsquo;s Samuel Hammond counters that &ldquo;within the industry, Anthropic is widely considered the most serious and proactive about policing insider threats from foreign nationals.&rdquo; If the Pentagon can reframe a safety-guardrail disagreement as an espionage risk, the playbook changes for every AI company with international employees &mdash; which is all of them.</p>
-      <div class="links"><a href="https://www.axios.com/2026/03/19/pentagon-anthropic-foreign-workforce-security-risks" target="_blank" rel="noopener">Axios: workforce risks</a> <a href="https://www.axios.com/2026/03/19/anthropic-house-homeland-security-ai" target="_blank" rel="noopener">Axios: House briefing</a> <a href="https://thehill.com/policy/technology/5790299-trump-administration-pentagon-anthropic-lawsuit/" target="_blank" rel="noopener">The Hill</a> <a href="https://thedeepdive.ca/doj-responds-to-anthropic-in-pentagon-lawsuit-calls-blacklist-lawful-and-reasonable/" target="_blank" rel="noopener">The Deep Dive: DOJ filing</a></div>
+      <h2>Claude Code 2.1.81 &mdash; <code>--bare</code> flag for headless automation</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Claude Code 2.1.81 adds <code>--bare</code> for scripted <code>-p</code> calls &mdash; it skips hooks, LSP, plugin sync, and skill directory walks for faster, deterministic automation runs. Also new: <code>--channels</code> permission relay lets channel servers forward tool approval prompts to your phone, so you can approve sensitive operations from anywhere. Other fixes include OAuth re-authentication in concurrent sessions and improved MCP read/search tool output collapsing.</p>
+      <p class="why">The <code>--bare</code> flag is the missing piece for CI/CD pipelines and cron-driven automations. Until now, scripted Claude Code runs carried the overhead of a full interactive session. This is what makes Claude Code a first-class Unix tool, not just an IDE companion.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub Releases</a></div>
     </div>
 
     <div class="story">
-      <h2>Claude Code 2.1.80 &mdash; Channels let you message your coding agent from Telegram</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Claude Code Changelog / VentureBeat</span></div>
-      <p>Claude Code 2.1.80 introduces Channels (research preview): MCP servers that push messages from external platforms into active coding sessions. Launch platforms are Telegram and Discord with two-way support &mdash; Claude reads the incoming event and can reply back through the same channel. The feature requires the Bun runtime and uses the <code>--channels</code> flag. Also in this release: 80MB memory savings on 250K-file repos, rate limit display in statusline scripts, <code>effort</code> frontmatter support for skills, and a fix for <code>--resume</code> dropping parallel tool results.</p>
-      <p class="why">VentureBeat frames Channels as an &ldquo;OpenClaw killer&rdquo; &mdash; instead of building a standalone agent bot, Anthropic made your existing local session (with full filesystem access and context) reachable from any messaging app. The session runs on your machine; Telegram becomes the remote control. For anyone who kicks off long agent runs and walks away, this is the feature you were waiting for.</p>
-      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://venturebeat.com/orchestration/anthropic-just-shipped-an-openclaw-killer-called-claude-code-channels" target="_blank" rel="noopener">VentureBeat</a> <a href="https://code.claude.com/docs/en/channels" target="_blank" rel="noopener">Channels docs</a></div>
+      <h2>Anthropic catches Pentagon in its own contradiction: &ldquo;very close&rdquo; email surfaces in court filing</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TechCrunch / NewsBytes</span></div>
+      <p>Anthropic filed two sworn declarations late Friday ahead of Tuesday&rsquo;s hearing before Judge Rita Lin. Head of Policy Sarah Heck revealed that Under Secretary Michael emailed Amodei on March 4 saying the two sides were &ldquo;very close&rdquo; on autonomous weapons and surveillance &mdash; one day <em>after</em> the Pentagon formalized the supply-chain risk designation citing those same issues. Head of Public Sector Thiyagu Ramasamy testified that Anthropic can&rsquo;t even see what government users type into the system, and that Anthropic is the only AI company where cleared personnel actually built the classified-environment models.</p>
+      <p class="why">TechCrunch&rsquo;s framing: if these two issues are what makes Anthropic a national security threat, why was the Pentagon&rsquo;s own official saying they were nearly resolved the day after the blacklisting? This email could undercut the government&rsquo;s entire narrative at Tuesday&rsquo;s hearing.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/20/new-court-filing-reveals-pentagon-told-anthropic-the-two-sides-were-nearly-aligned-a-week-after-trump-declared-the-relationship-kaput/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.newsbytesapp.com/news/business/anthropic-s-sworn-declarations-challenge-pentagon-s-national-security-risks-claims/story" target="_blank" rel="noopener">NewsBytes</a></div>
     </div>
 
     <div class="story">
-      <h2>Anthropic&rsquo;s 80,000-person study: people fear AI unreliability more than job loss</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TLDR AI / Anthropic</span></div>
-      <p>Anthropic published results from a global study of 80,508 participants on public attitudes toward AI &mdash; one of the largest surveys of its kind. Top desires: using AI for professional excellence and personal improvement. The leading concern wasn&rsquo;t job displacement &mdash; it was AI unreliability. Respondents want AI that works consistently before they want it to do more. The study surveyed participants across demographics and geographies, covering both current use patterns and forward-looking expectations.</p>
-      <p class="why">TLDR AI&rsquo;s take: at 80K participants, this dwarfs most AI sentiment research. The finding that &ldquo;unreliability&rdquo; outranks &ldquo;job loss&rdquo; as a concern suggests the public is more pragmatic than the pundit class &mdash; people who actually use AI daily care more about it working well than about existential labor-market fears.</p>
-      <div class="links"><a href="https://tldr.tech/ai/2026-03-19" target="_blank" rel="noopener">TLDR AI</a></div>
+      <h2>Super Micro co-founder arrested in $2.5B Nvidia GPU smuggling case</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Bloomberg / CNBC / Fortune</span></div>
+      <p>The DOJ unsealed &ldquo;Operation Gatekeeper,&rdquo; charging Super Micro co-founder Yih-Shyan &ldquo;Wally&rdquo; Liaw and two others with conspiring to smuggle $2.5 billion worth of Nvidia AI servers to China. The alleged scheme: purchase orders from a Southeast Asian front company, assembly and shipment to Supermicro&rsquo;s Taiwan facility, then removal of identifying packaging before forwarding to Chinese customers. Each defendant faces up to 20 years. SMCI shares crashed 28% on Friday.</p>
+      <p class="why">CNBC notes this is the highest-profile crackdown yet on AI chip export violations, involving a co-founder of a major Nasdaq-listed company, not some fly-by-night broker. The scale &mdash; $2.5 billion &mdash; suggests the chip embargo has a far bigger enforcement gap than Washington has publicly acknowledged.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/03/19/us-tech-execs-smuggled-nvidia-chips-to-china-prosecutors-say.html" target="_blank" rel="noopener">CNBC</a> <a href="https://fortune.com/2026/03/19/supermicro-arrested-founder-smuggling-gpu-china/" target="_blank" rel="noopener">Fortune</a> <a href="https://www.cnn.com/2026/03/19/politics/super-micro-computer-founder-charged-ai-chips-china" target="_blank" rel="noopener">CNN</a></div>
+    </div>
+
+    <div class="story">
+      <h2>a16z: ChatGPT hits 900M weekly users, OpenClaw is now the most-starred repo on GitHub</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">a16z / Olivia Moore</span></div>
+      <p>Andreessen Horowitz published the 6th edition of its Top 100 Gen AI Consumer Apps report. ChatGPT grew to 900M weekly active users &mdash; 2.7x larger than #2 Gemini on web, 2.5x on mobile. OpenClaw, a locally-run AI agent that started as a solo side project in January, surpassed both React and Linux to become the most-starred project on GitHub at 250K+ stars before being acquired by OpenAI in February. This edition broadens scope to include products where generative AI is now core (Canva, Notion, CapCut).</p>
+      <p class="why">Olivia Moore&rsquo;s insight: &ldquo;If ChatGPT was the moment consumers discovered AI could talk, OpenClaw may be the moment they discovered AI could act.&rdquo; The shift from chat-based AI to agent-based AI is now showing up in the numbers, not just in demos.</p>
+      <div class="links"><a href="https://www.a16z.news/p/top-100-gen-ai-consumer-apps-march" target="_blank" rel="noopener">a16z report</a> <a href="https://a16z.com/100-gen-ai-apps-6/" target="_blank" rel="noopener">Full 6th Edition</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Apple&rsquo;s Gemini-powered Siri could still land this month</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">9to5Mac</span></div>
+      <p>Despite reports of delays pushing features to iOS 26.5 and beyond, 9to5Mac reports that Apple&rsquo;s Gemini-powered Siri upgrade could still arrive this month with iOS 26.4. The revamped Siri will use Google&rsquo;s 1.2T-parameter Gemini model running on Apple&rsquo;s Private Cloud Compute, gaining on-screen awareness, deeper personal context from Gmail and Photos, and the ability to take actions inside apps.</p>
+      <p class="why">9to5Mac&rsquo;s take: Apple has been promising a real Siri upgrade for over a year now, and the Gemini partnership was supposed to be the shortcut. If it ships this month, it&rsquo;ll be the first time Apple Intelligence actually changes how most people interact with their phones. If it slips again, the &ldquo;Apple is behind on AI&rdquo; narrative calcifies.</p>
+      <div class="links"><a href="https://9to5mac.com/2026/03/20/apples-gemini-powered-siri-upgrade-could-still-arrive-this-month/" target="_blank" rel="noopener">9to5Mac</a></div>
     </div>
 
   </div>
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Fri Mar 20, 2026 at 6:03 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sat Mar 21, 2026 at 6:03 AM PDT</footer>
 </body>
 </html>

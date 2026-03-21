@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Friday, March 20, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Friday, March 20, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>It&rsquo;s Friday after GTC week, and the AI industry is doing its best impression of a quiet news day. Don&rsquo;t buy it. The real story is playing out in federal court filings and Congressional back rooms, not on keynote stages. The Pentagon escalated its fight with Anthropic by playing the China card &mdash; citing PRC employees as a national security risk under China&rsquo;s National Intelligence Law &mdash; while the DOJ filed a brief calling the supply-chain blacklist &ldquo;lawful and reasonable.&rdquo; On the same day, Anthropic was briefing House Homeland Security behind closed doors. Monday&rsquo;s hearing will be the first real judicial test of whether the government can blacklist a domestic AI company for refusing to drop its safety guardrails. On the dev tools front, Claude Code shipped Channels &mdash; MCP-based push messaging from Telegram and Discord into your local coding sessions &mdash; and VentureBeat is already calling it an OpenClaw killer. Premature? Maybe. But the direction is right: your agent stays local with full filesystem access while you talk to it from anywhere. The week&rsquo;s actual lesson: the most consequential AI decisions right now are being made by lawyers and judges, not engineers.</p>
+    </div>
+
+    <div class="story">
+      <h2>Pentagon plays the China card: cites Anthropic&rsquo;s PRC employees as security threat</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Axios / The Hill / Al Jazeera</span></div>
+      <p>Pentagon Undersecretary Emil Michael filed a declaration arguing that Anthropic &ldquo;employs a large number of foreign nationals&hellip; including many from the People&rsquo;s Republic of China,&rdquo; claiming this &ldquo;increases the degree of adversarial risk&rdquo; under China&rsquo;s National Intelligence Law. The same day, Anthropic briefed the House Homeland Security committee behind closed doors (Axios scoop). This follows the DOJ&rsquo;s Tuesday filing calling the supply-chain blacklist &ldquo;lawful and reasonable&rdquo; and arguing Anthropic&rsquo;s First Amendment claim will fail because refusing contract terms is &ldquo;conduct, not speech.&rdquo; The March 24 hearing on Anthropic&rsquo;s preliminary injunction now carries significantly higher stakes.</p>
+      <p class="why">Axios notes this shifts the dispute from contract terms to national security territory. The Foundation for American Innovation&rsquo;s Samuel Hammond counters that &ldquo;within the industry, Anthropic is widely considered the most serious and proactive about policing insider threats from foreign nationals.&rdquo; If the Pentagon can reframe a safety-guardrail disagreement as an espionage risk, the playbook changes for every AI company with international employees &mdash; which is all of them.</p>
+      <div class="links"><a href="https://www.axios.com/2026/03/19/pentagon-anthropic-foreign-workforce-security-risks" target="_blank" rel="noopener">Axios: workforce risks</a> <a href="https://www.axios.com/2026/03/19/anthropic-house-homeland-security-ai" target="_blank" rel="noopener">Axios: House briefing</a> <a href="https://thehill.com/policy/technology/5790299-trump-administration-pentagon-anthropic-lawsuit/" target="_blank" rel="noopener">The Hill</a> <a href="https://thedeepdive.ca/doj-responds-to-anthropic-in-pentagon-lawsuit-calls-blacklist-lawful-and-reasonable/" target="_blank" rel="noopener">The Deep Dive: DOJ filing</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code 2.1.80 &mdash; Channels let you message your coding agent from Telegram</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Claude Code Changelog / VentureBeat</span></div>
+      <p>Claude Code 2.1.80 introduces Channels (research preview): MCP servers that push messages from external platforms into active coding sessions. Launch platforms are Telegram and Discord with two-way support &mdash; Claude reads the incoming event and can reply back through the same channel. The feature requires the Bun runtime and uses the <code>--channels</code> flag. Also in this release: 80MB memory savings on 250K-file repos, rate limit display in statusline scripts, <code>effort</code> frontmatter support for skills, and a fix for <code>--resume</code> dropping parallel tool results.</p>
+      <p class="why">VentureBeat frames Channels as an &ldquo;OpenClaw killer&rdquo; &mdash; instead of building a standalone agent bot, Anthropic made your existing local session (with full filesystem access and context) reachable from any messaging app. The session runs on your machine; Telegram becomes the remote control. For anyone who kicks off long agent runs and walks away, this is the feature you were waiting for.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://venturebeat.com/orchestration/anthropic-just-shipped-an-openclaw-killer-called-claude-code-channels" target="_blank" rel="noopener">VentureBeat</a> <a href="https://code.claude.com/docs/en/channels" target="_blank" rel="noopener">Channels docs</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic&rsquo;s 80,000-person study: people fear AI unreliability more than job loss</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TLDR AI / Anthropic</span></div>
+      <p>Anthropic published results from a global study of 80,508 participants on public attitudes toward AI &mdash; one of the largest surveys of its kind. Top desires: using AI for professional excellence and personal improvement. The leading concern wasn&rsquo;t job displacement &mdash; it was AI unreliability. Respondents want AI that works consistently before they want it to do more. The study surveyed participants across demographics and geographies, covering both current use patterns and forward-looking expectations.</p>
+      <p class="why">TLDR AI&rsquo;s take: at 80K participants, this dwarfs most AI sentiment research. The finding that &ldquo;unreliability&rdquo; outranks &ldquo;job loss&rdquo; as a concern suggests the public is more pragmatic than the pundit class &mdash; people who actually use AI daily care more about it working well than about existential labor-market fears.</p>
+      <div class="links"><a href="https://tldr.tech/ai/2026-03-19" target="_blank" rel="noopener">TLDR AI</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Fri Mar 20, 2026 at 6:03 AM PDT</footer>
+</body>
+</html>
