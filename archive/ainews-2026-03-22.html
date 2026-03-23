@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Sunday, March 22, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Sunday, March 22, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The week ends with a quiet confession that says more than any product launch. Andrej Karpathy &mdash; the man who coined &ldquo;vibe coding&rdquo; &mdash; told the No Priors podcast he hasn&rsquo;t typed a line of code since December. He describes the experience of trying to keep up with what agents can now do as a &ldquo;state of psychosis.&rdquo; That&rsquo;s not a pitch deck talking &mdash; it&rsquo;s a former OpenAI co-founder and ex-Tesla AI director saying the ground shifted under his feet and he&rsquo;s still finding it. Meanwhile, CNBC published a sharp analysis arguing OpenClaw is doing to the model layer what ChatGPT did to search &mdash; except this time the disruption runs on a Mac Mini. Developers are discovering it&rsquo;s cheaper to run agent fleets locally than to pay for cloud APIs, which is awkward timing for companies that just raised hundreds of billions to sell those APIs. OpenAI&rsquo;s answer, per the FT: hire 3,500 more humans by year-end. The irony of fighting an AI-driven commodity wave with a hiring spree is apparently lost on no one except the people writing the checks. Tuesday brings the Anthropic-Pentagon hearing before Judge Rita Lin &mdash; the filings from last week suggest it could be more interesting than the typical government contractor spat.</p>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy hasn&rsquo;t written code since December, describes agent era as &ldquo;state of psychosis&rdquo;</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Fortune / No Priors podcast</span></div>
+      <p>In a No Priors podcast interview covered by Fortune, Andrej Karpathy revealed he stopped writing code entirely in December as AI agents took over his workflow. &ldquo;I don&rsquo;t think a normal person actually realizes that this happened or how dramatic it was,&rdquo; he said. He described being &ldquo;in the state of psychosis of trying to figure out what&rsquo;s possible, trying to push it to the limit&rdquo; &mdash; and wanting to be at the forefront but feeling &ldquo;extremely nervous&rdquo; that he&rsquo;s not. He also revealed &ldquo;Dobby the House Elf&rdquo; &mdash; an OpenClaw-based agent controlling his home&rsquo;s lighting, HVAC, security, pool, and spa via WhatsApp.</p>
+      <p class="why">Fortune&rsquo;s framing: this isn&rsquo;t a hobbyist playing with toys &mdash; it&rsquo;s a former OpenAI co-founder saying the shift from writing code to directing agents was the most dramatic change in his career, and three months in, he&rsquo;s still trying to process what it means.</p>
+      <div class="links"><a href="https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/" target="_blank" rel="noopener">Fortune</a> <a href="https://fortune.com/2026/03/17/andrej-karpathy-loop-autonomous-ai-agents-future/" target="_blank" rel="noopener">The Karpathy Loop</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenClaw&rsquo;s &ldquo;ChatGPT moment&rdquo; is making AI models a commodity</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">CNBC</span></div>
+      <p>CNBC reports that OpenClaw has become so popular it&rsquo;s exposing how rapidly expensive proprietary AI models are becoming commoditized. Developers are running fleets of always-on AI agents on personal Mac Minis, finding it far more economical than cloud APIs. Nvidia responded by building free NemoClaw security services to get enterprises comfortable with adoption. Both OpenAI and Anthropic are scrambling &mdash; Anthropic recently shipped OpenClaw-like features including its new <code>--channels</code> permission relay.</p>
+      <p class="why">CNBC&rsquo;s argument: if the most capable AI agent framework is open-source and runs on a $600 desktop, the value is migrating from the model layer to the agent layer &mdash; exactly the shift that threatens the business models companies just raised hundreds of billions to build.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/03/21/openclaw-chatgpt-moment-sparks-concern-ai-models-becoming-commodities.html" target="_blank" rel="noopener">CNBC</a> <a href="https://nvidianews.nvidia.com/news/nvidia-announces-nemoclaw" target="_blank" rel="noopener">Nvidia NemoClaw</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI plans to nearly double headcount to 8,000 by year-end</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Financial Times / Bloomberg</span></div>
+      <p>OpenAI plans to grow from 4,500 to 8,000 employees by end-2026, per the Financial Times. New hires span product, engineering, research, and sales &mdash; plus a new category of &ldquo;technical ambassadors&rdquo; to help enterprise customers use its AI tools. The hiring push comes as OpenAI approaches an $840 billion valuation following its $110 billion raise.</p>
+      <p class="why">Fortune&rsquo;s framing: this is explicitly competitive defense against Anthropic and Google, not organic growth. OpenAI is spending its war chest to lock in enterprise customers before the commoditization wave &mdash; exemplified by OpenClaw &mdash; erodes its moat.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/03/21/openai-to-nearly-double-workforce-to-8000-by-end-2026-ft-reports.html" target="_blank" rel="noopener">CNBC</a> <a href="https://fortune.com/2026/03/21/openai-double-headcount-this-year-sam-altman-anthropic-google/" target="_blank" rel="noopener">Fortune</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sun Mar 22, 2026 at 6:03 AM PDT</footer>
+</body>
+</html>
