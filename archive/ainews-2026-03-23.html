@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Monday, March 23, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Monday, March 23, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>Karpathy put numbers behind what he was describing as &ldquo;psychosis&rdquo; last week. His autoresearch framework ran 700 experiments in two days and found an 11% training speed gain &mdash; optimizations he himself had missed. Shopify&rsquo;s Tobias L&uuml;tke independently confirmed a 19% gain overnight on internal data. This isn&rsquo;t vibes; it&rsquo;s a reproducible result showing AI agents outpacing experienced researchers on measurable tasks. The caveat &mdash; it only works where you can define a scalar metric &mdash; is real, but it draws a clear line: anywhere you can score it, humans are already the bottleneck. Meanwhile, Anthropic is fighting on two fronts and winning both. Ramp&rsquo;s March AI Index shows Anthropic taking 70% of enterprise head-to-head matchups against OpenAI &mdash; the kind of swing you see when a product is just obviously better in the room. And tomorrow at 1:30 PM, Judge Rita Lin hears Anthropic&rsquo;s injunction against the Pentagon&rsquo;s &ldquo;supply chain risk&rdquo; designation. The filings are remarkable: the Pentagon&rsquo;s own Under Secretary emailed Anthropic&rsquo;s CEO saying they were &ldquo;nearly aligned&rdquo; &mdash; the day after the government formally branded Anthropic a national security threat. That hearing is worth watching.</p>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy: humans are now the bottleneck in AI research</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">WinBuzzer / GitHub</span></div>
+      <p>Karpathy&rsquo;s open-source autoresearch framework ran 700 autonomous experiments over two days on a single GPU, finding ~20 additive optimizations that yielded an 11% training speed gain. After the first night alone, the agent had run 50 experiments, discovered a better learning rate, and committed the proof to git &mdash; zero human input. Shopify CEO Tobias L&uuml;tke ran 37 overnight experiments on internal data and reported a 19% performance gain. Karpathy&rsquo;s next goal: asynchronous swarms of agents collaborating across scales, emulating &ldquo;a research community&rdquo; rather than a single PhD student.</p>
+      <p class="why">Karpathy&rsquo;s argument: in any domain with a clear, computable metric, AI agents already find optimizations humans miss. The bottleneck isn&rsquo;t compute or models &mdash; it&rsquo;s the speed at which humans can formulate and test hypotheses. Alignment and interpretability, where metrics are ambiguous, remain firmly human territory.</p>
+      <div class="links"><a href="https://winbuzzer.com/2026/03/23/karpathy-humans-bottleneck-ai-research-xcxwbn/" target="_blank" rel="noopener">WinBuzzer</a> <a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener">GitHub</a> <a href="https://venturebeat.com/technology/andrej-karpathys-new-open-source-autoresearch-lets-you-run-hundreds-of-ai" target="_blank" rel="noopener">VentureBeat</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic fires back at Pentagon ahead of tomorrow&rsquo;s hearing</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TechCrunch / StartupNews</span></div>
+      <p>Anthropic filed reply declarations in its lawsuit against the Department of Defense, challenging the Pentagon&rsquo;s claim that the company poses an &ldquo;unacceptable risk to national security.&rdquo; Head of Public Sector Thiyagu Ramasamy stated that once Claude is deployed inside an air-gapped government system, Anthropic has no access &mdash; no remote kill switch, no backdoor, no mechanism to push unauthorized updates. Separately, a court filing revealed that Under Secretary Emil Michael emailed CEO Dario Amodei on March 4 saying the two sides were &ldquo;very close&rdquo; on the disputed issues &mdash; one day after the Pentagon formally finalized its supply-chain risk designation. The hearing before Judge Rita Lin is tomorrow, March 24, at 1:30 PM PST.</p>
+      <p class="why">TechCrunch&rsquo;s framing: the &ldquo;nearly aligned&rdquo; email undercuts the government&rsquo;s public narrative that Anthropic was an intractable security risk. Twenty-two retired military officials &mdash; including former service secretaries &mdash; filed a brief calling the designation &ldquo;a misuse of government authority for retribution against a private company.&rdquo;</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/20/new-court-filing-reveals-pentagon-told-anthropic-the-two-sides-were-nearly-aligned-a-week-after-trump-declared-the-relationship-kaput/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://startupnews.fyi/2026/03/22/anthropic-challenges-pentagons-national-security-risk-claim-in-reply-to-suit-2/" target="_blank" rel="noopener">Reply filing</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic winning 70% of enterprise deals vs OpenAI</h2>
+      <div class="meta"><span class="tag tag-date">Mar 21</span> <span class="source">The Neuron / Ramp AI Index</span></div>
+      <p>Ramp&rsquo;s March 2026 AI Index shows Anthropic winning roughly 70% of head-to-head enterprise matchups against OpenAI among first-time AI buyers. Nearly one in four businesses on Ramp now pays for Anthropic &mdash; up from one in 25 a year ago. OpenAI&rsquo;s adoption rate dropped 1.5% in the latest month, its largest single-month decline ever. Overall enterprise AI spend on the Ramp platform grew 3.2x year-over-year.</p>
+      <p class="why">The Neuron&rsquo;s analysis: this is spend data from 30,000+ companies, not a benchmark or vibe check. The swing tracks with Anthropic&rsquo;s Claude Code and Cowork launches, and it&rsquo;s happening while OpenAI is spending its $110B war chest on a hiring blitz to hold ground.</p>
+      <div class="links"><a href="https://www.theneurondaily.com/p/the-enterprise-ai-platform-war-has-a-scoreboard-now-anthropic-is-winning" target="_blank" rel="noopener">The Neuron</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code 2.1.81: <code>--bare</code> scripting flag and <code>--channels</code> permission relay</h2>
+      <div class="meta"><span class="tag tag-date">Mar 20</span> <span class="source">Anthropic changelog</span></div>
+      <p>Claude Code v2.1.81 shipped two notable features. The <code>--bare</code> flag strips hooks, LSP, plugin sync, and skill walks from scripted <code>-p</code> calls &mdash; purpose-built for CI pipelines and automation. The <code>--channels</code> permission relay (research preview) lets channel servers forward tool-approval prompts to your phone via Telegram or Discord, so you can approve agent actions from anywhere. Also fixed: OAuth token refresh across concurrent sessions, voice mode silent retries, and session resumption in worktrees.</p>
+      <p class="why">The <code>--bare</code> flag is Anthropic acknowledging that Claude Code is becoming infrastructure, not just a dev tool. Stripping startup overhead for scripted calls means they&rsquo;re optimizing for the &ldquo;fleet of agents&rdquo; pattern that CNBC just reported developers are adopting.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Mon Mar 23, 2026 at 6:03 AM PDT</footer>
+</body>
+</html>
