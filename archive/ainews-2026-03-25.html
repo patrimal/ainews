@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Wednesday, March 25, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Wednesday, March 25, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The most interesting thing today isn&rsquo;t a product launch or a CEO blog post &mdash; it&rsquo;s a benchmark. Fran&ccedil;ois Chollet&rsquo;s ARC-AGI-3 drops with 1,000+ interactive game environments that force AI to explore, learn, and adapt in real time. For the first time, we&rsquo;ll get a formal comparison of human vs. AI learning efficiency, and early preview data suggests frontier models still hit a wall. If you care about whether AI is actually getting smarter or just getting better at pattern-matching against static puzzles, this is the scoreboard that matters. Elsewhere, Judge Lin all but telegraphed her ruling in the Anthropic case &mdash; calling the Pentagon&rsquo;s ban &ldquo;an attempt to cripple&rdquo; the company and noting it wasn&rsquo;t &ldquo;tailored to the stated national security concern.&rdquo; Ruling expected before Friday. Apple shipped iOS 26.4 today without the Gemini-powered Siri they&rsquo;ve been promising for months &mdash; pushed to 26.5, again &mdash; proving that even in 2026, the hardest problem in AI is shipping Siri on time. And Claude Code quietly dropped v2.1.83 with managed settings, new hook events, and transcript search &mdash; thirteen releases in three weeks.</p>
+    </div>
+
+    <div class="story">
+      <h2>ARC-AGI-3 launches: first interactive reasoning benchmark for AI</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">ARC Prize / Y Combinator</span></div>
+      <p>Fran&ccedil;ois Chollet and the ARC Prize team launched ARC-AGI-3, a fundamentally new benchmark with 1,000+ levels across 150+ interactive, video-game-like environments. Unlike the static grid puzzles in ARC-AGI-1 and 2, version 3 requires AI agents to explore, plan, remember, and adapt in real time &mdash; testing capabilities like goal-directedness and multi-step learning that current models struggle with.</p>
+      <p class="why">ARC Prize&rsquo;s framing: this is the first benchmark that formally compares human vs. AI action efficiency (learning efficiency). Early preview data showed frontier models plateauing well below human performance, suggesting the &ldquo;just scale it&rdquo; approach hits a ceiling when static pattern-matching gives way to interactive reasoning.</p>
+      <div class="links"><a href="https://arcprize.org/arc-agi/3/" target="_blank" rel="noopener">ARC-AGI-3</a> <a href="https://arcprize.org/blog/arc-agi-3-preview-30-day-learnings" target="_blank" rel="noopener">30-day preview learnings</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.83: managed settings, hook events, transcript search</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Anthropic / Claude Code changelog</span></div>
+      <p>Claude Code shipped v2.1.83 with a batch of enterprise and power-user features: a <code>managed-settings.d/</code> drop-in directory for deploying independent policy fragments, <code>CwdChanged</code> and <code>FileChanged</code> hook events for reactive environment management, transcript search with <code>/</code> and <code>n</code>/<code>N</code> navigation, and <code>CLAUDE_CODE_SUBPROCESS_ENV_SCRUB=1</code> to strip credentials from subprocess environments. Agents can now declare <code>initialPrompt</code> in frontmatter to auto-submit their first turn.</p>
+      <p class="why">The managed-settings drop-in directory is the significant one for teams: it lets IT deploy policy fragments independently without merge conflicts, which is the missing piece for enterprise rollouts where security, compliance, and dev teams each own different config slices.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic v. Pentagon: judge calls ban &ldquo;an attempt to cripple,&rdquo; ruling expected this week</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NPR / CNBC / The Hill</span></div>
+      <p>U.S. District Judge Rita Lin heard 90 minutes of oral argument and repeatedly pressed the government on why Anthropic was designated a supply chain risk. &ldquo;I don&rsquo;t know if it&rsquo;s murder, but it looks like an attempt to cripple Anthropic,&rdquo; Lin said. She called the Pentagon&rsquo;s actions &ldquo;troubling&rdquo; because they weren&rsquo;t &ldquo;tailored to the stated national security concern&rdquo; and questioned whether the government was punishing Anthropic for going public with its objections. No ruling was issued; Lin asked both sides to file additional evidence by Wednesday and indicated she&rsquo;ll decide before end of week.</p>
+      <p class="why">CNBC&rsquo;s read: the judge&rsquo;s skepticism was pointed and sustained &mdash; she told the government &ldquo;that seems a pretty low bar&rdquo; when they argued Anthropic&rsquo;s policy disagreement justified blacklisting. If she grants the injunction, it would be the first court ruling limiting executive power to punish domestic AI companies over policy disputes.</p>
+      <div class="links"><a href="https://www.npr.org/2026/03/24/nx-s1-5759276/anthropic-pentagon-claude-preliminary-injunction-hearing" target="_blank" rel="noopener">NPR</a> <a href="https://www.cnbc.com/2026/03/24/anthropic-lawsuit-pentagon-supply-chain-risk-claude.html" target="_blank" rel="noopener">CNBC</a> <a href="https://thehill.com/policy/technology/5799357-anthropic-challenges-pentagon-designation/" target="_blank" rel="noopener">The Hill</a></div>
+    </div>
+
+    <div class="story">
+      <h2>iOS 26.4 ships today &mdash; without the promised AI-powered Siri</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Macworld / Apple Insider / 9to5Mac</span></div>
+      <p>Apple released iOS 26.4 with AI-powered Playlist Playground in Apple Music, new emoji, and accessibility improvements. Notably absent: the Gemini-powered Siri overhaul that Apple has been teasing since January, featuring on-screen context awareness, multi-step action chaining, and natural multi-turn conversation. That&rsquo;s now pushed to iOS 26.5, with beta expected March 30.</p>
+      <p class="why">Apple Insider&rsquo;s take: the macOS Tahoe 26.4 release notes explicitly confirm &ldquo;still no new Siri,&rdquo; making this the third consecutive point release where Apple delayed the feature. The gap between Apple&rsquo;s AI messaging and its shipping cadence keeps widening while competitors ship weekly.</p>
+      <div class="links"><a href="https://www.macworld.com/article/3062548/ios-26-4-beta-features-install-release.html" target="_blank" rel="noopener">Macworld</a> <a href="https://appleinsider.com/articles/26/03/24/still-no-new-siri-in-macos-tahoe-264-but-there-are-bug-fixes-emoji-and-rosetta-2-warnings" target="_blank" rel="noopener">Apple Insider</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Mar 25, 2026 at 6:03 AM PDT</footer>
+</body>
+</html>

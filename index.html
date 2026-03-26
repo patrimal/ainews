@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News — Wednesday, March 25, 2026</title>
+  <title>AI News — Thursday, March 26, 2026</title>
   <style>
     :root {
       --bg: #fafaf9;
@@ -179,49 +179,57 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Wednesday, March 25, 2026</div>
+  <div id="date-line">Thursday, March 26, 2026</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
-      <p>The most interesting thing today isn&rsquo;t a product launch or a CEO blog post &mdash; it&rsquo;s a benchmark. Fran&ccedil;ois Chollet&rsquo;s ARC-AGI-3 drops with 1,000+ interactive game environments that force AI to explore, learn, and adapt in real time. For the first time, we&rsquo;ll get a formal comparison of human vs. AI learning efficiency, and early preview data suggests frontier models still hit a wall. If you care about whether AI is actually getting smarter or just getting better at pattern-matching against static puzzles, this is the scoreboard that matters. Elsewhere, Judge Lin all but telegraphed her ruling in the Anthropic case &mdash; calling the Pentagon&rsquo;s ban &ldquo;an attempt to cripple&rdquo; the company and noting it wasn&rsquo;t &ldquo;tailored to the stated national security concern.&rdquo; Ruling expected before Friday. Apple shipped iOS 26.4 today without the Gemini-powered Siri they&rsquo;ve been promising for months &mdash; pushed to 26.5, again &mdash; proving that even in 2026, the hardest problem in AI is shipping Siri on time. And Claude Code quietly dropped v2.1.83 with managed settings, new hook events, and transcript search &mdash; thirteen releases in three weeks.</p>
+      <p>The most genuinely exciting thing this week isn&rsquo;t a product launch &mdash; it&rsquo;s that frontier AI models solved a Ramsey-theory conjecture that had been open since 2019, producing a novel construction that a mathematician confirmed as publishable. Not &ldquo;scored well on a benchmark&rdquo; &mdash; actually advanced human mathematical knowledge. That&rsquo;s the kind of thing that deserves the hype the industry usually wastes on chatbot redesigns. Meanwhile, Arm shipped actual silicon for the first time in its 35-year history, a 136-core TSMC 3nm beast co-developed with Meta that claims 2x performance per rack over x86. That&rsquo;s a real inflection in compute infrastructure, not a press release about future plans. And then there&rsquo;s Sam Altman&rsquo;s fusion deal &mdash; OpenAI is &ldquo;in advanced talks&rdquo; to buy 50 gigawatts from a reactor that hasn&rsquo;t demonstrated commercial viability yet. The Anthropic v. Pentagon ruling could land today; Judge Lin all but wrote the opinion during oral argument, calling the ban &ldquo;an attempt to cripple&rdquo; the company. If she grants the injunction, it sets the first judicial limit on executive power to punish AI companies over policy disagreements.</p>
     </div>
 
     <div class="story">
-      <h2>ARC-AGI-3 launches: first interactive reasoning benchmark for AI</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">ARC Prize / Y Combinator</span></div>
-      <p>Fran&ccedil;ois Chollet and the ARC Prize team launched ARC-AGI-3, a fundamentally new benchmark with 1,000+ levels across 150+ interactive, video-game-like environments. Unlike the static grid puzzles in ARC-AGI-1 and 2, version 3 requires AI agents to explore, plan, remember, and adapt in real time &mdash; testing capabilities like goal-directedness and multi-step learning that current models struggle with.</p>
-      <p class="why">ARC Prize&rsquo;s framing: this is the first benchmark that formally compares human vs. AI action efficiency (learning efficiency). Early preview data showed frontier models plateauing well below human performance, suggesting the &ldquo;just scale it&rdquo; approach hits a ceiling when static pattern-matching gives way to interactive reasoning.</p>
-      <div class="links"><a href="https://arcprize.org/arc-agi/3/" target="_blank" rel="noopener">ARC-AGI-3</a> <a href="https://arcprize.org/blog/arc-agi-3-preview-30-day-learnings" target="_blank" rel="noopener">30-day preview learnings</a></div>
-    </div>
-
-    <div class="story">
-      <h2>Claude Code v2.1.83: managed settings, hook events, transcript search</h2>
+      <h2>Claude Code v2.1.84: PowerShell preview, model overrides, idle session management</h2>
       <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Anthropic / Claude Code changelog</span></div>
-      <p>Claude Code shipped v2.1.83 with a batch of enterprise and power-user features: a <code>managed-settings.d/</code> drop-in directory for deploying independent policy fragments, <code>CwdChanged</code> and <code>FileChanged</code> hook events for reactive environment management, transcript search with <code>/</code> and <code>n</code>/<code>N</code> navigation, and <code>CLAUDE_CODE_SUBPROCESS_ENV_SCRUB=1</code> to strip credentials from subprocess environments. Agents can now declare <code>initialPrompt</code> in frontmatter to auto-submit their first turn.</p>
-      <p class="why">The managed-settings drop-in directory is the significant one for teams: it lets IT deploy policy fragments independently without merge conflicts, which is the missing piece for enterprise rollouts where security, compliance, and dev teams each own different config slices.</p>
+      <p>Claude Code shipped v2.1.84 with a PowerShell tool for Windows (opt-in preview), environment variables to override model capability detection for pinned defaults, <code>CLAUDE_STREAM_IDLE_TIMEOUT_MS</code> for configuring the streaming watchdog, a <code>TaskCreated</code> hook event, and <code>allowedChannelPlugins</code> for enterprise plugin allowlists. Idle sessions now get a nudge to <code>/clear</code> after 75+ minutes to reduce token re-caching. MCP tool descriptions are capped at 2KB to prevent bloat, and token counts &ge;1M now display as &ldquo;1.5m&rdquo; instead of &ldquo;1512.6k&rdquo;.</p>
+      <p class="why">The PowerShell preview is Anthropic&rsquo;s first real move toward Windows-native support in Claude Code. The idle-return prompt and MCP description cap address two of the biggest complaints from power users: runaway context windows and MCP servers that dump pages of tool descriptions into every turn.</p>
       <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
     </div>
 
     <div class="story">
-      <h2>Anthropic v. Pentagon: judge calls ban &ldquo;an attempt to cripple,&rdquo; ruling expected this week</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NPR / CNBC / The Hill</span></div>
-      <p>U.S. District Judge Rita Lin heard 90 minutes of oral argument and repeatedly pressed the government on why Anthropic was designated a supply chain risk. &ldquo;I don&rsquo;t know if it&rsquo;s murder, but it looks like an attempt to cripple Anthropic,&rdquo; Lin said. She called the Pentagon&rsquo;s actions &ldquo;troubling&rdquo; because they weren&rsquo;t &ldquo;tailored to the stated national security concern&rdquo; and questioned whether the government was punishing Anthropic for going public with its objections. No ruling was issued; Lin asked both sides to file additional evidence by Wednesday and indicated she&rsquo;ll decide before end of week.</p>
-      <p class="why">CNBC&rsquo;s read: the judge&rsquo;s skepticism was pointed and sustained &mdash; she told the government &ldquo;that seems a pretty low bar&rdquo; when they argued Anthropic&rsquo;s policy disagreement justified blacklisting. If she grants the injunction, it would be the first court ruling limiting executive power to punish domestic AI companies over policy disputes.</p>
-      <div class="links"><a href="https://www.npr.org/2026/03/24/nx-s1-5759276/anthropic-pentagon-claude-preliminary-injunction-hearing" target="_blank" rel="noopener">NPR</a> <a href="https://www.cnbc.com/2026/03/24/anthropic-lawsuit-pentagon-supply-chain-risk-claude.html" target="_blank" rel="noopener">CNBC</a> <a href="https://thehill.com/policy/technology/5799357-anthropic-challenges-pentagon-designation/" target="_blank" rel="noopener">The Hill</a></div>
+      <h2>Anthropic v. Pentagon: ruling expected today or tomorrow</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">NPR / CNBC / Lawfare</span></div>
+      <p>Additional evidence was due Wednesday per Judge Lin&rsquo;s order, clearing the path for a ruling. During Tuesday&rsquo;s 90-minute hearing, Lin told the government its justification for blacklisting Anthropic &ldquo;seems a pretty low bar&rdquo; and questioned whether the Pentagon was punishing the company for publicly criticizing the government&rsquo;s contracting position. Anthropic requested a decision by March 26. Lawfare&rsquo;s legal analysis concludes the designation &ldquo;won&rsquo;t survive first contact with the legal system.&rdquo;</p>
+      <p class="why">Lawfare&rsquo;s assessment: the Pentagon&rsquo;s supply-chain-risk designation lacks the procedural safeguards courts require, and Lin&rsquo;s pointed questioning suggests she agrees. If she grants the preliminary injunction, it would be the first court ruling limiting executive power to weaponize procurement rules against domestic AI companies over policy disputes.</p>
+      <div class="links"><a href="https://www.npr.org/2026/03/24/nx-s1-5759276/anthropic-pentagon-claude-preliminary-injunction-hearing" target="_blank" rel="noopener">NPR</a> <a href="https://www.cnbc.com/2026/03/24/anthropic-lawsuit-pentagon-supply-chain-risk-claude.html" target="_blank" rel="noopener">CNBC</a> <a href="https://www.lawfaremedia.org/article/pentagon's-anthropic-designation-won't-survive-first-contact-with-legal-system" target="_blank" rel="noopener">Lawfare</a></div>
     </div>
 
     <div class="story">
-      <h2>iOS 26.4 ships today &mdash; without the promised AI-powered Siri</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Macworld / Apple Insider / 9to5Mac</span></div>
-      <p>Apple released iOS 26.4 with AI-powered Playlist Playground in Apple Music, new emoji, and accessibility improvements. Notably absent: the Gemini-powered Siri overhaul that Apple has been teasing since January, featuring on-screen context awareness, multi-step action chaining, and natural multi-turn conversation. That&rsquo;s now pushed to iOS 26.5, with beta expected March 30.</p>
-      <p class="why">Apple Insider&rsquo;s take: the macOS Tahoe 26.4 release notes explicitly confirm &ldquo;still no new Siri,&rdquo; making this the third consecutive point release where Apple delayed the feature. The gap between Apple&rsquo;s AI messaging and its shipping cadence keeps widening while competitors ship weekly.</p>
-      <div class="links"><a href="https://www.macworld.com/article/3062548/ios-26-4-beta-features-install-release.html" target="_blank" rel="noopener">Macworld</a> <a href="https://appleinsider.com/articles/26/03/24/still-no-new-siri-in-macos-tahoe-264-but-there-are-bug-fixes-emoji-and-rosetta-2-warnings" target="_blank" rel="noopener">Apple Insider</a></div>
+      <h2>Arm ships its first chip in 35 years: a 136-core AI data center CPU</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Arm Newsroom / Tom&rsquo;s Hardware / CNBC</span></div>
+      <p>Arm launched the AGI CPU, its first in-house production processor after 35 years of licensing IP to partners. Built on TSMC&rsquo;s 3nm process with up to 136 Neoverse V3 cores at 3.2 GHz all-core (3.7 GHz boost) within a 300W TDP, the chip was co-developed with Meta as lead partner. Arm claims 2x performance per rack versus x86, enabling up to $10B in CAPEX savings per GW of data center capacity. Launch partners include Meta, OpenAI, Cerebras, and Cloudflare. Arm stock jumped 16% on the news.</p>
+      <p class="why">Tom&rsquo;s Hardware: this is the first time Arm has competed directly with its own licensees, a fundamental shift in the company&rsquo;s business model. The $15B annual revenue projection from this chip alone signals Arm believes the inference compute market is large enough to justify alienating partners &mdash; and Meta&rsquo;s co-development role suggests at least one hyperscaler agrees.</p>
+      <div class="links"><a href="https://newsroom.arm.com/news/arm-agi-cpu-launch" target="_blank" rel="noopener">Arm announcement</a> <a href="https://www.tomshardware.com/tech-industry/semiconductors/arm-launches-its-first-data-center-cpu" target="_blank" rel="noopener">Tom&rsquo;s Hardware</a> <a href="https://www.cnbc.com/2026/03/25/arm-stock-chip-revenue-agi-cpu.html" target="_blank" rel="noopener">CNBC</a></div>
+    </div>
+
+    <div class="story">
+      <h2>AI models solve open math conjecture for the first time on FrontierMath</h2>
+      <div class="meta"><span class="tag tag-date">Mar 24</span> <span class="source">Epoch AI / WinBuzzer</span></div>
+      <p>GPT-5.4 Pro produced a novel solution to a Ramsey-style problem on hypergraphs that had been open since a 2019 paper by Will Brian and Paul Larson. The construction, establishing H(n) &ge; (26/25)&middot;k_n for n &ge; 15, was elicited by researchers Kevin Barreto and Liam Price using a prompting workflow they&rsquo;d developed for Erd&odblac;s-type problems. Problem contributor Will Brian confirmed the result as publishable. Epoch AI subsequently verified that Opus 4.6, Gemini 3.1 Pro, and GPT-5.4 (xhigh) could also solve it, marking the first time any model has cleared FrontierMath&rsquo;s open-problem track.</p>
+      <p class="why">Epoch AI&rsquo;s framing: FrontierMath scores jumped from ~5% under GPT-4 in 2024 to 50% under GPT-5.4 Pro &mdash; but solving an open problem is categorically different from solving known ones. This is the first independently verified instance of AI producing novel mathematics that extends human knowledge, not just reproducing it.</p>
+      <div class="links"><a href="https://epoch.ai/frontiermath/open-problems/ramsey-hypergraphs" target="_blank" rel="noopener">Epoch AI problem page</a> <a href="https://winbuzzer.com/2026/03/24/gpt-54-pro-solves-open-math-problem-epoch-ai-frontiermath-xcxwbn/" target="_blank" rel="noopener">WinBuzzer</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI in talks to buy 50 GW of fusion power from Helion Energy</h2>
+      <div class="meta"><span class="tag tag-date">Mar 23</span> <span class="source">TechCrunch / Axios / GeekWire</span></div>
+      <p>OpenAI is negotiating a deal with Helion Energy for 5 GW of power by 2030, ramping to 50 GW by 2035 &mdash; roughly 12.5% of Helion&rsquo;s projected total output. Sam Altman, who led Helion&rsquo;s $500M round in 2021 with a personal $375M investment, stepped down as Helion&rsquo;s board chair to clear the conflict of interest. Helion&rsquo;s first commercial fusion plant is planned for 2028, though the company has yet to demonstrate commercial viability.</p>
+      <p class="why">TechCrunch&rsquo;s read: the deal is as much a signal about AI&rsquo;s energy problem as it is about fusion &mdash; OpenAI plans to spend $100B+ on infrastructure and needs power sources that don&rsquo;t exist yet. Altman stepping down from the Helion board is notable corporate governance, but the underlying bet is on a reactor that hasn&rsquo;t generated net energy commercially.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/23/sam-altman-openai-fusion-energy-board-helion/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.axios.com/2026/03/23/openai-fusion-altman-helion" target="_blank" rel="noopener">Axios</a> <a href="https://www.geekwire.com/2026/report-helion-is-working-on-a-massive-fusion-power-deal-with-openai/" target="_blank" rel="noopener">GeekWire</a></div>
     </div>
 
   </div>
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Mar 25, 2026 at 6:03 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Thu Mar 26, 2026 at 6:03 AM PDT</footer>
 </body>
 </html>
