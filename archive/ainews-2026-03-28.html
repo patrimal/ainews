@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Saturday, March 28, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Saturday, March 28, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>Anthropic&rsquo;s Mythos leak is the kind of story that matters more for what it reveals accidentally than what any company would say on purpose. Their own internal safety documents &mdash; not marketing, not a benchmark blog post &mdash; describe a model &ldquo;far ahead of any other AI model in cyber capabilities&rdquo; that &ldquo;presages an upcoming wave of models that can exploit vulnerabilities in ways that far outpace the efforts of defenders.&rdquo; That&rsquo;s Anthropic talking about their own creation, in documents they didn&rsquo;t mean to publish. A new model tier above Opus is coming, and the company that built it is genuinely worried about what it can do. Meanwhile, OpenAI is having a productive week of killing things: Sora is dead (the deepfake TikTok nobody wanted made $2.1M lifetime &mdash; a rounding error), and they&rsquo;re redirecting that compute to robotics. The more interesting OpenAI move is the 17.5% guaranteed return dangled at PE firms &mdash; essentially paying a premium to buy enterprise distribution through portfolio companies because organic sales aren&rsquo;t growing fast enough against Anthropic. And Shopify quietly did what OpenAI&rsquo;s Instant Checkout couldn&rsquo;t: put real commerce inside AI conversations at scale, by letting merchants keep control of the transaction instead of trying to own it.</p>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic&rsquo;s &ldquo;Claude Mythos&rdquo; leaked via unsecured data store &mdash; a new model tier above Opus</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Fortune / The Decoder / Seeking Alpha</span></div>
+      <p>Fortune discovered ~3,000 unpublished assets on Anthropic&rsquo;s servers, including draft documentation for &ldquo;Claude Mythos&rdquo; (internal codename &ldquo;Capybara&rdquo;). Anthropic confirmed the model exists and called it &ldquo;the most capable we&rsquo;ve built to date&rdquo; &mdash; a new tier above Opus with &ldquo;dramatically higher scores&rdquo; in coding, academic reasoning, and cybersecurity. Internal docs warn it&rsquo;s &ldquo;currently far ahead of any other AI model in cyber capabilities&rdquo; and could enable large-scale vulnerability exploitation. Anthropic blamed &ldquo;human error&rdquo; in CMS configuration.</p>
+      <p class="why">Fortune&rsquo;s reporting: Anthropic&rsquo;s own leaked safety assessment says the model &ldquo;presages an upcoming wave of models that can exploit vulnerabilities in ways that far outpace the efforts of defenders&rdquo; &mdash; the first time a frontier lab&rsquo;s internal documents have revealed this level of concern about their own model&rsquo;s offensive cyber capabilities.</p>
+      <div class="links"><a href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/" target="_blank" rel="noopener">Fortune (initial)</a> <a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/" target="_blank" rel="noopener">Fortune (cyber risk)</a> <a href="https://the-decoder.com/anthropic-leak-reveals-new-model-claude-mythos-with-dramatically-higher-scores-on-tests-than-any-previous-model/" target="_blank" rel="noopener">The Decoder</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI kills Sora &mdash; downloads fell 75%, Disney exits $1B deal</h2>
+      <div class="meta"><span class="tag tag-date">Mar 24</span> <span class="source">TechCrunch / Variety / NBC News</span></div>
+      <p>OpenAI is shutting down the Sora video app, which launched in October 2025 as a TikTok-style AI video platform. Downloads plummeted ~75% from the November peak (3.3M to 1.1M in February), and the app made just $2.1M lifetime from in-app purchases. Disney has exited a three-year partnership that would have given Sora access to 200+ Disney/Marvel/Pixar/Star Wars characters and included a planned $1B investment in OpenAI. The company is reportedly redirecting Sora&rsquo;s compute to robotics research.</p>
+      <p class="why">TechCrunch: the &ldquo;cameo&rdquo; deepfake feature that was Sora&rsquo;s differentiator turned out to be exactly what repelled users. The Disney pullout &mdash; including a $1B planned investment &mdash; signals that even media partners who signed on enthusiastically saw the product-market fit collapse in real time.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/24/openais-sora-was-the-creepiest-app-on-your-phone-now-its-shutting-down/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://variety.com/2026/digital/news/openai-shutting-down-sora-video-disney-1236698277/" target="_blank" rel="noopener">Variety</a> <a href="https://www.nbcnews.com/tech/tech-news/openai-shuttering-sora-video-generating-service-rcna264989" target="_blank" rel="noopener">NBC News</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI offers PE firms 17.5% guaranteed returns for $4B enterprise joint venture</h2>
+      <div class="meta"><span class="tag tag-date">Mar 26</span> <span class="source">Reuters / Sherwood News / Unite.AI</span></div>
+      <p>OpenAI is negotiating with TPG, Advent International, Bain Capital, and Brookfield for a $4B joint venture valued at $10B pre-money. The deal includes preferred equity with a guaranteed 17.5% minimum return &mdash; unlike Anthropic&rsquo;s rival $1B offer, which doesn&rsquo;t guarantee returns. The strategic play: PE firms&rsquo; hundreds of portfolio companies become a captive enterprise sales channel for OpenAI products, bypassing the slower deal-by-deal sales cycle.</p>
+      <p class="why">Reuters: the 17.5% guarantee is financially aggressive for a company projecting $14B in 2026 losses &mdash; but it buys something money alone can&rsquo;t: instant distribution across hundreds of enterprise companies via PE portfolios, a channel Anthropic is also pursuing but at one-quarter the scale.</p>
+      <div class="links"><a href="https://finance.yahoo.com/markets/stocks/articles/openai-guarantees-17-5-minimum-165757294.html" target="_blank" rel="noopener">Reuters via Yahoo</a> <a href="https://sherwood.news/tech/openai-woos-private-equity-investors-with-17-5-return/" target="_blank" rel="noopener">Sherwood News</a> <a href="https://www.unite.ai/openai-offers-private-equity-firms-17-5-guaranteed-returns-to-beat-anthropic-in-enterprise-race/" target="_blank" rel="noopener">Unite.AI</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Shopify Agentic Storefronts go live &mdash; millions of merchants sell inside ChatGPT, Gemini, Copilot</h2>
+      <div class="meta"><span class="tag tag-date">Mar 24</span> <span class="source">Shopify / Modern Retail / CNBC</span></div>
+      <p>Every eligible Shopify merchant&rsquo;s products are now discoverable inside ChatGPT, Google AI Mode, Microsoft Copilot, and the Gemini app &mdash; no separate integration, no extra apps, no transaction fees beyond standard processing. Purchases complete on merchant storefronts, not inside the AI conversation. A new &ldquo;Agentic&rdquo; plan lets brands not on Shopify add products to the catalog for AI channel distribution.</p>
+      <p class="why">Modern Retail: unlike OpenAI&rsquo;s abandoned Instant Checkout, Shopify&rsquo;s approach keeps merchants as the merchant of record with full control of customer relationships &mdash; which is why it actually shipped to millions of stores instead of dying in pilot. This is the infrastructure layer for AI-native commerce.</p>
+      <div class="links"><a href="https://www.shopify.com/news/agentic-commerce-momentum" target="_blank" rel="noopener">Shopify</a> <a href="https://www.modernretail.co/technology/shopify-says-purchases-are-coming-inside-chatgpt-through-agentic-storefronts-as-openai-retreats-on-instant-checkout/" target="_blank" rel="noopener">Modern Retail</a> <a href="https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html" target="_blank" rel="noopener">CNBC</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sat Mar 28, 2026 at 6:03 AM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
