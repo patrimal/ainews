@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI News — Monday, March 30, 2026</title>
+  <title>AI News — Tuesday, March 31, 2026</title>
   <style>
     :root {
       --bg: #fafaf9;
@@ -179,58 +179,58 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Monday, March 30, 2026</div>
+  <div id="date-line">Tuesday, March 31, 2026</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
-      <p>The &ldquo;one model to rule them all&rdquo; fantasy officially died today. Microsoft just shipped a feature where GPT drafts your research and Claude reviews it for accuracy &mdash; and it&rsquo;s 13.8% better than either model alone. That&rsquo;s not a partnership announcement dressed up for a press release; it&rsquo;s a quiet admission that the best AI workflow is adversarial peer review between competing models. Meanwhile, the actually interesting news for anyone who builds things: Claude Code 2.1.88 dropped with 25+ fixes that read like a support ticket greatest-hits album &mdash; prompt cache misses in long sessions, memory leaks, Windows CRLF hell, CJK text truncation. No keynote, no hype cycle, just the boring plumbing that makes your 3-hour coding session stop crashing. And Boris Cherny posted his power-user tips thread revealing he writes code from his phone using <code>/teleport</code>. The gap between how AI gets marketed and how AI actually gets used has never been wider.</p>
+      <p>Anthropic is having the most Anthropic week imaginable: they accidentally left their scariest model&rsquo;s draft blog post in a public data lake &mdash; a model they themselves say poses &ldquo;unprecedented cybersecurity risks&rdquo; &mdash; and in the very same breath, they&rsquo;re shopping a $60 billion IPO to Goldman Sachs. Nothing says &ldquo;responsible AI development&rdquo; like warning Congress your model could enable mass cyberattacks while simultaneously pitching Wall Street on why that&rsquo;s worth sixty billion dollars. Meanwhile, the Sora post-mortem is the most honest thing to come out of AI video this year: a million-dollar-a-day bonfire that peaked at a million users and lost half of them. Disney found out it was dead an hour before the public did. And today, Reddit starts requiring &ldquo;human verification&rdquo; for suspicious accounts &mdash; the logical endpoint of a platform that spent years courting AI companies to train on its data and now has to prove its remaining users are biological. The funniest detail: using AI to write posts isn&rsquo;t against Reddit&rsquo;s rules. They just want to confirm a human pressed &ldquo;submit.&rdquo;</p>
     </div>
 
     <div class="story">
-      <h2>Claude Code v2.1.88 ships 25+ fixes for long-session stability, adds flicker-free rendering</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
-      <p>The biggest Claude Code release in weeks lands with fixes targeting the pain points of heavy daily users: prompt cache misses caused by tool schema bytes changing mid-session, nested CLAUDE.md files being re-injected dozens of times, a memory leak from large JSON inputs retained as LRU cache keys, and an OOM crash when editing files over 1 GiB. New features include <code>CLAUDE_CODE_NO_FLICKER=1</code> for flicker-free alt-screen rendering, a <code>PermissionDenied</code> hook that fires after auto mode denials, and named subagents in <code>@</code> mention typeahead.</p>
-      <p class="why">The prompt cache miss fix is the headliner &mdash; cache misses in long sessions meant silently burning extra tokens and adding latency every time the tool schema drifted. This alone could meaningfully reduce costs for power users running multi-hour sessions.</p>
-      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
+      <h2>Reddit&rsquo;s bot crackdown goes live: automated accounts get labels, suspicious users face &ldquo;human verification&rdquo;</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">TechCrunch / Engadget</span></div>
+      <p>Starting today, Reddit labels automated accounts with an [App] badge on their profiles and may prompt suspicious accounts to verify they&rsquo;re human. Verification methods under consideration include passkeys, third-party biometric checks, and government ID services. CEO Steve Huffman emphasized the approach is &ldquo;privacy-first&rdquo; &mdash; confirming a person exists behind an account, not who they are. Reddit says it removes 100,000 bot accounts daily. Importantly, using AI to write posts isn&rsquo;t banned; only fully automated accounts are targeted.</p>
+      <p class="why">TechCrunch&rsquo;s framing: this is the first major platform to draw a line between &ldquo;AI-assisted human&rdquo; and &ldquo;fully automated bot,&rdquo; a distinction that will likely become the industry template as every social platform grapples with the same problem.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/25/reddit-bots-new-human-verification-requirements/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.engadget.com/social-media/reddit-will-prompt-some-accounts-to-verify-humanness-in-latest-bot-crackdown-161000181.html" target="_blank" rel="noopener">Engadget</a></div>
     </div>
 
     <div class="story">
-      <h2>Microsoft ships &ldquo;Critique&rdquo;: GPT drafts, Claude reviews &mdash; multi-model Copilot is here</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">GeekWire / Thurrott / PYMNTS</span></div>
-      <p>Microsoft launched three Copilot features today. &ldquo;Critique&rdquo; puts GPT and Claude in sequence: GPT generates a research response, then Claude reviews it for accuracy, completeness, and citation quality before the user sees it. &ldquo;Model Council&rdquo; lets users compare responses from different models side-by-side. And Copilot Cowork &mdash; built on Anthropic&rsquo;s Claude Cowork technology &mdash; enters early access via the Frontier program, handling multi-step tasks across Outlook, Teams, and Excel.</p>
-      <p class="why">GeekWire&rsquo;s take: Microsoft is admitting no single model is good enough, but the 13.8% benchmark improvement over standalone Google and Perplexity tools suggests the multi-model approach isn&rsquo;t just hedging &mdash; adversarial review between competing models genuinely produces better output.</p>
-      <div class="links"><a href="https://www.geekwire.com/2026/gpt-drafts-claude-critiques-microsoft-blends-rival-ai-models-in-new-copilot-upgrade/" target="_blank" rel="noopener">GeekWire</a> <a href="https://www.thurrott.com/a-i/334334/microsofts-researcher-ai-agent-can-now-make-gpt-and-claude-models-work-together" target="_blank" rel="noopener">Thurrott</a> <a href="https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-expands-copilot-with-task-execution-feature/" target="_blank" rel="noopener">PYMNTS</a></div>
+      <h2>Anthropic eyes $60B IPO as early as October &mdash; Goldman, JPMorgan, and Morgan Stanley compete for underwriting</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Winbuzzer / CNBC / The Information</span></div>
+      <p>Anthropic is in early-stage IPO discussions targeting Q4 2026, potentially as early as October, according to reports from multiple outlets on Sunday. Goldman Sachs, JPMorgan Chase, and Morgan Stanley are competing for underwriting roles. The company closed a $30 billion round in February at a $380 billion valuation. If it proceeds, Anthropic would join OpenAI in what could be two of the largest venture-backed IPOs in history.</p>
+      <p class="why">The Information&rsquo;s reporting: the timing is aggressive given that Anthropic is simultaneously managing the Mythos leak fallout and government briefings about cybersecurity risks &mdash; going public while actively warning regulators about your own model&rsquo;s dangers is an unprecedented tightrope walk.</p>
+      <div class="links"><a href="https://winbuzzer.com/2026/03/30/anthropic-ipo-q4-2026-60-billion-target-xcxwbn/" target="_blank" rel="noopener">Winbuzzer</a> <a href="https://www.cnbc.com/video/2026/03/27/anthropic-eyes-october-ipo---reports.html" target="_blank" rel="noopener">CNBC</a> <a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-considers-fourth-quarter-ipo/" target="_blank" rel="noopener">PYMNTS</a></div>
     </div>
 
     <div class="story">
-      <h2>Mistral borrows $830M from seven banks to build a 13,800-GPU data center outside Paris</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / TechCrunch / CNBC</span></div>
-      <p>France&rsquo;s Mistral secured $830 million in debt financing &mdash; backed by BNP Paribas, Cr&eacute;dit Agricole, HSBC, and four other banks &mdash; to fill a facility in Bruy&egrave;res-le-Ch&acirc;tel with 13,800 Nvidia GB300 GPUs. The 44MW data center is expected to open in Q2 2026. Mistral aims for 200MW of capacity across Europe by end of 2027, following a &euro;1.2 billion Swedish data center announcement in February.</p>
-      <p class="why">Bloomberg&rsquo;s reporting: this is the largest European AI infrastructure debt deal to date, and it&rsquo;s pure debt, not equity &mdash; meaning Mistral is betting it can generate enough revenue from these GPUs to service $830M in loans, a fundamentally different risk profile than burning VC cash.</p>
-      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-03-30/ai-startup-mistral-raises-830-million-in-data-center-debt-rush" target="_blank" rel="noopener">Bloomberg</a> <a href="https://techcrunch.com/2026/03/30/mistral-ai-raises-830m-in-debt-to-set-up-a-data-center-near-paris/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.cnbc.com/2026/03/30/mistral-ai-paris-data-center-cluster-debt-financing.html" target="_blank" rel="noopener">CNBC</a></div>
+      <h2>Anthropic&rsquo;s leaked &ldquo;Mythos&rdquo; model: a &ldquo;step change&rdquo; that scares its own creators</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Fortune / Euronews / CSO Online</span></div>
+      <p>Coverage continued through the weekend of Anthropic&rsquo;s accidentally leaked &ldquo;Claude Mythos&rdquo; (internally codenamed Capybara) &mdash; a next-generation model the company calls its &ldquo;most capable&rdquo; ever. A misconfigured CMS left a draft blog post in a public data store, discovered by security researchers from LayerX and Cambridge. The model reportedly delivers dramatic improvements in coding, reasoning, and cybersecurity. Anthropic is privately warning government officials it could enable large-scale cyberattacks and is restricting access to early-access defense customers while working to make it cheaper to run before any general release.</p>
+      <p class="why">Fortune&rsquo;s exclusive: Anthropic&rsquo;s own leaked draft said Mythos is &ldquo;currently far ahead of any other AI model in cyber capabilities&rdquo; and &ldquo;presages an upcoming wave of models that can exploit vulnerabilities in ways that far outpace the efforts of defenders.&rdquo; The company is essentially saying the offense/defense asymmetry in cybersecurity is about to get dramatically worse.</p>
+      <div class="links"><a href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/" target="_blank" rel="noopener">Fortune (exclusive)</a> <a href="https://www.euronews.com/next/2026/03/30/what-is-anthropics-mythos-the-leaked-ai-model-that-poses-unprecedented-cybersecurity-risks" target="_blank" rel="noopener">Euronews</a> <a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/" target="_blank" rel="noopener">Fortune (cyber risks)</a></div>
     </div>
 
     <div class="story">
-      <h2>Boris Cherny drops his Claude Code power-user tips &mdash; and he writes code from his phone</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">@bcherny on X</span></div>
-      <p>The creator of Claude Code posted a thread of his favorite hidden and under-utilized features. Highlights: he uses <code>/teleport</code> to continue cloud sessions on local machines, <code>/remote-control</code> to steer local sessions from his phone, and runs <code>/loop 5m /babysit</code> to auto-address code review, auto-rebase, and shepherd PRs to production. He also emphasized <code>/btw</code> for asking side questions without interrupting the agent, and <code>/branch</code> for conversation forking.</p>
-      <p class="why">Cherny&rsquo;s core point: the single most important tip is to give Claude a way to verify its output &mdash; once you do that, Claude will iterate until the result is great. The rest is workflow optimization built on that foundation.</p>
-      <div class="links"><a href="https://x.com/bcherny/status/2038454336355999749" target="_blank" rel="noopener">Thread on X</a> <a href="https://github.com/shanraisshan/claude-code-best-practice/blob/main/tips/claude-boris-15-tips-30-mar-26.md" target="_blank" rel="noopener">Tips compiled</a></div>
+      <h2>Why OpenAI really killed Sora: $1M/day burn, 500K users, and Disney found out an hour before the public</h2>
+      <div class="meta"><span class="tag tag-date">Mar 29</span> <span class="source">TechCrunch / Slate</span></div>
+      <p>TechCrunch published its deep-dive into Sora&rsquo;s demise on Saturday. The numbers are brutal: after launch, global users peaked around one million, then collapsed below 500,000 &mdash; while operational costs held steady at roughly $1 million per day. OpenAI gave 30 days&rsquo; notice on March 24 that the Sora web app, iOS app, and API will all shut down. Disney, which had committed $1 billion to an OpenAI partnership, reportedly learned of the shutdown less than an hour before the public announcement. 9to5Mac noted Sora isn&rsquo;t the only product OpenAI axed this month &mdash; it&rsquo;s part of a broader consolidation around ChatGPT and core API offerings.</p>
+      <p class="why">Slate&rsquo;s analysis: Sora&rsquo;s failure is the first major proof point that AI video generation doesn&rsquo;t have viable unit economics at consumer scale &mdash; and OpenAI killing its most-hyped product signals the company is finally prioritizing revenue over spectacle.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://slate.com/technology/2026/03/ai-openai-sam-altman-disney-sora-shutdown.html" target="_blank" rel="noopener">Slate</a> <a href="https://9to5mac.com/2026/03/29/sora-isnt-the-only-thing-openai-shut-down-this-month/" target="_blank" rel="noopener">9to5Mac</a></div>
     </div>
 
     <div class="story">
-      <h2>Shopify Agentic Storefronts go live &mdash; 5.6M merchants now shoppable inside ChatGPT, Gemini, and Copilot</h2>
-      <div class="meta"><span class="tag tag-date">Mar 24</span> <span class="source">Shopify / CNBC</span></div>
-      <p>Shopify&rsquo;s &ldquo;Agentic Storefronts&rdquo; activated by default for all eligible US merchants on March 24. Products are now discoverable in ChatGPT, Google AI Mode, Microsoft Copilot, and the Gemini app &mdash; no separate integrations, no apps, no extra transaction fees. Buyers are redirected to the merchant&rsquo;s own checkout. AI-driven traffic to Shopify stores has grown 7x since January 2025.</p>
-      <p class="why">CNBC&rsquo;s analysis: this is the first real agentic commerce infrastructure at scale &mdash; 5.6 million merchants became shoppable inside AI assistants overnight, and the &ldquo;default on&rdquo; design means most store owners didn&rsquo;t have to do anything. The distribution advantage now belongs to whoever the AI recommends.</p>
-      <div class="links"><a href="https://www.shopify.com/news/agentic-commerce-momentum" target="_blank" rel="noopener">Shopify announcement</a> <a href="https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html" target="_blank" rel="noopener">CNBC</a></div>
+      <h2>Google Translate brings real-time headphone translation to iOS &mdash; 70+ languages, any Bluetooth headphones</h2>
+      <div class="meta"><span class="tag tag-date">Mar 26</span> <span class="source">TechCrunch / MacRumors</span></div>
+      <p>Google expanded its &ldquo;Live Translate&rdquo; feature to iOS and 12 countries including the US, UK, Japan, Germany, France, and India. The Gemini-powered feature preserves each speaker&rsquo;s tone and cadence in real time across 70+ languages. Unlike Apple&rsquo;s competing translation, there are no hardware restrictions &mdash; any Bluetooth headphones work. Setup is minimal: open Google Translate, connect headphones, tap Live Translate.</p>
+      <p class="why">Skift&rsquo;s take: by working with any headphones and not requiring Apple hardware, Google just made real-time translation a commodity feature available to every iPhone and Android user &mdash; effectively undercutting Apple&rsquo;s walled-garden approach to the same capability.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/26/google-translates-real-time-headphone-translations-feature-expands-to-ios-and-more-countries/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.macrumors.com/2026/03/26/google-translate-gemini-ai/" target="_blank" rel="noopener">MacRumors</a></div>
     </div>
 
   </div>
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Mon Mar 30, 2026 at 6:04 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 31, 2026 at 6:03 AM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

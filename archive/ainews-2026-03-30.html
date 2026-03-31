@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Monday, March 30, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Monday, March 30, 2026</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The &ldquo;one model to rule them all&rdquo; fantasy officially died today. Microsoft just shipped a feature where GPT drafts your research and Claude reviews it for accuracy &mdash; and it&rsquo;s 13.8% better than either model alone. That&rsquo;s not a partnership announcement dressed up for a press release; it&rsquo;s a quiet admission that the best AI workflow is adversarial peer review between competing models. Meanwhile, the actually interesting news for anyone who builds things: Claude Code 2.1.88 dropped with 25+ fixes that read like a support ticket greatest-hits album &mdash; prompt cache misses in long sessions, memory leaks, Windows CRLF hell, CJK text truncation. No keynote, no hype cycle, just the boring plumbing that makes your 3-hour coding session stop crashing. And Boris Cherny posted his power-user tips thread revealing he writes code from his phone using <code>/teleport</code>. The gap between how AI gets marketed and how AI actually gets used has never been wider.</p>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.88 ships 25+ fixes for long-session stability, adds flicker-free rendering</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>The biggest Claude Code release in weeks lands with fixes targeting the pain points of heavy daily users: prompt cache misses caused by tool schema bytes changing mid-session, nested CLAUDE.md files being re-injected dozens of times, a memory leak from large JSON inputs retained as LRU cache keys, and an OOM crash when editing files over 1 GiB. New features include <code>CLAUDE_CODE_NO_FLICKER=1</code> for flicker-free alt-screen rendering, a <code>PermissionDenied</code> hook that fires after auto mode denials, and named subagents in <code>@</code> mention typeahead.</p>
+      <p class="why">The prompt cache miss fix is the headliner &mdash; cache misses in long sessions meant silently burning extra tokens and adding latency every time the tool schema drifted. This alone could meaningfully reduce costs for power users running multi-hour sessions.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Microsoft ships &ldquo;Critique&rdquo;: GPT drafts, Claude reviews &mdash; multi-model Copilot is here</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">GeekWire / Thurrott / PYMNTS</span></div>
+      <p>Microsoft launched three Copilot features today. &ldquo;Critique&rdquo; puts GPT and Claude in sequence: GPT generates a research response, then Claude reviews it for accuracy, completeness, and citation quality before the user sees it. &ldquo;Model Council&rdquo; lets users compare responses from different models side-by-side. And Copilot Cowork &mdash; built on Anthropic&rsquo;s Claude Cowork technology &mdash; enters early access via the Frontier program, handling multi-step tasks across Outlook, Teams, and Excel.</p>
+      <p class="why">GeekWire&rsquo;s take: Microsoft is admitting no single model is good enough, but the 13.8% benchmark improvement over standalone Google and Perplexity tools suggests the multi-model approach isn&rsquo;t just hedging &mdash; adversarial review between competing models genuinely produces better output.</p>
+      <div class="links"><a href="https://www.geekwire.com/2026/gpt-drafts-claude-critiques-microsoft-blends-rival-ai-models-in-new-copilot-upgrade/" target="_blank" rel="noopener">GeekWire</a> <a href="https://www.thurrott.com/a-i/334334/microsofts-researcher-ai-agent-can-now-make-gpt-and-claude-models-work-together" target="_blank" rel="noopener">Thurrott</a> <a href="https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-expands-copilot-with-task-execution-feature/" target="_blank" rel="noopener">PYMNTS</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Mistral borrows $830M from seven banks to build a 13,800-GPU data center outside Paris</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / TechCrunch / CNBC</span></div>
+      <p>France&rsquo;s Mistral secured $830 million in debt financing &mdash; backed by BNP Paribas, Cr&eacute;dit Agricole, HSBC, and four other banks &mdash; to fill a facility in Bruy&egrave;res-le-Ch&acirc;tel with 13,800 Nvidia GB300 GPUs. The 44MW data center is expected to open in Q2 2026. Mistral aims for 200MW of capacity across Europe by end of 2027, following a &euro;1.2 billion Swedish data center announcement in February.</p>
+      <p class="why">Bloomberg&rsquo;s reporting: this is the largest European AI infrastructure debt deal to date, and it&rsquo;s pure debt, not equity &mdash; meaning Mistral is betting it can generate enough revenue from these GPUs to service $830M in loans, a fundamentally different risk profile than burning VC cash.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-03-30/ai-startup-mistral-raises-830-million-in-data-center-debt-rush" target="_blank" rel="noopener">Bloomberg</a> <a href="https://techcrunch.com/2026/03/30/mistral-ai-raises-830m-in-debt-to-set-up-a-data-center-near-paris/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.cnbc.com/2026/03/30/mistral-ai-paris-data-center-cluster-debt-financing.html" target="_blank" rel="noopener">CNBC</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Boris Cherny drops his Claude Code power-user tips &mdash; and he writes code from his phone</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">@bcherny on X</span></div>
+      <p>The creator of Claude Code posted a thread of his favorite hidden and under-utilized features. Highlights: he uses <code>/teleport</code> to continue cloud sessions on local machines, <code>/remote-control</code> to steer local sessions from his phone, and runs <code>/loop 5m /babysit</code> to auto-address code review, auto-rebase, and shepherd PRs to production. He also emphasized <code>/btw</code> for asking side questions without interrupting the agent, and <code>/branch</code> for conversation forking.</p>
+      <p class="why">Cherny&rsquo;s core point: the single most important tip is to give Claude a way to verify its output &mdash; once you do that, Claude will iterate until the result is great. The rest is workflow optimization built on that foundation.</p>
+      <div class="links"><a href="https://x.com/bcherny/status/2038454336355999749" target="_blank" rel="noopener">Thread on X</a> <a href="https://github.com/shanraisshan/claude-code-best-practice/blob/main/tips/claude-boris-15-tips-30-mar-26.md" target="_blank" rel="noopener">Tips compiled</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Shopify Agentic Storefronts go live &mdash; 5.6M merchants now shoppable inside ChatGPT, Gemini, and Copilot</h2>
+      <div class="meta"><span class="tag tag-date">Mar 24</span> <span class="source">Shopify / CNBC</span></div>
+      <p>Shopify&rsquo;s &ldquo;Agentic Storefronts&rdquo; activated by default for all eligible US merchants on March 24. Products are now discoverable in ChatGPT, Google AI Mode, Microsoft Copilot, and the Gemini app &mdash; no separate integrations, no apps, no extra transaction fees. Buyers are redirected to the merchant&rsquo;s own checkout. AI-driven traffic to Shopify stores has grown 7x since January 2025.</p>
+      <p class="why">CNBC&rsquo;s analysis: this is the first real agentic commerce infrastructure at scale &mdash; 5.6 million merchants became shoppable inside AI assistants overnight, and the &ldquo;default on&rdquo; design means most store owners didn&rsquo;t have to do anything. The distribution advantage now belongs to whoever the AI recommends.</p>
+      <div class="links"><a href="https://www.shopify.com/news/agentic-commerce-momentum" target="_blank" rel="noopener">Shopify announcement</a> <a href="https://www.cnbc.com/2026/03/24/openai-revamps-shopping-experience-in-chatgpt-after-instant-checkout.html" target="_blank" rel="noopener">CNBC</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Mon Mar 30, 2026 at 6:04 AM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
