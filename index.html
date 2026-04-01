@@ -179,14 +179,14 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Tuesday, March 31, 2026 &middot; Last updated 7:25 PM PDT</div>
+  <div id="date-line">Tuesday, March 31, 2026 &middot; Last updated 8:01 PM PDT</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
       <p>Anthropic is having the most Anthropic week imaginable: they accidentally left their scariest model&rsquo;s draft blog post in a public data lake &mdash; a model they themselves say poses &ldquo;unprecedented cybersecurity risks&rdquo; &mdash; and in the very same breath, they&rsquo;re shopping a $60 billion IPO to Goldman Sachs. Nothing says &ldquo;responsible AI development&rdquo; like warning Congress your model could enable mass cyberattacks while simultaneously pitching Wall Street on why that&rsquo;s worth sixty billion dollars. Meanwhile, the Sora post-mortem is the most honest thing to come out of AI video this year: a million-dollar-a-day bonfire that peaked at a million users and lost half of them. Disney found out it was dead an hour before the public did. And today, Reddit starts requiring &ldquo;human verification&rdquo; for suspicious accounts &mdash; the logical endpoint of a platform that spent years courting AI companies to train on its data and now has to prove its remaining users are biological. The funniest detail: using AI to write posts isn&rsquo;t against Reddit&rsquo;s rules. They just want to confirm a human pressed &ldquo;submit.&rdquo;</p>
-      <p><strong>Evening update:</strong> Anthropic&rsquo;s month from hell just got worse. Hours after we noted the irony of their IPO-while-warning-Congress routine, it emerged that they&rsquo;d accidentally shipped Claude Code&rsquo;s entire source code &mdash; 500,000 lines of their agentic architecture &mdash; in an npm package. Two leaks in five days. The &ldquo;responsible AI&rdquo; company can&rsquo;t keep its own <code>.npmignore</code> straight. The silver lining? Boris Cherny&rsquo;s weekend tips thread is a reminder that the product itself remains genuinely excellent even when the release process&hellip; isn&rsquo;t. Elsewhere, Nvidia dropped $2 billion on Marvell to build &ldquo;NVLink Fusion&rdquo; AI factories with custom silicon and silicon photonics &mdash; the clearest signal yet that even Jensen thinks the future of AI compute is too big for one company. And Newsom signed California&rsquo;s first AI procurement executive order, essentially daring Trump to stop states from requiring actual safeguards.</p>
+      <p><strong>Evening update:</strong> Anthropic&rsquo;s month from hell just got worse. Hours after we noted the irony of their IPO-while-warning-Congress routine, it emerged that they&rsquo;d accidentally shipped Claude Code&rsquo;s entire source code &mdash; 500,000 lines of their agentic architecture &mdash; in an npm package. Two leaks in five days. The &ldquo;responsible AI&rdquo; company can&rsquo;t keep its own <code>.npmignore</code> straight. The silver lining? Boris Cherny&rsquo;s weekend tips thread is a reminder that the product itself remains genuinely excellent even when the release process&hellip; isn&rsquo;t. Elsewhere, Nvidia dropped $2 billion on Marvell to build &ldquo;NVLink Fusion&rdquo; AI factories with custom silicon and silicon photonics &mdash; the clearest signal yet that even Jensen thinks the future of AI compute is too big for one company. And Newsom signed California&rsquo;s first AI procurement executive order, essentially daring Trump to stop states from requiring actual safeguards. Late update: Anthropic&rsquo;s day somehow got worse &mdash; The Register reports users are burning through Claude Code quotas in a fraction of expected time, with a reverse-engineer claiming to have found prompt caching bugs that silently inflate token costs 10-20x. Anthropic says it&rsquo;s &ldquo;top priority.&rdquo; Meanwhile, Alibaba quietly dropped Qwen 3.5 Omni over the weekend &mdash; a natively multimodal model that beats Gemini on audio benchmarks and spontaneously learned to code from spoken instructions without being trained for it. That&rsquo;s the kind of emergent capability that deserves more attention than Anthropic&rsquo;s third self-own this week. And Oracle fired up to 30,000 employees today to pay for AI data centers, which is certainly one way to fund the future.</p>
     </div>
 
     <div class="story">
@@ -261,9 +261,33 @@
       <div class="links"><a href="https://x.com/bcherny/status/2038454336355999749" target="_blank" rel="noopener">Thread on X</a> <a href="https://threadreaderapp.com/thread/2038454336355999749.html" target="_blank" rel="noopener">Thread Reader</a></div>
     </div>
 
+    <div class="story">
+      <h2>Anthropic admits Claude Code quotas draining &ldquo;way faster than expected&rdquo; &mdash; possible 10-20x token inflation bug</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">The Register</span></div>
+      <p>Users across all subscription tiers report burning through Claude Code quotas in a fraction of the expected time &mdash; a Max 5 subscriber ($100/month) consumed their entire allocation in one hour. Anthropic acknowledged the issue, calling it &ldquo;the top priority for the team.&rdquo; Three factors appear to be compounding: intentional peak-hour throttling, the expiration of a March promotional doubling, and a potential prompt caching bug that one reverse-engineer claims silently inflates token costs by 10-20x.</p>
+      <p class="why">The Register&rsquo;s reporting highlights that Anthropic still doesn&rsquo;t disclose exact usage limits to paying customers &mdash; the opacity makes it impossible for users to budget their work or verify whether they&rsquo;re hitting a bug or a policy change.</p>
+      <div class="links"><a href="https://www.theregister.com/2026/03/31/anthropic_claude_code_limits/" target="_blank" rel="noopener">The Register</a> <a href="https://www.roborhythms.com/claude-code-rate-limit-draining-march-2026/" target="_blank" rel="noopener">RoboRhythms analysis</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Oracle cuts up to 30,000 employees &mdash; 18% of workforce &mdash; to fund AI data center buildout</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">The Next Web / TD Cowen</span></div>
+      <p>Oracle began executing what analysts believe is the largest layoff in its history on Monday, with employees across the US, India, Canada, and Mexico receiving termination emails at 6 AM local time with no prior warning. TD Cowen estimates 20,000&ndash;30,000 positions cut, roughly 18% of Oracle&rsquo;s 162,000-person global workforce. The company is redirecting the savings toward its capital-intensive AI infrastructure bet &mdash; a buildout its current balance sheet cannot comfortably sustain.</p>
+      <p class="why">The Next Web&rsquo;s framing: this is the starkest example yet of a legacy tech company cannibalizing its existing workforce to fund AI infrastructure &mdash; not because AI is replacing those workers&rsquo; jobs, but because the company needs their salaries to pay for GPU clusters.</p>
+      <div class="links"><a href="https://thenextweb.com/news/oracle-layoffs-march-2026" target="_blank" rel="noopener">The Next Web</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Alibaba drops Qwen 3.5 Omni: native multimodal model processes 10+ hours of audio, beats Gemini on benchmarks</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">MarkTechPost / The Decoder</span></div>
+      <p>Alibaba&rsquo;s Qwen team released Qwen3.5-Omni on Sunday &mdash; a natively multimodal model that handles text, images, audio, and video in a single architecture. The Plus variant hit state-of-the-art on 215 benchmarks, beating Gemini 3.1 Pro on audio understanding, reasoning, and translation. It supports speech recognition in 113 languages, generation in 36, and can process over 10 hours of audio input. Most notably, it learned to write code from spoken instructions and video demonstrations without specific training for those tasks.</p>
+      <p class="why">The Decoder&rsquo;s analysis: Qwen 3.5 Omni learned to code from spoken instructions and video without anyone training it to &mdash; an emergent capability suggesting multimodal training produces generalization the researchers didn&rsquo;t explicitly design for.</p>
+      <div class="links"><a href="https://www.marktechpost.com/2026/03/30/alibaba-qwen-team-releases-qwen3-5-omni-a-native-multimodal-model-for-text-audio-video-and-realtime-interaction/" target="_blank" rel="noopener">MarkTechPost</a> <a href="https://the-decoder.com/qwen3-5-omni-learned-to-write-code-from-spoken-instructions-and-video-without-anyone-training-it-to/" target="_blank" rel="noopener">The Decoder</a></div>
+    </div>
+
   </div>
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 31, 2026 at 7:25 PM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 31, 2026 at 8:01 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
