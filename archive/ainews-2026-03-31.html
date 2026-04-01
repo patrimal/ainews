@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Tuesday, March 31, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Tuesday, March 31, 2026 &middot; Last updated 8:01 PM PDT</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>Anthropic is having the most Anthropic week imaginable: they accidentally left their scariest model&rsquo;s draft blog post in a public data lake &mdash; a model they themselves say poses &ldquo;unprecedented cybersecurity risks&rdquo; &mdash; and in the very same breath, they&rsquo;re shopping a $60 billion IPO to Goldman Sachs. Nothing says &ldquo;responsible AI development&rdquo; like warning Congress your model could enable mass cyberattacks while simultaneously pitching Wall Street on why that&rsquo;s worth sixty billion dollars. Meanwhile, the Sora post-mortem is the most honest thing to come out of AI video this year: a million-dollar-a-day bonfire that peaked at a million users and lost half of them. Disney found out it was dead an hour before the public did. And today, Reddit starts requiring &ldquo;human verification&rdquo; for suspicious accounts &mdash; the logical endpoint of a platform that spent years courting AI companies to train on its data and now has to prove its remaining users are biological. The funniest detail: using AI to write posts isn&rsquo;t against Reddit&rsquo;s rules. They just want to confirm a human pressed &ldquo;submit.&rdquo;</p>
+      <p><strong>Evening update:</strong> Anthropic&rsquo;s month from hell just got worse. Hours after we noted the irony of their IPO-while-warning-Congress routine, it emerged that they&rsquo;d accidentally shipped Claude Code&rsquo;s entire source code &mdash; 500,000 lines of their agentic architecture &mdash; in an npm package. Two leaks in five days. The &ldquo;responsible AI&rdquo; company can&rsquo;t keep its own <code>.npmignore</code> straight. The silver lining? Boris Cherny&rsquo;s weekend tips thread is a reminder that the product itself remains genuinely excellent even when the release process&hellip; isn&rsquo;t. Elsewhere, Nvidia dropped $2 billion on Marvell to build &ldquo;NVLink Fusion&rdquo; AI factories with custom silicon and silicon photonics &mdash; the clearest signal yet that even Jensen thinks the future of AI compute is too big for one company. And Newsom signed California&rsquo;s first AI procurement executive order, essentially daring Trump to stop states from requiring actual safeguards. Late update: Anthropic&rsquo;s day somehow got worse &mdash; The Register reports users are burning through Claude Code quotas in a fraction of expected time, with a reverse-engineer claiming to have found prompt caching bugs that silently inflate token costs 10-20x. Anthropic says it&rsquo;s &ldquo;top priority.&rdquo; Meanwhile, Alibaba quietly dropped Qwen 3.5 Omni over the weekend &mdash; a natively multimodal model that beats Gemini on audio benchmarks and spontaneously learned to code from spoken instructions without being trained for it. That&rsquo;s the kind of emergent capability that deserves more attention than Anthropic&rsquo;s third self-own this week. And Oracle fired up to 30,000 employees today to pay for AI data centers, which is certainly one way to fund the future.</p>
+    </div>
+
+    <div class="story">
+      <h2>Reddit&rsquo;s bot crackdown goes live: automated accounts get labels, suspicious users face &ldquo;human verification&rdquo;</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">TechCrunch / Engadget</span></div>
+      <p>Starting today, Reddit labels automated accounts with an [App] badge on their profiles and may prompt suspicious accounts to verify they&rsquo;re human. Verification methods under consideration include passkeys, third-party biometric checks, and government ID services. CEO Steve Huffman emphasized the approach is &ldquo;privacy-first&rdquo; &mdash; confirming a person exists behind an account, not who they are. Reddit says it removes 100,000 bot accounts daily. Importantly, using AI to write posts isn&rsquo;t banned; only fully automated accounts are targeted.</p>
+      <p class="why">TechCrunch&rsquo;s framing: this is the first major platform to draw a line between &ldquo;AI-assisted human&rdquo; and &ldquo;fully automated bot,&rdquo; a distinction that will likely become the industry template as every social platform grapples with the same problem.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/25/reddit-bots-new-human-verification-requirements/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.engadget.com/social-media/reddit-will-prompt-some-accounts-to-verify-humanness-in-latest-bot-crackdown-161000181.html" target="_blank" rel="noopener">Engadget</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic eyes $60B IPO as early as October &mdash; Goldman, JPMorgan, and Morgan Stanley compete for underwriting</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Winbuzzer / CNBC / The Information</span></div>
+      <p>Anthropic is in early-stage IPO discussions targeting Q4 2026, potentially as early as October, according to reports from multiple outlets on Sunday. Goldman Sachs, JPMorgan Chase, and Morgan Stanley are competing for underwriting roles. The company closed a $30 billion round in February at a $380 billion valuation. If it proceeds, Anthropic would join OpenAI in what could be two of the largest venture-backed IPOs in history.</p>
+      <p class="why">The Information&rsquo;s reporting: the timing is aggressive given that Anthropic is simultaneously managing the Mythos leak fallout and government briefings about cybersecurity risks &mdash; going public while actively warning regulators about your own model&rsquo;s dangers is an unprecedented tightrope walk.</p>
+      <div class="links"><a href="https://winbuzzer.com/2026/03/30/anthropic-ipo-q4-2026-60-billion-target-xcxwbn/" target="_blank" rel="noopener">Winbuzzer</a> <a href="https://www.cnbc.com/video/2026/03/27/anthropic-eyes-october-ipo---reports.html" target="_blank" rel="noopener">CNBC</a> <a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-considers-fourth-quarter-ipo/" target="_blank" rel="noopener">PYMNTS</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic&rsquo;s leaked &ldquo;Mythos&rdquo; model: a &ldquo;step change&rdquo; that scares its own creators</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Fortune / Euronews / CSO Online</span></div>
+      <p>Coverage continued through the weekend of Anthropic&rsquo;s accidentally leaked &ldquo;Claude Mythos&rdquo; (internally codenamed Capybara) &mdash; a next-generation model the company calls its &ldquo;most capable&rdquo; ever. A misconfigured CMS left a draft blog post in a public data store, discovered by security researchers from LayerX and Cambridge. The model reportedly delivers dramatic improvements in coding, reasoning, and cybersecurity. Anthropic is privately warning government officials it could enable large-scale cyberattacks and is restricting access to early-access defense customers while working to make it cheaper to run before any general release.</p>
+      <p class="why">Fortune&rsquo;s exclusive: Anthropic&rsquo;s own leaked draft said Mythos is &ldquo;currently far ahead of any other AI model in cyber capabilities&rdquo; and &ldquo;presages an upcoming wave of models that can exploit vulnerabilities in ways that far outpace the efforts of defenders.&rdquo; The company is essentially saying the offense/defense asymmetry in cybersecurity is about to get dramatically worse.</p>
+      <div class="links"><a href="https://fortune.com/2026/03/26/anthropic-says-testing-mythos-powerful-new-ai-model-after-data-leak-reveals-its-existence-step-change-in-capabilities/" target="_blank" rel="noopener">Fortune (exclusive)</a> <a href="https://www.euronews.com/next/2026/03/30/what-is-anthropics-mythos-the-leaked-ai-model-that-poses-unprecedented-cybersecurity-risks" target="_blank" rel="noopener">Euronews</a> <a href="https://fortune.com/2026/03/27/anthropic-leaked-ai-mythos-cybersecurity-risk/" target="_blank" rel="noopener">Fortune (cyber risks)</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Why OpenAI really killed Sora: $1M/day burn, 500K users, and Disney found out an hour before the public</h2>
+      <div class="meta"><span class="tag tag-date">Mar 29</span> <span class="source">TechCrunch / Slate</span></div>
+      <p>TechCrunch published its deep-dive into Sora&rsquo;s demise on Saturday. The numbers are brutal: after launch, global users peaked around one million, then collapsed below 500,000 &mdash; while operational costs held steady at roughly $1 million per day. OpenAI gave 30 days&rsquo; notice on March 24 that the Sora web app, iOS app, and API will all shut down. Disney, which had committed $1 billion to an OpenAI partnership, reportedly learned of the shutdown less than an hour before the public announcement. 9to5Mac noted Sora isn&rsquo;t the only product OpenAI axed this month &mdash; it&rsquo;s part of a broader consolidation around ChatGPT and core API offerings.</p>
+      <p class="why">Slate&rsquo;s analysis: Sora&rsquo;s failure is the first major proof point that AI video generation doesn&rsquo;t have viable unit economics at consumer scale &mdash; and OpenAI killing its most-hyped product signals the company is finally prioritizing revenue over spectacle.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://slate.com/technology/2026/03/ai-openai-sam-altman-disney-sora-shutdown.html" target="_blank" rel="noopener">Slate</a> <a href="https://9to5mac.com/2026/03/29/sora-isnt-the-only-thing-openai-shut-down-this-month/" target="_blank" rel="noopener">9to5Mac</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Google Translate brings real-time headphone translation to iOS &mdash; 70+ languages, any Bluetooth headphones</h2>
+      <div class="meta"><span class="tag tag-date">Mar 26</span> <span class="source">TechCrunch / MacRumors</span></div>
+      <p>Google expanded its &ldquo;Live Translate&rdquo; feature to iOS and 12 countries including the US, UK, Japan, Germany, France, and India. The Gemini-powered feature preserves each speaker&rsquo;s tone and cadence in real time across 70+ languages. Unlike Apple&rsquo;s competing translation, there are no hardware restrictions &mdash; any Bluetooth headphones work. Setup is minimal: open Google Translate, connect headphones, tap Live Translate.</p>
+      <p class="why">Skift&rsquo;s take: by working with any headphones and not requiring Apple hardware, Google just made real-time translation a commodity feature available to every iPhone and Android user &mdash; effectively undercutting Apple&rsquo;s walled-garden approach to the same capability.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/03/26/google-translates-real-time-headphone-translations-feature-expands-to-ios-and-more-countries/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.macrumors.com/2026/03/26/google-translate-gemini-ai/" target="_blank" rel="noopener">MacRumors</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic accidentally ships Claude Code&rsquo;s entire source code in npm package &mdash; second leak in five days</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Fortune / SiliconANGLE</span></div>
+      <p>A source map file was inadvertently included in Claude Code v2.1.88&rsquo;s npm package, exposing roughly 500,000 lines of TypeScript across nearly 2,000 files. The leaked code reveals the &ldquo;agentic harness&rdquo; &mdash; the software that instructs Claude how to use tools and enforces behavioral guardrails. Anthropic called it &ldquo;a release packaging issue caused by human error, not a security breach&rdquo; and confirmed no customer data was exposed. This is Anthropic&rsquo;s second accidental disclosure in five days, following the Mythos blog post leak.</p>
+      <p class="why">Fortune&rsquo;s reporting: the leaked code gives competitors a detailed look at how Anthropic structures its agentic architecture, and once distributed via npm, copies have already propagated beyond Anthropic&rsquo;s ability to recall them.</p>
+      <div class="links"><a href="https://fortune.com/2026/03/31/anthropic-source-code-claude-code-data-leak-second-security-lapse-days-after-accidentally-revealing-mythos/" target="_blank" rel="noopener">Fortune</a> <a href="https://siliconangle.com/2026/03/31/anthropic-accidentally-exposes-claude-code-source-code-npm-packaging-error/" target="_blank" rel="noopener">SiliconANGLE</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Nvidia takes $2B stake in Marvell, launches &ldquo;NVLink Fusion&rdquo; for custom AI factories</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / CNBC</span></div>
+      <p>Nvidia is investing $2 billion in Marvell Technology and opening its NVLink platform to Marvell&rsquo;s custom AI chips and networking gear. The deal creates &ldquo;NVLink Fusion&rdquo; &mdash; a rack-scale platform where Marvell provides custom XPUs alongside Nvidia&rsquo;s Vera CPUs, ConnectX NICs, and Spectrum-X switches. The companies will also co-develop silicon photonics (using light instead of copper for data transfer) and telecom-AI integration. Marvell stock surged 12.8%.</p>
+      <p class="why">CNBC&rsquo;s analysis: Nvidia is essentially admitting it can&rsquo;t own the entire AI compute stack alone &mdash; by opening NVLink to third-party custom silicon, it&rsquo;s betting that being the platform beats being the sole chip supplier.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-03-31/nvidia-invests-2-billion-in-marvell-announces-partnership" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.cnbc.com/2026/03/31/marvell-nvidia-stock-stake.html" target="_blank" rel="noopener">CNBC</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Newsom signs AI executive order requiring safeguards for state contractors &mdash; a direct rebuke to Trump&rsquo;s deregulation push</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Gov.ca.gov / CBS Sacramento</span></div>
+      <p>California&rsquo;s Executive Order N-5-26 gives state agencies 120 days to implement new AI procurement standards. Companies seeking government contracts must demonstrate safeguards against CSAM generation, discriminatory outputs, and civil rights violations. State agencies must watermark AI-generated images and videos. Newsom explicitly framed this as a counterweight to Trump&rsquo;s push for a single, industry-friendly federal approach to AI regulation.</p>
+      <p class="why">The governor&rsquo;s office positioned this as the first state-level executive order setting comprehensive AI procurement standards &mdash; a template other states may follow as the federal-state tension over AI regulation intensifies.</p>
+      <div class="links"><a href="https://www.gov.ca.gov/2026/03/30/as-trump-rolls-back-protections-governor-newsom-signs-first-of-its-kind-executive-order-to-strengthen-ai-protections-and-responsible-use/" target="_blank" rel="noopener">Gov.ca.gov</a> <a href="https://www.cbsnews.com/sacramento/news/california-gavin-newsom-ai-guardrails-executive-order/" target="_blank" rel="noopener">CBS</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Boris Cherny shares 15 &ldquo;hidden&rdquo; Claude Code features: <code>/voice</code>, <code>/batch</code>, <code>/teleport</code>, and more</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">@bcherny (X)</span></div>
+      <p>Claude Code&rsquo;s creator posted a detailed thread of his favorite under-utilized features. Highlights: <code>/voice</code> for speech-to-code (Cherny says he does &ldquo;most of my coding by speaking&rdquo;), <code>/batch</code> to fan out parallelizable work across multiple worktree agents, <code>/teleport</code> to move cloud sessions to your local machine, and <code>/remote-control</code> to drive a local session from your phone. He also detailed hooks for lifecycle management, the Chrome extension for frontend verification, and <code>--bare</code> for 10x faster SDK startup.</p>
+      <p class="why">Cherny&rsquo;s thread reveals Claude Code has quietly accumulated a deep feature set most users don&rsquo;t know about &mdash; <code>/batch</code> and worktree-based parallelism in particular turn it from a single-task tool into a multi-agent orchestrator.</p>
+      <div class="links"><a href="https://x.com/bcherny/status/2038454336355999749" target="_blank" rel="noopener">Thread on X</a> <a href="https://threadreaderapp.com/thread/2038454336355999749.html" target="_blank" rel="noopener">Thread Reader</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic admits Claude Code quotas draining &ldquo;way faster than expected&rdquo; &mdash; possible 10-20x token inflation bug</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">The Register</span></div>
+      <p>Users across all subscription tiers report burning through Claude Code quotas in a fraction of the expected time &mdash; a Max 5 subscriber ($100/month) consumed their entire allocation in one hour. Anthropic acknowledged the issue, calling it &ldquo;the top priority for the team.&rdquo; Three factors appear to be compounding: intentional peak-hour throttling, the expiration of a March promotional doubling, and a potential prompt caching bug that one reverse-engineer claims silently inflates token costs by 10-20x.</p>
+      <p class="why">The Register&rsquo;s reporting highlights that Anthropic still doesn&rsquo;t disclose exact usage limits to paying customers &mdash; the opacity makes it impossible for users to budget their work or verify whether they&rsquo;re hitting a bug or a policy change.</p>
+      <div class="links"><a href="https://www.theregister.com/2026/03/31/anthropic_claude_code_limits/" target="_blank" rel="noopener">The Register</a> <a href="https://www.roborhythms.com/claude-code-rate-limit-draining-march-2026/" target="_blank" rel="noopener">RoboRhythms analysis</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Oracle cuts up to 30,000 employees &mdash; 18% of workforce &mdash; to fund AI data center buildout</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">The Next Web / TD Cowen</span></div>
+      <p>Oracle began executing what analysts believe is the largest layoff in its history on Monday, with employees across the US, India, Canada, and Mexico receiving termination emails at 6 AM local time with no prior warning. TD Cowen estimates 20,000&ndash;30,000 positions cut, roughly 18% of Oracle&rsquo;s 162,000-person global workforce. The company is redirecting the savings toward its capital-intensive AI infrastructure bet &mdash; a buildout its current balance sheet cannot comfortably sustain.</p>
+      <p class="why">The Next Web&rsquo;s framing: this is the starkest example yet of a legacy tech company cannibalizing its existing workforce to fund AI infrastructure &mdash; not because AI is replacing those workers&rsquo; jobs, but because the company needs their salaries to pay for GPU clusters.</p>
+      <div class="links"><a href="https://thenextweb.com/news/oracle-layoffs-march-2026" target="_blank" rel="noopener">The Next Web</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Alibaba drops Qwen 3.5 Omni: native multimodal model processes 10+ hours of audio, beats Gemini on benchmarks</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">MarkTechPost / The Decoder</span></div>
+      <p>Alibaba&rsquo;s Qwen team released Qwen3.5-Omni on Sunday &mdash; a natively multimodal model that handles text, images, audio, and video in a single architecture. The Plus variant hit state-of-the-art on 215 benchmarks, beating Gemini 3.1 Pro on audio understanding, reasoning, and translation. It supports speech recognition in 113 languages, generation in 36, and can process over 10 hours of audio input. Most notably, it learned to write code from spoken instructions and video demonstrations without specific training for those tasks.</p>
+      <p class="why">The Decoder&rsquo;s analysis: Qwen 3.5 Omni learned to code from spoken instructions and video without anyone training it to &mdash; an emergent capability suggesting multimodal training produces generalization the researchers didn&rsquo;t explicitly design for.</p>
+      <div class="links"><a href="https://www.marktechpost.com/2026/03/30/alibaba-qwen-team-releases-qwen3-5-omni-a-native-multimodal-model-for-text-audio-video-and-realtime-interaction/" target="_blank" rel="noopener">MarkTechPost</a> <a href="https://the-decoder.com/qwen3-5-omni-learned-to-write-code-from-spoken-instructions-and-video-without-anyone-training-it-to/" target="_blank" rel="noopener">The Decoder</a></div>
+    </div>
+
+  </div>
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 31, 2026 at 8:01 PM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
