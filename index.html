@@ -179,13 +179,14 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Wednesday, April 1, 2026 &middot; Last updated 6:00 AM PDT</div>
+  <div id="date-line">Wednesday, April 1, 2026 &middot; Last updated 2:01 PM PDT</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
       <p>Happy birthday to the tool that writes 4% of all code on GitHub. Claude Code turns one today, and Boris Cherny marked the occasion by declaring &ldquo;coding is largely solved&rdquo; &mdash; a claim that sounds like classic tech-executive hubris until you remember he hasn&rsquo;t manually edited a line of code since November while shipping 10&ndash;30 PRs a day. Meanwhile, Karpathy spent the week in what he calls &ldquo;AI psychosis,&rdquo; showing off a persistent OpenClaw agent named Dobby that IP-scanned his home network, reverse-engineered his Sonos API without being asked, and now runs his entire house via WhatsApp. That&rsquo;s the genuinely thrilling part of today&rsquo;s news: autonomous agents are crossing from &ldquo;do what I say&rdquo; to &ldquo;figure it out yourself.&rdquo; The less thrilling part: the Claude Code source leak keeps on giving. Deep-dive analyses revealed KAIROS &mdash; an unreleased always-on daemon mode with &ldquo;memory distillation&rdquo; &mdash; and an Undercover Mode that strips AI attribution from open-source commits with no force-OFF switch. Within 24 hours, attackers registered malicious npm packages targeting developers who tried to build the leaked code. And in the day&rsquo;s most tragicomic twist, Perplexity &mdash; the &ldquo;privacy-first&rdquo; Google alternative &mdash; got hit with a class-action alleging it shared your chatbot conversations with Meta and Google even in Incognito mode. It&rsquo;s April Fools&rsquo; Day, but none of these are jokes.</p>
+      <p><strong>Midday refresh:</strong> The afternoon brought the number that makes all the morning&rsquo;s drama feel like a sideshow: OpenAI just closed $122 billion at an $852 billion valuation, with Amazon alone putting up $50B (most of it contingent on an IPO or AGI &mdash; the most expensive bet-hedge in history). At $2B/month revenue and 900M weekly active users, they&rsquo;re being valued like telecom infrastructure, not a software company. Meanwhile, Anthropic broke its silence on the Claude Code leak &mdash; Boris Cherny called it &ldquo;human error&rdquo; in a missed deploy step, said no one was fired, and the company has been DMCA-ing 8,000+ GitHub repos. And Sam Altman gave his first interview on the Sora shutdown, finally admitting what the numbers showed: downloads fell 75% from their peak, the Disney billion-dollar deal collapsed before money changed hands, and OpenAI was burning compute on what Altman diplomatically called a product that &ldquo;wasn&rsquo;t finding its audience.&rdquo; At least he&rsquo;s honest about one flop while his company flirts with a trillion-dollar valuation.</p>
     </div>
 
     <div class="story">
@@ -197,11 +198,11 @@
     </div>
 
     <div class="story">
-      <h2>Claude Code leak deep-dives reveal KAIROS daemon mode, Undercover Mode, and a supply chain attack follows within 24 hours</h2>
-      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Alex Kim / WaveSpeedAI / PiunikaWeb</span></div>
-      <p>Detailed analyses of the 512K-line Claude Code source leak surfaced major unreleased features. KAIROS is an always-on autonomous daemon with a <code>/dream</code> skill for &ldquo;nightly memory distillation,&rdquo; append-only daily logs, and 5-minute cron refreshes &mdash; scaffolding for a persistent background agent. Undercover Mode (~90 lines) strips all traces of AI authorship in non-internal repos with no force-OFF switch, meaning AI-authored commits appear human-authored. Also found: anti-distillation defenses (fake tools + cryptographic signatures), frustration detection via regex, and a production bug that wasted ~250K API calls/day. Separately, attackers registered malicious npm packages (<code>color-diff-napi</code>, <code>modifiers-napi</code>) squatting on internal names developers encounter when building the leaked code.</p>
-      <p class="why">Alex Kim&rsquo;s analysis: KAIROS suggests Anthropic is building toward an agent that doesn&rsquo;t wait to be asked &mdash; it watches, logs, and acts proactively. The Undercover Mode revelation is more immediately controversial: AI contributions to public open-source repos will have no indication they were AI-authored.</p>
-      <div class="links"><a href="https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/" target="_blank" rel="noopener">Alex Kim analysis</a> <a href="https://wavespeed.ai/blog/posts/claude-code-leaked-source-hidden-features/" target="_blank" rel="noopener">WaveSpeedAI</a> <a href="https://piunikaweb.com/2026/04/01/claude-code-source-leak-npm-supply-chain-attack/" target="_blank" rel="noopener">Supply chain attack</a></div>
+      <h2>Claude Code leak: Anthropic calls it &ldquo;human error,&rdquo; DMCA-takedowns hit 8,000+ repos as deep-dives reveal KAIROS and Undercover Mode</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="tag tag-date">Updated 2:01 PM</span> <span class="source">Bloomberg / Alex Kim / OfficeChai / PiunikaWeb</span></div>
+      <p>Anthropic officially responded to the Claude Code source leak today. Boris Cherny said &ldquo;our deploy process has a few manual steps, and we didn&rsquo;t do one of the steps correctly&rdquo; &mdash; a packaging error in v2.1.88 bundled a 60MB source map pointing to a full archive of ~2,000 files. No one was fired; the team is adding automation to prevent recurrence. Anthropic has issued DMCA takedowns on 8,000+ GitHub repositories, though it later acknowledged the sweep was broader than intended and scaled it back. Meanwhile, deep-dive analyses of the 512K-line codebase continue to surface unreleased features: KAIROS (an always-on daemon with <code>/dream</code> for &ldquo;nightly memory distillation&rdquo;), Undercover Mode (strips AI attribution from non-internal commits with no force-OFF switch), internal model codenames &ldquo;Capybara&rdquo; (Claude 4.6 variant) and &ldquo;Numbat&rdquo; (next-gen), anti-distillation defenses, and a production bug wasting ~250K API calls/day. Attackers also registered malicious npm packages squatting on internal dependency names.</p>
+      <p class="why">Bloomberg&rsquo;s framing: a company that boasts about dogfooding its own AI for development shipped a leak caused by a manual step its AI apparently didn&rsquo;t automate. The DMCA overreach &mdash; later walked back &mdash; drew additional criticism from the open-source community.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-01/anthropic-scrambles-to-address-leak-of-claude-code-source-code" target="_blank" rel="noopener">Bloomberg</a> <a href="https://officechai.com/ai/claude-code-leak-was-human-error-no-one-was-fired-claude-code-creator-boris-cherny/" target="_blank" rel="noopener">Cherny interview</a> <a href="https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/" target="_blank" rel="noopener">Alex Kim analysis</a> <a href="https://piunikaweb.com/2026/04/01/anthropic-dmca-claude-code-leak-github/" target="_blank" rel="noopener">DMCA takedowns</a></div>
     </div>
 
     <div class="story">
@@ -228,9 +229,25 @@
       <div class="links"><a href="https://appleinsider.com/articles/26/03/31/openais-chatgpt-now-available-hands-free-via-carplay-with-ios-264" target="_blank" rel="noopener">AppleInsider</a> <a href="https://9to5mac.com/2026/03/31/chatgpt-app-launches-for-carplay-on-ios-26-4/" target="_blank" rel="noopener">9to5Mac</a> <a href="https://www.macrumors.com/2026/03/31/openai-chatgpt-carplay/" target="_blank" rel="noopener">MacRumors</a></div>
     </div>
 
+    <div class="story">
+      <h2>OpenAI closes record $122B round at $852B valuation &mdash; Amazon bets $50B, most contingent on IPO or AGI</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / TechStartups</span></div>
+      <p>OpenAI completed the largest private funding round in history: $122 billion at an $852 billion post-money valuation. Amazon committed $50 billion (with $35B contingent on OpenAI going public or achieving AGI), while Nvidia and SoftBank each put in $30 billion. Other participants include Andreessen Horowitz, D.E. Shaw, MGX, TPG, and T. Rowe Price. OpenAI says it&rsquo;s generating $2 billion per month in revenue with 900 million weekly active users and over 50 million subscribers. An IPO is widely expected later this year.</p>
+      <p class="why">Bloomberg&rsquo;s key detail: Amazon&rsquo;s $35B contingency clause means the biggest chunk of the biggest round in history only materializes if OpenAI either goes public or reaches AGI &mdash; a bet that treats a scientific milestone and an IPO as interchangeable triggers.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round" target="_blank" rel="noopener">Bloomberg</a> <a href="https://techstartups.com/2026/04/01/openai-raises-record-122b-at-852b-valuation-as-ipo-buzz-intensifies/" target="_blank" rel="noopener">TechStartups</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Sam Altman explains killing Sora: downloads fell 75%, Disney&rsquo;s $1B deal collapsed, and &ldquo;it wasn&rsquo;t finding its audience&rdquo;</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Slate / TechCrunch / Let&rsquo;s Data Science</span></div>
+      <p>In his first interview since OpenAI discontinued the Sora video app on March 24, Sam Altman admitted the product failed to gain traction. Downloads plunged ~75% from their November peak, and the $1 billion Disney partnership collapsed before any money changed hands &mdash; Disney learned about the shutdown less than an hour before the public announcement. Altman said he deliberately avoided addictive-engagement features citing recent jury rulings against Meta and Google, but the bottom line was simpler: Sora was burning expensive compute for very little return. The app shuts down April 26; the API follows September 24.</p>
+      <p class="why">Slate&rsquo;s take: this is the first time a major AI CEO has publicly admitted that a flagship generative-AI product simply flopped with consumers &mdash; a rare moment of honesty in an industry that usually pivots quietly and calls it &ldquo;strategic refocusing.&rdquo;</p>
+      <div class="links"><a href="https://slate.com/technology/2026/03/ai-openai-sam-altman-disney-sora-shutdown.html" target="_blank" rel="noopener">Slate</a> <a href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://letsdatascience.com/news/sam-altman-explains-ending-sora-app-fc29e5ba" target="_blank" rel="noopener">Let&rsquo;s Data Science</a></div>
+    </div>
+
   </div><!-- end content -->
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Apr 1, 2026 at 6:00 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Apr 1, 2026 at 2:01 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
