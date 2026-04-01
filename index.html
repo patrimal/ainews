@@ -179,13 +179,14 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Tuesday, March 31, 2026</div>
+  <div id="date-line">Tuesday, March 31, 2026 &middot; Last updated 7:25 PM PDT</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
       <p>Anthropic is having the most Anthropic week imaginable: they accidentally left their scariest model&rsquo;s draft blog post in a public data lake &mdash; a model they themselves say poses &ldquo;unprecedented cybersecurity risks&rdquo; &mdash; and in the very same breath, they&rsquo;re shopping a $60 billion IPO to Goldman Sachs. Nothing says &ldquo;responsible AI development&rdquo; like warning Congress your model could enable mass cyberattacks while simultaneously pitching Wall Street on why that&rsquo;s worth sixty billion dollars. Meanwhile, the Sora post-mortem is the most honest thing to come out of AI video this year: a million-dollar-a-day bonfire that peaked at a million users and lost half of them. Disney found out it was dead an hour before the public did. And today, Reddit starts requiring &ldquo;human verification&rdquo; for suspicious accounts &mdash; the logical endpoint of a platform that spent years courting AI companies to train on its data and now has to prove its remaining users are biological. The funniest detail: using AI to write posts isn&rsquo;t against Reddit&rsquo;s rules. They just want to confirm a human pressed &ldquo;submit.&rdquo;</p>
+      <p><strong>Evening update:</strong> Anthropic&rsquo;s month from hell just got worse. Hours after we noted the irony of their IPO-while-warning-Congress routine, it emerged that they&rsquo;d accidentally shipped Claude Code&rsquo;s entire source code &mdash; 500,000 lines of their agentic architecture &mdash; in an npm package. Two leaks in five days. The &ldquo;responsible AI&rdquo; company can&rsquo;t keep its own <code>.npmignore</code> straight. The silver lining? Boris Cherny&rsquo;s weekend tips thread is a reminder that the product itself remains genuinely excellent even when the release process&hellip; isn&rsquo;t. Elsewhere, Nvidia dropped $2 billion on Marvell to build &ldquo;NVLink Fusion&rdquo; AI factories with custom silicon and silicon photonics &mdash; the clearest signal yet that even Jensen thinks the future of AI compute is too big for one company. And Newsom signed California&rsquo;s first AI procurement executive order, essentially daring Trump to stop states from requiring actual safeguards.</p>
     </div>
 
     <div class="story">
@@ -228,9 +229,41 @@
       <div class="links"><a href="https://techcrunch.com/2026/03/26/google-translates-real-time-headphone-translations-feature-expands-to-ios-and-more-countries/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.macrumors.com/2026/03/26/google-translate-gemini-ai/" target="_blank" rel="noopener">MacRumors</a></div>
     </div>
 
+    <div class="story">
+      <h2>Anthropic accidentally ships Claude Code&rsquo;s entire source code in npm package &mdash; second leak in five days</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Fortune / SiliconANGLE</span></div>
+      <p>A source map file was inadvertently included in Claude Code v2.1.88&rsquo;s npm package, exposing roughly 500,000 lines of TypeScript across nearly 2,000 files. The leaked code reveals the &ldquo;agentic harness&rdquo; &mdash; the software that instructs Claude how to use tools and enforces behavioral guardrails. Anthropic called it &ldquo;a release packaging issue caused by human error, not a security breach&rdquo; and confirmed no customer data was exposed. This is Anthropic&rsquo;s second accidental disclosure in five days, following the Mythos blog post leak.</p>
+      <p class="why">Fortune&rsquo;s reporting: the leaked code gives competitors a detailed look at how Anthropic structures its agentic architecture, and once distributed via npm, copies have already propagated beyond Anthropic&rsquo;s ability to recall them.</p>
+      <div class="links"><a href="https://fortune.com/2026/03/31/anthropic-source-code-claude-code-data-leak-second-security-lapse-days-after-accidentally-revealing-mythos/" target="_blank" rel="noopener">Fortune</a> <a href="https://siliconangle.com/2026/03/31/anthropic-accidentally-exposes-claude-code-source-code-npm-packaging-error/" target="_blank" rel="noopener">SiliconANGLE</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Nvidia takes $2B stake in Marvell, launches &ldquo;NVLink Fusion&rdquo; for custom AI factories</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / CNBC</span></div>
+      <p>Nvidia is investing $2 billion in Marvell Technology and opening its NVLink platform to Marvell&rsquo;s custom AI chips and networking gear. The deal creates &ldquo;NVLink Fusion&rdquo; &mdash; a rack-scale platform where Marvell provides custom XPUs alongside Nvidia&rsquo;s Vera CPUs, ConnectX NICs, and Spectrum-X switches. The companies will also co-develop silicon photonics (using light instead of copper for data transfer) and telecom-AI integration. Marvell stock surged 12.8%.</p>
+      <p class="why">CNBC&rsquo;s analysis: Nvidia is essentially admitting it can&rsquo;t own the entire AI compute stack alone &mdash; by opening NVLink to third-party custom silicon, it&rsquo;s betting that being the platform beats being the sole chip supplier.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-03-31/nvidia-invests-2-billion-in-marvell-announces-partnership" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.cnbc.com/2026/03/31/marvell-nvidia-stock-stake.html" target="_blank" rel="noopener">CNBC</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Newsom signs AI executive order requiring safeguards for state contractors &mdash; a direct rebuke to Trump&rsquo;s deregulation push</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Gov.ca.gov / CBS Sacramento</span></div>
+      <p>California&rsquo;s Executive Order N-5-26 gives state agencies 120 days to implement new AI procurement standards. Companies seeking government contracts must demonstrate safeguards against CSAM generation, discriminatory outputs, and civil rights violations. State agencies must watermark AI-generated images and videos. Newsom explicitly framed this as a counterweight to Trump&rsquo;s push for a single, industry-friendly federal approach to AI regulation.</p>
+      <p class="why">The governor&rsquo;s office positioned this as the first state-level executive order setting comprehensive AI procurement standards &mdash; a template other states may follow as the federal-state tension over AI regulation intensifies.</p>
+      <div class="links"><a href="https://www.gov.ca.gov/2026/03/30/as-trump-rolls-back-protections-governor-newsom-signs-first-of-its-kind-executive-order-to-strengthen-ai-protections-and-responsible-use/" target="_blank" rel="noopener">Gov.ca.gov</a> <a href="https://www.cbsnews.com/sacramento/news/california-gavin-newsom-ai-guardrails-executive-order/" target="_blank" rel="noopener">CBS</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Boris Cherny shares 15 &ldquo;hidden&rdquo; Claude Code features: <code>/voice</code>, <code>/batch</code>, <code>/teleport</code>, and more</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">@bcherny (X)</span></div>
+      <p>Claude Code&rsquo;s creator posted a detailed thread of his favorite under-utilized features. Highlights: <code>/voice</code> for speech-to-code (Cherny says he does &ldquo;most of my coding by speaking&rdquo;), <code>/batch</code> to fan out parallelizable work across multiple worktree agents, <code>/teleport</code> to move cloud sessions to your local machine, and <code>/remote-control</code> to drive a local session from your phone. He also detailed hooks for lifecycle management, the Chrome extension for frontend verification, and <code>--bare</code> for 10x faster SDK startup.</p>
+      <p class="why">Cherny&rsquo;s thread reveals Claude Code has quietly accumulated a deep feature set most users don&rsquo;t know about &mdash; <code>/batch</code> and worktree-based parallelism in particular turn it from a single-task tool into a multi-agent orchestrator.</p>
+      <div class="links"><a href="https://x.com/bcherny/status/2038454336355999749" target="_blank" rel="noopener">Thread on X</a> <a href="https://threadreaderapp.com/thread/2038454336355999749.html" target="_blank" rel="noopener">Thread Reader</a></div>
+    </div>
+
   </div>
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 31, 2026 at 6:03 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Mar 31, 2026 at 7:25 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
