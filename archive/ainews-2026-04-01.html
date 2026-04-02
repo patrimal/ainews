@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Wednesday, April 1, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Wednesday, April 1, 2026 &middot; Last updated 2:01 PM PDT</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>Happy birthday to the tool that writes 4% of all code on GitHub. Claude Code turns one today, and Boris Cherny marked the occasion by declaring &ldquo;coding is largely solved&rdquo; &mdash; a claim that sounds like classic tech-executive hubris until you remember he hasn&rsquo;t manually edited a line of code since November while shipping 10&ndash;30 PRs a day. Meanwhile, Karpathy spent the week in what he calls &ldquo;AI psychosis,&rdquo; showing off a persistent OpenClaw agent named Dobby that IP-scanned his home network, reverse-engineered his Sonos API without being asked, and now runs his entire house via WhatsApp. That&rsquo;s the genuinely thrilling part of today&rsquo;s news: autonomous agents are crossing from &ldquo;do what I say&rdquo; to &ldquo;figure it out yourself.&rdquo; The less thrilling part: the Claude Code source leak keeps on giving. Deep-dive analyses revealed KAIROS &mdash; an unreleased always-on daemon mode with &ldquo;memory distillation&rdquo; &mdash; and an Undercover Mode that strips AI attribution from open-source commits with no force-OFF switch. Within 24 hours, attackers registered malicious npm packages targeting developers who tried to build the leaked code. And in the day&rsquo;s most tragicomic twist, Perplexity &mdash; the &ldquo;privacy-first&rdquo; Google alternative &mdash; got hit with a class-action alleging it shared your chatbot conversations with Meta and Google even in Incognito mode. It&rsquo;s April Fools&rsquo; Day, but none of these are jokes.</p>
+      <p><strong>Midday refresh:</strong> The afternoon brought the number that makes all the morning&rsquo;s drama feel like a sideshow: OpenAI just closed $122 billion at an $852 billion valuation, with Amazon alone putting up $50B (most of it contingent on an IPO or AGI &mdash; the most expensive bet-hedge in history). At $2B/month revenue and 900M weekly active users, they&rsquo;re being valued like telecom infrastructure, not a software company. Meanwhile, Anthropic broke its silence on the Claude Code leak &mdash; Boris Cherny called it &ldquo;human error&rdquo; in a missed deploy step, said no one was fired, and the company has been DMCA-ing 8,000+ GitHub repos. And Sam Altman gave his first interview on the Sora shutdown, finally admitting what the numbers showed: downloads fell 75% from their peak, the Disney billion-dollar deal collapsed before money changed hands, and OpenAI was burning compute on what Altman diplomatically called a product that &ldquo;wasn&rsquo;t finding its audience.&rdquo; At least he&rsquo;s honest about one flop while his company flirts with a trillion-dollar valuation.</p>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy&rsquo;s &ldquo;Dobby&rdquo; agent scans his network, reverse-engineers APIs, and runs his entire smart home via WhatsApp</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">@karpathy / Fortune / Let&rsquo;s Data Science</span></div>
+      <p>Andrej Karpathy demonstrated &ldquo;Dobby the House Elf&rdquo; &mdash; a persistent OpenClaw agent that autonomously discovered devices on his local network, reverse-engineered undocumented Sonos API endpoints, and started playing music in his study without being told how. Dobby now controls lighting, HVAC, security cameras, shades, pool, and spa &mdash; all via natural-language WhatsApp messages. When a FedEx truck arrives, Dobby detects it on his security cameras and texts him. Karpathy says he&rsquo;s in a &ldquo;state of psychosis trying to figure out what&rsquo;s possible.&rdquo;</p>
+      <p class="why">Karpathy&rsquo;s point: the agent didn&rsquo;t need documentation, SDKs, or setup &mdash; it discovered and integrated with hardware autonomously. If this pattern generalizes, vendor apps become vestigial and the OS-level &ldquo;app&rdquo; abstraction starts to erode.</p>
+      <div class="links"><a href="https://fortune.com/2026/03/21/andrej-karpathy-openai-cofounder-ai-agents-coding-state-of-psychosis-openclaw/" target="_blank" rel="noopener">Fortune</a> <a href="https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3" target="_blank" rel="noopener">Let&rsquo;s Data Science</a> <a href="https://x.com/venturetwins/status/2035773250261930015" target="_blank" rel="noopener">Justine Moore on X</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code leak: Anthropic calls it &ldquo;human error,&rdquo; DMCA-takedowns hit 8,000+ repos as deep-dives reveal KAIROS and Undercover Mode</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="tag tag-date">Updated 2:01 PM</span> <span class="source">Bloomberg / Alex Kim / OfficeChai / PiunikaWeb</span></div>
+      <p>Anthropic officially responded to the Claude Code source leak today. Boris Cherny said &ldquo;our deploy process has a few manual steps, and we didn&rsquo;t do one of the steps correctly&rdquo; &mdash; a packaging error in v2.1.88 bundled a 60MB source map pointing to a full archive of ~2,000 files. No one was fired; the team is adding automation to prevent recurrence. Anthropic has issued DMCA takedowns on 8,000+ GitHub repositories, though it later acknowledged the sweep was broader than intended and scaled it back. Meanwhile, deep-dive analyses of the 512K-line codebase continue to surface unreleased features: KAIROS (an always-on daemon with <code>/dream</code> for &ldquo;nightly memory distillation&rdquo;), Undercover Mode (strips AI attribution from non-internal commits with no force-OFF switch), internal model codenames &ldquo;Capybara&rdquo; (Claude 4.6 variant) and &ldquo;Numbat&rdquo; (next-gen), anti-distillation defenses, and a production bug wasting ~250K API calls/day. Attackers also registered malicious npm packages squatting on internal dependency names.</p>
+      <p class="why">Bloomberg&rsquo;s framing: a company that boasts about dogfooding its own AI for development shipped a leak caused by a manual step its AI apparently didn&rsquo;t automate. The DMCA overreach &mdash; later walked back &mdash; drew additional criticism from the open-source community.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-01/anthropic-scrambles-to-address-leak-of-claude-code-source-code" target="_blank" rel="noopener">Bloomberg</a> <a href="https://officechai.com/ai/claude-code-leak-was-human-error-no-one-was-fired-claude-code-creator-boris-cherny/" target="_blank" rel="noopener">Cherny interview</a> <a href="https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/" target="_blank" rel="noopener">Alex Kim analysis</a> <a href="https://piunikaweb.com/2026/04/01/anthropic-dmca-claude-code-leak-github/" target="_blank" rel="noopener">DMCA takedowns</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Perplexity AI hit with class-action: &ldquo;undetectable&rdquo; trackers allegedly shared user chats with Meta and Google &mdash; even in Incognito mode</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg</span></div>
+      <p>A proposed class-action filed in San Francisco federal court accuses Perplexity of embedding tracking software that transmits user conversations to Meta and Google the moment users log in. The complaint alleges data flows even when users enable Perplexity&rsquo;s Incognito mode. The plaintiff, a Utah man filing as John Doe, shared financial details including family tax obligations and investment strategies with the chatbot. Both Meta and Google are named as defendants for allegedly exploiting the data for ad targeting. Perplexity&rsquo;s spokesperson said the company &ldquo;does not share user data with Meta or Google&rdquo; and has not been served.</p>
+      <p class="why">Bloomberg&rsquo;s framing: if proven, the AI search engine marketed as a privacy-conscious alternative to Google was doing exactly what users switched away from &mdash; and the Incognito mode they relied on was purely cosmetic.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-01/perplexity-ai-machine-accused-of-sharing-data-with-meta-google" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.analyticsinsight.net/news/perplexity-ai-sued-over-undetectable-tracking-technology" target="_blank" rel="noopener">Analytics Insight</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code turns one: 4% of all GitHub commits, DAU doubled last month, and v2.1.89 ships with deferred hooks</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">@bcherny / Claude Code Changelog</span></div>
+      <p>Boris Cherny marked Claude Code&rsquo;s first anniversary with a reflective post &mdash; and striking numbers. The tool now authors 4% of all public GitHub commits (~135K/day), with Semi Analysis predicting 20% by year-end. DAU doubled in the past month. Cherny, who hasn&rsquo;t manually edited code since November, declared &ldquo;coding is largely solved.&rdquo; Separately, v2.1.89 shipped today with notable features: <code>&quot;defer&quot;</code> permission decisions for <code>PreToolUse</code> hooks (headless sessions can pause at tool calls and resume later), flicker-free alt-screen rendering, named subagents in typeahead, non-blocking MCP connections, and 30+ bug fixes including memory leaks and CJK text handling. Also: <code>/buddy</code> hatches a small creature that watches you code &mdash; it&rsquo;s April Fools&rsquo; Day.</p>
+      <p class="why">Cherny&rsquo;s argument: the shift is from &ldquo;software engineer&rdquo; to &ldquo;builder&rdquo; &mdash; code is becoming the assembly language of intent. The deferred hooks in v2.1.89 are practically significant: CI/CD pipelines can now pause at risky tool calls for human approval, then resume without restarting.</p>
+      <div class="links"><a href="https://x.com/bcherny/status/2026449617915884009" target="_blank" rel="noopener">Anniversary post on X</a> <a href="https://www.teamday.ai/ai/boris-cherny-claude-code-year-one" target="_blank" rel="noopener">TeamDay profile</a> <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a></div>
+    </div>
+
+    <div class="story">
+      <h2>ChatGPT launches on Apple CarPlay &mdash; voice-only, no text, first AI chatbot in the car dashboard</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">AppleInsider / 9to5Mac / MacRumors</span></div>
+      <p>OpenAI updated ChatGPT to support Apple CarPlay, making it the first major AI chatbot accessible through a car&rsquo;s infotainment system. The interface is deliberately minimal: voice-only, no text or imagery, with just a mute toggle and end-call button. There&rsquo;s no wake word &mdash; you have to manually open the app. Apple&rsquo;s iOS 26.4 (released March 24) enabled the underlying entitlement; Claude and Gemini are expected to follow. The feature requires Apple&rsquo;s explicit approval for each app.</p>
+      <p class="why">9to5Mac&rsquo;s take: Apple&rsquo;s decision to gate AI chatbots behind a voice-only, no-visual-output requirement sets a strict safety template for in-car AI &mdash; the design constraint will shape how every competitor builds their CarPlay integration.</p>
+      <div class="links"><a href="https://appleinsider.com/articles/26/03/31/openais-chatgpt-now-available-hands-free-via-carplay-with-ios-264" target="_blank" rel="noopener">AppleInsider</a> <a href="https://9to5mac.com/2026/03/31/chatgpt-app-launches-for-carplay-on-ios-26-4/" target="_blank" rel="noopener">9to5Mac</a> <a href="https://www.macrumors.com/2026/03/31/openai-chatgpt-carplay/" target="_blank" rel="noopener">MacRumors</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI closes record $122B round at $852B valuation &mdash; Amazon bets $50B, most contingent on IPO or AGI</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / TechStartups</span></div>
+      <p>OpenAI completed the largest private funding round in history: $122 billion at an $852 billion post-money valuation. Amazon committed $50 billion (with $35B contingent on OpenAI going public or achieving AGI), while Nvidia and SoftBank each put in $30 billion. Other participants include Andreessen Horowitz, D.E. Shaw, MGX, TPG, and T. Rowe Price. OpenAI says it&rsquo;s generating $2 billion per month in revenue with 900 million weekly active users and over 50 million subscribers. An IPO is widely expected later this year.</p>
+      <p class="why">Bloomberg&rsquo;s key detail: Amazon&rsquo;s $35B contingency clause means the biggest chunk of the biggest round in history only materializes if OpenAI either goes public or reaches AGI &mdash; a bet that treats a scientific milestone and an IPO as interchangeable triggers.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round" target="_blank" rel="noopener">Bloomberg</a> <a href="https://techstartups.com/2026/04/01/openai-raises-record-122b-at-852b-valuation-as-ipo-buzz-intensifies/" target="_blank" rel="noopener">TechStartups</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Sam Altman explains killing Sora: downloads fell 75%, Disney&rsquo;s $1B deal collapsed, and &ldquo;it wasn&rsquo;t finding its audience&rdquo;</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Slate / TechCrunch / Let&rsquo;s Data Science</span></div>
+      <p>In his first interview since OpenAI discontinued the Sora video app on March 24, Sam Altman admitted the product failed to gain traction. Downloads plunged ~75% from their November peak, and the $1 billion Disney partnership collapsed before any money changed hands &mdash; Disney learned about the shutdown less than an hour before the public announcement. Altman said he deliberately avoided addictive-engagement features citing recent jury rulings against Meta and Google, but the bottom line was simpler: Sora was burning expensive compute for very little return. The app shuts down April 26; the API follows September 24.</p>
+      <p class="why">Slate&rsquo;s take: this is the first time a major AI CEO has publicly admitted that a flagship generative-AI product simply flopped with consumers &mdash; a rare moment of honesty in an industry that usually pivots quietly and calls it &ldquo;strategic refocusing.&rdquo;</p>
+      <div class="links"><a href="https://slate.com/technology/2026/03/ai-openai-sam-altman-disney-sora-shutdown.html" target="_blank" rel="noopener">Slate</a> <a href="https://techcrunch.com/2026/03/29/why-openai-really-shut-down-sora/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://letsdatascience.com/news/sam-altman-explains-ending-sora-app-fc29e5ba" target="_blank" rel="noopener">Let&rsquo;s Data Science</a></div>
+    </div>
+
+  </div><!-- end content -->
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Apr 1, 2026 at 2:01 PM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
