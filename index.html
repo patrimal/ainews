@@ -179,13 +179,14 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Friday, April 3, 2026 &middot; Last updated 6:02 AM PDT</div>
+  <div id="date-line">Friday, April 3, 2026 &middot; Last updated 2:00 PM PDT</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
       <p>OpenAI just told you where the money is &mdash; and it&rsquo;s not in video. Killing Sora while it burned $1M/day in compute to redirect everything toward &ldquo;automated researchers and companies&rdquo; is the most honest strategic signal Altman has sent in years. Claude Code alone does $2.5B ARR; Sora never cracked 1M users. The math wrote itself. Meanwhile, state legislatures are doing what Congress won&rsquo;t: Tennessee banned AI from impersonating therapists, Georgia is about to, Idaho sent four AI bills to the governor in one week &mdash; actual laws with actual teeth, passed with near-unanimous bipartisan votes. No hearings-as-theater, no &ldquo;we need to study this&rdquo; stalling. On the financial side, both OpenAI and Anthropic are now openly prepping for late-2026 IPOs at a combined target north of $1 trillion, despite neither company being profitable and both burning cash at rates that would make a defense contractor blush. And Boris Cherny is calmly shipping MCP improvements to Claude Code three days after the biggest source leak in AI history, which is either admirable engineering discipline or the most aggressive &ldquo;nothing to see here&rdquo; in tech. (The DOJ&rsquo;s Anthropic ban appeal now has an April 30 Ninth Circuit deadline &mdash; the legal fight continues, but the business machines on both sides are clearly not waiting for the courts.)</p>
+      <p><strong>Midday refresh:</strong> The afternoon brought two genuinely exciting open releases. Google dropped Gemma 4 under Apache 2.0 &mdash; a 31B-parameter model that runs on a Raspberry Pi, handles multimodal input with 256K context, and is currently #3 on open-weight leaderboards. Netflix quietly released VOID on Hugging Face, their first public model ever, doing physics-aware object removal from video that&rsquo;s actually impressive (remove a person holding a guitar and the guitar falls &mdash; not composited out, physically simulated). Meanwhile, Boris Cherny announced NO_FLICKER mode with mouse support for Claude Code, capping 65+ changes across three releases in four days. And OpenAI bought TBPN, the tech talk show, because apparently when you&rsquo;re prepping for a trillion-dollar IPO, owning a media property that reaches your target investor audience is just good &ldquo;strategy.&rdquo;</p>
     </div>
 
     <div class="story">
@@ -213,16 +214,40 @@
     </div>
 
     <div class="story">
-      <h2>Claude Code v2.1.91 ships MCP result persistence and plugin executables; Boris calls source leak &ldquo;human error&rdquo;</h2>
-      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Claude Code Changelog / @bcherny</span></div>
-      <p>v2.1.91 shipped April 2 with MCP tool result persistence override &mdash; servers can now push up to 500K chars per result via <code>_meta["anthropic/maxResultSizeChars"]</code>, solving truncation issues with large DB schemas. Also new: plugin executables under <code>bin/</code>, multi-line deep links, and fixes for transcript chain breaks on <code>--resume</code>, plan-mode persistence in remote sessions, and <code>cmd+delete</code> across terminal emulators. Separately, Boris Cherny addressed the March 31 source leak: &ldquo;It was human error. Our deploy process has a few manual steps, and we didn&rsquo;t do one of the steps correctly.&rdquo; No one was fired; bulk DMCA notices retracted same day.</p>
-      <p class="why">Boris&rsquo;s direct quote: &ldquo;Honest mistake, it happens.&rdquo; Three releases in four days through the leak chaos &mdash; the team is answering with shipping velocity, not spin. The MCP persistence override is the headline fix for developers who&rsquo;ve been hitting silent truncation on large tool results.</p>
-      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://officechai.com/ai/claude-code-leak-was-human-error-no-one-was-fired-claude-code-creator-boris-cherny/" target="_blank" rel="noopener">OfficeChai (Boris)</a> <a href="https://x.com/bcherny/status/2039207155069505693" target="_blank" rel="noopener">Boris on X</a></div>
+      <h2>Claude Code ships NO_FLICKER renderer, 65+ fixes across three releases in four days</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="tag tag-date">Updated 2:00 PM</span> <span class="source">Claude Code Changelog / @bcherny</span></div>
+      <p>Boris Cherny announced NO_FLICKER mode &mdash; an experimental alt-screen renderer with virtualized scrollback and mouse support in the terminal (<code>CLAUDE_CODE_NO_FLICKER=1 claude</code>). This caps a 65-change blitz across v2.1.89, v2.1.90, and v2.1.91 (April 1&ndash;2). Highlights: MCP result persistence up to 500K chars, <code>/powerup</code> interactive lessons, deferred permission hooks for headless sessions, plugin executables, autocompact thrash-loop fix, and PowerShell security hardening. Separately, Boris addressed the March 31 source leak: &ldquo;It was human error. Our deploy process has a few manual steps, and we didn&rsquo;t do one of the steps correctly.&rdquo;</p>
+      <p class="why">Boris&rsquo;s announcement: most internal users already prefer the new renderer. Three releases, 65+ changes, and a new rendering engine shipped through the biggest leak crisis in Claude Code&rsquo;s history &mdash; the team is answering with shipping velocity, not spin.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://x.com/bcherny/status/2039421575422980329" target="_blank" rel="noopener">Boris: NO_FLICKER</a> <a href="https://officechai.com/ai/claude-code-leak-was-human-error-no-one-was-fired-claude-code-creator-boris-cherny/" target="_blank" rel="noopener">OfficeChai (leak)</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Google drops Gemma 4 under Apache 2.0 &mdash; 31B model ranks #3 on open-weight leaderboards</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Google AI Blog / Dataconomy</span></div>
+      <p>Google released the Gemma 4 family in four sizes (2B, 4B, 26B, 31B parameters) under the Apache 2.0 license. The flagship 31B model supports 256K context, processes text, audio, and video natively, and runs on edge devices including phones and Raspberry Pi with near-zero latency. Trained on 140+ languages with built-in support for complex reasoning, multi-step planning, and code generation.</p>
+      <p class="why">Dataconomy&rsquo;s take: a 31B model handling multimodal input with 256K context that runs locally on a phone and ships under Apache 2.0 moves the floor for what &ldquo;open-weight&rdquo; means in practice &mdash; smaller teams can now ship products that required API-tier models six months ago.</p>
+      <div class="links"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener">Google AI Blog</a> <a href="https://dataconomy.com/2026/04/03/google-releases-open-source-ai-model-gemma-4-for-developers/" target="_blank" rel="noopener">Dataconomy</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Netflix open-sources VOID &mdash; first public model does physics-aware object removal from video</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Hugging Face / Netflix Research</span></div>
+      <p>Netflix quietly dropped VOID (Video Object and Interaction Deletion) on Hugging Face &mdash; their first-ever public model release. VOID doesn&rsquo;t just erase objects from video; it simulates the physical consequences. Remove a person holding a guitar and the guitar falls. Built on CogVideoX with a novel &ldquo;quadmask&rdquo; conditioning system that separately encodes primary objects, overlap regions, physically affected regions, and background.</p>
+      <p class="why">Physics-aware video inpainting at this quality is genuinely novel. The quadmask approach solves what prior inpainting models couldn&rsquo;t: cascading physical effects when objects are removed from a scene. And Netflix releasing it open-weight suggests they see more value in the ecosystem than in keeping it proprietary.</p>
+      <div class="links"><a href="https://huggingface.co/netflix/void-model" target="_blank" rel="noopener">Hugging Face</a> <a href="https://huggingface.co/papers/2604.02296" target="_blank" rel="noopener">Paper</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI acquires TBPN talk show in first media deal &mdash; promises editorial independence</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">TechCrunch / SF Standard</span></div>
+      <p>OpenAI acquired TBPN (Technology Business Programming Network), the founder-led tech talk show hosted by John Coogan and Jordi Hays, in its first media acquisition. The show generated ~$5M in ad revenue in 2025, is on track for $30M this year, and will report to Chris Lehane, OpenAI&rsquo;s chief global affairs officer. Altman: &ldquo;I don&rsquo;t expect them to go any easier on us.&rdquo;</p>
+      <p class="why">SF Standard&rsquo;s framing: this is Altman adding to OpenAI&rsquo;s &ldquo;growing influence machine&rdquo; &mdash; a media property reaching the exact founder/investor audience OpenAI needs for its IPO. The show reports to the global affairs chief, not an editorial team, which tells you everything about the real purpose.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://sfstandard.com/2026/04/02/sam-altman-adds-tbpn-openai-s-growing-influence-machine/" target="_blank" rel="noopener">SF Standard</a> <a href="https://openai.com/index/openai-acquires-tbpn/" target="_blank" rel="noopener">OpenAI blog</a></div>
     </div>
 
   </div><!-- end content -->
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Fri Apr 3, 2026 at 6:02 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Fri Apr 3, 2026 at 2:00 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
