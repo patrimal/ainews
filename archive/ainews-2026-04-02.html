@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News — Thursday, April 2, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Thursday, April 2, 2026 &middot; Last updated 8:01 PM PDT</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The AI-government cold war just got hot. The DOJ filed to appeal Judge Lin&rsquo;s ruling blocking Trump&rsquo;s Anthropic ban &mdash; meaning a federal appeals court will now decide whether the government can blacklist an AI company for insisting on surveillance guardrails. That&rsquo;s genuinely consequential: the precedent will determine whether safety-conscious AI companies can be punished for saying no. Meanwhile, Sam Altman went on &ldquo;Mostly Human&rdquo; to admit he &ldquo;miscalibrated&rdquo; public trust on the Pentagon deal, then pivoted to arguing the government should have <em>more</em> authority over AI &mdash; a convenient position when your company just took the Pentagon&rsquo;s contract and your competitor got banned for refusing it. On the technical side, Alibaba dropped Qwen3.6-Plus with a 1M-token context window and agentic coding chops, continuing China&rsquo;s strategy of shipping competitive models at a pace that makes the frontier labs look leisurely. And LeCun used his Brown lecture to tell a capacity crowd that hundreds of billions invested in LLMs is &ldquo;complete BS&rdquo; &mdash; which is a bolder claim when you&rsquo;ve left Meta and have a $3.5B startup betting the other way. The one thing everyone agrees on: the era of passive AI chatbots is over. The fight is about who controls the agents that replace them.</p>
+      <p><strong>Evening update:</strong> The day&rsquo;s real bombshell wasn&rsquo;t the DOJ appeal &mdash; it was the Claude Code source leak that Anthropic spent the last 48 hours trying to contain. A botched npm publish on Monday shipped a 60MB source map with 512,000 lines of TypeScript, and security researchers immediately found the good stuff: anti-distillation poison pills that inject fake tools to corrupt competitor training data, a &ldquo;frustration regex&rdquo; for detecting when users curse at the bot, an &ldquo;undercover mode&rdquo; that strips all Anthropic traces from employees&rsquo; open-source contributions, and KAIROS &mdash; an unreleased autonomous agent that runs in the background, responds to GitHub webhooks, and literally dreams. Anthropic&rsquo;s DMCA cleanup then accidentally nuked 8,100+ innocent GitHub repos before Boris Cherny retracted the notices. Meanwhile, Karpathy casually demonstrated an OpenClaw agent named &ldquo;Dobby&rdquo; that reverse-engineered his home network&rsquo;s undocumented APIs to replace every vendor app on his phone. The most interesting AI capabilities are already built &mdash; they&rsquo;re just leaking out faster than anyone planned.</p>
+    </div>
+
+    <div class="story">
+      <h2>DOJ appeals Anthropic ban ruling &mdash; federal court will decide if government can blacklist AI companies over safety demands</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / Seeking Alpha</span></div>
+      <p>The Trump administration filed a notice of appeal today challenging Judge Rita Lin&rsquo;s March 26 order that blocked the government&rsquo;s ban on Anthropic AI across all federal agencies. The ban stemmed from Anthropic&rsquo;s refusal to drop safety guardrails &mdash; specifically a restriction prohibiting mass surveillance of American citizens &mdash; during Pentagon contract negotiations. Judge Lin had called the ban &ldquo;classic illegal First Amendment retaliation&rdquo; and found the national security justification questionable. The DOJ has one week before the stay expires.</p>
+      <p class="why">Bloomberg&rsquo;s framing: this is the first federal appeals case testing whether the government can designate an AI company a &ldquo;supply chain risk&rdquo; as retaliation for publicly insisting on ethical red lines. The outcome sets precedent for every AI company negotiating with the Pentagon.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-02/doj-to-appeal-court-order-halting-trump-s-ban-on-anthropic-ai" target="_blank" rel="noopener">Bloomberg</a> <a href="https://seekingalpha.com/news/4572169-us-doj-to-appeal-court-order-pausing-ban-on-anthropics-ai" target="_blank" rel="noopener">Seeking Alpha</a> <a href="https://www.jurist.org/news/2026/03/us-district-judge-blocks-government-ban-on-anthropic-ai/" target="_blank" rel="noopener">JURIST (background)</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Alibaba launches Qwen3.6-Plus &mdash; 1M-token context, agentic coding, and multimodal reasoning for enterprise AI</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Dataconomy / TechBriefly / TradingView</span></div>
+      <p>Alibaba released Qwen3.6-Plus today, a flagship model designed for agentic AI deployment. It supports a 1M-token context window by default, can plan and iterate on repository-level engineering tasks, and processes images, documents, and video. Alibaba says it&rsquo;s the strongest domestic coding model yet. The model is available through Alibaba Cloud&rsquo;s Model Studio and is compatible with third-party coding tools including OpenClaw, Claude Code, and Cline. Selected Qwen3.6 models will be open-sourced in developer-friendly sizes.</p>
+      <p class="why">Dataconomy&rsquo;s key detail: this is Alibaba&rsquo;s third proprietary model release in under a week, and the agentic coding focus signals China&rsquo;s frontier labs are pivoting from chat benchmarks to the tool-use and code-generation capabilities that drive enterprise revenue.</p>
+      <div class="links"><a href="https://dataconomy.com/2026/04/02/alibaba-launches-qwen3-6-plus-for-enterprise-ai-applications/" target="_blank" rel="noopener">Dataconomy</a> <a href="https://techbriefly.com/2026/04/02/qwen3-6-plus-targets-coding-and-multimodal-business-tasks/" target="_blank" rel="noopener">TechBriefly</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Altman admits he &ldquo;miscalibrated&rdquo; public trust on Pentagon deal, argues government should have more power over AI</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Let&rsquo;s Data Science / CNBC / Axios</span></div>
+      <p>In an interview with Laurie Segall on &ldquo;Mostly Human,&rdquo; Sam Altman acknowledged that he &ldquo;miscalibrated&rdquo; how much the public would distrust OpenAI&rsquo;s February Pentagon agreement. He defended deploying models on classified military networks while arguing that democratically elected institutions &mdash; not companies &mdash; should set national-security AI policy. The interview comes as OpenAI&rsquo;s competitor Anthropic fights a government ban for refusing similar terms without surveillance guardrails.</p>
+      <p class="why">Axios&rsquo;s read: Altman calling for more government authority over AI is strategic positioning &mdash; his company already took the Pentagon contract, so a regulatory framework that forces competitors to do the same helps OpenAI and hurts the company that said no.</p>
+      <div class="links"><a href="https://letsdatascience.com/news/sam-altman-urges-government-control-over-ai-69d502ec" target="_blank" rel="noopener">Let&rsquo;s Data Science</a> <a href="https://www.cnbc.com/2026/03/05/open-ai-altman-anthropic-pentagon-war.html" target="_blank" rel="noopener">CNBC (background)</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code ships three releases in two days &mdash; v2.1.91 adds MCP result persistence and plugin executables atop <code>/powerup</code> and NO_FLICKER</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="tag tag-date">Updated 8:01 PM</span> <span class="source">Claude Code Changelog / @bcherny</span></div>
+      <p>v2.1.91 shipped today with MCP tool result persistence override &mdash; servers can now push up to 500K chars per result via <code>_meta["anthropic/maxResultSizeChars"]</code>, useful for passing large DB schemas without truncation. It also adds <code>disableSkillShellExecution</code> for locking down shell access in skills and plugins, plugin executables under <code>bin/</code>, multi-line deep links, and fixes for transcript chain breaks on <code>--resume</code>, <code>cmd+delete</code> across terminal emulators, and plan-mode persistence in remote sessions. Earlier, v2.1.90 (April 1) added <code>/powerup</code> interactive lessons, PowerShell hardening, and 10+ fixes including a rate-limit dialog infinite loop. v2.1.89 (April 1) brought <code>CLAUDE_CODE_NO_FLICKER=1</code> for alt-screen rendering with mouse support and 30+ bug fixes.</p>
+      <p class="why">Boris Cherny&rsquo;s note on NO_FLICKER: most internal testers already prefer it over the old renderer. The alt-screen approach keeps memory flat in long sessions and adds actual mouse support &mdash; a fundamental UX shift for terminal-based AI coding.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://piunikaweb.com/2026/04/02/anthropic-no-flicker-mode-claude-code/" target="_blank" rel="noopener">PiunikaWeb on NO_FLICKER</a></div>
+    </div>
+
+    <div class="story">
+      <h2>LeCun at Brown: &ldquo;If you are interested in human-level AI, don&rsquo;t work on LLMs&rdquo;</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Brown Daily Herald / Brown University</span></div>
+      <p>Yann LeCun delivered his most provocative public lecture yet at Brown&rsquo;s Lemley Family Leadership Series. He displayed a red all-caps slide reading &ldquo;IF YOU ARE INTERESTED IN HUMAN-LEVEL AI, DON&rsquo;T WORK ON LLMs&rdquo; and told a capacity crowd that &ldquo;hundreds of billions invested in an industry counting on LLMs reaching human-level intelligence&rdquo; is &ldquo;complete BS.&rdquo; He argued LLMs manipulate language to seem smart but are &ldquo;completely helpless when it comes to the physical world&rdquo; and &ldquo;intrinsically unsafe.&rdquo; His alternative: world models trained on sensory data that can predict consequences of actions &mdash; the bet behind his $3.5B startup AMI Labs.</p>
+      <p class="why">LeCun&rsquo;s core argument: intelligence means accomplishing new tasks with no prior training, which LLMs cannot do. The unsolved problem he identified &mdash; hierarchical planning &mdash; is what his billion-dollar company is built to crack. It&rsquo;s a genuine technical thesis, not just contrarianism, but he now has $3.5B riding on being right.</p>
+      <div class="links"><a href="https://www.browndailyherald.com/article/2026/04/ai-pioneer-yann-lecun-discusses-new-frontiers-in-the-field-at-brown-lecture" target="_blank" rel="noopener">Brown Daily Herald</a> <a href="https://www.brown.edu/news/2026-04-01/yann-lecun-artificial-intelligence-pioneer" target="_blank" rel="noopener">Brown University</a> <a href="https://www.technologyreview.com/2026/01/22/1131661/yann-lecuns-new-venture-ami-labs/" target="_blank" rel="noopener">MIT Tech Review (AMI Labs)</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic&rsquo;s Claude Code source leaks via npm &mdash; 512K lines expose anti-distillation tricks, &ldquo;undercover mode,&rdquo; and unreleased KAIROS autonomous agent</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">BleepingComputer / TechCrunch / Gizmodo / @bcherny</span></div>
+      <p>A misconfigured npm publish of Claude Code v2.1.88 on March 31 shipped a 60MB <code>cli.js.map</code> source map containing ~1,900 files and ~512,000 lines of reconstructable TypeScript. The repo was forked 41,500+ times within hours. Developers found anti-distillation poison pills (fake tool definitions injected to corrupt competitor training data), a frustration regex detecting user profanity, native client attestation acting as DRM for API calls, and &ldquo;undercover mode&rdquo; that strips all Anthropic traces from employees&rsquo; open-source contributions. Most intriguing: KAIROS, an unreleased persistent agent with background daemons, GitHub webhooks, a <code>/dream</code> mode for memory distillation, and 5-minute cron loops. Anthropic&rsquo;s DMCA response accidentally took down 8,100+ innocent GitHub repos before Boris Cherny retracted the bulk notices, limiting takedowns to 96 forks of the actual leaked code.</p>
+      <p class="why">The strategic damage isn&rsquo;t the code &mdash; it&rsquo;s the roadmap. Competitors can now anticipate features like persistent autonomous agents months before Anthropic ships them, and the anti-distillation bypass (<code>CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS</code>) is now public knowledge. Gizmodo notes the timing is brutal: this hits as Anthropic reportedly prepares for a potential IPO.</p>
+      <div class="links"><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/claude-code-source-code-accidentally-leaked-in-npm-package/" target="_blank" rel="noopener">BleepingComputer</a> <a href="https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/" target="_blank" rel="noopener">Deep dive (Alex Kim)</a> <a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/" target="_blank" rel="noopener">TechCrunch (DMCA)</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy demos &ldquo;Dobby&rdquo; &mdash; an OpenClaw agent that reverse-engineered his home network and replaced every vendor app</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Let&rsquo;s Data Science / Beeble / @karpathy</span></div>
+      <p>Andrej Karpathy demonstrated an OpenClaw agent named &ldquo;Dobby the House Elf&rdquo; that scanned his local network, discovered devices, reverse-engineered their undocumented APIs, and took control of Sonos speakers, lighting, HVAC, shades, pool, spa, and security cameras &mdash; all via natural language over WhatsApp. Dobby also monitors cameras and sends push alerts when it spots a delivery truck at the door.</p>
+      <p class="why">Karpathy&rsquo;s argument: the traditional app ecosystem depends on each vendor maintaining a separate app with its own UI. An agent that discovers and controls arbitrary networked devices through API reverse-engineering makes vendor lock-in and single-purpose apps obsolete.</p>
+      <div class="links"><a href="https://letsdatascience.com/news/karpathy-demonstrates-agent-replacing-smartphone-apps-9005a0b3" target="_blank" rel="noopener">Let&rsquo;s Data Science</a> <a href="https://beeble.com/en/blog/introducing-dobby-the-ai-assistant-poised-to-disrupt-the-entire-app-market" target="_blank" rel="noopener">Beeble</a></div>
+    </div>
+
+  </div><!-- end content -->
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Thu Apr 2, 2026 at 8:01 PM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
