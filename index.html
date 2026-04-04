@@ -179,7 +179,7 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Saturday, April 4, 2026 &middot; Last updated 2:00 PM PDT</div>
+  <div id="date-line">Saturday, April 4, 2026 &middot; Last updated 3:10 PM PDT</div>
 
   <div id="content">
 
@@ -187,6 +187,7 @@
       <h2>The Big Picture</h2>
       <p>Anthropic just pulled the rug on the ecosystem that helped make Claude the dominant AI platform. Starting today, Claude subscriptions no longer cover third-party tools like OpenClaw &mdash; meaning the developers and power users who drove Claude&rsquo;s adoption through independent tooling now get to choose between paying per-token or going back to the API. Boris Cherny calls it &ldquo;capacity management&rdquo; and insists subscriptions &ldquo;weren&rsquo;t built for these usage patterns.&rdquo; OpenClaw&rsquo;s Peter Steinberger calls it something else, noting that the timing of feature absorption into Claude Code is &ldquo;funny.&rdquo; Meanwhile, Claude Code itself shipped v2.1.92 today with an interactive Bedrock setup wizard and per-model cost breakdowns &mdash; tooling that makes the first-party experience stickier right as third-party access gets squeezed. In other endings, OpenAI quietly pulled the plug on GPT-4o across all plans yesterday, burying a model that defined a generation with the clinical notation that 0.1% of users were still on it. And Newsom signed an executive order asserting California&rsquo;s right to overrule federal supply-chain risk designations &mdash; a direct response to the DOD&rsquo;s Anthropic ban that reads less like AI policy and more like a governor protecting a $60B startup headquartered in his state. Sam Altman, for his part, went on a podcast to say he wants his kid to &ldquo;play in the dirt&rdquo; rather than use AI. The CEO building AGI would rather his son play outside.</p>
       <p><strong>Midday refresh:</strong> The OpenClaw cutoff is live &mdash; as of noon PT, Claude subscriptions officially stopped working through third-party tools. Meanwhile, two stories the morning missed: OpenAI is quietly reshuffling its entire C-suite ahead of its IPO. COO to &ldquo;special projects,&rdquo; AGI CEO on medical leave, CMO stepping down &mdash; three top executives in a single announcement, with Brockman picking up product duties. The kind of move that would dominate news cycles if OpenAI weren&rsquo;t already producing them weekly. And Google dropped Gemma 4 on Wednesday &mdash; four open-weight models under Apache 2.0, built from Gemini 3, with 256K context and native function calling. This is a real salvo in the open-weights war, especially the licensing switch from Gemma 3&rsquo;s restrictive terms. Altman went on Axios today to warn CEOs of a &ldquo;severe capacity crunch&rdquo; and advise them to &ldquo;lock in tokens now.&rdquo; The CEO selling tokens says buy tokens. Noted.</p>
+      <p><strong>Afternoon update:</strong> The morning briefing missed two voices Patrick tracks closely. Karpathy dropped a genuinely interesting thread about abandoning RAG in favor of &ldquo;LLM Knowledge Bases&rdquo; &mdash; structured wikis that LLMs compile and maintain from raw documents, with a 100-article, 400K-word research wiki as proof of concept. This is the kind of workflow innovation that actually changes how people work. Meanwhile, LeCun told a standing-room crowd at Brown that &ldquo;AI sucks&rdquo; and called the hundreds of billions invested in LLMs reaching human-level intelligence &ldquo;complete BS&rdquo; &mdash; then pivoted to pitching his $1B AMI Labs world-models venture as the real path forward. Also notable: Anthropic&rsquo;s MAD Bugs initiative had Claude Opus 4.6 autonomously write a working FreeBSD kernel exploit in 8 hours, part of 500+ zero-days found in open-source software. That&rsquo;s not a benchmark &mdash; that&rsquo;s a genuine capability inflection point.</p>
     </div>
 
     <div class="story">
@@ -237,9 +238,41 @@
       <div class="links"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener">Google Blog</a> <a href="https://www.theregister.com/2026/04/02/googles_gemma_4_open_weights/" target="_blank" rel="noopener">The Register</a> <a href="https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/" target="_blank" rel="noopener">Dev Blog</a></div>
     </div>
 
+    <div class="story">
+      <h2>Karpathy shifts from code to knowledge &mdash; introduces &ldquo;LLM Knowledge Bases&rdquo; as a RAG replacement</h2>
+      <div class="meta"><span class="tag tag-date">Apr 2</span> <span class="source">Andrej Karpathy / VentureBeat</span></div>
+      <p>Karpathy posted a detailed thread about a fundamental shift in his LLM usage: instead of writing code, he&rsquo;s having LLMs &ldquo;compile&rdquo; raw documents (papers, repos, articles) into structured markdown wikis with summaries, encyclopedia-style articles, and backlinks. No vector databases, no embeddings &mdash; just an LLM organizing knowledge into human-readable, editable files. His research wiki has grown to ~100 articles and 400K+ words, with every claim traceable to a specific source file.</p>
+      <p class="why">Karpathy&rsquo;s argument: RAG&rsquo;s vector-embedding approach is a &ldquo;black box&rdquo; that humans can&rsquo;t inspect or edit. His alternative keeps knowledge in plain markdown that both humans and LLMs can read, verify, and maintain &mdash; a fundamentally different information architecture.</p>
+      <div class="links"><a href="https://x.com/karpathy/status/2024583544157458452" target="_blank" rel="noopener">Original thread</a> <a href="https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an" target="_blank" rel="noopener">VentureBeat</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI acquires TBPN podcast for &ldquo;low hundreds of millions&rdquo; &mdash; its first media deal</h2>
+      <div class="meta"><span class="tag tag-date">Apr 2</span> <span class="source">CNBC / TechCrunch / CNN</span></div>
+      <p>OpenAI acquired TBPN, the daily tech talk show hosted by John Coogan and Jordi Hays, in its first media acquisition. The show will be housed under OpenAI&rsquo;s strategy org, reporting to chief political operative Chris Lehane. TBPN generated ~$5M in ad revenue in 2025 and is on track for $30M+ this year. Altman posted: &ldquo;I don&rsquo;t expect them to go any easier on us.&rdquo;</p>
+      <p class="why">CNN&rsquo;s framing: this isn&rsquo;t buying a podcast &mdash; it&rsquo;s buying influence. Housing a media property under your chief political operative, not your content team, tells you everything about the intent.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/02/openai-acquires-tech-podcast-tbpn.html" target="_blank" rel="noopener">CNBC</a> <a href="https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.cnn.com/2026/04/03/media/openai-tbpn-podcast-sale-lehane" target="_blank" rel="noopener">CNN</a></div>
+    </div>
+
+    <div class="story">
+      <h2>LeCun tells Brown audience &ldquo;AI sucks&rdquo; &mdash; calls LLM investment &ldquo;complete BS&rdquo;</h2>
+      <div class="meta"><span class="tag tag-date">Apr 1</span> <span class="source">Yann LeCun / Brown University</span></div>
+      <p>In a standing-room-only lecture at Brown, LeCun opened with &ldquo;AI sucks&rdquo; and argued that LLMs create a false impression of intelligence while being &ldquo;completely helpless&rdquo; with the physical world. He called the hundreds of billions invested in reaching human-level AI through language models &ldquo;complete BS&rdquo; and showed a slide in red text: &ldquo;IF YOU ARE INTERESTED IN HUMAN-LEVEL AI, DON&rsquo;T WORK ON LLMs.&rdquo; His pitch: world models via his $1B AMI Labs venture.</p>
+      <p class="why">LeCun&rsquo;s core argument: LLMs manipulate language but can&rsquo;t predict consequences of actions in the physical world. Without that capability, agentic AI systems are &ldquo;dangerous&rdquo; &mdash; and no amount of scaling will fix it.</p>
+      <div class="links"><a href="https://www.brown.edu/news/2026-04-01/yann-lecun-artificial-intelligence-pioneer" target="_blank" rel="noopener">Brown University</a> <a href="https://www.browndailyherald.com/article/2026/04/ai-pioneer-yann-lecun-discusses-new-frontiers-in-the-field-at-brown-lecture" target="_blank" rel="noopener">Brown Daily Herald</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Opus 4.6 writes working FreeBSD kernel exploit in 8 hours &mdash; part of 500+ zero-day haul</h2>
+      <div class="meta"><span class="tag tag-date">Mar 31</span> <span class="source">Calif.io / RoboRhythms</span></div>
+      <p>Anthropic&rsquo;s MAD Bugs initiative published research showing Claude Opus 4.6 autonomously discovered and exploited CVE-2026-4747, a remote kernel code execution vulnerability in FreeBSD, in ~8 hours. The initiative has found 500+ high-severity zero-days in production open-source software including Vim, Emacs, and Firefox. Claude performed the entire exploit chain from lab setup to working root shell &mdash; tasks that traditionally require years of kernel expertise.</p>
+      <p class="why">Calif.io&rsquo;s assessment: this is the first time an AI has independently discovered and exploited vulnerabilities at this scale. Automated zero-day discovery fundamentally changes the economics of both offense and defense.</p>
+      <div class="links"><a href="https://byteiota.com/claude-ai-writes-freebsd-kernel-exploit-in-8-hours/" target="_blank" rel="noopener">ByteIota</a> <a href="https://www.roborhythms.com/claude-ai-finds-zero-day-vulnerabilities-open-source-2026/" target="_blank" rel="noopener">RoboRhythms</a></div>
+    </div>
+
   </div><!-- end content -->
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sat Apr 4, 2026 at 2:00 PM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sat Apr 4, 2026 at 3:10 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
