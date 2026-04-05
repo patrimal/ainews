@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News &mdash; Saturday, April 4, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Saturday, April 4, 2026 &middot; Last updated 8:01 PM PDT</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>Anthropic just pulled the rug on the ecosystem that helped make Claude the dominant AI platform. Starting today, Claude subscriptions no longer cover third-party tools like OpenClaw &mdash; meaning the developers and power users who drove Claude&rsquo;s adoption through independent tooling now get to choose between paying per-token or going back to the API. Boris Cherny calls it &ldquo;capacity management&rdquo; and insists subscriptions &ldquo;weren&rsquo;t built for these usage patterns.&rdquo; OpenClaw&rsquo;s Peter Steinberger calls it something else, noting that the timing of feature absorption into Claude Code is &ldquo;funny.&rdquo; Meanwhile, Claude Code itself shipped v2.1.92 today with an interactive Bedrock setup wizard and per-model cost breakdowns &mdash; tooling that makes the first-party experience stickier right as third-party access gets squeezed. In other endings, OpenAI quietly pulled the plug on GPT-4o across all plans yesterday, burying a model that defined a generation with the clinical notation that 0.1% of users were still on it. And Newsom signed an executive order asserting California&rsquo;s right to overrule federal supply-chain risk designations &mdash; a direct response to the DOD&rsquo;s Anthropic ban that reads less like AI policy and more like a governor protecting a $60B startup headquartered in his state. Sam Altman, for his part, went on a podcast to say he wants his kid to &ldquo;play in the dirt&rdquo; rather than use AI. The CEO building AGI would rather his son play outside.</p>
+      <p><strong>Midday refresh:</strong> The OpenClaw cutoff is live &mdash; as of noon PT, Claude subscriptions officially stopped working through third-party tools. Meanwhile, two stories the morning missed: OpenAI is quietly reshuffling its entire C-suite ahead of its IPO. COO to &ldquo;special projects,&rdquo; AGI CEO on medical leave, CMO stepping down &mdash; three top executives in a single announcement, with Brockman picking up product duties. The kind of move that would dominate news cycles if OpenAI weren&rsquo;t already producing them weekly. And Google dropped Gemma 4 on Wednesday &mdash; four open-weight models under Apache 2.0, built from Gemini 3, with 256K context and native function calling. This is a real salvo in the open-weights war, especially the licensing switch from Gemma 3&rsquo;s restrictive terms. Altman went on Axios today to warn CEOs of a &ldquo;severe capacity crunch&rdquo; and advise them to &ldquo;lock in tokens now.&rdquo; The CEO selling tokens says buy tokens. Noted.</p>
+      <p><strong>Afternoon update:</strong> The morning briefing missed two voices Patrick tracks closely. Karpathy dropped a genuinely interesting thread about abandoning RAG in favor of &ldquo;LLM Knowledge Bases&rdquo; &mdash; structured wikis that LLMs compile and maintain from raw documents, with a 100-article, 400K-word research wiki as proof of concept. This is the kind of workflow innovation that actually changes how people work. Meanwhile, LeCun told a standing-room crowd at Brown that &ldquo;AI sucks&rdquo; and called the hundreds of billions invested in LLMs reaching human-level intelligence &ldquo;complete BS&rdquo; &mdash; then pivoted to pitching his $1B AMI Labs world-models venture as the real path forward. Also notable: Anthropic&rsquo;s MAD Bugs initiative had Claude Opus 4.6 autonomously write a working FreeBSD kernel exploit in 8 hours, part of 500+ zero-days found in open-source software. That&rsquo;s not a benchmark &mdash; that&rsquo;s a genuine capability inflection point.</p>
+      <p><strong>Evening update:</strong> Anthropic had a busy week and the receipts are piling up. While cutting off third-party tools and leaking their own source code via an npm packaging error, they also quietly closed a $400M all-stock acquisition of Coefficient Bio &mdash; a stealth biotech startup with fewer than ten employees, all ex-Genentech. Anthropic is spending half a billion dollars (in stock, sure, but still) on a team smaller than most Series A startups because they want to own AI drug discovery. Meanwhile, the security picture this week is genuinely alarming: Mercor&rsquo;s 4TB breach via a poisoned LiteLLM package exposed training data from every major lab, and Anthropic&rsquo;s own source code leak put 500K lines of Claude Code internals on GitHub. Andreessen called it the end of AI&rsquo;s &ldquo;we&rsquo;ll lock it up&rdquo; era. He&rsquo;s not wrong &mdash; when your supply chain is open-source Python packages maintained by strangers, &ldquo;locked up&rdquo; was always aspirational.</p>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic cuts off third-party tools from Claude subscriptions &mdash; OpenClaw and others lose access</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="tag tag-date">Updated 2:00 PM</span> <span class="source">The Decoder / VentureBeat / XDA</span></div>
+      <p>The cutoff is now live. As of noon PT, Claude Pro and Max subscriptions no longer work through third-party harnesses like OpenClaw. Users must opt into pay-as-you-go &ldquo;extra usage&rdquo; billing or use the API directly. Anthropic is offering a one-time credit equal to one month&rsquo;s subscription and up to 30% discounts on pre-purchased usage bundles. OpenClaw creator Peter Steinberger negotiated a brief delay but called the move &ldquo;sad for the ecosystem,&rdquo; alleging Anthropic &ldquo;absorbed popular features from his software into its closed system, then shut out alternatives.&rdquo;</p>
+      <p class="why">Steinberger&rsquo;s point: flat-rate subscriptions fundamentally clash with agent-driven continuous usage patterns. This is the first major AI platform drawing that line &mdash; and the timing with Claude Code&rsquo;s feature absorption isn&rsquo;t coincidental.</p>
+      <div class="links"><a href="https://the-decoder.com/anthropic-cuts-off-third-party-tools-like-openclaw-for-claude-subscribers-citing-unsustainable-demand/" target="_blank" rel="noopener">The Decoder</a> <a href="https://venturebeat.com/technology/anthropic-cuts-off-the-ability-to-use-claude-subscriptions-with-openclaw-and" target="_blank" rel="noopener">VentureBeat</a> <a href="https://www.xda-developers.com/claude-subscribers-just-lost-access-to-openclaw-and-other-third-party-toolsunless-they-pay-more/" target="_blank" rel="noopener">XDA</a> <a href="https://news.ycombinator.com/item?id=47633396" target="_blank" rel="noopener">HN discussion</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.92 ships with Bedrock setup wizard and per-model cost tracking</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Today&rsquo;s release adds an interactive Bedrock setup wizard that walks users through AWS authentication, region configuration, and model pinning from the login screen. Subscription users get per-model and cache-hit cost breakdowns via <code>/cost</code>, and enterprise admins get <code>forceRemoteSettingsRefresh</code> for fail-closed policy enforcement. Also: <code>/release-notes</code> is now an interactive version picker, remote control sessions use hostname prefixes, and the <code>/tag</code> and <code>/vim</code> commands were removed (vim mode moves to <code>/config</code>). Fourteen bug fixes including tmux subagent spawning, fullscreen scrolling in iTerm2/Ghostty, and a 60% faster Write tool diff for large files.</p>
+      <p class="why">The Bedrock wizard and per-model cost breakdown signal Anthropic preparing Claude Code for enterprise AWS deployments &mdash; making the first-party tool stickier right as third-party access gets curtailed.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub Releases</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI fully retires GPT-4o from all plans &mdash; 0.1% of users remained</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">OpenAI / CNBC</span></div>
+      <p>OpenAI completed the full retirement of GPT-4o from ChatGPT on April 3, ending access for the final holdouts: Business, Enterprise, and Edu customers using it within Custom GPTs. The API remains available for now. Internal metrics showed only 0.1% of daily ChatGPT users still selected GPT-4o when the February deprecation was announced &mdash; usage had migrated overwhelmingly to GPT-5.2, 5.3, and the 5.4 family.</p>
+      <p class="why">OpenAI&rsquo;s own data: GPT-4o was the model that brought multimodal to the mainstream &mdash; its quiet death with 99.9% of users already gone marks how fast the frontier moves. Under two years from flagship to footnote.</p>
+      <div class="links"><a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" target="_blank" rel="noopener">OpenAI</a> <a href="https://www.cnbc.com/2026/01/29/openai-will-retire-gpt-4o-from-chatgpt-next-month.html" target="_blank" rel="noopener">CNBC</a> <a href="https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models" target="_blank" rel="noopener">Help Center</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Newsom signs executive order asserting California&rsquo;s AI oversight &mdash; overrules federal Anthropic ban</h2>
+      <div class="meta"><span class="tag tag-date">Apr 2</span> <span class="source">CalMatters / Washington Post</span></div>
+      <p>Governor Newsom signed an executive order establishing that California will independently review federal supply-chain risk designations before deciding whether to do business with flagged AI companies. This directly addresses the DOD&rsquo;s designation of Anthropic as a supply-chain risk, which blocked the company from military contracts over clauses banning domestic mass surveillance and autonomous weapons. The order also requires state agencies to assess AI harm in contracting decisions while encouraging AI adoption.</p>
+      <p class="why">Washington Post&rsquo;s framing: this reframes the Anthropic ban as a states&rsquo;-rights issue. California is asserting tech sovereignty &mdash; deciding which AI companies are safe to work with rather than deferring to a federal designation the state considers politically motivated.</p>
+      <div class="links"><a href="https://calmatters.org/politics/2026/04/newsom-moves-for-california-ai-startups/" target="_blank" rel="noopener">CalMatters</a> <a href="https://www.washingtonpost.com/business/2026/04/02/ai-anthropic-defense-department-newsom-executive-order/a8e956f8-2ecf-11f1-aac2-f56b5ccad184_story.html" target="_blank" rel="noopener">Washington Post</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI reshuffles C-suite ahead of IPO &mdash; COO out, AGI CEO on medical leave</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Bloomberg / TechCrunch</span></div>
+      <p>OpenAI announced three major leadership changes: COO Brad Lightcap moves to &ldquo;special projects&rdquo; overseeing the enterprise joint venture with PE firms, AGI CEO Fidji Simo is taking medical leave for a POTS relapse, and CMO Kate Rouch is stepping down to focus on cancer recovery. Greg Brockman takes over product management while Simo is out, with CRO Denise Dresser absorbing COO duties.</p>
+      <p class="why">Bloomberg&rsquo;s framing: three C-suite departures in a single announcement ahead of an IPO is unusual. The COO role isn&rsquo;t being refilled &mdash; it&rsquo;s being distributed, suggesting OpenAI is flattening its org chart around Altman.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-03/openai-coo-shifts-out-of-role-agi-ceo-taking-medical-leave" target="_blank" rel="noopener">Bloomberg</a> <a href="https://techcrunch.com/2026/04/03/openai-executive-shuffle-new-roles-coo-brad-lightcap-fidji-simo-kate-rouch/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.axios.com/2026/04/03/openai-fidji-simo-medical-leave-reshuffle" target="_blank" rel="noopener">Axios</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Google launches Gemma 4 &mdash; four open-weight models under Apache 2.0, built from Gemini 3</h2>
+      <div class="meta"><span class="tag tag-date">Apr 2</span> <span class="source">Google / The Register</span></div>
+      <p>Google released Gemma 4: four open-weight models from edge to workstation. The lineup spans 2B and 4B &ldquo;Effective&rdquo; models for smartphones, a 26B Mixture-of-Experts model, and a 31B Dense model. Built from Gemini 3 research, they feature 256K context windows, native vision and audio, function calling, and 140+ language support. The big shift: Apache 2.0 licensing replaces Gemma 3&rsquo;s restrictive terms.</p>
+      <p class="why">The Register&rsquo;s analysis: this is Google&rsquo;s direct counter to the Chinese open-weight models (DeepSeek, Qwen) eating its lunch. Apache 2.0 removes the enterprise licensing friction that held back Gemma 3 adoption.</p>
+      <div class="links"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener">Google Blog</a> <a href="https://www.theregister.com/2026/04/02/googles_gemma_4_open_weights/" target="_blank" rel="noopener">The Register</a> <a href="https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/" target="_blank" rel="noopener">Dev Blog</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy shifts from code to knowledge &mdash; introduces &ldquo;LLM Knowledge Bases&rdquo; as a RAG replacement</h2>
+      <div class="meta"><span class="tag tag-date">Apr 2</span> <span class="source">Andrej Karpathy / VentureBeat</span></div>
+      <p>Karpathy posted a detailed thread about a fundamental shift in his LLM usage: instead of writing code, he&rsquo;s having LLMs &ldquo;compile&rdquo; raw documents (papers, repos, articles) into structured markdown wikis with summaries, encyclopedia-style articles, and backlinks. No vector databases, no embeddings &mdash; just an LLM organizing knowledge into human-readable, editable files. His research wiki has grown to ~100 articles and 400K+ words, with every claim traceable to a specific source file.</p>
+      <p class="why">Karpathy&rsquo;s argument: RAG&rsquo;s vector-embedding approach is a &ldquo;black box&rdquo; that humans can&rsquo;t inspect or edit. His alternative keeps knowledge in plain markdown that both humans and LLMs can read, verify, and maintain &mdash; a fundamentally different information architecture.</p>
+      <div class="links"><a href="https://x.com/karpathy/status/2024583544157458452" target="_blank" rel="noopener">Original thread</a> <a href="https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an" target="_blank" rel="noopener">VentureBeat</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI acquires TBPN podcast for &ldquo;low hundreds of millions&rdquo; &mdash; its first media deal</h2>
+      <div class="meta"><span class="tag tag-date">Apr 2</span> <span class="source">CNBC / TechCrunch / CNN</span></div>
+      <p>OpenAI acquired TBPN, the daily tech talk show hosted by John Coogan and Jordi Hays, in its first media acquisition. The show will be housed under OpenAI&rsquo;s strategy org, reporting to chief political operative Chris Lehane. TBPN generated ~$5M in ad revenue in 2025 and is on track for $30M+ this year. Altman posted: &ldquo;I don&rsquo;t expect them to go any easier on us.&rdquo;</p>
+      <p class="why">CNN&rsquo;s framing: this isn&rsquo;t buying a podcast &mdash; it&rsquo;s buying influence. Housing a media property under your chief political operative, not your content team, tells you everything about the intent.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/02/openai-acquires-tech-podcast-tbpn.html" target="_blank" rel="noopener">CNBC</a> <a href="https://techcrunch.com/2026/04/02/openai-acquires-tbpn-the-buzzy-founder-led-business-talk-show/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.cnn.com/2026/04/03/media/openai-tbpn-podcast-sale-lehane" target="_blank" rel="noopener">CNN</a></div>
+    </div>
+
+    <div class="story">
+      <h2>LeCun tells Brown audience &ldquo;AI sucks&rdquo; &mdash; calls LLM investment &ldquo;complete BS&rdquo;</h2>
+      <div class="meta"><span class="tag tag-date">Apr 1</span> <span class="source">Yann LeCun / Brown University</span></div>
+      <p>In a standing-room-only lecture at Brown, LeCun opened with &ldquo;AI sucks&rdquo; and argued that LLMs create a false impression of intelligence while being &ldquo;completely helpless&rdquo; with the physical world. He called the hundreds of billions invested in reaching human-level AI through language models &ldquo;complete BS&rdquo; and showed a slide in red text: &ldquo;IF YOU ARE INTERESTED IN HUMAN-LEVEL AI, DON&rsquo;T WORK ON LLMs.&rdquo; His pitch: world models via his $1B AMI Labs venture.</p>
+      <p class="why">LeCun&rsquo;s core argument: LLMs manipulate language but can&rsquo;t predict consequences of actions in the physical world. Without that capability, agentic AI systems are &ldquo;dangerous&rdquo; &mdash; and no amount of scaling will fix it.</p>
+      <div class="links"><a href="https://www.brown.edu/news/2026-04-01/yann-lecun-artificial-intelligence-pioneer" target="_blank" rel="noopener">Brown University</a> <a href="https://www.browndailyherald.com/article/2026/04/ai-pioneer-yann-lecun-discusses-new-frontiers-in-the-field-at-brown-lecture" target="_blank" rel="noopener">Brown Daily Herald</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Opus 4.6 writes working FreeBSD kernel exploit in 8 hours &mdash; part of 500+ zero-day haul</h2>
+      <div class="meta"><span class="tag tag-date">Mar 31</span> <span class="source">Calif.io / RoboRhythms</span></div>
+      <p>Anthropic&rsquo;s MAD Bugs initiative published research showing Claude Opus 4.6 autonomously discovered and exploited CVE-2026-4747, a remote kernel code execution vulnerability in FreeBSD, in ~8 hours. The initiative has found 500+ high-severity zero-days in production open-source software including Vim, Emacs, and Firefox. Claude performed the entire exploit chain from lab setup to working root shell &mdash; tasks that traditionally require years of kernel expertise.</p>
+      <p class="why">Calif.io&rsquo;s assessment: this is the first time an AI has independently discovered and exploited vulnerabilities at this scale. Automated zero-day discovery fundamentally changes the economics of both offense and defense.</p>
+      <div class="links"><a href="https://byteiota.com/claude-ai-writes-freebsd-kernel-exploit-in-8-hours/" target="_blank" rel="noopener">ByteIota</a> <a href="https://www.roborhythms.com/claude-ai-finds-zero-day-vulnerabilities-open-source-2026/" target="_blank" rel="noopener">RoboRhythms</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic acquires Coefficient Bio for $400M &mdash; fewer than 10 employees, all ex-Genentech</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">TechCrunch / The Information</span></div>
+      <p>Anthropic closed an all-stock acquisition of Coefficient Bio, a stealth biotech AI startup founded eight months ago by Samuel Stanton and Nathan C. Frey, both former Genentech Prescient Design researchers. The team &mdash; nearly all computational biologists &mdash; joins Anthropic&rsquo;s Healthcare &amp; Life Sciences division under Eric Kauderer-Abrams. Coefficient was building AI models to automate drug R&amp;D planning, clinical regulatory strategy, and new drug opportunity identification.</p>
+      <p class="why">The Information&rsquo;s framing: $400M for fewer than 10 people signals Anthropic is paying for domain expertise, not technology. The bet is that protein design and biomolecule modeling specialists can build pharma-grade Claude tools that justify enterprise pricing.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/04/03/anthropic-buys-biotech-startup-coefficient-bio-in-400m-deal-reports/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.theinformation.com/articles/anthropic-acquires-startup-coefficient-bio-400-million" target="_blank" rel="noopener">The Information</a> <a href="https://thenextweb.com/news/anthropic-just-paid-400-million-for-a-startup-with-fewer-than-10-people" target="_blank" rel="noopener">The Next Web</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Twin cybersecurity incidents shake AI industry &mdash; Mercor&rsquo;s 4TB breach and Anthropic&rsquo;s source code leak</h2>
+      <div class="meta"><span class="tag tag-date">Apr 2</span> <span class="source">Fortune / TechCrunch / SecurityWeek</span></div>
+      <p>Two security failures converged this week. First, a supply-chain attack on the open-source LiteLLM package (used to route between AI models) gave the hacking group Lapsus$ access to Mercor, a $10B AI training-data startup whose clients include OpenAI, Anthropic, and Meta. Lapsus$ claims 4TB of stolen data including source code and customer datasets. Separately, Anthropic accidentally shipped a source map in Claude Code v2.1.88&rsquo;s npm package, exposing ~500K lines of internal TypeScript &mdash; and then mass-DMCA&rsquo;d thousands of GitHub repos trying to claw it back, which Anthropic called &ldquo;an accident.&rdquo;</p>
+      <p class="why">Fortune&rsquo;s assessment: the Mercor breach put &ldquo;an incredible amount of state-of-the-art training data from every major lab&rdquo; at risk, per Y Combinator&rsquo;s Garry Tan. The twin incidents expose how dependent the AI industry is on open-source supply chains it doesn&rsquo;t control.</p>
+      <div class="links"><a href="https://fortune.com/2026/04/02/mercor-ai-startup-security-incident-10-billion/" target="_blank" rel="noopener">Fortune (Mercor)</a> <a href="https://techcrunch.com/2026/04/01/anthropic-took-down-thousands-of-github-repos-trying-to-yank-its-leaked-source-code-a-move-the-company-says-was-an-accident/" target="_blank" rel="noopener">TechCrunch (Anthropic)</a> <a href="https://finance.yahoo.com/sectors/technology/article/twin-cybersecurity-incidents-leave-ai-industry-shaken-141850823.html" target="_blank" rel="noopener">Yahoo Finance</a></div>
+    </div>
+
+  </div><!-- end content -->
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sat Apr 4, 2026 at 8:01 PM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
