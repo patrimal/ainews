@@ -179,13 +179,14 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Thursday, April 9, 2026 &middot; Last updated 6:03 AM PDT</div>
+  <div id="date-line">Thursday, April 9, 2026 &middot; Last updated 2:00 PM PDT</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
       <p>Ronan Farrow just published the most devastating profile of a tech CEO since &mdash; well, maybe ever. Over 100 sources, internal memos, Ilya Sutskever&rsquo;s handwritten notes calling out a &ldquo;consistent pattern of lying,&rdquo; a sitting board member using the word &ldquo;sociopath&rdquo; on the record, and a Microsoft executive floating comparisons to Ponzi scheme operators. That landed Sunday and it&rsquo;s still detonating: OpenAI today paused its UK Stargate data center project, blaming energy costs and regulation &mdash; the diplomatic translation of &ldquo;we announced this for headlines and the economics never worked.&rdquo; Meanwhile, Meta shipped Muse Spark, their first model under Alexandr Wang&rsquo;s Meta Superintelligence Labs &mdash; and it&rsquo;s proprietary. The company that built its entire AI brand on open-source just went closed. Benchmarks are respectable (4th on Artificial Analysis, behind Gemini 3.1 Pro, GPT-5.4, and Opus 4.6) but the strategy reversal tells you more than any leaderboard. The genuinely exciting news is quieter: Anthropic crossed $30B in annualized revenue, tripling from $9B in four months and passing OpenAI. They also shipped Managed Agents &mdash; cloud-hosted, sandboxed, auto-scaling agent infrastructure with Notion, Rakuten, and Asana already onboard. While OpenAI writes policy papers comparing itself to the New Deal, Anthropic is building the plumbing that makes agents actually deployable. The gap between talking about the future and shipping it keeps growing.</p>
+      <p><strong>Midday refresh:</strong> The Altman saga added a new chapter &mdash; Musk formally filed to have Altman and Brockman removed as officers and unwind OpenAI&rsquo;s for-profit conversion entirely, with jury selection starting April 27. OpenAI fired back calling it &ldquo;nothing more than a harassment campaign driven by ego.&rdquo; More interesting than the legal theater: Karpathy dropped an &ldquo;LLM Wiki&rdquo; pattern that hit 16 million views and 5,000 GitHub stars &mdash; the idea that LLMs should compile your research into persistent, interlinked markdown wikis instead of doing throwaway RAG retrieval. It&rsquo;s the kind of genuinely novel workflow insight that makes you rethink how you use these tools. Claude Code shipped v2.1.97 and v2.1.98 back-to-back with 50+ changes including a Google Vertex AI setup wizard, NO_FLICKER focus view, and a batch of security hardening fixes. And Perplexity quietly crossed $450M ARR &mdash; a 50% jump in one month &mdash; by pivoting from search to agents with their &ldquo;Computer&rdquo; product. The pattern holds: the companies actually shipping product are the ones growing.</p>
     </div>
 
     <div class="story">
@@ -228,9 +229,41 @@
       <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-06/broadcom-confirms-deal-to-ship-google-tpu-chips-to-anthropic" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.theregister.com/2026/04/07/broadcom_google_chip_deal_anthropic_customer/" target="_blank" rel="noopener">The Register</a> <a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/" target="_blank" rel="noopener">PYMNTS</a> <a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank" rel="noopener">Anthropic</a></div>
     </div>
 
+    <div class="story">
+      <h2>Claude Code v2.1.97 &amp; v2.1.98 ship back-to-back &mdash; 50+ changes in 48 hours</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Two rapid-fire releases landed April 8&ndash;9. Highlights: a Google Vertex AI interactive setup wizard, a Focus View toggle (<code>Ctrl+O</code>) for NO_FLICKER mode that strips everything to prompt/tool summaries/response, a Monitor tool for streaming background script events, subprocess PID namespace sandboxing on Linux, and status line refresh intervals. On the security side, Anthropic patched a Bash tool backslash-escape bypass that could lead to arbitrary code execution, plus hardened compound command handling and network redirect prompting.</p>
+      <p class="why">The security fixes are the real headline: a permission bypass allowing arbitrary code execution is exactly the kind of vulnerability that matters when Claude Code runs with elevated permissions. The Vertex AI wizard and Focus View are quality-of-life wins that lower the barrier for enterprise adoption.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Perplexity&rsquo;s ARR crosses $450M &mdash; 50% jump in one month on AI agent pivot</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Financial Times / PYMNTS / TechStartups</span></div>
+      <p>Perplexity&rsquo;s estimated annual recurring revenue topped $450 million in March, a 50% jump from the prior month, according to the Financial Times. The growth was driven by &ldquo;Computer,&rdquo; an agentic AI product that performs complex tasks with minimal human supervision, alongside a shift to usage-based pricing. The company now has 100M+ monthly active users and tens of thousands of enterprise clients paying $20&ndash;$200/month. For context: prior ARR was $305M, up from $16M two years ago.</p>
+      <p class="why">PYMNTS&rsquo;s framing: AI systems are shifting from &ldquo;occasional utilities&rdquo; to &ldquo;general-purpose assistants embedded across daily decision-making.&rdquo; The revenue trajectory validates that agent-first products can monetize at scale &mdash; not just chatbot wrappers.</p>
+      <div class="links"><a href="https://www.pymnts.com/artificial-intelligence-2/2026/perplexitys-shift-to-ai-agents-boosts-revenue-50/" target="_blank" rel="noopener">PYMNTS</a> <a href="https://techstartups.com/2026/04/08/perplexity-revenue-surges-50-as-ai-startup-shifts-from-search-to-autonomous-ai-agents/" target="_blank" rel="noopener">TechStartups</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Musk files to remove Altman and Brockman from OpenAI &mdash; trial starts April 27</h2>
+      <div class="meta"><span class="tag tag-date">Apr 7</span> <span class="source">CNBC / Bloomberg / Benzinga</span></div>
+      <p>Elon Musk filed a court motion seeking to remove Sam Altman as CEO and Greg Brockman as president, and to unwind OpenAI&rsquo;s for-profit conversion entirely &mdash; restoring the company to its original nonprofit structure. Jury selection begins April 27 in federal court in Oakland. OpenAI responded by urging the California and Delaware AGs to investigate &ldquo;improper and anti-competitive behavior&rdquo; by Musk, calling the suit &ldquo;nothing more than a harassment campaign driven by ego, jealousy and a desire to slow down a competitor.&rdquo;</p>
+      <p class="why">Bloomberg&rsquo;s framing: Musk wants any trial winnings directed to the OpenAI nonprofit. Combined with the Farrow expos&eacute; and the Stargate pause, OpenAI now faces a credibility crisis on three fronts &mdash; legal, journalistic, and financial &mdash; two weeks before trial.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/07/elon-musk-seeks-ouster-of-openai-ceo-sam-altman-as-part-of-lawsuit.html" target="_blank" rel="noopener">CNBC</a> <a href="https://www.bloomberg.com/news/articles/2026-04-07/musk-wants-openai-nonprofit-to-get-any-trial-winnings-from-suit" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.benzinga.com/news/legal/26/04/51695765/elon-musk-seeks-ouster-sam-altman-greg-brockman-openai-harassment-claim" target="_blank" rel="noopener">Benzinga</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy&rsquo;s &ldquo;LLM Wiki&rdquo; goes viral &mdash; 16M views, 5K GitHub stars, and a rethink of RAG</h2>
+      <div class="meta"><span class="tag tag-date">Apr 4</span> <span class="source">Andrej Karpathy / VentureBeat / Analytics India</span></div>
+      <p>Andrej Karpathy posted that he&rsquo;s spending less time using LLMs to generate code and more time using them to &ldquo;compile&rdquo; raw research into persistent, interlinked markdown wikis. The pattern: dump papers, notes, and articles into a folder, point an LLM at it, and let it build and maintain a structured knowledge base with backlinks, categories, and encyclopedia-style articles. His personal wiki grew to 100 articles and 400K words on a single topic. He followed up with a GitHub gist &ldquo;idea file&rdquo; &mdash; not code, just the architecture &mdash; arguing that in the age of LLM agents, sharing the idea is more useful than sharing the app.</p>
+      <p class="why">Karpathy&rsquo;s core insight: at personal scale, structured markdown beats vector search, and LLMs handle interlinking better than humans. VentureBeat calls it a &ldquo;bypass of RAG&rdquo; &mdash; instead of retrieving on the fly, you pre-compile knowledge into a living document that compounds over time.</p>
+      <div class="links"><a href="https://x.com/karpathy/status/2039805659525644595" target="_blank" rel="noopener">Original tweet</a> <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">GitHub gist</a> <a href="https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an" target="_blank" rel="noopener">VentureBeat</a></div>
+    </div>
+
   </div><!-- end content -->
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Thu Apr 9, 2026 at 6:03 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Thu Apr 9, 2026 at 2:00 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
