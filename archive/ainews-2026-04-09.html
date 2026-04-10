@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News &mdash; Thursday, April 9, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Thursday, April 9, 2026 &middot; Last updated 8:00 PM PDT</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>Ronan Farrow just published the most devastating profile of a tech CEO since &mdash; well, maybe ever. Over 100 sources, internal memos, Ilya Sutskever&rsquo;s handwritten notes calling out a &ldquo;consistent pattern of lying,&rdquo; a sitting board member using the word &ldquo;sociopath&rdquo; on the record, and a Microsoft executive floating comparisons to Ponzi scheme operators. That landed Sunday and it&rsquo;s still detonating: OpenAI today paused its UK Stargate data center project, blaming energy costs and regulation &mdash; the diplomatic translation of &ldquo;we announced this for headlines and the economics never worked.&rdquo; Meanwhile, Meta shipped Muse Spark, their first model under Alexandr Wang&rsquo;s Meta Superintelligence Labs &mdash; and it&rsquo;s proprietary. The company that built its entire AI brand on open-source just went closed. Benchmarks are respectable (4th on Artificial Analysis, behind Gemini 3.1 Pro, GPT-5.4, and Opus 4.6) but the strategy reversal tells you more than any leaderboard. The genuinely exciting news is quieter: Anthropic crossed $30B in annualized revenue, tripling from $9B in four months and passing OpenAI. They also shipped Managed Agents &mdash; cloud-hosted, sandboxed, auto-scaling agent infrastructure with Notion, Rakuten, and Asana already onboard. While OpenAI writes policy papers comparing itself to the New Deal, Anthropic is building the plumbing that makes agents actually deployable. The gap between talking about the future and shipping it keeps growing.</p>
+      <p><strong>Midday refresh:</strong> The Altman saga added a new chapter &mdash; Musk formally filed to have Altman and Brockman removed as officers and unwind OpenAI&rsquo;s for-profit conversion entirely, with jury selection starting April 27. OpenAI fired back calling it &ldquo;nothing more than a harassment campaign driven by ego.&rdquo; More interesting than the legal theater: Karpathy dropped an &ldquo;LLM Wiki&rdquo; pattern that hit 16 million views and 5,000 GitHub stars &mdash; the idea that LLMs should compile your research into persistent, interlinked markdown wikis instead of doing throwaway RAG retrieval. It&rsquo;s the kind of genuinely novel workflow insight that makes you rethink how you use these tools. Claude Code shipped v2.1.97 and v2.1.98 back-to-back with 50+ changes including a Google Vertex AI setup wizard, NO_FLICKER focus view, and a batch of security hardening fixes. And Perplexity quietly crossed $450M ARR &mdash; a 50% jump in one month &mdash; by pivoting from search to agents with their &ldquo;Computer&rdquo; product. The pattern holds: the companies actually shipping product are the ones growing.</p>
+      <p><strong>Evening update:</strong> The story of the day dropped while you were at lunch. Anthropic&rsquo;s Claude Mythos Preview &mdash; restricted to 12 partners under Project Glasswing &mdash; has been autonomously finding and exploiting zero-day vulnerabilities across every major OS and browser. We&rsquo;re talking a 17-year-old FreeBSD RCE, a four-bug browser exploit chain that escaped both renderer and OS sandboxes, and &ldquo;thousands&rdquo; of high-severity flaws. This is a genuine capability discontinuity. TechCrunch raises the fair question of whether restricting the model is safety or competitive moat-building, but when your AI writes a 20-gadget ROP chain autonomously, the safety argument is hard to dismiss. Meanwhile, OpenAI is telling investors it&rsquo;ll make $100 billion in ad revenue by 2030 &mdash; assuming 2.75 billion weekly users, which is roughly &ldquo;every human with internet access uses ChatGPT daily.&rdquo; The same company is now being investigated by Florida&rsquo;s AG over ChatGPT&rsquo;s alleged role in a campus shooting that killed two. And Meta just committed another $21B to CoreWeave, bringing their total infrastructure tab to $35B through 2032. The contrast is stark: Anthropic ships a model that finds real vulnerabilities in real software, OpenAI ships ad revenue projections on a napkin.</p>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI pauses UK Stargate data center &mdash; blames energy costs and regulation</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / CNBC / Engadget</span></div>
+      <p>OpenAI is pausing its UK Stargate infrastructure project, the AI data center initiative with NVIDIA announced last September to give the UK sovereign computing capabilities. The company says it &ldquo;sees huge potential for the UK&rsquo;s AI future&rdquo; but will &ldquo;move forward when the right conditions such as regulation and the cost of energy enable long-term infrastructure investment.&rdquo; The pause follows Oracle shelving an expansion at the Abilene, Texas main Stargate hub over funding issues &mdash; suggesting the problems aren&rsquo;t UK-specific.</p>
+      <p class="why">Bloomberg&rsquo;s framing: this is a blow to PM Starmer&rsquo;s AI growth strategy and raises questions about the entire Stargate initiative&rsquo;s financial viability. When both the UK and Texas expansions stall, the issue isn&rsquo;t regulation &mdash; it&rsquo;s the math.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-09/openai-pauses-stargate-uk-data-center-effort-citing-energy-costs" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.cnbc.com/2026/04/09/openai-halts-uk-stargate-project.html" target="_blank" rel="noopener">CNBC</a> <a href="https://www.engadget.com/ai/openai-pauses-its-stargate-uk-data-center-plan-115626978.html" target="_blank" rel="noopener">Engadget</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Meta launches Muse Spark &mdash; first model from Meta Superintelligence Labs, and it&rsquo;s proprietary</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="tag tag-date">Updated 8:00 PM</span> <span class="source">CNBC / TechCrunch / Axios / Fortune</span></div>
+      <p>Meta debuted Muse Spark, the first model from Meta Superintelligence Labs under new chief AI officer Alexandr Wang (brought in via the $14.3B Scale AI acquisition). The multimodal model accepts voice, text, and image inputs and scores 52 on the Artificial Analysis Intelligence Index &mdash; 4th overall behind Gemini 3.1 Pro, GPT-5.4, and Claude Opus 4.6. Meta claims it matches Llama 4 Maverick performance at 10x less compute. Early traction is strong: the Meta AI app jumped from #57 to #5 on the U.S. App Store within 24 hours of launch, and daily web visitors rose 450% day-over-day to an all-time high.</p>
+      <p class="why">TechCrunch calls it a &ldquo;ground-up overhaul.&rdquo; Meta &mdash; the company whose AI identity was &ldquo;we open-source everything&rdquo; &mdash; shipped a closed model after its Llama 4 debut flopped with developers last year. The strategy pivot from open-source champion to proprietary competitor is the real headline.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://techcrunch.com/2026/04/09/meta-ai-app-climbs-to-no-5-on-the-app-store-after-muse-spark-launch/" target="_blank" rel="noopener">App Store surge</a> <a href="https://www.axios.com/2026/04/08/meta-muse-alexandr-wang" target="_blank" rel="noopener">Axios</a> <a href="https://fortune.com/2026/04/08/meta-unveils-muse-spark-mark-zuckerberg-ai-push/" target="_blank" rel="noopener">Fortune</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic launches Claude Managed Agents &mdash; cloud-hosted, auto-scaling agent infrastructure</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">SiliconANGLE / Startup Fortune / Anthropic</span></div>
+      <p>Anthropic shipped Claude Managed Agents in public beta &mdash; a suite of composable APIs for building and deploying cloud-hosted agents at scale. The platform handles sandboxed code execution, authentication, checkpointing, scoped permissions, and persistent long-running sessions. It supports both single-task flows and complex multi-agent pipelines. In internal tests, structured file generation success rates improved by up to 10 points over standard prompting. Early adopters include Notion, Rakuten, and Asana, with several already shipping agent-powered features to their products.</p>
+      <p class="why">SiliconANGLE&rsquo;s framing: this is Anthropic making the leap from &ldquo;model provider&rdquo; to &ldquo;agent platform.&rdquo; The sandboxing, checkpointing, and scoped permissions are the kind of production-grade infrastructure that separates demo agents from deployed ones.</p>
+      <div class="links"><a href="https://siliconangle.com/2026/04/08/anthropic-launches-claude-managed-agents-speed-ai-agent-development/" target="_blank" rel="noopener">SiliconANGLE</a> <a href="https://startupfortune.com/anthropic-unveils-managed-agents-for-claude-eyeing-enterprise-ai-workflows/" target="_blank" rel="noopener">Startup Fortune</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Ronan Farrow&rsquo;s New Yorker investigation eviscerates Altman &mdash; &ldquo;unconstrained by truth&rdquo;</h2>
+      <div class="meta"><span class="tag tag-date">Apr 7</span> <span class="source">The New Yorker / CNN / Semafor</span></div>
+      <p>The New Yorker published a year-and-a-half investigation by Ronan Farrow and Andrew Marantz, drawing on 100+ sources, never-before-disclosed internal memos, and 200+ pages of documents. A board member called Altman a &ldquo;sociopath&rdquo; and &ldquo;unconstrained by truth.&rdquo; Ilya Sutskever&rsquo;s memo listed &ldquo;lying&rdquo; as the first observed pattern. Dario Amodei alleged Altman personally denied contractual terms in real time during Microsoft&rsquo;s $1B negotiation. A Microsoft executive said there was &ldquo;a small but real possibility&rdquo; Altman would be remembered like a Ponzi scheme perpetrator. The piece documents Altman publicly advocating for AI regulation while privately lobbying to gut it &mdash; including threatening California legislators over a safety testing bill.</p>
+      <p class="why">Gary Marcus&rsquo;s take: &ldquo;This isn&rsquo;t a hit piece. It&rsquo;s a deeply sourced document.&rdquo; The timing &mdash; two weeks before Musk&rsquo;s trial and amid IPO prep &mdash; makes this the kind of credibility damage that can&rsquo;t be walked back with a blog post.</p>
+      <div class="links"><a href="https://www.cnn.com/2026/04/07/business/video/the-new-yorker-investigates-sam-altmans-alleged-deceptions-at-openai-vrtc" target="_blank" rel="noopener">CNN</a> <a href="https://www.semafor.com/article/04/06/2026/new-yorker-investigation-raises-questions-over-sam-altmans-trustworthiness" target="_blank" rel="noopener">Semafor</a> <a href="https://garymarcus.substack.com/p/sam-altman-unconstrained-by-the-truth" target="_blank" rel="noopener">Gary Marcus</a> <a href="https://petapixel.com/2026/04/08/investigation-raises-serious-concerns-over-sam-altmans-trustworthiness/" target="_blank" rel="noopener">PetaPixel</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic crosses $30B revenue run rate &mdash; triples in four months, surpasses OpenAI</h2>
+      <div class="meta"><span class="tag tag-date">Apr 7</span> <span class="source">Bloomberg / The Register / PYMNTS / Anthropic</span></div>
+      <p>Anthropic&rsquo;s annualized revenue has crossed $30 billion, up from roughly $9 billion at the end of 2025 &mdash; a 3x jump in four months. The company now surpasses OpenAI&rsquo;s estimated $25 billion run rate. Anthropic counts 1,000+ enterprise clients paying over $1M annually, a figure that has more than doubled recently. To fuel this, the company expanded its compute agreement with Google and Broadcom, securing access to 3.5 GW of new Google TPU chips and backed it with $100M in open-source security donations via Project Glasswing.</p>
+      <p class="why">The Register&rsquo;s framing: Anthropic went from scrappy underdog to revenue leader in one quarter. The $9B-to-$30B trajectory in four months suggests enterprise demand isn&rsquo;t just growing &mdash; it&rsquo;s compounding, driven by API deployments going from experiments to production.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-06/broadcom-confirms-deal-to-ship-google-tpu-chips-to-anthropic" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.theregister.com/2026/04/07/broadcom_google_chip_deal_anthropic_customer/" target="_blank" rel="noopener">The Register</a> <a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/" target="_blank" rel="noopener">PYMNTS</a> <a href="https://www.anthropic.com/news/google-broadcom-partnership-compute" target="_blank" rel="noopener">Anthropic</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.97 &amp; v2.1.98 ship back-to-back &mdash; 50+ changes in 48 hours</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Two rapid-fire releases landed April 8&ndash;9. Highlights: a Google Vertex AI interactive setup wizard, a Focus View toggle (<code>Ctrl+O</code>) for NO_FLICKER mode that strips everything to prompt/tool summaries/response, a Monitor tool for streaming background script events, subprocess PID namespace sandboxing on Linux, and status line refresh intervals. On the security side, Anthropic patched a Bash tool backslash-escape bypass that could lead to arbitrary code execution, plus hardened compound command handling and network redirect prompting.</p>
+      <p class="why">The security fixes are the real headline: a permission bypass allowing arbitrary code execution is exactly the kind of vulnerability that matters when Claude Code runs with elevated permissions. The Vertex AI wizard and Focus View are quality-of-life wins that lower the barrier for enterprise adoption.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub releases</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Perplexity&rsquo;s ARR crosses $450M &mdash; 50% jump in one month on AI agent pivot</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Financial Times / PYMNTS / TechStartups</span></div>
+      <p>Perplexity&rsquo;s estimated annual recurring revenue topped $450 million in March, a 50% jump from the prior month, according to the Financial Times. The growth was driven by &ldquo;Computer,&rdquo; an agentic AI product that performs complex tasks with minimal human supervision, alongside a shift to usage-based pricing. The company now has 100M+ monthly active users and tens of thousands of enterprise clients paying $20&ndash;$200/month. For context: prior ARR was $305M, up from $16M two years ago.</p>
+      <p class="why">PYMNTS&rsquo;s framing: AI systems are shifting from &ldquo;occasional utilities&rdquo; to &ldquo;general-purpose assistants embedded across daily decision-making.&rdquo; The revenue trajectory validates that agent-first products can monetize at scale &mdash; not just chatbot wrappers.</p>
+      <div class="links"><a href="https://www.pymnts.com/artificial-intelligence-2/2026/perplexitys-shift-to-ai-agents-boosts-revenue-50/" target="_blank" rel="noopener">PYMNTS</a> <a href="https://techstartups.com/2026/04/08/perplexity-revenue-surges-50-as-ai-startup-shifts-from-search-to-autonomous-ai-agents/" target="_blank" rel="noopener">TechStartups</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Musk files to remove Altman and Brockman from OpenAI &mdash; trial starts April 27</h2>
+      <div class="meta"><span class="tag tag-date">Apr 7</span> <span class="source">CNBC / Bloomberg / Benzinga</span></div>
+      <p>Elon Musk filed a court motion seeking to remove Sam Altman as CEO and Greg Brockman as president, and to unwind OpenAI&rsquo;s for-profit conversion entirely &mdash; restoring the company to its original nonprofit structure. Jury selection begins April 27 in federal court in Oakland. OpenAI responded by urging the California and Delaware AGs to investigate &ldquo;improper and anti-competitive behavior&rdquo; by Musk, calling the suit &ldquo;nothing more than a harassment campaign driven by ego, jealousy and a desire to slow down a competitor.&rdquo;</p>
+      <p class="why">Bloomberg&rsquo;s framing: Musk wants any trial winnings directed to the OpenAI nonprofit. Combined with the Farrow expos&eacute; and the Stargate pause, OpenAI now faces a credibility crisis on three fronts &mdash; legal, journalistic, and financial &mdash; two weeks before trial.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/07/elon-musk-seeks-ouster-of-openai-ceo-sam-altman-as-part-of-lawsuit.html" target="_blank" rel="noopener">CNBC</a> <a href="https://www.bloomberg.com/news/articles/2026-04-07/musk-wants-openai-nonprofit-to-get-any-trial-winnings-from-suit" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.benzinga.com/news/legal/26/04/51695765/elon-musk-seeks-ouster-sam-altman-greg-brockman-openai-harassment-claim" target="_blank" rel="noopener">Benzinga</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy&rsquo;s &ldquo;LLM Wiki&rdquo; goes viral &mdash; 16M views, 5K GitHub stars, and a rethink of RAG</h2>
+      <div class="meta"><span class="tag tag-date">Apr 4</span> <span class="source">Andrej Karpathy / VentureBeat / Analytics India</span></div>
+      <p>Andrej Karpathy posted that he&rsquo;s spending less time using LLMs to generate code and more time using them to &ldquo;compile&rdquo; raw research into persistent, interlinked markdown wikis. The pattern: dump papers, notes, and articles into a folder, point an LLM at it, and let it build and maintain a structured knowledge base with backlinks, categories, and encyclopedia-style articles. His personal wiki grew to 100 articles and 400K words on a single topic. He followed up with a GitHub gist &ldquo;idea file&rdquo; &mdash; not code, just the architecture &mdash; arguing that in the age of LLM agents, sharing the idea is more useful than sharing the app.</p>
+      <p class="why">Karpathy&rsquo;s core insight: at personal scale, structured markdown beats vector search, and LLMs handle interlinking better than humans. VentureBeat calls it a &ldquo;bypass of RAG&rdquo; &mdash; instead of retrieving on the fly, you pre-compile knowledge into a living document that compounds over time.</p>
+      <div class="links"><a href="https://x.com/karpathy/status/2039805659525644595" target="_blank" rel="noopener">Original tweet</a> <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">GitHub gist</a> <a href="https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an" target="_blank" rel="noopener">VentureBeat</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic restricts Claude Mythos after it autonomously finds thousands of zero-day exploits</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">TechCrunch / The Hacker News / Tom&rsquo;s Hardware / SecurityWeek</span></div>
+      <p>Anthropic&rsquo;s unreleased Claude Mythos Preview has autonomously identified &ldquo;thousands&rdquo; of high- and critical-severity zero-day vulnerabilities across every major operating system and web browser. In one case, it found and fully exploited a 17-year-old FreeBSD NFS remote code execution flaw (CVE-2026-4747), writing a 20-gadget ROP chain that grants unauthenticated root access. In another, it chained four browser vulnerabilities into a JIT heap spray that escaped both renderer and OS sandboxes. The model is restricted to 12 partners &mdash; including Amazon, Apple, Microsoft, Google, CrowdStrike, and the Linux Foundation &mdash; under &ldquo;Project Glasswing,&rdquo; backed by $100M in usage credits and $4M in direct open-source security donations.</p>
+      <p class="why">Simon Willison&rsquo;s take: restricting Mythos to security researchers &ldquo;sounds necessary to me.&rdquo; The model reads source code, forms hypotheses, runs debuggers, and produces working exploits autonomously &mdash; a genuine capability discontinuity that forced Anthropic to invent a new release paradigm rather than ship it publicly.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/04/09/is-anthropic-limiting-the-release-of-mythos-to-protect-the-internet-or-anthropic/" target="_blank" rel="noopener">TechCrunch analysis</a> <a href="https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html" target="_blank" rel="noopener">The Hacker News</a> <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-latest-ai-model-identifies-thousands-of-zero-day-vulnerabilities-in-every-major-operating-system-and-every-major-web-browser-claude-mythos-preview-sparks-race-to-fix-critical-bugs-some-unpatched-for-decades" target="_blank" rel="noopener">Tom&rsquo;s Hardware</a> <a href="https://simonwillison.net/2026/Apr/7/project-glasswing/" target="_blank" rel="noopener">Willison</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Florida AG launches investigation into OpenAI over ChatGPT&rsquo;s alleged role in FSU campus shooting</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">TechCrunch / Axios / WFSU</span></div>
+      <p>Florida Attorney General James Uthmeier announced an investigation into OpenAI over the alleged role of ChatGPT in the April 2025 Florida State University shooting that killed two and injured five. Court records show the accused gunman entered 200+ prompts into ChatGPT before the attack, including asking how the country would react and what time the student union would be busiest. Uthmeier said his office will issue subpoenas to OpenAI as part of the probe, citing additional concerns about ChatGPT&rsquo;s handling of users in mental health crises.</p>
+      <p class="why">Axios&rsquo;s framing: this adds a state-level regulatory front to OpenAI&rsquo;s already crowded legal calendar &mdash; the Musk trial starts April 27, the Farrow expos&eacute; is still reverberating, and now a sitting AG is issuing subpoenas over a mass shooting.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/04/09/florida-ag-investigation-openai-chatgpt-shooting/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://www.axios.com/2026/04/09/florida-ag-launches-investigation-openai" target="_blank" rel="noopener">Axios</a> <a href="https://news.wfsu.org/state-news/2026-04-09/florida-ag-uthmeier-announces-investigation-in-openai-chatgpt" target="_blank" rel="noopener">WFSU</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI tells investors it&rsquo;ll make $100B in ad revenue by 2030 &mdash; projects $2.5B this year</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Axios / Investing.com / The Tech Portal</span></div>
+      <p>OpenAI has presented investor projections showing $2.5 billion in ad revenue for 2026, scaling to $11B in 2027, $25B in 2028, $53B in 2029, and $100B by 2030. The projections assume 2.75 billion weekly users by 2030. Early ChatGPT ad pilots have crossed $100 million in annualized revenue with 600+ advertisers. Ads are currently being tested on free and lower-tier users. For context: Google made ~$300B and Meta ~$200B from ads in 2025.</p>
+      <p class="why">Axios reports OpenAI is now positioning ads as a core revenue pillar alongside subscriptions and API. The $100B-by-2030 number requires ChatGPT to reach roughly the same weekly user base as the entire global internet &mdash; an assumption that tells you more about the audience (investors) than the business.</p>
+      <div class="links"><a href="https://www.investing.com/news/company-news/openai-projects-25-billion-in-ad-revenue-for-2026-93CH-4605384" target="_blank" rel="noopener">Investing.com</a> <a href="https://thetechportal.com/2026/04/09/openai-projects-100bn-in-ad-revenue-by-2030-around-2-5bn-in-2026-report" target="_blank" rel="noopener">The Tech Portal</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Meta commits another $21B to CoreWeave &mdash; total AI infrastructure tab hits $35B through 2032</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / CNBC / CoreWeave</span></div>
+      <p>CoreWeave announced a $21 billion expanded agreement with Meta for dedicated AI cloud capacity through December 2032, on top of a prior $14.2 billion commitment &mdash; bringing Meta&rsquo;s total CoreWeave tab to $35B. The infrastructure will include early deployments of the NVIDIA Vera Rubin platform. A key focus is inference rather than training, reflecting the industry&rsquo;s shift toward running AI systems continuously at scale. CoreWeave is raising $4.25B in new debt to fund the buildout.</p>
+      <p class="why">CNBC&rsquo;s framing: the deal signals Meta is betting that inference &mdash; running &ldquo;Agentic AI&rdquo; continuously for 3B+ users &mdash; will dwarf training costs. Committing $35B through 2032 to a single cloud partner is the kind of infrastructure lock-in that reshapes the competitive landscape.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-09/coreweave-expands-meta-deal-for-ai-computing-to-21-billion" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.cnbc.com/2026/04/09/meta-commits-to-spending-additional-21-billion-with-coreweave-.html" target="_blank" rel="noopener">CNBC</a> <a href="https://investors.coreweave.com/news/news-details/2026/CoreWeave-and-Meta-Announce-21-Billion-Expanded-AI-Infrastructure-Agreement/default.aspx" target="_blank" rel="noopener">CoreWeave IR</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy reveals &ldquo;Dobby the Elf Claw&rdquo; &mdash; an OpenClaw agent running his entire home</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Benzinga / Storyboard18 / No Priors podcast</span></div>
+      <p>On the No Priors podcast, Andrej Karpathy showed off a custom OpenClaw-based AI agent he calls &ldquo;Dobby the Elf Claw&rdquo; that controls his home&rsquo;s lights, HVAC, shades, pool, spa, sound system, and security through WhatsApp messages. The agent scanned his local network, discovered devices, and reverse-engineered undocumented APIs autonomously. It replaced six separate apps. Karpathy added that he hasn&rsquo;t &ldquo;typed a line of code probably since December&rdquo; &mdash; agents handle it. NVIDIA&rsquo;s Jensen Huang gifted him a DGX Station with a GB300 superchip to power the setup.</p>
+      <p class="why">Karpathy&rsquo;s point: the shift from &ldquo;AI generates text&rdquo; to &ldquo;AI carries out tasks&rdquo; is already real in personal computing. An agent that reverse-engineers device APIs and replaces half a dozen apps isn&rsquo;t a demo &mdash; it&rsquo;s his actual daily workflow.</p>
+      <div class="links"><a href="https://www.benzinga.com/news/topics/26/04/51746743/i-call-him-dobby-the-elf-claw-openai-cofounder-andrej-karpathy-says-after-nvidias-jensen-huang-gifts-him-a-superchip-to-power-his-ai-home" target="_blank" rel="noopener">Benzinga</a> <a href="https://www.storyboard18.com/digital/dobby-the-elf-claw-andrej-karpathy-shows-how-ai-now-runs-his-home-and-most-of-his-coding-93270.htm" target="_blank" rel="noopener">Storyboard18</a></div>
+    </div>
+
+  </div><!-- end content -->
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Thu Apr 9, 2026 at 8:00 PM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
