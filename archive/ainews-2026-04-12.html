@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News &mdash; Sunday, April 12, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Sunday, April 12, 2026 &middot; Last updated 8:01 PM PDT</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The biggest AI story of the week isn&rsquo;t a Molotov cocktail or a CEO&rsquo;s carefully staged family photo &mdash; it&rsquo;s a spreadsheet number. Anthropic hit $30 billion in annualized revenue, surpassing OpenAI&rsquo;s $25B for the first time. The company that bet on enterprise APIs over viral consumer products, safety-first positioning over &ldquo;ship it&rdquo; culture, and boring B2B relationships over splashy demos is now the revenue leader in AI. That&rsquo;s not marketing &mdash; it&rsquo;s a thesis validated by a thousand Fortune 500 procurement departments. CoreWeave, meanwhile, signed $56 billion in infrastructure deals in 48 hours (Meta and Anthropic), becoming the GPU landlord to the two largest AI labs on Earth. The picks-and-shovels play is working exactly as the textbook says it should. On the technical side, two genuinely significant things happened: Z.ai&rsquo;s GLM-5.1 became the first open-weight model to crack Code Arena&rsquo;s top 3, beating GPT-5.4 and Gemini 3.1 Pro &mdash; the &ldquo;open source can&rsquo;t compete at the frontier&rdquo; argument is now officially dead. And Tufts researchers published a neuro-symbolic approach that cuts AI energy use by 100x. Not 10%. Not 2x. A hundred times. If that scales, it doesn&rsquo;t just solve AI&rsquo;s energy problem &mdash; it rewrites the economics of inference entirely. The real story of this week isn&rsquo;t that people are attacking AI CEOs. It&rsquo;s that the infrastructure and economics of AI are shifting faster than the discourse can keep up.</p>
+      <p><strong>Midday refresh:</strong> The afternoon&rsquo;s most revealing story isn&rsquo;t a product launch &mdash; it&rsquo;s enemies cooperating. OpenAI, Anthropic, and Google are now sharing fraud fingerprints and chain-of-thought classifiers through the Frontier Model Forum to combat Chinese distillation of their frontier models. When companies that poach each other&rsquo;s engineers start swapping attack intelligence, the threat isn&rsquo;t theoretical &mdash; Anthropic traced 16 million Claude exchanges to ~24,000 fraudulent accounts from MiniMax, Moonshot, and DeepSeek. A frontier model costs ~$1B to train; a distillation run costs ~$100K. The math explains the urgency better than any press release. Meanwhile, Demis Hassabis delivered the most candid statement from a major AI CEO in months: chatbots shipped too early, and AI should have stayed in the lab solving science. It&rsquo;s easy to be philosophical about timing when your competitor&rsquo;s chatbot has 300M users &mdash; but he&rsquo;s not wrong about AlphaFold being the more consequential product. On the Altman firebombing: the suspect was a Pause AI follower who posted &ldquo;We are close to midnight, it&rsquo;s time to actually act&rdquo; in their Discord. The SF Standard&rsquo;s analysis today argues OpenAI&rsquo;s &ldquo;New Deal&rdquo; policy document represents &ldquo;deployment absorption instead of development friction&rdquo; &mdash; asking society to adapt to rapid rollout rather than accepting regulatory limits. Sharp framing.</p>
+      <p><strong>Evening update:</strong> The story that should have dominated this morning&rsquo;s briefing finally caught fire tonight. Anthropic&rsquo;s Claude Mythos Preview &mdash; withheld from public release because it autonomously discovered thousands of zero-day vulnerabilities across every major OS and browser, including a 27-year-old OpenBSD bug &mdash; has triggered an honest-to-god regulatory panic. The Bank of England summoned banking leaders. Powell and Bessent convened Wall Street CEOs at Treasury. Germany&rsquo;s BSI declared it a matter of national security. This is the first time in seven years a major AI lab has publicly withheld a model over safety concerns, and the first time &ldquo;we made something too dangerous to release&rdquo; wasn&rsquo;t marketing &mdash; it was followed by emergency meetings in central banks. LeCun, naturally, called it &ldquo;BS from self-delusion.&rdquo; Meanwhile, Altman&rsquo;s home was hit a second time &mdash; a drive-by shooting at 1:40 AM Sunday, two more suspects arrested with three firearms. Two attacks in 48 hours from apparently unrelated suspects. The discourse about AI anxiety is no longer theoretical.</p>
+    </div>
+
+    <div class="story">
+      <h2>GLM-5.1 becomes first open-weight model to crack Code Arena top 3 &mdash; beats GPT-5.4 and Gemini</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Arena.ai / VentureBeat / OfficeChai</span></div>
+      <p>Z.ai&rsquo;s GLM-5.1, released under the MIT license, posted a 1530 Elo score on Code Arena &mdash; third in the world behind only Claude Opus 4.6 Thinking (1548) and Claude Opus 4.6 (1542). It surpassed GPT-5.4, Gemini 3.1 Pro, and Claude Sonnet 4.6. The model, built by Chinese AI lab Zhipu AI&rsquo;s international arm, targets agentic engineering: long-running coding tasks, autonomous optimization loops, and multi-step software projects. A +90 Elo jump over its predecessor in a single release.</p>
+      <p class="why">VentureBeat&rsquo;s framing: this is the moment open-source models became genuinely competitive at the frontier of code generation. MIT-licensed weights mean any developer can run frontier-class coding AI locally &mdash; no API costs, no rate limits, no subscription policy changes.</p>
+      <div class="links"><a href="https://x.com/arena/status/2042643933768151485" target="_blank" rel="noopener">Arena.ai results</a> <a href="https://venturebeat.com/technology/ai-joins-the-8-hour-work-day-as-glm-ships-5-1-open-source-llm-beating-opus-4" target="_blank" rel="noopener">VentureBeat</a> <a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank" rel="noopener">HuggingFace weights</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Altman&rsquo;s home attacked twice in 48 hours &mdash; Molotov Friday, drive-by shooting Sunday</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="tag tag-date">Updated 8:01 PM</span> <span class="source">SF Standard / Semafor / The Decoder / CNBC</span></div>
+      <p>A second attack struck Sam Altman&rsquo;s Russian Hill home at 1:40 AM Sunday &mdash; a drive-by shooting from a Honda sedan captured on surveillance. Police arrested Amanda Tom, 25, and Muhamad Tarik Hussein, 23, recovering three firearms. This follows Friday&rsquo;s Molotov cocktail by Daniel Alejandro Moreno-Gama, 20, a Pause AI follower who posted &ldquo;We are close to midnight, it&rsquo;s time to actually act&rdquo; in PauseAI&rsquo;s Discord. Altman responded on Semafor: &ldquo;The fear and anxiety about AI is justified; we are in the process of witnessing the largest change to society in a long time, and perhaps ever.&rdquo;</p>
+      <p class="why">Semafor&rsquo;s framing: two attacks in 48 hours from apparently unrelated suspects suggests this isn&rsquo;t one disturbed individual &mdash; it&rsquo;s a pattern. The first attacker was ideologically motivated (AI extinction fears); the second pair&rsquo;s motivations remain unclear pending investigation.</p>
+      <div class="links"><a href="https://sfstandard.com/2026/04/12/sam-altman-s-home-targeted-second-attack/" target="_blank" rel="noopener">SF Standard (second attack)</a> <a href="https://www.semafor.com/article/04/12/2026/altman-links-attack-to-great-anxiety-over-ai" target="_blank" rel="noopener">Semafor</a> <a href="https://sfstandard.com/2026/04/12/openai-wants-new-deal-ai-attack-sam-altman-s-home-made-urgent/" target="_blank" rel="noopener">SF Standard (analysis)</a> <a href="https://the-decoder.com/molotov-suspect-who-attacked-sam-altmans-home-was-likely-a-pause-ai-follower-with-ai-extinction-fears/" target="_blank" rel="noopener">The Decoder</a></div>
+    </div>
+
+    <div class="story">
+      <h2>CoreWeave signs $56B in AI cloud deals &mdash; Meta ($21B expansion) and Anthropic within 48 hours</h2>
+      <div class="meta"><span class="tag tag-date">Apr 10</span> <span class="source">Bloomberg / CNBC / CoreWeave</span></div>
+      <p>CoreWeave expanded its agreement with Meta to $21 billion (up from $14.2B) on April 9, then announced a separate multi-year deal with Anthropic on April 10 to support Claude model development and deployment. Nine of the top ten AI model providers now use CoreWeave&rsquo;s platform. The Meta contract runs through December 2032 using NVIDIA Rubin-generation chips. CoreWeave stock jumped 12% on the Anthropic announcement alone, with no customer now representing more than 35% of total revenue.</p>
+      <p class="why">CNBC&rsquo;s analysis: CoreWeave went from 62% customer concentration on Microsoft to a diversified position as infrastructure provider to both of the largest AI revenue generators. The company that pivoted from crypto mining to GPU cloud is now the backbone of frontier AI training.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-09/coreweave-expands-meta-deal-for-ai-computing-to-21-billion" target="_blank" rel="noopener">Bloomberg (Meta deal)</a> <a href="https://www.cnbc.com/2026/04/10/coreweave-anthropic-claude-ai-deal.html" target="_blank" rel="noopener">CNBC (Anthropic deal)</a> <a href="https://investors.coreweave.com/news/news-details/2026/CoreWeave-Announces-Multi-Year-Agreement-With-Anthropic/default.aspx" target="_blank" rel="noopener">CoreWeave IR</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic passes OpenAI in revenue &mdash; $30B annualized run rate vs. OpenAI&rsquo;s $25B</h2>
+      <div class="meta"><span class="tag tag-date">Apr 7</span> <span class="source">The Information / Bloomberg / PYMNTS</span></div>
+      <p>Anthropic&rsquo;s annualized revenue run rate crossed $30 billion in early April, surpassing OpenAI&rsquo;s $25B for the first time. The company tripled its ARR from $9B at end of 2025 in roughly four months. Over 1,000 enterprise customers now spend more than $1M/year on Claude &mdash; double the count from February&rsquo;s Series G announcement. Eighty percent of Anthropic&rsquo;s revenue comes from business customers, versus OpenAI&rsquo;s more consumer-heavy mix. Anthropic is evaluating an IPO as early as October 2026, potentially at a $380B valuation.</p>
+      <p class="why">The Information&rsquo;s reporting: enterprise revenue carries higher retention, better expansion economics, and lower churn than consumer subscriptions. Anthropic&rsquo;s bet on API-first distribution and enterprise safety guarantees is now outearning ChatGPT&rsquo;s 300M+ monthly users.</p>
+      <div class="links"><a href="https://www.theinformation.com/briefings/anthropic-says-topped-30-billion-annualized-revenue" target="_blank" rel="noopener">The Information</a> <a href="https://www.pymnts.com/artificial-intelligence-2/2026/anthropic-hits-30-billion-run-rate-as-enterprise-demand-accelerates/" target="_blank" rel="noopener">PYMNTS</a> <a href="https://www.analyticsinsight.net/news/anthropic-hits-30-billion-revenue-edges-past-openai" target="_blank" rel="noopener">Analytics Insight</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Neuro-symbolic AI slashes energy use 100x while boosting accuracy &mdash; Tufts researchers</h2>
+      <div class="meta"><span class="tag tag-date">Apr 5</span> <span class="source">ScienceDaily / ScitechDaily / E&amp;T Magazine</span></div>
+      <p>Researchers at Tufts University developed a neuro-symbolic AI approach that combines neural networks with symbolic reasoning, cutting training time from 36+ hours to 34 minutes and reducing energy consumption by 100x. In Tower of Hanoi benchmark tests, the system achieved a 95% success rate vs. 34% for standard vision-language-action models. The method uses only 1% of the energy for training and 5% during operation. The work will be presented at the International Conference of Robotics and Automation in Vienna in May.</p>
+      <p class="why">AI already consumes over 10% of U.S. electricity. A 100x efficiency gain isn&rsquo;t incremental &mdash; it&rsquo;s a potential paradigm shift for whether AI-at-scale is economically and environmentally sustainable. The approach also improved accuracy, which means the efficiency/capability tradeoff may not exist.</p>
+      <div class="links"><a href="https://www.sciencedaily.com/releases/2026/04/260405003952.htm" target="_blank" rel="noopener">ScienceDaily</a> <a href="https://scitechdaily.com/100x-less-power-the-breakthrough-that-could-solve-ais-massive-energy-crisis/" target="_blank" rel="noopener">ScitechDaily</a> <a href="https://eandt.theiet.org/2026/04/07/ai-system-could-cut-energy-use-100-times-researchers-say" target="_blank" rel="noopener">E&amp;T Magazine</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Hassabis: chatbots shipped too early &mdash; AI should have stayed in the lab solving science</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">The Neuron / Cleo Abram interview</span></div>
+      <p>Google DeepMind CEO Demis Hassabis told Cleo Abram that the &ldquo;best use case of AI&rdquo; was always improving human health and accelerating scientific discovery &mdash; not becoming everybody&rsquo;s browser tab. He said transformers achieved abstraction and conversation capabilities faster than researchers expected, ChatGPT went viral, and commercial pressures accelerated the timeline toward consumer products before the technology was ready. He envisioned a &ldquo;CERN-like&rdquo; collaborative approach to AGI, progressing deliberately with specialized systems like AlphaFold.</p>
+      <p class="why">Hassabis&rsquo;s argument: AlphaFold is now used by 3M+ scientists and may touch almost every future drug &mdash; a more consequential product than any chatbot. The candor is notable from someone whose company is simultaneously racing to ship Gemini consumer features.</p>
+      <div class="links"><a href="https://www.theneurondaily.com/p/demis-says-chat-came-too-soon" target="_blank" rel="noopener">The Neuron</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude for Word launches in beta &mdash; AI sidebar inside Microsoft&rsquo;s own product</h2>
+      <div class="meta"><span class="tag tag-date">Apr 10</span> <span class="source">Anthropic / TechCrunch / Benzinga</span></div>
+      <p>Anthropic released Claude for Word as a native sidebar add-in for Microsoft Word on Mac and Windows, available via the Microsoft AppSource marketplace. The integration reads, drafts, and edits documents while surfacing every change as a tracked change. It connects with Claude for Excel and Claude for PowerPoint, enabling a single conversation thread across all three open documents. Available on Team and Enterprise plans.</p>
+      <p class="why">Benzinga&rsquo;s framing: Anthropic is embedding itself inside Microsoft&rsquo;s flagship product suite while MSFT stock has slid 22%. Legal contract review is the lead use case &mdash; exactly the kind of high-value enterprise workflow that drives Anthropic&rsquo;s $30B revenue run rate.</p>
+      <div class="links"><a href="https://claude.com/claude-for-word" target="_blank" rel="noopener">Claude for Word</a> <a href="https://www.benzinga.com/markets/tech/26/04/51770150/anthropic-claude-word-microsoft-office-dominance-msft-stock" target="_blank" rel="noopener">Benzinga</a> <a href="https://www.artificiallawyer.com/2026/04/11/anthropic-targets-lawyers-with-claude-for-word/" target="_blank" rel="noopener">Artificial Lawyer</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.101 ships team onboarding, enterprise TLS, and 30+ fixes</h2>
+      <div class="meta"><span class="tag tag-date">Apr 10</span> <span class="source">Anthropic / Claude Code Changelog</span></div>
+      <p>The largest Claude Code release in weeks adds <code>/team-onboarding</code> to generate teammate ramp-up guides, OS CA certificate store trust by default (enterprise TLS proxies now work without extra setup), and auto-creating cloud environments for <code>/ultraplan</code>. Also ships a Monitor tool for streaming background script events and subprocess sandboxing with PID namespace isolation on Linux.</p>
+      <p class="why">The headline number: 30+ bug fixes including a memory leak in long sessions, a command injection vulnerability in LSP binary detection, and hardcoded 5-minute timeouts that aborted slow backends. The <code>/team-onboarding</code> command signals Anthropic is building for team adoption, not just individual developers.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Full changelog</a> <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.101" target="_blank" rel="noopener">GitHub release</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI, Anthropic, and Google share attack intelligence to combat Chinese model distillation</h2>
+      <div class="meta"><span class="tag tag-date">Apr 6</span> <span class="source">Bloomberg / The Neuron / Frontier Model Forum</span></div>
+      <p>Three rival frontier labs are sharing fraud fingerprints, proxy infrastructure data, and chain-of-thought elicitation classifiers through the Frontier Model Forum &mdash; the first substantive operational use of the nonprofit since its 2023 founding. The cooperation traces to Anthropic&rsquo;s February disclosure of 16 million Claude exchanges across ~24,000 fraudulent accounts attributed to MiniMax (~13M), Moonshot/Kimi (~3.4M), and DeepSeek (~150K).</p>
+      <p class="why">Bloomberg&rsquo;s analysis: a frontier model costs ~$1B to train; a successful distillation run costs ~$100K&ndash;$200K. When competitors who recruit each other&rsquo;s engineers start swapping security intelligence, the economic threat has crossed from nuisance to existential &mdash; for their business models, not humanity.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china" target="_blank" rel="noopener">Bloomberg</a> <a href="https://winbuzzer.com/2026/04/08/openai-anthropic-google-team-up-to-stop-chinese-ai-model-the-xcxwbn/" target="_blank" rel="noopener">WinBuzzer</a> <a href="https://builtin.com/articles/openai-google-anthropic-ai-model-theft-china" target="_blank" rel="noopener">Built In</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Mythos triggers global regulatory scramble &mdash; Bank of England and Fed summon banking leaders</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / FT / Disruption Banking</span></div>
+      <p>Anthropic&rsquo;s decision to withhold Claude Mythos Preview &mdash; which autonomously discovered thousands of zero-day vulnerabilities across every major OS, browser, and financial system, including a 27-year-old OpenBSD bug &mdash; has triggered coordinated emergency responses from global regulators. The Bank of England, FCA, Treasury, and NCSC plan to summon bank, insurer, and exchange leaders within two weeks. In the US, Treasury Secretary Bessent and Fed Chair Powell convened CEOs from JPMorgan, Goldman Sachs, Morgan Stanley, BofA, and Citigroup. Germany&rsquo;s BSI called it a matter of &ldquo;national and European security.&rdquo; Anthropic&rsquo;s Project Glasswing provides $100M in credits to 50+ companies for defensive research.</p>
+      <p class="why">Bloomberg&rsquo;s reporting: Powell&rsquo;s participation signals extraordinary concern &mdash; the Fed chair &ldquo;prefers an independent role&rdquo; and would not normally sit alongside Treasury for an industry briefing. This is the first time in seven years a major AI lab has publicly withheld a model over safety, and the first time the response involved central bank emergency meetings.</p>
+      <div class="links"><a href="https://www.bloomberg.com/news/articles/2026-04-11/bank-of-england-set-to-discuss-anthropic-s-mythos-with-banks" target="_blank" rel="noopener">Bloomberg</a> <a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener">Project Glasswing</a> <a href="https://www.disruptionbanking.com/2026/04/12/is-anthropics-mythos-able-to-hack-the-global-banking-system/" target="_blank" rel="noopener">Disruption Banking</a> <a href="https://www.archyde.com/uk-regulators-to-warn-financial-firms-over-claude-mythos-security-risks/" target="_blank" rel="noopener">UK regulator details</a></div>
+    </div>
+
+    <div class="story">
+      <h2>LeCun dismisses Mythos panic as &ldquo;BS from self-delusion&rdquo; &mdash; Cisco and CrowdStrike disagree</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">NewsBytes / Inshorts</span></div>
+      <p>Yann LeCun posted on X that &ldquo;Mythos drama = BS from self-delusion,&rdquo; arguing similar vulnerability-finding capabilities could be achieved with smaller, cheaper models and that Anthropic&rsquo;s claims are overblown. Gary Marcus echoed the skepticism. But cybersecurity firms pushed back hard: Cisco and CrowdStrike representatives called the technology a &ldquo;game-changer,&rdquo; noting vulnerability detection tasks that previously took months can now be completed in minutes.</p>
+      <p class="why">LeCun&rsquo;s critique carries a specific claim worth tracking: that frontier-scale models aren&rsquo;t necessary for vulnerability discovery. If he&rsquo;s right, the regulatory panic is overblown &mdash; but the security problem is actually worse, because it means cheap, widely available models can find the same bugs.</p>
+      <div class="links"><a href="https://www.newsbytesapp.com/news/science/meta-s-yann-lecun-calls-claude-mythos-drama-and-bs/story" target="_blank" rel="noopener">NewsBytes</a> <a href="https://inshorts.com/en/news/bs-from-self-delusion--meta-s-ex-top-ai-scientist-lecun-on-claude-mythos-concerns-1775988930525" target="_blank" rel="noopener">Inshorts</a></div>
+    </div>
+
+  </div><!-- end content -->
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sun Apr 12, 2026 at 8:01 PM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
