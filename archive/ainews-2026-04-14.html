@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News &mdash; Tuesday, April 14, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Tuesday, April 14, 2026 &middot; Last updated 8:01 PM PDT</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The attempted murder charges against Daniel Moreno-Gama land today and they read like a thriller treatment: a 20-year-old travels from Texas to San Francisco carrying a hit list of AI executives&rsquo; home addresses, firebombs Sam Altman&rsquo;s house at 3:45 AM, then walks three miles to OpenAI headquarters with kerosene and a chair. Two counts of attempted murder. Nineteen years to life. We are now in a world where leading an AI company requires a security detail. Meanwhile, Anthropic spent the last ten days quietly cornering the developer platform market. First they cut OpenClaw off from Claude subscriptions &mdash; Cherny&rsquo;s &ldquo;engineering constraints&rdquo; framing was diplomatic, but OpenClaw&rsquo;s creator promptly left for OpenAI, which tells you how that conversation went. Then they launched Managed Agents, a platform that tells every SaaS company: we&rsquo;ll handle your agent infrastructure now. Cloudflare lost 13.5%. Fastly lost 18%. Two trillion dollars in SaaS market cap has evaporated since January. And Meta&rsquo;s vaunted open-source commitment? Dead on arrival. Muse Spark, the first model from their $14B Superintelligence Labs, is closed-source. After years of Zuckerberg and LeCun preaching the gospel of open AI, Alexandr Wang&rsquo;s team locked it down. LeCun &mdash; who left Meta for AMI Labs &mdash; posted yesterday that p(doom) estimates are &ldquo;complete bullshit&rdquo; and most AI leaders agree but stay silent. He might be right about existential risk, but the more immediate risk is becoming clear: the open-vs-closed debate just lost its biggest institutional champion, and the people building these systems now need bodyguards.</p>
+      <p><strong>Midday refresh:</strong> The morning didn&rsquo;t know the half of it. Fortune dropped a damning piece: Anthropic quietly reduced Claude&rsquo;s default effort to &ldquo;medium&rdquo; in early March, and an AMD senior director analyzed 6,852 sessions to prove the model got worse &mdash; reads less context, makes more mistakes, needs more hand-holding. Cherny admitted the change but blamed user feedback about token consumption. The timing is exquisite: Anthropic is heading for an IPO at a $380B valuation while users are publicly posting evidence that the product degraded. Meanwhile, Anthropic&rsquo;s other hand is playing a completely different game &mdash; Claude Mythos Preview can apparently find zero-day vulnerabilities in every major OS and browser, including a 27-year-old OpenBSD bug nobody knew existed, and they&rsquo;re so spooked they restricted access to 40 companies under &ldquo;Project Glasswing.&rdquo; The UK government is scrambling. LeCun called it &ldquo;BS from self-delusion.&rdquo; Stanford&rsquo;s annual AI Index confirms what anyone paying attention already knew: China&rsquo;s closed the performance gap to 2.7%, AI adoption outpaced the PC and the internet, and nobody&rsquo;s disclosing training details anymore. The Altman situation got worse too &mdash; a second incident (gunfire) on Sunday, two more arrests, and a raw blog post where he shared a family photo and wrote &ldquo;I am awake in the middle of the night and pissed.&rdquo; On the actually-exciting front: Karpathy dropped an LLM Wiki pattern that lets AI agents build and maintain self-healing knowledge bases instead of re-discovering everything via RAG every single time. Seven open-source implementations in under a week. That&rsquo;s the kind of thing that changes how people work.</p>
+      <p><strong>Evening update:</strong> The AI cybersecurity arms race went from implicit to explicit in about six hours. OpenAI launched GPT-5.4-Cyber &mdash; a fine-tuned model with &ldquo;cyber-permissive&rdquo; refusal thresholds and binary reverse engineering &mdash; exactly one week after Anthropic&rsquo;s Mythos reveal. The distribution strategies tell the whole story: Anthropic locked 40 companies under NDA; OpenAI is rolling out to thousands of verified defenders. Meanwhile, Bloomberg dropped that VCs are offering Anthropic $800 billion &mdash; more than double February&rsquo;s $380B &mdash; which is a stunning number for a company whose users spent this morning on GitHub documenting product degradation. The product news is actually good: Claude Code shipped routines (scheduled automations that run on Anthropic&rsquo;s infrastructure, not your laptop) and a desktop redesign merging Code, Cowork, and Chat into one drag-and-drop workspace. NVIDIA used Quantum Day to open-source Ising, AI models for quantum calibration and error correction that cut calibration time from days to hours. And DeepMind shipped Gemini Robotics-ER 1.6, which now lets Boston Dynamics&rsquo; Spot robots autonomously read industrial gauges and pressure dials. The Altman arraignment brought the public defender&rsquo;s predictable defense &mdash; &ldquo;acute mental health crisis&rdquo; &mdash; plus federal charges on top of the state ones. The day started with two attacks and ends with two competing cybersecurity AI programs, two valuation narratives, and no clarity on who&rsquo;s actually winning.</p>
+    </div>
+
+    <div class="story">
+      <h2>Altman&rsquo;s home attacked twice in four days &mdash; attempted murder charges, federal indictment, and &ldquo;acute mental health crisis&rdquo; defense</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="tag tag-date">Updated 8:01 PM</span> <span class="source">NPR / CNBC / Fortune / SF Standard / TechRadar</span></div>
+      <p>San Francisco DA charged Daniel Moreno-Gama, 20, with two counts of attempted murder for the April 10 Molotov cocktail attack on Altman&rsquo;s home. He carried a hit list of AI executives&rsquo; home addresses. Then on Sunday April 12, a second incident: gunfire reported near the same home. Police arrested Amanda Tom, 25, and Muhamad Tarik Hussein, 23, on suspicion of negligent discharge of a firearm. At his arraignment Tuesday evening, Moreno-Gama&rsquo;s public defender said he was &ldquo;in the midst of an acute mental health crisis&rdquo; at the time. Federal prosecutors filed separate charges: attempted damage and destruction by means of explosives and possession of an unregistered firearm. Fortune reports the FBI identified other AI executives on the hit list, and experts warn this is &ldquo;just the beginning&rdquo; of AI-motivated violence. Altman responded with a personal blog post sharing a family photo and writing: &ldquo;I am awake in the middle of the night and pissed.&rdquo;</p>
+      <p class="why">Fortune&rsquo;s framing: the hit list of multiple AI executives transforms this from a lone-wolf targeting one CEO to a broader threat against the industry&rsquo;s leadership. The dual federal-and-state prosecution path signals authorities are treating this as potential domestic terrorism, not just arson.</p>
+      <div class="links"><a href="https://www.npr.org/2026/04/13/g-s1-117320/openai-sam-altman-molotov-cocktail" target="_blank" rel="noopener">NPR</a> <a href="https://www.cnbc.com/2026/04/14/sam-altman-openai-molotov-attack-arraignment.html" target="_blank" rel="noopener">CNBC</a> <a href="https://fortune.com/2026/04/14/sam-altman-openai-ceo-attacked-molotov-cocktail-gunshots-san-francisco-anti-ai-data-centers-tech/" target="_blank" rel="noopener">Fortune</a> <a href="https://sfstandard.com/2026/04/12/sam-altman-s-home-targeted-second-attack/" target="_blank" rel="noopener">SF Standard</a> <a href="https://www.techradar.com/ai-platforms-assistants/sam-altmans-weekend-second-home-attack-a-furious-blog-post-and-a-growing-backlash" target="_blank" rel="noopener">TechRadar</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.108 &mdash; recap on session return, prompt cache TTL controls, 15+ bug fixes</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="tag tag-date">Updated 2:00 PM</span> <span class="source">Claude Code Changelog</span></div>
+      <p>Anthropic shipped v2.1.108 today with meaningful new features: a <code>/recap</code> command that provides context when you return to a session, <code>ENABLE_PROMPT_CACHING_1H</code> env var for 1-hour cache TTL on API key/Bedrock/Vertex/Foundry, and the ability for Claude to discover and invoke built-in slash commands via the Skill tool. The release also fixes 15+ bugs including a regression where paste didn&rsquo;t work in <code>/login</code>, subscribers with telemetry disabled falling back to 5-minute cache instead of 1-hour, diacritical marks being dropped from responses, and the Agent tool prompting for permission when the safety classifier exceeded context. This morning&rsquo;s v2.1.107 added earlier thinking hints during long operations.</p>
+      <p class="why">The prompt caching controls matter most here &mdash; the new env vars give API-key and cloud-provider users explicit control over cache TTL for the first time, and the telemetry-disabled cache fix was silently costing subscribers 12x more cache misses per hour than intended.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Managed Agents public beta triggers &ldquo;SaaS-pocalypse&rdquo; &mdash; $2T wiped from software stocks</h2>
+      <div class="meta"><span class="tag tag-date">Apr 11</span> <span class="source">24/7 Wall St / Seeking Alpha / The New Stack</span></div>
+      <p>Anthropic launched Claude Managed Agents in public beta on April 8 &mdash; a fully managed harness where Claude runs as an autonomous agent with secure sandboxing, tool execution, web browsing, and code execution for $0.08/session-hour plus standard token rates. Notion, Rakuten, and Sentry are already in production. The market response was brutal: Fastly fell 18%, Akamai dropped 16.6%, Cloudflare lost 13.5%, DigitalOcean slid 13.4%. The selloff, which began with Claude Cowork in January, has now erased approximately $2 trillion from software market capitalization.</p>
+      <p class="why">24/7 Wall St&rsquo;s analysis: Managed Agents bundles code execution, credential management, and hosting into a single API call, compressing the seat-based SaaS model by replacing work that once required multiple licensed tools and human operators. The companies hit hardest &mdash; CDN, edge, and hosting providers &mdash; sell exactly the infrastructure Anthropic is now packaging for free.</p>
+      <div class="links"><a href="https://247wallst.com/investing/2026/04/11/anthropics-just-triggered-another-saas-sell-off-are-software-stocks-uninvestable/" target="_blank" rel="noopener">24/7 Wall St</a> <a href="https://seekingalpha.com/news/4574113-fastly-along-with-akamai-and-cloudflare-tumbles-after-anthropic-launches-managed-agents" target="_blank" rel="noopener">Seeking Alpha</a> <a href="https://thenewstack.io/with-claude-managed-agents-anthropic-wants-to-run-your-ai-agents-for-you/" target="_blank" rel="noopener">The New Stack</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Meta Muse Spark: first model from Superintelligence Labs is closed-source</h2>
+      <div class="meta"><span class="tag tag-date">Apr 8</span> <span class="source">Bloomberg / CNBC / TechCrunch / Gizmodo</span></div>
+      <p>Meta Superintelligence Labs, led by Chief AI Officer Alexandr Wang, shipped Muse Spark on April 8 &mdash; a natively multimodal reasoning model with tool use, visual chain of thought, and a &ldquo;Contemplating mode&rdquo; that orchestrates multiple agents reasoning in parallel. The team rebuilt Meta&rsquo;s AI stack from the ground up in nine months. The headline: Muse Spark is closed-source, breaking with Meta&rsquo;s years-long open-model strategy that produced Llama. Available now at meta.ai.</p>
+      <p class="why">CNBC&rsquo;s framing: this is Meta&rsquo;s first major model since the $14B deal that brought in Alexandr Wang, and the closed-source decision marks the end of Meta as the corporate champion of open AI. Gizmodo was less kind &mdash; the model &ldquo;doesn&rsquo;t exactly spark joy&rdquo; &mdash; but the strategic shift matters more than the benchmarks.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html" target="_blank" rel="noopener">CNBC</a> <a href="https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/" target="_blank" rel="noopener">Meta blog</a> <a href="https://gizmodo.com/metas-first-ai-model-from-its-superintelligence-lab-doesnt-exactly-spark-joy-2000744082" target="_blank" rel="noopener">Gizmodo</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic cuts OpenClaw from Claude subscriptions &mdash; Steinberger heads to OpenAI</h2>
+      <div class="meta"><span class="tag tag-date">Apr 4</span> <span class="source">TechCrunch / Boris Cherny / VentureBeat</span></div>
+      <p>Starting April 4 at noon PT, Claude Pro and Max subscriptions no longer cover usage through third-party tools including OpenClaw. Users must now pay separately via &ldquo;extra usage&rdquo; billing. Boris Cherny explained that &ldquo;subscriptions weren&rsquo;t built for the usage patterns of these third-party tools&rdquo; and that Anthropic is &ldquo;prioritizing our customers using our products and API.&rdquo; He also submitted PRs to improve prompt cache efficiency for OpenClaw specifically. OpenClaw creator Peter Steinberger and board member Dave Morin said they &ldquo;tried to talk sense into Anthropic&rdquo; but could only delay the pricing by one week. Steinberger subsequently announced he&rsquo;s joining OpenAI. Anthropic offered a one-time credit equal to monthly subscription price, redeemable through April 17.</p>
+      <p class="why">Cherny&rsquo;s own tweets: the capacity framing is honest &mdash; OpenClaw sessions consumed far more compute than native Claude Code sessions. But VentureBeat&rsquo;s reporting adds the competitive layer: Steinberger&rsquo;s immediate departure to OpenAI and the one-week delay after lobbying reveal this wasn&rsquo;t purely an engineering decision. Karpathy&rsquo;s observation that the OpenClaw moment was big because &ldquo;non-technical people experienced agentic models for the first time&rdquo; gives context for the demand spike.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://x.com/bcherny/status/2040206440556826908" target="_blank" rel="noopener">Cherny&rsquo;s thread</a> <a href="https://venturebeat.com/technology/anthropic-cuts-off-the-ability-to-use-claude-subscriptions-with-openclaw-and" target="_blank" rel="noopener">VentureBeat</a> <a href="https://x.com/karpathy/status/2042341482531864741" target="_blank" rel="noopener">Karpathy on OpenClaw moment</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Fortune: Anthropic quietly &ldquo;nerfed&rdquo; Claude &mdash; users document degradation, Cherny admits effort reduced to &ldquo;medium&rdquo;</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Fortune / VentureBeat / The Register</span></div>
+      <p>Fortune published a detailed investigation into growing user backlash against Anthropic&rsquo;s Claude performance. The core revelation: Anthropic reduced Claude&rsquo;s default effort level to &ldquo;medium&rdquo; in early March to cut token consumption, and didn&rsquo;t tell users. AMD Senior Director Stella Laurenzo filed a GitHub issue backed by analysis of 6,852 sessions, 17,871 thinking blocks, and 234,760 tool calls showing Claude shifted from &ldquo;research-first&rdquo; to &ldquo;edit-first&rdquo; behavior &mdash; reading less context before acting and making more mistakes. Cherny confirmed the change, said they&rsquo;d test defaulting Teams/Enterprise to &ldquo;high effort.&rdquo; OpenAI&rsquo;s revenue chief alleged Anthropic made a &ldquo;strategic misstep&rdquo; on compute capacity.</p>
+      <p class="why">Fortune&rsquo;s reporting: with Anthropic at a $380B valuation and reportedly heading toward an IPO, the transparency gap is the real story. The company that built its brand on being more aligned with users than competitors silently degraded the product to manage compute costs &mdash; then got caught by a user who did the analysis Anthropic should have published themselves.</p>
+      <div class="links"><a href="https://fortune.com/2026/04/14/anthropic-claude-performance-decline-user-complaints-backlash-lack-of-transparency-accusations-compute-crunch/" target="_blank" rel="noopener">Fortune</a> <a href="https://venturebeat.com/technology/is-anthropic-nerfing-claude-users-increasingly-report-performance" target="_blank" rel="noopener">VentureBeat</a> <a href="https://www.theregister.com/2026/04/13/claude_outage_quality_complaints/" target="_blank" rel="noopener">The Register</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Mythos Preview finds zero-days in every major OS &mdash; Anthropic restricts access to 40 companies under Project Glasswing</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Gizmodo / Fortune / TechCrunch / Anthropic</span></div>
+      <p>Anthropic revealed that Claude Mythos Preview, its most capable unreleased model, identified thousands of zero-day vulnerabilities &mdash; many critical &mdash; in every major operating system and every major web browser, plus a 27-year-old bug in OpenBSD that nobody had found. Over 99% of the discovered vulnerabilities remain unpatched. Rather than release the model publicly, Anthropic restricted access to a consortium of 40 organizations (Microsoft, Apple, Google, CrowdStrike, JPMorgan) through a new initiative called Project Glasswing. The UK&rsquo;s Bank of England, FCA, and Treasury scheduled &ldquo;urgent discussions&rdquo; with the National Cyber Security Centre.</p>
+      <p class="why">Anthropic characterized Mythos as &ldquo;essentially the world&rsquo;s most dangerous super-hacker.&rdquo; LeCun dismissed the alarm as &ldquo;BS from self-delusion.&rdquo; Fortune&rsquo;s cybersecurity sources note the harder problem isn&rsquo;t finding vulnerabilities &mdash; it&rsquo;s fixing them, and there&rsquo;s no evidence Mythos helps with that. Nobody outside Anthropic has had unfettered access to verify these claims independently.</p>
+      <div class="links"><a href="https://gizmodo.com/claude-mythos-preview-has-officially-frightened-the-british-2000745462" target="_blank" rel="noopener">Gizmodo</a> <a href="https://fortune.com/2026/04/13/cybersecurity-anthropic-claude-mythos-dario-amodei-tech-ceo/" target="_blank" rel="noopener">Fortune</a> <a href="https://techcrunch.com/2026/04/07/anthropic-mythos-ai-model-preview-security/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://red.anthropic.com/2026/mythos-preview/" target="_blank" rel="noopener">Anthropic</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Stanford&rsquo;s 2026 AI Index: China closes gap to 2.7%, AI adoption outpaces PC and internet</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Stanford HAI / MIT Technology Review / TechCrunch / SiliconANGLE</span></div>
+      <p>Stanford HAI released its annual AI Index on April 13 with 12 key takeaways. The US-China performance gap has narrowed to 2.7 percentage points (down from 17&ndash;32 points at end of 2023). Generative AI hit 53% population adoption in three years &mdash; faster than the PC or internet. Estimated annual value to US consumers: $172 billion. But the costs are staggering: Grok 4&rsquo;s training emissions hit 72,816 tons of CO2, AI data center power capacity reached 29.6 GW, and annual GPT-4o inference water use may exceed the drinking water needs of 12 million people. OpenAI, Anthropic, and Google have all stopped disclosing training dataset sizes and parameter counts.</p>
+      <p class="why">TechCrunch&rsquo;s framing: the report&rsquo;s most striking finding is the expert-public disconnect &mdash; 73% of US AI experts view AI&rsquo;s job impact positively vs. 23% of the public. The transparency section is damning: of 95 notable models released in 2025, 80 shipped without training code. The industry is getting more powerful and less open simultaneously.</p>
+      <div class="links"><a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" target="_blank" rel="noopener">Stanford HAI</a> <a href="https://www.technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts/" target="_blank" rel="noopener">MIT Tech Review</a> <a href="https://techcrunch.com/2026/04/13/stanford-report-highlights-growing-disconnect-between-ai-insiders-and-everyone-else/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://siliconangle.com/2026/04/13/stanford-hais-2026-ai-index-reveals-china-u-s-now-neck-neck-race-global-dominance/" target="_blank" rel="noopener">SiliconANGLE</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy&rsquo;s LLM Wiki pattern: AI-maintained knowledge bases that replace RAG &mdash; 7 open-source projects in a week</h2>
+      <div class="meta"><span class="tag tag-date">Apr 10</span> <span class="source">Andrej Karpathy / Analytics Vidhya / SimpleNews</span></div>
+      <p>Andrej Karpathy shared a GitHub Gist describing &ldquo;LLM Wiki&rdquo; &mdash; a pattern where you dump raw research materials into a folder and an LLM builds and maintains an entire interlinked wiki from scratch. Unlike RAG, which re-discovers information on every query, the LLM reads, understands, and integrates new sources into the knowledge base, updating existing pages, flagging contradictions, and creating new concept pages. The pattern sparked a wave of open-source implementations: at least seven GitHub projects accumulated over 3,000 combined stars in under a week.</p>
+      <p class="why">Karpathy&rsquo;s core insight: RAG treats every query as if the system has amnesia. LLM Wiki builds persistent, evolving understanding &mdash; closer to how humans actually learn. The community response (7 projects, 3,000+ stars in days) suggests this hit a nerve for people drowning in Notion/Docs/bookmarks sprawl.</p>
+      <div class="links"><a href="https://www.analyticsvidhya.com/blog/2026/04/llm-wiki-by-andrej-karpathy/" target="_blank" rel="noopener">Analytics Vidhya</a> <a href="https://www.simplenews.ai/news/karpathys-llm-wiki-pattern-sparks-wave-of-open-source-knowledge-base-tools-3hel" target="_blank" rel="noopener">SimpleNews</a> <a href="https://www.mindstudio.ai/blog/andrej-karpathy-llm-wiki-knowledge-base-claude-code" target="_blank" rel="noopener">MindStudio</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI launches GPT-5.4-Cyber &mdash; a direct counter to Mythos, with thousands of defenders instead of 40</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">SiliconANGLE / Axios / Bloomberg / 9to5Mac</span></div>
+      <p>OpenAI released GPT-5.4-Cyber, a fine-tuned variant of GPT-5.4 designed for defensive cybersecurity, exactly one week after Anthropic&rsquo;s Mythos reveal. The model is &ldquo;cyber-permissive&rdquo; &mdash; lowered refusal boundaries for legitimate security tasks &mdash; with standout capability in binary reverse engineering: analyzing compiled software for malware and vulnerabilities without source code. Access is through the expanded Trusted Access for Cyber program with tiered verification; individuals verify at chatgpt.com/cyber, enterprises through their OpenAI rep.</p>
+      <p class="why">Bloomberg&rsquo;s framing: the distribution strategy is the real difference. Anthropic restricted Mythos to 40 companies under NDA; OpenAI is rolling out to thousands of verified security professionals and hundreds of teams. OpenAI explicitly pitched this as &ldquo;preparation for more capable models expected later this year.&rdquo;</p>
+      <div class="links"><a href="https://siliconangle.com/2026/04/14/openai-launches-gpt-5-4-cyber-model-vetted-security-professionals/" target="_blank" rel="noopener">SiliconANGLE</a> <a href="https://www.axios.com/2026/04/14/openai-model-cyber-program-release" target="_blank" rel="noopener">Axios</a> <a href="https://9to5mac.com/2026/04/14/openai-unveils-gpt-5-4-cyber-an-ai-model-for-defensive-cybersecurity/" target="_blank" rel="noopener">9to5Mac</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code ships routines and a desktop redesign &mdash; scheduled automations run on Anthropic&rsquo;s infra, not yours</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">9to5Mac / SiliconANGLE / The Register</span></div>
+      <p>Anthropic launched Claude Code routines as a research preview &mdash; scheduled automations that package a prompt, repo connections, and connectors into repeatable tasks running on Anthropic&rsquo;s web infrastructure (your Mac can be off). Limits: 5/day on Pro, 15 on Max, 25 on Team/Enterprise. Separately, the desktop app got a full redesign: multiple Claude sessions side-by-side with a new sidebar, integrated terminal, file editing, HTML/PDF preview, and a faster diff viewer in a drag-and-drop layout. The redesign unifies Claude Code, Cowork, and Chat into one window.</p>
+      <p class="why">The Register&rsquo;s take: routines are &ldquo;mildly clever cron jobs&rdquo; but the shift to server-side execution is the point &mdash; it means Claude can run maintenance, PR reviews, and monitoring without a local machine, which is the gap between &ldquo;coding assistant&rdquo; and &ldquo;autonomous developer infrastructure.&rdquo;</p>
+      <div class="links"><a href="https://9to5mac.com/2026/04/14/anthropic-adds-repeatable-routines-feature-to-claude-code-heres-how-it-works/" target="_blank" rel="noopener">9to5Mac</a> <a href="https://siliconangle.com/2026/04/14/anthropics-claude-code-gets-automated-routines-desktop-makeover/" target="_blank" rel="noopener">SiliconANGLE</a> <a href="https://www.theregister.com/2026/04/14/claude_code_routines/" target="_blank" rel="noopener">The Register</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic draws $800B+ valuation offers &mdash; more than double February&rsquo;s $380B, amid user backlash</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / Reuters / GuruFocus</span></div>
+      <p>Bloomberg reports Anthropic has received multiple offers from VCs for a new funding round at approximately $800 billion or higher &mdash; more than doubling the $380B post-money valuation from February&rsquo;s $30B Series G. The company has &ldquo;so far resisted&rdquo; these offers. Anthropic&rsquo;s run-rate revenue now reportedly exceeds $30B, up from ~$9B at end of 2025. The timing is notable: offers arrived the same day Fortune published its investigation into Claude&rsquo;s silently reduced effort levels and user-documented performance degradation.</p>
+      <p class="why">The juxtaposition is the story: investors are valuing Anthropic at $800B on the same day users are filing GitHub issues with 6,852-session datasets proving the product got worse. Either the investors are right that the moat is deep enough to survive a quality dip, or the users are canaries that the market hasn&rsquo;t heard yet.</p>
+      <div class="links"><a href="https://www.gurufocus.com/news/8793684/anthropics-valuation-soars-to-800-billion-amid-strong-investor-interest" target="_blank" rel="noopener">GuruFocus</a> <a href="https://www.investing.com/news/stock-market-news/anthropic-draws-offers-from-vcs-to-invest-at-up-to-800-billion-valuation-business-insider-reports-4614119" target="_blank" rel="noopener">Reuters</a></div>
+    </div>
+
+    <div class="story">
+      <h2>NVIDIA open-sources Ising &mdash; AI models for quantum calibration and error correction, cutting cal time from days to hours</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">NVIDIA / The Quantum Insider / Silicon Republic</span></div>
+      <p>At NVIDIA Quantum Day (World Quantum Day), NVIDIA launched Ising &mdash; a family of open-source AI models for quantum computing. Ising Calibration is a vision-language model that automates continuous calibration of quantum processors, reducing the process from days to hours. Ising Decoding provides two 3D convolutional neural network variants for real-time quantum error correction, achieving up to 2.5x faster and 3x more accurate decoding than pyMatching, the current open-source standard. Already adopted by Atom Computing, Fermi National Accelerator Lab, Cornell, Sandia National Labs, and dozens more.</p>
+      <p class="why">NVIDIA&rsquo;s framing: these are the first open AI models purpose-built for quantum computing. The adoption list &mdash; national labs, university physics departments, quantum hardware startups &mdash; signals this solves a real bottleneck, not a marketing exercise.</p>
+      <div class="links"><a href="https://nvidianews.nvidia.com/news/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers" target="_blank" rel="noopener">NVIDIA</a> <a href="https://thequantuminsider.com/2026/04/14/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers/" target="_blank" rel="noopener">The Quantum Insider</a> <a href="https://www.siliconrepublic.com/machines/nvidia-ising-ai-quantum-models-family-open-source" target="_blank" rel="noopener">Silicon Republic</a></div>
+    </div>
+
+    <div class="story">
+      <h2>DeepMind ships Gemini Robotics-ER 1.6 &mdash; Spot robots now read gauges and dashboards autonomously</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Google DeepMind / Boston Dynamics / Seeking Alpha</span></div>
+      <p>Google DeepMind released Gemini Robotics-ER 1.6 with significantly improved spatial reasoning and a new instrument-reading capability: robots can now interpret circular pressure gauges, vertical level indicators, and digital readouts. Boston Dynamics integrated it into Spot&rsquo;s AIVI-Learning platform, enabling autonomous facility inspection and dashboard reading. The model is available via the Gemini API and Google AI Studio as of today.</p>
+      <p class="why">Boston Dynamics&rsquo; blog: instrument reading was &ldquo;discovered through close collaboration&rdquo; &mdash; meaning the robotics partner drove the feature, not the research lab. That&rsquo;s the product-market fit loop working: Spot needed to read gauges in refineries, DeepMind built the capability, and it shipped to all AIVI-Learning customers within weeks.</p>
+      <div class="links"><a href="https://deepmind.google/blog/gemini-robotics-er-1-6/" target="_blank" rel="noopener">DeepMind</a> <a href="https://bostondynamics.com/blog/aivi-learning-now-powered-google-gemini-robotics/" target="_blank" rel="noopener">Boston Dynamics</a> <a href="https://seekingalpha.com/news/4574852-googles-deepmind-launches-more-advanced-gemini-robotics" target="_blank" rel="noopener">Seeking Alpha</a></div>
+    </div>
+
+  </div><!-- end content -->
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Tue Apr 14, 2026 at 8:01 PM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
