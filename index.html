@@ -179,7 +179,7 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Wednesday, April 15, 2026 &middot; Last updated 2:01 PM PDT</div>
+  <div id="date-line">Wednesday, April 15, 2026 &middot; Last updated 8:00 PM PDT</div>
 
   <div id="content">
 
@@ -187,6 +187,7 @@
       <h2>The Big Picture</h2>
       <p>The AI industry&rsquo;s credibility problem is now a five-alarm fire. Anthropic is reportedly days away from launching Opus 4.7 &mdash; a major model upgrade &mdash; exactly one week after getting caught silently nerfing the current model to save on compute. The timing is exquisite cynicism or total coincidence; pick your reading. Meanwhile, OpenAI&rsquo;s own investors are going on the record with the Financial Times calling the company &ldquo;deeply unfocused&rdquo; and comparing it to Netscape &mdash; a browser that once owned the internet and then didn&rsquo;t. Anthropic&rsquo;s revenue tripled in three months to $30B annualized, and OpenAI&rsquo;s chief revenue officer responded by accusing Anthropic of cooking the books. Ronan Farrow dropped a 16,000-word New Yorker investigation describing Altman as someone who &ldquo;believes the shifting realities of his sales pitches as he&rsquo;s saying them,&rdquo; which is either the most charitable or the most damning thing you can say about someone steering a trillion-dollar trajectory. And in the &ldquo;we live in a simulation&rdquo; corner: Zuckerberg is building an AI clone of himself so his 72,000 employees can talk to a chatbot instead of a human. After killing open-source with Muse Spark and spending $14B to poach Alexandr Wang, that&rsquo;s the best use of Meta&rsquo;s AI stack. The one genuinely exciting signal: Apple is quietly testing four smart glasses prototypes for 2027 &mdash; no displays, no VR, just cameras and AI. The company that actually ships consumer hardware that works is entering the arena. That matters more than another valuation headline.</p>
       <p><strong>Midday refresh:</strong> Anthropic&rsquo;s morning went sideways &mdash; Claude went dark for three hours across the API, Claude Code, and Claude.ai, right as Opus 4.7 hype hits critical mass. No root cause disclosed. The company then quietly made one of the most consequential governance moves in AI: appointing Novartis CEO Vas Narasimhan to the board, tipping the Long-Term Benefit Trust into majority control. A safety-oriented oversight body with actual board power is rarer than a unicorn in this industry &mdash; and it happened on the same day the service went down. Meanwhile, the enterprise AI conveyor belt keeps moving: Novo Nordisk is going all-in with OpenAI on drug discovery with full integration by year-end, and Meta locked in a multi-year deal with Broadcom for 1 gigawatt of custom 2nm AI chips through 2029. The real story of mid-April isn&rsquo;t the drama &mdash; it&rsquo;s the infrastructure and governance bets being placed while everyone watches the outage monitor.</p>
+      <p><strong>Evening update:</strong> In a move that&rsquo;s either impressively disciplined or hilariously tone-deaf, the Claude Code team shipped v2.1.110 &mdash; their biggest quality-of-life release in months &mdash; on the same day the platform went dark for three hours. Flicker-free TUI rendering finally graduated from an env var hack to a real <code>/tui</code> command, push notifications arrived, and 20+ bug fixes landed targeting the exact MCP stability issues that power users have been screaming about. Meanwhile, OpenAI quietly dropped an Agents SDK update with sandboxing, multi-provider support, and the kind of unglamorous enterprise plumbing that actually matters for production deployments. And Karpathy put his finger on something important: AI users are splitting into two populations that are &ldquo;speaking past each other&rdquo; &mdash; free-tier skeptics who tried ChatGPT once and frontier power users who see a completely different capability landscape. He&rsquo;s describing the discourse, but he&rsquo;s also describing the market.</p>
     </div>
 
     <div class="story">
@@ -261,9 +262,33 @@
       <div class="links"><a href="https://www.cnbc.com/2026/04/14/meta-commits-to-one-gigawatt-of-custom-chips-with-broadcom-as-hock-tan-agrees-to-leave-board.html" target="_blank" rel="noopener">CNBC</a> <a href="https://siliconangle.com/2026/04/14/meta-doubles-partnership-broadcom-committing-1-gigawatt-custom-ai-processors/" target="_blank" rel="noopener">SiliconAngle</a> <a href="https://about.fb.com/news/2026/04/meta-partners-with-broadcom-to-co-develop-custom-ai-silicon/" target="_blank" rel="noopener">Meta</a></div>
     </div>
 
+    <div class="story">
+      <h2>Claude Code v2.1.110 ships flicker-free TUI, push notifications, and 20+ bug fixes</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>The biggest Claude Code quality-of-life release in months landed today with v2.1.110. The headliner: NO_FLICKER rendering is now a first-class feature via <code>/tui</code> (and <code>/tui fullscreen</code>), no more env vars. Push notifications let Claude ping your phone when Remote Control is enabled. New <code>/focus</code> command replaces the old Ctrl+O behavior for focus view. External editor (<code>Ctrl+G</code>) can now show Claude&rsquo;s last response as commented context. Under the hood: 20+ bug fixes targeting MCP connection drops mid-response, plugin dependency management, session persistence, and garbled rendering in macOS Terminal.app.</p>
+      <p class="why">The changelog reveals fixes for issues that have plagued power users for weeks &mdash; MCP tool calls hanging when servers drop, non-streaming retries causing multi-minute hangs, and high CPU in fullscreen. This stability pass matters more than new features for anyone running long sessions.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub Releases</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI updates Agents SDK with sandboxing, model harness, and multi-provider support</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">OpenAI / TechCrunch</span></div>
+      <p>OpenAI released a major update to its Agents SDK, adding sandboxed execution environments that let agents operate in controlled workspaces with file and code access isolated from the broader system. The new model harness includes configurable memory, sandbox-aware orchestration, and file system tools. Multi-provider support integrates with Blaxel, Cloudflare, and Vercel sandboxes, plus a new Manifest abstraction for portable workspace descriptions. Python first, TypeScript later.</p>
+      <p class="why">TechCrunch&rsquo;s framing: this is OpenAI building the unglamorous plumbing that enterprise AI agents actually need &mdash; sandboxing, isolation, and multi-provider portability. The kind of update that matters more to companies deploying agents in production than any model benchmark.</p>
+      <div class="links"><a href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/" target="_blank" rel="noopener">OpenAI blog</a> <a href="https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/" target="_blank" rel="noopener">TechCrunch</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy: AI users are splitting into two populations that are &ldquo;speaking past each other&rdquo;</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Andrej Karpathy / Business Insider</span></div>
+      <p>Andrej Karpathy posted a thread arguing that AI users are diverging into two distinct populations: everyday users who tried free-tier ChatGPT and let it shape their view of AI&rsquo;s limitations, and power users paying for frontier models like Claude Code and Codex who see a fundamentally different capability landscape. &ldquo;The free and old/deprecated models don&rsquo;t reflect the capability in the latest round of state of the art agentic models,&rdquo; he wrote. Business Insider and multiple outlets picked up the thread as the framing went viral.</p>
+      <p class="why">Karpathy&rsquo;s argument: the discourse is broken because the two populations are literally using different products and drawing opposite conclusions. The gap is structural, not attitudinal &mdash; and it widens every time a frontier model ships that free-tier users never see.</p>
+      <div class="links"><a href="https://x.com/karpathy/status/2042334451611693415" target="_blank" rel="noopener">Thread on X</a> <a href="https://letsdatascience.com/news/karpathy-warns-growing-gap-among-ai-users-a6adb56d" target="_blank" rel="noopener">Let&rsquo;s Data Science</a></div>
+    </div>
+
   </div><!-- end content -->
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Apr 15, 2026 at 2:01 PM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Apr 15, 2026 at 8:00 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
