@@ -179,13 +179,14 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Thursday, April 16, 2026 &middot; Last updated 6:05 AM PDT</div>
+  <div id="date-line">Thursday, April 16, 2026 &middot; Last updated 2:01 PM PDT</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
       <p>The Mythos story crossed a threshold today that actually matters. Bloomberg published its deep-dive into how Anthropic&rsquo;s own security researcher stress-tested the model and concluded it could &ldquo;hack the systems beneath most modern computing&rdquo; &mdash; and now the ECB is convening calls with eurozone bank chief risk officers to discuss the implications. This is no longer a tech company voluntarily being cautious. This is a central bank treating a specific AI model as a systemic risk to financial infrastructure. Meanwhile, PwC dropped the number that explains everything about the AI economy right now: 74% of the economic value is flowing to 20% of companies. The other 80% are spending billions and getting productivity theater. And the poetic irony of the week: Alibaba shipped Happy Oyster, a world-building AI that generates interactive 3D environments for games and film &mdash; on the same week Sora dies. OpenAI spent a million dollars a day on a video generator that lost half its users. Alibaba shipped a 3D world model to the same creative market. One company is shutting down a product it couldn&rsquo;t afford; another just launched one. That&rsquo;s the gap between building what people want and building what sounds good in a press release.</p>
+      <p><strong>Midday refresh:</strong> Anthropic dropped Opus 4.7 &mdash; and the numbers are real: 13% jump on Cursor&rsquo;s 93-task coding benchmark, 3&times; more production task resolution on Rakuten-SWE-Bench, and 2,576px vision that makes pixel-perfect computer use possible. Claude Code v2.1.111 shipped alongside it with <code>/ultrareview</code> (multi-agent code review in the cloud) and an <code>xhigh</code> effort level for when you need more reasoning without going full <code>max</code>. Meanwhile, TSMC&rsquo;s Q1 report confirmed what everyone building these models already knew: AI chip demand is &ldquo;extremely robust,&rdquo; 3nm chips are now a quarter of TSMC&rsquo;s revenue, and they raised full-year guidance to 30%+ growth. The infrastructure layer is printing money. The model layer is shipping. The application layer &mdash; well, re-read that PwC number above.</p>
     </div>
 
     <div class="story">
@@ -228,9 +229,33 @@
       <div class="links"><a href="https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation" target="_blank" rel="noopener">OpenAI</a> <a href="https://variety.com/2026/digital/news/openai-shutting-down-sora-video-disney-1236698277/" target="_blank" rel="noopener">Variety</a> <a href="https://the-decoder.com/openai-sets-two-stage-sora-shutdown-with-app-closing-april-2026-and-api-following-in-september/" target="_blank" rel="noopener">The Decoder</a></div>
     </div>
 
+    <div class="story">
+      <h2>Anthropic launches Claude Opus 4.7 &mdash; biggest leap in agentic coding since Opus 4.5</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Anthropic / CNBC / GitHub</span></div>
+      <p>Claude Opus 4.7 is generally available across all products, API, Bedrock, Vertex AI, and Foundry. The headline numbers: 13% improvement on Cursor&rsquo;s 93-task coding benchmark, 3&times; more production task resolution on Rakuten-SWE-Bench, and 98.5% visual acuity on XBOW computer-use benchmarks. New <code>xhigh</code> effort level sits between <code>high</code> and <code>max</code>. Vision upgraded to 2,576px (3&times; prior models). Task budgets (beta) let developers guide token spending across extended runs. Pricing unchanged at $5/$25 per million tokens. Cyber capabilities intentionally dialed back from Mythos Preview, with a new Cyber Verification Program for legitimate security researchers.</p>
+      <p class="why">Anthropic&rsquo;s blog: Opus 4.7 can &ldquo;hand off your hardest coding work&rdquo; with self-verification of outputs. The Rakuten-SWE-Bench 3&times; result and sustained reasoning on long runs are step-function improvements for anyone using Claude as a dev tool.</p>
+      <div class="links"><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener">Anthropic</a> <a href="https://www.cnbc.com/2026/04/16/anthropic-claude-opus-4-7-model-mythos.html" target="_blank" rel="noopener">CNBC</a> <a href="https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.111 ships <code>/ultrareview</code>, auto mode, and 30+ fixes</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code changelog</span></div>
+      <p>The biggest Claude Code release in weeks. <code>/ultrareview</code> runs comprehensive code review using parallel multi-agent analysis in the cloud (3 free for Pro/Max). Auto mode no longer requires a flag and works for Max subscribers on Opus 4.7. New <code>/less-permission-prompts</code> skill scans transcripts and proposes allowlists. Plan files now named after your prompt instead of random words. Interactive <code>/effort</code> slider with arrow-key navigation. PowerShell tool rolling out on Windows. Plus 30+ bug fixes including terminal tearing in iTerm2+tmux, LSP diagnostic ordering, and rate-limit errors on Bedrock/Vertex. v2.1.112 hotfix followed hours later for an auto mode availability issue.</p>
+      <p class="why">The auto mode + <code>xhigh</code> effort combination on Opus 4.7 is the real unlock &mdash; Claude can now make autonomous decisions during long coding sessions with more reasoning power than <code>high</code> but without the latency cost of <code>max</code>.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a></div>
+    </div>
+
+    <div class="story">
+      <h2>TSMC posts record Q1 profit &mdash; up 58% as AI chips hit a quarter of revenue</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">CNBC / Quartz / Investing.com</span></div>
+      <p>TSMC reported Q1 net income of NT$572.48 billion ($18.16 billion), beating estimates by 5%. Revenue hit $35.6 billion &mdash; a fourth straight quarterly record. Chips on the 3nm node now represent 25% of total revenue, and advanced chips account for 75% of wafer revenue. CEO C.C. Wei called AI demand &ldquo;extremely robust&rdquo; and raised full-year 2026 guidance to 30%+ revenue growth. Q2 forecast: $39&ndash;40.2 billion, a 10% sequential jump. Demand continues to outpace supply.</p>
+      <p class="why">TSMC is the clearest financial signal of whether the AI boom is real or hype. A 58% profit jump with supply still constrained says the infrastructure layer isn&rsquo;t slowing down &mdash; it&rsquo;s accelerating.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/16/tsmc-q1-profit-58-percent-ai-chip-demand-record.html" target="_blank" rel="noopener">CNBC</a> <a href="https://qz.com/tsmc-record-profit-revenue-forecast-ai-chips-041626" target="_blank" rel="noopener">Quartz</a></div>
+    </div>
+
   </div><!-- end content -->
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Thu Apr 16, 2026 at 6:05 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Thu Apr 16, 2026 at 2:01 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
