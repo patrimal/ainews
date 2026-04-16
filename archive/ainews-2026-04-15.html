@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI News &mdash; Wednesday, April 15, 2026</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2563eb;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --tag-today-bg: #dcfce7;
+      --tag-today-text: #166534;
+      --tag-yesterday-bg: #fef3c7;
+      --tag-yesterday-text: #92400e;
+      --tag-date-bg: #f5f5f4;
+      --tag-date-text: #57534e;
+      --header-gradient: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      --header-text: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0a09;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #60a5fa;
+        --border: #292524;
+        --card-bg: #1c1917;
+        --card-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+        --tag-today-bg: #14532d;
+        --tag-today-text: #86efac;
+        --tag-yesterday-bg: #78350f;
+        --tag-yesterday-text: #fde68a;
+        --tag-date-bg: #292524;
+        --tag-date-text: #a8a29e;
+        --header-gradient: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        --header-text: #e2e8f0;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--header-gradient);
+      color: var(--header-text);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      border-radius: 0 0 12px 12px;
+    }
+    header .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.25rem;
+    }
+    header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-left: 0.75rem;
+    }
+    header a:hover { color: #ffffff; }
+    header .subtitle {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+    #date-line {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 0 1.5rem;
+      margin-bottom: 1rem;
+    }
+    #content {
+      padding: 0 1rem;
+    }
+    .story {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.15rem;
+      margin-bottom: 0.85rem;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+    }
+    .story h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.35rem;
+    }
+    .story .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-today {
+      background: var(--tag-today-bg);
+      color: var(--tag-today-text);
+    }
+    .tag-yesterday {
+      background: var(--tag-yesterday-bg);
+      color: var(--tag-yesterday-text);
+    }
+    .tag-date {
+      background: var(--tag-date-bg);
+      color: var(--tag-date-text);
+    }
+    .story .source {
+      color: var(--muted);
+    }
+    .story p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .story .why {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 0.65rem;
+      border-left: 2px solid var(--border);
+    }
+    .story .links {
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+    }
+    .story .links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.75rem;
+      padding: 0.2rem 0;
+      display: inline-block;
+    }
+    .story .links a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-row">
+      <h1>AI News Briefing</h1>
+      <div><a href="sources.html">Sources</a> <a href="archive/">Archive</a></div>
+    </div>
+    <div class="subtitle">Prepared for Patrick</div>
+  </header>
+  <div id="date-line">Wednesday, April 15, 2026 &middot; Last updated 8:00 PM PDT</div>
+
+  <div id="content">
+
+    <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
+      <h2>The Big Picture</h2>
+      <p>The AI industry&rsquo;s credibility problem is now a five-alarm fire. Anthropic is reportedly days away from launching Opus 4.7 &mdash; a major model upgrade &mdash; exactly one week after getting caught silently nerfing the current model to save on compute. The timing is exquisite cynicism or total coincidence; pick your reading. Meanwhile, OpenAI&rsquo;s own investors are going on the record with the Financial Times calling the company &ldquo;deeply unfocused&rdquo; and comparing it to Netscape &mdash; a browser that once owned the internet and then didn&rsquo;t. Anthropic&rsquo;s revenue tripled in three months to $30B annualized, and OpenAI&rsquo;s chief revenue officer responded by accusing Anthropic of cooking the books. Ronan Farrow dropped a 16,000-word New Yorker investigation describing Altman as someone who &ldquo;believes the shifting realities of his sales pitches as he&rsquo;s saying them,&rdquo; which is either the most charitable or the most damning thing you can say about someone steering a trillion-dollar trajectory. And in the &ldquo;we live in a simulation&rdquo; corner: Zuckerberg is building an AI clone of himself so his 72,000 employees can talk to a chatbot instead of a human. After killing open-source with Muse Spark and spending $14B to poach Alexandr Wang, that&rsquo;s the best use of Meta&rsquo;s AI stack. The one genuinely exciting signal: Apple is quietly testing four smart glasses prototypes for 2027 &mdash; no displays, no VR, just cameras and AI. The company that actually ships consumer hardware that works is entering the arena. That matters more than another valuation headline.</p>
+      <p><strong>Midday refresh:</strong> Anthropic&rsquo;s morning went sideways &mdash; Claude went dark for three hours across the API, Claude Code, and Claude.ai, right as Opus 4.7 hype hits critical mass. No root cause disclosed. The company then quietly made one of the most consequential governance moves in AI: appointing Novartis CEO Vas Narasimhan to the board, tipping the Long-Term Benefit Trust into majority control. A safety-oriented oversight body with actual board power is rarer than a unicorn in this industry &mdash; and it happened on the same day the service went down. Meanwhile, the enterprise AI conveyor belt keeps moving: Novo Nordisk is going all-in with OpenAI on drug discovery with full integration by year-end, and Meta locked in a multi-year deal with Broadcom for 1 gigawatt of custom 2nm AI chips through 2029. The real story of mid-April isn&rsquo;t the drama &mdash; it&rsquo;s the infrastructure and governance bets being placed while everyone watches the outage monitor.</p>
+      <p><strong>Evening update:</strong> In a move that&rsquo;s either impressively disciplined or hilariously tone-deaf, the Claude Code team shipped v2.1.110 &mdash; their biggest quality-of-life release in months &mdash; on the same day the platform went dark for three hours. Flicker-free TUI rendering finally graduated from an env var hack to a real <code>/tui</code> command, push notifications arrived, and 20+ bug fixes landed targeting the exact MCP stability issues that power users have been screaming about. Meanwhile, OpenAI quietly dropped an Agents SDK update with sandboxing, multi-provider support, and the kind of unglamorous enterprise plumbing that actually matters for production deployments. And Karpathy put his finger on something important: AI users are splitting into two populations that are &ldquo;speaking past each other&rdquo; &mdash; free-tier skeptics who tried ChatGPT once and frontier power users who see a completely different capability landscape. He&rsquo;s describing the discourse, but he&rsquo;s also describing the market.</p>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic preps Claude Opus 4.7 and AI design tool &mdash; The Information reports imminent launch</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">The Information / Geeky Gadgets / FindSkill / Polymarket</span></div>
+      <p>The Information reported exclusively that Anthropic is preparing to launch Claude Opus 4.7, its next flagship model, alongside a new tool for designing websites and presentations &mdash; potentially as soon as this week. The evidence is stacking up: 500,000 lines of leaked source code contain internal references to Opus 4.7, Polymarket gives it a 98% probability, and multiple outlets are now confirming independently. The model is an incremental upgrade to Opus 4.6, which launched in February with a one-million-token context window. The design tool marks Anthropic&rsquo;s first move into the visual creation space, directly competing with tools like Google AI Studio.</p>
+      <p class="why">The Information&rsquo;s framing: the timing matters as much as the model. Anthropic is launching a flagship upgrade days after Fortune documented that they silently degraded the current model&rsquo;s effort level. Whether Opus 4.7 restores what was taken or genuinely advances the frontier will tell you a lot about what the &ldquo;nerfing&rdquo; was actually about.</p>
+      <div class="links"><a href="https://www.theinformation.com/briefings/exclusive-anthropic-preps-opus-4-7-model-ai-design-tool" target="_blank" rel="noopener">The Information</a> <a href="https://www.geeky-gadgets.com/claude-opus-4-7-leak-anthropic-updates/" target="_blank" rel="noopener">Geeky Gadgets</a> <a href="https://findskill.ai/blog/claude-opus-4-7-release-tracker/" target="_blank" rel="noopener">FindSkill</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI&rsquo;s $852B valuation under fire &mdash; own investors call it &ldquo;deeply unfocused,&rdquo; compare to Netscape</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Financial Times / TechCrunch / Tech Startups</span></div>
+      <p>The Financial Times reported that some OpenAI backers are privately questioning the $852 billion valuation from last month&rsquo;s record $122B round led by Amazon, NVIDIA, and SoftBank. The concern: Altman is pivoting to enterprise AI and the Codex coding platform while ChatGPT &mdash; a billion-user consumer product growing 50&ndash;100% annually &mdash; gets deprioritized. One early backer told the FT: &ldquo;You have ChatGPT, a 1 billion-user business growing 50-100 per cent a year, what are you doing talking about enterprise and code?&rdquo; An industry analyst compared OpenAI to Netscape. TechCrunch added that secondary-market demand for Anthropic shares has surged while OpenAI shares trade at a discount, with Anthropic&rsquo;s revenue jumping from $9B to $30B annualized in three months. OpenAI&rsquo;s chief revenue officer accused Anthropic of overstating revenue by roughly $8 billion.</p>
+      <p class="why">TechCrunch&rsquo;s analysis: justifying OpenAI&rsquo;s valuation requires assuming an IPO north of $1.2 trillion. With Anthropic offering a lower entry point and tripling revenue, some investors backing both companies now see the smaller bet as the better one. The revenue-cooking accusation adds a new competitive dimension &mdash; the AI giants are no longer just competing on models.</p>
+      <div class="links"><a href="https://www.irishtimes.com/business/2026/04/14/openai-investors-question-852bn-valuation-as-strategy-shifts/" target="_blank" rel="noopener">Financial Times (via Irish Times)</a> <a href="https://techcrunch.com/2026/04/14/anthropics-rise-is-giving-some-openai-investors-second-thoughts/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://techstartups.com/2026/04/14/openais-852b-valuation-faces-investor-scrutiny-and-pushback-as-sam-altman-shifts-to-enterprise-ai/" target="_blank" rel="noopener">Tech Startups</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Meta building AI Zuckerberg clone for 72,000 employees &mdash; CEO spends 5&ndash;10 hours/week coding it himself</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">Tom&rsquo;s Guide / AI Bucket / NewsBytesApp</span></div>
+      <p>Meta is developing a photorealistic AI avatar of Mark Zuckerberg that uses Llama models to interact with its entire 72,000-person workforce in real time. The digital twin is trained on Zuckerberg&rsquo;s appearance, voice, tone, mannerisms, and publicly available statements to simulate his decision-making logic and provide guidance aligned with leadership thinking. Zuckerberg is personally involved, spending 5&ndash;10 hours per week writing code and helping train the model. The project is still in early development but signals that Meta is deploying its $115&ndash;135 billion 2026 capex commitment internally at the executive level.</p>
+      <p class="why">Tom&rsquo;s Guide&rsquo;s framing: the project raises immediate questions about authenticity and accountability &mdash; when AI-Zuckerberg gives guidance that turns out to be wrong, who&rsquo;s responsible? But the deeper signal is that Meta now views its own CEO as a scaling bottleneck that AI can solve, which is either visionary internal tooling or the most on-brand thing Zuckerberg has ever done.</p>
+      <div class="links"><a href="https://www.tomsguide.com/ai/meta-is-building-an-ai-mark-zuckerberg-and-employees-will-have-to-talk-to-it" target="_blank" rel="noopener">Tom&rsquo;s Guide</a> <a href="https://www.aibucket.io/post/metas-ai-ceo-twin-signals-new-leadership-era" target="_blank" rel="noopener">AI Bucket</a> <a href="https://www.newsbytesapp.com/news/science/mark-zuckerberg-getting-ai-avatar-for-employee-interactions/story" target="_blank" rel="noopener">NewsBytesApp</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Ronan Farrow&rsquo;s 16,000-word New Yorker investigation: &ldquo;Sam Altman May Control Our Future &mdash; Can He Be Trusted?&rdquo;</h2>
+      <div class="meta"><span class="tag tag-date">Apr 13</span> <span class="source">The New Yorker / TechCrunch / Gary Marcus / NPR</span></div>
+      <p>Ronan Farrow and Andrew Marantz published a 16,000-word investigation in The New Yorker after 18 months of reporting, reviewing never-before-disclosed internal memos, 200+ pages of documents, and interviews with more than 100 people. The piece describes Altman as having &ldquo;a relentless will to power that, even among industrialists who put their names on spaceships, sets him apart.&rdquo; A former board member said Altman &ldquo;believes the shifting realities of his sales pitches as he&rsquo;s saying them.&rdquo; The article provides the most detailed account yet of why Altman was ousted in November 2023 and covers potential fraud concerns, alignment issues at OpenAI, and national security entanglements in the Gulf. Farrow is doing a press tour this week across NPR, Lawfare, and Katie Couric. Altman called the article &ldquo;incendiary.&rdquo;</p>
+      <p class="why">Farrow&rsquo;s reporting: the 100+ interview pool and internal document trove make this the most comprehensive portrait of Altman&rsquo;s leadership to date. Gary Marcus noted the piece lands at exactly the moment OpenAI&rsquo;s investors are publicly questioning Altman&rsquo;s strategy &mdash; and days after someone tried to kill him. The trust question isn&rsquo;t academic anymore.</p>
+      <div class="links"><a href="https://newyorkerest.com/issue/2026/04/13" target="_blank" rel="noopener">The New Yorker</a> <a href="https://techcrunch.com/2026/04/11/sam-altman-responds-to-incendiary-new-yorker-article-after-attack-on-his-home/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://garymarcus.substack.com/p/sam-altman-unconstrained-by-the-truth" target="_blank" rel="noopener">Gary Marcus</a> <a href="https://www.wbur.org/hereandnow/2026/04/14/sam-altman-ronan-farrow" target="_blank" rel="noopener">NPR</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Apple testing four AI smart glasses designs for 2027 &mdash; acetate frames, cameras, no displays</h2>
+      <div class="meta"><span class="tag tag-date">Apr 12</span> <span class="source">Bloomberg / TechCrunch / 9to5Mac / MacRumors</span></div>
+      <p>Bloomberg&rsquo;s Mark Gurman reported that Apple is in active prototype testing for its first AI-powered smart glasses, with four distinct frame designs under evaluation: large rectangular, slim rectangular (similar to Tim Cook&rsquo;s frames), large oval, and small oval. The glasses will use acetate in finishes including black, ocean blue, and light brown. No displays &mdash; they&rsquo;ll handle photos, video, phone calls, music, and a revamped Siri via cameras and microphones only. The glasses are part of a broader three-pronged AI wearable strategy alongside camera-equipped AirPods and a smart home display. Launch expected spring/summer 2027. Apple&rsquo;s AI chief John Giannandrea is reportedly leaving the company.</p>
+      <p class="why">Gurman&rsquo;s reporting: Apple is entering the AI wearable space without the display complexity that sank Google Glass and keeps Vision Pro niche. The no-display approach is a direct competitor to Meta Ray-Ban, which has already proven the form factor works. Apple shipping a $300&ndash;500 AI camera on your face in 2027 could do for AI what AirPods did for wireless audio.</p>
+      <div class="links"><a href="https://techcrunch.com/2026/04/12/apple-reportedly-testing-four-designs-for-upcoming-smart-glasses/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://9to5mac.com/2026/04/12/apple-exploring-four-different-styles-for-its-upcoming-smart-glasses-using-premium-materials/" target="_blank" rel="noopener">9to5Mac</a> <a href="https://www.macrumors.com/2026/04/13/apple-smart-glasses-four-styles/" target="_blank" rel="noopener">MacRumors</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude goes down for three hours &mdash; API, Claude Code, and Claude.ai all hit</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">CNBC / TechRadar / Newsweek</span></div>
+      <p>Anthropic confirmed elevated errors across Claude.ai, the API, and Claude Code starting at 10:53 AM ET on Wednesday. A brief fix at 11:03 AM failed, and the platform went fully down at 11:40 AM before recovering at 1:42 PM ET. Down Detector logged over 15,000 reports at peak. Pro accounts recovered before free tier, and mobile came back before desktop. Anthropic did not disclose the root cause.</p>
+      <p class="why">CNBC&rsquo;s framing: the outage hit the same week Anthropic is reportedly preparing to ship Opus 4.7, and days after Fortune documented silent model degradation. For a company trying to win enterprise trust, three hours of unplanned downtime with no public root cause analysis is not the look.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/15/anthropic-outage-elevated-errors-claude-chatbot-code-api.html" target="_blank" rel="noopener">CNBC</a> <a href="https://www.techradar.com/news/live/claude-anthropic-down-outage-april-15-2026" target="_blank" rel="noopener">TechRadar</a> <a href="https://status.claude.com/" target="_blank" rel="noopener">Status page</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Anthropic&rsquo;s safety trust takes board majority &mdash; Novartis CEO Vas Narasimhan appointed</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Anthropic / BusinessToday / RD World Online</span></div>
+      <p>Anthropic&rsquo;s Long-Term Benefit Trust appointed Novartis CEO Vas Narasimhan to the board of directors, making Trust-appointed directors the majority for the first time. Narasimhan &mdash; a physician-scientist who has overseen approval of 35+ novel medicines &mdash; is the first pharmaceutical executive on the board. He joins Dario and Daniela Amodei, Reed Hastings, Jay Kreps, Yasmin Razavi, and Chris Liddell.</p>
+      <p class="why">RD World Online&rsquo;s analysis: this is the structural milestone the Trust was designed for. With majority control, the safety-oriented oversight body now has real power over Anthropic&rsquo;s direction &mdash; significant as the company approaches a potential IPO at $30B+ annualized revenue.</p>
+      <div class="links"><a href="https://www.anthropic.com/news/narasimhan-board" target="_blank" rel="noopener">Anthropic</a> <a href="https://www.businesstoday.in/technology/story/why-vas-narasimhans-entry-to-anthropics-board-matters-ahead-of-ipo-525737-2026-04-15" target="_blank" rel="noopener">BusinessToday</a> <a href="https://www.rdworldonline.com/anthropics-oversight-trust-just-hit-majority-control-the-tipping-point-was-adding-novartis-ceo-vas-narasimhan-to-its-board/" target="_blank" rel="noopener">RD World Online</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Novo Nordisk and OpenAI partner on AI drug discovery &mdash; full integration by end of 2026</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">CNBC / Yahoo Finance / Euronews</span></div>
+      <p>Novo Nordisk announced a strategic partnership with OpenAI to deploy AI across drug discovery, manufacturing, supply chain, and corporate operations. Pilot programmes launch immediately, with full integration targeted by end of 2026. OpenAI will also help upskill Novo&rsquo;s global workforce on AI literacy. The deal includes strict data governance and human oversight provisions.</p>
+      <p class="why">CNBC&rsquo;s take: this is OpenAI&rsquo;s biggest healthcare deployment to date. Novo Nordisk &mdash; maker of Ozempic and Wegovy &mdash; is betting that AI can compress the drug discovery pipeline that typically takes a decade. The end-of-2026 integration timeline makes this a near-term test of whether enterprise AI delivers on the promise or stays in pilot purgatory.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/14/novo-nordisk-openai-ai-drug-discovery-healthcare-nvo.html" target="_blank" rel="noopener">CNBC</a> <a href="https://sg.finance.yahoo.com/news/novo-nordisk-openai-partner-transform-060000405.html" target="_blank" rel="noopener">Yahoo Finance</a> <a href="https://www.euronews.com/health/2026/04/14/novo-nordisk-joins-forces-with-openai-to-fast-track-drug-research" target="_blank" rel="noopener">Euronews</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Meta locks in 1 gigawatt of custom 2nm AI chips with Broadcom through 2029</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">CNBC / SiliconAngle / Meta</span></div>
+      <p>Meta extended its partnership with Broadcom for the design of next-generation MTIA (Meta Training and Inference Accelerator) chips through 2029, committing to an initial 1-gigawatt deployment with plans for multi-gigawatt scale. The MTIA chips will be the first AI silicon to use a 2nm process. Meta is developing four new chip generations within the next two years to handle ranking, recommendations, and generative AI workloads. Separately, Broadcom CEO Hock Tan told Meta he won&rsquo;t stand for re-election to Meta&rsquo;s board.</p>
+      <p class="why">SiliconAngle&rsquo;s analysis: this is Meta moving to reduce its dependence on NVIDIA for AI compute. A 1-gigawatt chip commitment at 2nm is an infrastructure bet that dwarfs anything in Meta&rsquo;s hardware history &mdash; four chip generations in two years signals they&rsquo;re serious about owning their silicon stack.</p>
+      <div class="links"><a href="https://www.cnbc.com/2026/04/14/meta-commits-to-one-gigawatt-of-custom-chips-with-broadcom-as-hock-tan-agrees-to-leave-board.html" target="_blank" rel="noopener">CNBC</a> <a href="https://siliconangle.com/2026/04/14/meta-doubles-partnership-broadcom-committing-1-gigawatt-custom-ai-processors/" target="_blank" rel="noopener">SiliconAngle</a> <a href="https://about.fb.com/news/2026/04/meta-partners-with-broadcom-to-co-develop-custom-ai-silicon/" target="_blank" rel="noopener">Meta</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Claude Code v2.1.110 ships flicker-free TUI, push notifications, and 20+ bug fixes</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Claude Code Changelog</span></div>
+      <p>The biggest Claude Code quality-of-life release in months landed today with v2.1.110. The headliner: NO_FLICKER rendering is now a first-class feature via <code>/tui</code> (and <code>/tui fullscreen</code>), no more env vars. Push notifications let Claude ping your phone when Remote Control is enabled. New <code>/focus</code> command replaces the old Ctrl+O behavior for focus view. External editor (<code>Ctrl+G</code>) can now show Claude&rsquo;s last response as commented context. Under the hood: 20+ bug fixes targeting MCP connection drops mid-response, plugin dependency management, session persistence, and garbled rendering in macOS Terminal.app.</p>
+      <p class="why">The changelog reveals fixes for issues that have plagued power users for weeks &mdash; MCP tool calls hanging when servers drop, non-streaming retries causing multi-minute hangs, and high CPU in fullscreen. This stability pass matters more than new features for anyone running long sessions.</p>
+      <div class="links"><a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">Changelog</a> <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">GitHub Releases</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI updates Agents SDK with sandboxing, model harness, and multi-provider support</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">OpenAI / TechCrunch</span></div>
+      <p>OpenAI released a major update to its Agents SDK, adding sandboxed execution environments that let agents operate in controlled workspaces with file and code access isolated from the broader system. The new model harness includes configurable memory, sandbox-aware orchestration, and file system tools. Multi-provider support integrates with Blaxel, Cloudflare, and Vercel sandboxes, plus a new Manifest abstraction for portable workspace descriptions. Python first, TypeScript later.</p>
+      <p class="why">TechCrunch&rsquo;s framing: this is OpenAI building the unglamorous plumbing that enterprise AI agents actually need &mdash; sandboxing, isolation, and multi-provider portability. The kind of update that matters more to companies deploying agents in production than any model benchmark.</p>
+      <div class="links"><a href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/" target="_blank" rel="noopener">OpenAI blog</a> <a href="https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/" target="_blank" rel="noopener">TechCrunch</a></div>
+    </div>
+
+    <div class="story">
+      <h2>Karpathy: AI users are splitting into two populations that are &ldquo;speaking past each other&rdquo;</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Andrej Karpathy / Business Insider</span></div>
+      <p>Andrej Karpathy posted a thread arguing that AI users are diverging into two distinct populations: everyday users who tried free-tier ChatGPT and let it shape their view of AI&rsquo;s limitations, and power users paying for frontier models like Claude Code and Codex who see a fundamentally different capability landscape. &ldquo;The free and old/deprecated models don&rsquo;t reflect the capability in the latest round of state of the art agentic models,&rdquo; he wrote. Business Insider and multiple outlets picked up the thread as the framing went viral.</p>
+      <p class="why">Karpathy&rsquo;s argument: the discourse is broken because the two populations are literally using different products and drawing opposite conclusions. The gap is structural, not attitudinal &mdash; and it widens every time a frontier model ships that free-tier users never see.</p>
+      <div class="links"><a href="https://x.com/karpathy/status/2042334451611693415" target="_blank" rel="noopener">Thread on X</a> <a href="https://letsdatascience.com/news/karpathy-warns-growing-gap-among-ai-users-a6adb56d" target="_blank" rel="noopener">Let&rsquo;s Data Science</a></div>
+    </div>
+
+  </div><!-- end content -->
+
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Wed Apr 15, 2026 at 8:00 PM PDT</footer>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
