@@ -179,13 +179,14 @@
     </div>
     <div class="subtitle">Prepared for Patrick</div>
   </header>
-  <div id="date-line">Saturday, April 18, 2026 &middot; Last updated 6:00 AM PDT</div>
+  <div id="date-line">Saturday, April 18, 2026 &middot; Last updated 2:00 PM PDT</div>
 
   <div id="content">
 
     <div class="story" style="border-left: 3px solid var(--accent); background: var(--card-bg);">
       <h2>The Big Picture</h2>
       <p>Saturday morning, and the comedy of yesterday&rsquo;s &ldquo;productive&rdquo; White House meeting has a punchline: Trump, asked about Amodei&rsquo;s visit on an Arizona tarmac, said &ldquo;Who?&rdquo; and then &ldquo;no idea.&rdquo; Wiles and Bessent apparently didn&rsquo;t bother looping in the President before sitting down with the CEO of a company Trump publicly vowed in February to &ldquo;not do business with again.&rdquo; That&rsquo;s either a government that&rsquo;s quietly functional in spite of its top &mdash; or one where the adults in the room have stopped asking permission. Your call. Meanwhile, the actual news of the weekend is in developer tools: OpenAI&rsquo;s Codex desktop app just grew eyes and hands &mdash; it can now see, click, and type in any app on your Mac, with multiple agents working in parallel, image generation, persistent memory, and 90+ new plugins. That&rsquo;s the biggest step yet toward &ldquo;agent operates your computer&rdquo; being a shipping product, not a demo. On the darker side, OX Security published a report showing Anthropic&rsquo;s MCP has an architectural RCE that Anthropic refuses to fix &mdash; 150 million downloads and 7,000 exposed servers running code by design, because the spec says STDIO commands execute before validation. Anthropic&rsquo;s response: expected behavior, sanitization is the developer&rsquo;s problem. And Physical Intelligence&rsquo;s &pi;0.7 is the genuinely exciting paper of the week &mdash; a robot foundation model that folded laundry on a bimanual UR5e it was never trained on. Compositional generalization, in a robot, with receipts. The &ldquo;ChatGPT moment for robotics&rdquo; people have been predicting for two years might actually be here, in a research paper nobody except robotics Twitter is reading.</p>
+      <p><strong>Midday refresh:</strong> Cerebras&rsquo;s Friday S-1 keeps leaking gifts. The Information got the numbers on OpenAI&rsquo;s side of the deal and they&rsquo;re wild: Altman is committing $20B&ndash;$30B over three years for Cerebras chips, and in exchange gets warrants for up to 10% of the company &mdash; plus he already loaned Cerebras $1B at 6% to build the data centers that&rsquo;ll run his AI on his chips in his equity-stake vendor. OpenAI isn&rsquo;t buying compute anymore, it&rsquo;s vertically integrating the supply chain through the balance sheet, with a Nvidia-shaped hole in the middle of the strategy. Separately, India&rsquo;s three biggest fintechs &mdash; Paytm parent One97, Razorpay, Pine Labs &mdash; are now publicly lobbying Anthropic for early Mythos access. This is the shape of things: release a model that finds zero-days in every major browser, gate it to a handpicked coalition, and watch access turn into a diplomatic asset overnight.</p>
     </div>
 
     <div class="story">
@@ -228,9 +229,25 @@
       <div class="links"><a href="https://www.pi.website/blog/pi07" target="_blank" rel="noopener">Pi blog</a> <a href="https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/" target="_blank" rel="noopener">TechCrunch</a> <a href="https://the-decoder.com/physical-intelligence-shows-robot-model-with-llm-like-generalization-flaws-included/" target="_blank" rel="noopener">The Decoder</a></div>
     </div>
 
+    <div class="story">
+      <h2>India&rsquo;s biggest fintechs line up to beg Anthropic for Mythos access</h2>
+      <div class="meta"><span class="tag tag-today">Today</span> <span class="source">Bloomberg / StartupNews</span></div>
+      <p>Three of India&rsquo;s largest fintechs &mdash; Paytm parent One97 Communications, Razorpay, and Pine Labs &mdash; have formally asked Anthropic for early access to Claude Mythos Preview, according to reporting Saturday. The pitch: let us use Mythos internally to hunt for zero-days in our own stack before someone else finds them there first. Anthropic has kept Mythos strictly inside the Project Glasswing coalition (AWS, Apple, Google, Microsoft, Cisco, Nvidia, JPMorgan, et al.) since its April 7 unveiling. India is not in the tent.</p>
+      <p class="why">What the story reveals: gating a frontier cyber model doesn&rsquo;t just manage risk, it creates a two-tier world. A Pine Labs or a Razorpay has to publicly lobby a San Francisco lab for parity with Cisco. Expect every major fintech, telco, and bank outside the coalition to queue up next &mdash; and expect Anthropic to quietly enjoy the leverage.</p>
+      <div class="links"><a href="https://startupnews.fyi/2026/04/18/nervous-indian-fintechs-push-anthropic-for-access-to-mythos/" target="_blank" rel="noopener">StartupNews</a> <a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener">Project Glasswing</a></div>
+    </div>
+
+    <div class="story">
+      <h2>OpenAI is buying 10% of Cerebras with its own purchase orders</h2>
+      <div class="meta"><span class="tag tag-yesterday">Yesterday</span> <span class="source">The Information / Reuters / Manila Times</span></div>
+      <p>The Information pulled apart Cerebras&rsquo;s Friday S-1 and found the OpenAI side of the deal. Altman is committing $20B over three years (up to $30B) for chip-powered server capacity, and Cerebras issued OpenAI warrants for up to 33.4M shares of non-voting Class N stock &mdash; vesting in full only if OpenAI buys 2 gigawatts of compute. At the max spend, that&rsquo;s roughly 10% of Cerebras. OpenAI also loaned Cerebras $1B at 6% in January to build the data centers that will house the chips it&rsquo;ll be buying. Cerebras is targeting a Q2 IPO on Nasdaq under &ldquo;CBRS&rdquo; at ~$35B.</p>
+      <p class="why">The Information&rsquo;s read: this is a structural bet against Nvidia dependency. OpenAI isn&rsquo;t just a customer &mdash; it&rsquo;s a creditor and shareholder in a chip vendor it helps underwrite. Yesterday&rsquo;s briefing flagged the MBZUAI concentration risk; the real story in the S-1 is that the IPO itself is a vehicle for OpenAI to monetize the compute contracts it was going to sign anyway.</p>
+      <div class="links"><a href="https://www.theinformation.com/articles/openai-spend-20-billion-cerebras-chips-receive-equity-stake" target="_blank" rel="noopener">The Information</a> <a href="https://www.manilatimes.net/2026/04/18/business/foreign-business/openai-to-spend-more-than-20-billion-on-cerebras-chips-receive-stake/2322863" target="_blank" rel="noopener">Manila Times</a> <a href="https://www.gurufocus.com/news/8800280/openai-partners-with-cerebras-for-20-billion-deal-reducing-nvidia-dependency" target="_blank" rel="noopener">GuruFocus</a></div>
+    </div>
+
   </div><!-- end content -->
 
-  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sat Apr 18, 2026 at 6:00 AM PDT</footer>
+  <footer>Curated daily by Claude &middot; Sources managed by Patrick<br>Generated Sat Apr 18, 2026 at 2:00 PM PDT</footer>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
